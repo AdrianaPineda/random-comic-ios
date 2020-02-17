@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00B391865972FB1563352F6A /* ShowComicRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2594BF0328725A0A3B54A5E /* ShowComicRouterTests.swift */; };
+		01A09DF523FA57F300701B69 /* ShowComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A09DF423FA57F300701B69 /* ShowComicViewController.xib */; };
 		01A9D52823798AA000D61EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52723798AA000D61EAA /* AppDelegate.swift */; };
 		01A9D52A23798AA000D61EAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52923798AA000D61EAA /* SceneDelegate.swift */; };
 		01A9D52D23798AA000D61EAA /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52B23798AA000D61EAA /* ComicRating.xcdatamodeld */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A09DF423FA57F300701B69 /* ShowComicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowComicViewController.xib; sourceTree = "<group>"; };
 		01A9D52423798AA000D61EAA /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A9D52723798AA000D61EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A9D52923798AA000D61EAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				F779B12A0A466A604EC822E0 /* ShowComicViewInput.swift */,
 				CCBA999EE37C8C1932FC58DB /* ShowComicViewOutput.swift */,
 				40257C734D1AA94A236548B9 /* ShowComicViewController.swift */,
+				01A09DF423FA57F300701B69 /* ShowComicViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				01A9D53723798AA200D61EAA /* LaunchScreen.storyboard in Resources */,
 				01A9D53423798AA200D61EAA /* Preview Assets.xcassets in Resources */,
 				01A9D53123798AA200D61EAA /* Assets.xcassets in Resources */,
+				01A09DF523FA57F300701B69 /* ShowComicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
