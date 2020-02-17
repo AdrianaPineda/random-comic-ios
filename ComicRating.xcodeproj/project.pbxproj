@@ -15,7 +15,6 @@
 		01A9D53123798AA200D61EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A9D53023798AA200D61EAA /* Assets.xcassets */; };
 		01A9D53423798AA200D61EAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A9D53323798AA200D61EAA /* Preview Assets.xcassets */; };
 		01A9D53723798AA200D61EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A9D53523798AA200D61EAA /* LaunchScreen.storyboard */; };
-		01A9D54223798AA200D61EAA /* ComicRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D54123798AA200D61EAA /* ComicRatingTests.swift */; };
 		01A9D54D23798AA200D61EAA /* ComicRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D54C23798AA200D61EAA /* ComicRatingUITests.swift */; };
 		12C8A2E0F54FF7BA1FB557DF /* ShowComicModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16575DAA27CAD1D752A8D00D /* ShowComicModuleInput.swift */; };
 		1AE93DAB9A508134D72E4265 /* ShowComicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E787592793E414843E018CA /* ShowComicInteractor.swift */; };
@@ -63,8 +62,6 @@
 		01A9D53623798AA200D61EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A9D53823798AA200D61EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01A9D53D23798AA200D61EAA /* ComicRatingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicRatingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		01A9D54123798AA200D61EAA /* ComicRatingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRatingTests.swift; sourceTree = "<group>"; };
-		01A9D54323798AA200D61EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01A9D54823798AA200D61EAA /* ComicRatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicRatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A9D54C23798AA200D61EAA /* ComicRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRatingUITests.swift; sourceTree = "<group>"; };
 		01A9D54E23798AA200D61EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,8 +164,6 @@
 		01A9D54023798AA200D61EAA /* ComicRatingTests */ = {
 			isa = PBXGroup;
 			children = (
-				01A9D54123798AA200D61EAA /* ComicRatingTests.swift */,
-				01A9D54323798AA200D61EAA /* Info.plist */,
 				9CD3A6D666774029129C6D4F /* ShowComic */,
 			);
 			path = ComicRatingTests;
@@ -188,7 +183,6 @@
 			children = (
 				899AAB58DF92C128152DE41B /* ShowComicInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -201,7 +195,6 @@
 				C9F91E51823921FEEC0902D9 /* Router */,
 				BEA7AA34E0A9A034719C2EE3 /* Configurator */,
 			);
-			name = ShowComic;
 			path = ShowComic;
 			sourceTree = "<group>";
 		};
@@ -210,7 +203,6 @@
 			children = (
 				DFBA45636D20E60306A85EC3 /* ShowComicPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -221,7 +213,6 @@
 				3EB155CDBA134161EA2E91B9 /* ShowComicInteractorOutput.swift */,
 				7E787592793E414843E018CA /* ShowComicInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -231,7 +222,6 @@
 				16575DAA27CAD1D752A8D00D /* ShowComicModuleInput.swift */,
 				223EC06D5A87DEF7C60158F8 /* ShowComicPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -240,7 +230,6 @@
 			children = (
 				9E4738D5E28CCEA55E426A6C /* ShowComicViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -253,7 +242,6 @@
 				8F4CA0F2A30E5C5890423FC0 /* Presenter */,
 				EB73B2CB9DA44220EB9AB363 /* Router */,
 			);
-			name = ShowComic;
 			path = ShowComic;
 			sourceTree = "<group>";
 		};
@@ -264,7 +252,6 @@
 				CCBA999EE37C8C1932FC58DB /* ShowComicViewOutput.swift */,
 				40257C734D1AA94A236548B9 /* ShowComicViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -273,7 +260,6 @@
 			children = (
 				5EFA6D4F60391AE1C00D2FEE /* ShowComicConfiguratorTests.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -283,7 +269,6 @@
 				C9B28766B773AAFC185417CB /* ShowComicConfigurator.swift */,
 				ACEAF913B907219F674CD80A /* ShowComicInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -293,7 +278,6 @@
 				753789C1E6ACA82869584F34 /* ShowComicRouterInput.swift */,
 				35B29A8A47FEBC1F2215CE73 /* ShowComicRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -302,7 +286,6 @@
 			children = (
 				F2594BF0328725A0A3B54A5E /* ShowComicRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -460,7 +443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01A9D54223798AA200D61EAA /* ComicRatingTests.swift in Sources */,
 				26AF338388489A1A6200EC67 /* ShowComicConfiguratorTests.swift in Sources */,
 				3BF0A7F1AC4E36D2FD005F72 /* ShowComicViewTests.swift in Sources */,
 				A1BE654D759C7E9A827DE0BD /* ShowComicInteractorTests.swift in Sources */,
