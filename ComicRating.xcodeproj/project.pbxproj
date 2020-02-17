@@ -78,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A09DEC23FA4D5200701B69 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		01A9D51B23798AA000D61EAA = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +108,7 @@
 		01A9D52623798AA000D61EAA /* ComicRating */ = {
 			isa = PBXGroup;
 			children = (
+				01A09DEC23FA4D5200701B69 /* Modules */,
 				01A9D52723798AA000D61EAA /* AppDelegate.swift */,
 				01A9D52923798AA000D61EAA /* SceneDelegate.swift */,
 				01A9D52E23798AA000D61EAA /* ContentView.swift */,
