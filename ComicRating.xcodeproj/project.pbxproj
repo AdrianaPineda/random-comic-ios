@@ -117,6 +117,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		01A09DF023FA506300701B69 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9CD3A6D666774029129C6D4F /* ShowComic */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		01A9D51B23798AA000D61EAA = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +172,7 @@
 		01A9D54023798AA200D61EAA /* ComicRatingTests */ = {
 			isa = PBXGroup;
 			children = (
-				9CD3A6D666774029129C6D4F /* ShowComic */,
+				01A09DF023FA506300701B69 /* Modules */,
 			);
 			path = ComicRatingTests;
 			sourceTree = "<group>";

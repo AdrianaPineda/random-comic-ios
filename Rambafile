@@ -20,7 +20,7 @@ project_group_path: ComicRating/Modules
 test_target: ComicRatingTests
 
 # The file path for new tests
-test_file_path: ComicRatingTests
+test_file_path: ComicRatingTests/Modules
 
 # The Xcode group path to new tests
 test_group_path: ComicRatingTests
