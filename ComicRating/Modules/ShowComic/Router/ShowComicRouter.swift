@@ -10,7 +10,9 @@ import UIKit
 class ShowComicRouter: ShowComicRouterInput {
 
     func presentShowComicControllerFromWindow(window: UIWindow) {
-        
+        let showComicViewController = ShowComicViewController()
+        window.rootViewController = showComicViewController
+        window.makeKeyAndVisible()
     }
 
 }
