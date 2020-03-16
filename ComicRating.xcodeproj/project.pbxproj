@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00B391865972FB1563352F6A /* ShowComicRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2594BF0328725A0A3B54A5E /* ShowComicRouterTests.swift */; };
 		01A09DF523FA57F300701B69 /* ShowComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A09DF423FA57F300701B69 /* ShowComicViewController.xib */; };
+		01A09E3423FD061600701B69 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A09E3323FD061600701B69 /* AppDependencies.swift */; };
 		01A9D52823798AA000D61EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52723798AA000D61EAA /* AppDelegate.swift */; };
 		01A9D52A23798AA000D61EAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52923798AA000D61EAA /* SceneDelegate.swift */; };
 		01A9D52D23798AA000D61EAA /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01A9D52B23798AA000D61EAA /* ComicRating.xcdatamodeld */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		01A09DF423FA57F300701B69 /* ShowComicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowComicViewController.xib; sourceTree = "<group>"; };
+		01A09E3323FD061600701B69 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDependencies.swift; path = Modules/AppDependencies.swift; sourceTree = "<group>"; };
 		01A9D52423798AA000D61EAA /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A9D52723798AA000D61EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A9D52923798AA000D61EAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				01A09DEC23FA4D5200701B69 /* Modules */,
+				01A09E3323FD061600701B69 /* AppDependencies.swift */,
 				01A9D52723798AA000D61EAA /* AppDelegate.swift */,
 				01A9D52923798AA000D61EAA /* SceneDelegate.swift */,
 				01A9D53023798AA200D61EAA /* Assets.xcassets */,
@@ -437,6 +440,7 @@
 				959DAB16F6B556756F290CD8 /* ShowComicViewController.swift in Sources */,
 				12C8A2E0F54FF7BA1FB557DF /* ShowComicModuleInput.swift in Sources */,
 				452ADCC2EB8FC00879FA86F1 /* ShowComicPresenter.swift in Sources */,
+				01A09E3423FD061600701B69 /* AppDependencies.swift in Sources */,
 				217F185E957EC725A529CDCD /* ShowComicInteractorInput.swift in Sources */,
 				AF861B15D4AC0CC619E4B653 /* ShowComicInteractorOutput.swift in Sources */,
 				1AE93DAB9A508134D72E4265 /* ShowComicInteractor.swift in Sources */,
