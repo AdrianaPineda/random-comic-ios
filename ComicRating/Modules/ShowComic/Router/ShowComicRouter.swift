@@ -10,7 +10,7 @@ import UIKit
 class ShowComicRouter: ShowComicRouterInput {
 
     weak var showComicPresenter: ShowComicModuleInput?
-    weak var showComicViewController: ShowComicViewController?
+    var showComicViewController: ShowComicViewController?
 
     func presentShowComicControllerFromWindow(window: UIWindow) {
         window.rootViewController = showComicViewController
