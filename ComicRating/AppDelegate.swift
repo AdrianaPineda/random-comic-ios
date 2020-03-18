@@ -14,13 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let dependencies = AppDependencies()
+        dependencies.initDependencies()
+
         self.window = UIWindow()
-
         if let window = self.window {
-            window.rootViewController = ViewController()
-            window.makeKeyAndVisible()
+            dependencies.setRootViewControllerInWindow(window: window)
         }
-
         return true
     }
 }
