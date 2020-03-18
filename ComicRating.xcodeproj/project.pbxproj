@@ -14,6 +14,20 @@
 		015F7048241F463D004ED20A /* ComicRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7047241F463D004ED20A /* ComicRatingTests.swift */; };
 		015F7053241F463D004ED20A /* ComicRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7052241F463D004ED20A /* ComicRatingUITests.swift */; };
 		015F7061241F4736004ED20A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015F7060241F4736004ED20A /* ViewController.xib */; };
+		015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706624209415004ED20A /* ShowComicPresenter.swift */; };
+		015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706724209415004ED20A /* ShowComicModuleInput.swift */; };
+		015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015F706924209415004ED20A /* ShowComicViewController.xib */; };
+		015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706A24209415004ED20A /* ShowComicViewController.swift */; };
+		015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706B24209415004ED20A /* ShowComicViewInput.swift */; };
+		015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706C24209415004ED20A /* ShowComicViewOutput.swift */; };
+		015F707E24209415004ED20A /* ShowComicInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706E24209415004ED20A /* ShowComicInitializer.swift */; };
+		015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706F24209415004ED20A /* ShowComicConfigurator.swift */; };
+		015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707124209415004ED20A /* ShowComicInteractor.swift */; };
+		015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707224209415004ED20A /* ShowComicInteractorInput.swift */; };
+		015F708224209415004ED20A /* ShowComicInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707324209415004ED20A /* ShowComicInteractorOutput.swift */; };
+		015F708324209415004ED20A /* ShowComicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707524209415004ED20A /* ShowComicRouter.swift */; };
+		015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707624209415004ED20A /* ShowComicRouterInput.swift */; };
+		015F708524209415004ED20A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707724209415004ED20A /* AppDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,20 @@
 		015F7052241F463D004ED20A /* ComicRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRatingUITests.swift; sourceTree = "<group>"; };
 		015F7054241F463D004ED20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015F7060241F4736004ED20A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		015F706624209415004ED20A /* ShowComicPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicPresenter.swift; sourceTree = "<group>"; };
+		015F706724209415004ED20A /* ShowComicModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicModuleInput.swift; sourceTree = "<group>"; };
+		015F706924209415004ED20A /* ShowComicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowComicViewController.xib; sourceTree = "<group>"; };
+		015F706A24209415004ED20A /* ShowComicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewController.swift; sourceTree = "<group>"; };
+		015F706B24209415004ED20A /* ShowComicViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewInput.swift; sourceTree = "<group>"; };
+		015F706C24209415004ED20A /* ShowComicViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewOutput.swift; sourceTree = "<group>"; };
+		015F706E24209415004ED20A /* ShowComicInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInitializer.swift; sourceTree = "<group>"; };
+		015F706F24209415004ED20A /* ShowComicConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicConfigurator.swift; sourceTree = "<group>"; };
+		015F707124209415004ED20A /* ShowComicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInteractor.swift; sourceTree = "<group>"; };
+		015F707224209415004ED20A /* ShowComicInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInteractorInput.swift; sourceTree = "<group>"; };
+		015F707324209415004ED20A /* ShowComicInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInteractorOutput.swift; sourceTree = "<group>"; };
+		015F707524209415004ED20A /* ShowComicRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouter.swift; sourceTree = "<group>"; };
+		015F707624209415004ED20A /* ShowComicRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouterInput.swift; sourceTree = "<group>"; };
+		015F707724209415004ED20A /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +125,10 @@
 		015F702F241F463B004ED20A /* ComicRating */ = {
 			isa = PBXGroup;
 			children = (
+				015F706324209415004ED20A /* Modules */,
 				015F7030241F463B004ED20A /* AppDelegate.swift */,
 				015F7034241F463B004ED20A /* ViewController.swift */,
+				015F707724209415004ED20A /* AppDependencies.swift */,
 				015F7039241F463C004ED20A /* Assets.xcassets */,
 				015F703B241F463C004ED20A /* LaunchScreen.storyboard */,
 				015F703E241F463C004ED20A /* Info.plist */,
@@ -123,6 +153,74 @@
 				015F7054241F463D004ED20A /* Info.plist */,
 			);
 			path = ComicRatingUITests;
+			sourceTree = "<group>";
+		};
+		015F706324209415004ED20A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				015F706424209415004ED20A /* ShowComic */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		015F706424209415004ED20A /* ShowComic */ = {
+			isa = PBXGroup;
+			children = (
+				015F706524209415004ED20A /* Presenter */,
+				015F706824209415004ED20A /* View */,
+				015F706D24209415004ED20A /* Configurator */,
+				015F707024209415004ED20A /* Interactor */,
+				015F707424209415004ED20A /* Router */,
+			);
+			path = ShowComic;
+			sourceTree = "<group>";
+		};
+		015F706524209415004ED20A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				015F706624209415004ED20A /* ShowComicPresenter.swift */,
+				015F706724209415004ED20A /* ShowComicModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		015F706824209415004ED20A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				015F706924209415004ED20A /* ShowComicViewController.xib */,
+				015F706A24209415004ED20A /* ShowComicViewController.swift */,
+				015F706B24209415004ED20A /* ShowComicViewInput.swift */,
+				015F706C24209415004ED20A /* ShowComicViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		015F706D24209415004ED20A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				015F706E24209415004ED20A /* ShowComicInitializer.swift */,
+				015F706F24209415004ED20A /* ShowComicConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		015F707024209415004ED20A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				015F707124209415004ED20A /* ShowComicInteractor.swift */,
+				015F707224209415004ED20A /* ShowComicInteractorInput.swift */,
+				015F707324209415004ED20A /* ShowComicInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		015F707424209415004ED20A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				015F707524209415004ED20A /* ShowComicRouter.swift */,
+				015F707624209415004ED20A /* ShowComicRouterInput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +330,7 @@
 				015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */,
 				015F7061241F4736004ED20A /* ViewController.xib in Resources */,
 				015F703A241F463C004ED20A /* Assets.xcassets in Resources */,
+				015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +356,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				015F7035241F463B004ED20A /* ViewController.swift in Sources */,
+				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
+				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
+				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
+				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,
+				015F708324209415004ED20A /* ShowComicRouter.swift in Sources */,
+				015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */,
+				015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */,
+				015F708224209415004ED20A /* ShowComicInteractorOutput.swift in Sources */,
+				015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */,
+				015F707E24209415004ED20A /* ShowComicInitializer.swift in Sources */,
+				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
+				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
+				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
