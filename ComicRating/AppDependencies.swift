@@ -10,20 +10,14 @@ import Foundation
 import UIKit
 
 class AppDependencies {
-    var showComicRouter = ShowComicRouter()
+    var showComicRouter: ShowComicRouter?
 
     func initDependencies() {
-        let showComicPresenter = ShowComicPresenter()
-        let showComicViewController = ShowComicViewController()
-
-        self.showComicRouter.showComicPresenter = showComicPresenter
-        self.showComicRouter.showComicViewController = showComicViewController
-
-        showComicPresenter.router = self.showComicRouter
-
+        let showComicModuleConfigurator = ShowComicModuleConfigurator()
+        self.showComicRouter = showComicModuleConfigurator.configure()
     }
 
     func setRootViewControllerInWindow(window: UIWindow) {
-        self.showComicRouter.presentShowComicControllerFromWindow(window: window)
+        self.showComicRouter?.presentShowComicControllerFromWindow(window: window)
     }
 }

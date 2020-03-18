@@ -17,8 +17,9 @@ class ShowComicModuleConfigurator {
         }
     }
 
-    private func configure(viewController: ShowComicViewController) {
+    func configure() -> ShowComicRouter {
 
+        let viewController = ShowComicViewController()
         let router = ShowComicRouter()
 
         let presenter = ShowComicPresenter()
@@ -30,6 +31,11 @@ class ShowComicModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+
+        router.showComicPresenter = presenter
+        router.showComicViewController = viewController
+
+        return router
     }
 
 }
