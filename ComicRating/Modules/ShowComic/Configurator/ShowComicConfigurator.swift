@@ -10,13 +10,6 @@ import UIKit
 
 class ShowComicModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
-        if let viewController = viewInput as? ShowComicViewController {
-            configure(viewController: viewController)
-        }
-    }
-
     func configure() -> ShowComicRouter {
 
         let viewController = ShowComicViewController()

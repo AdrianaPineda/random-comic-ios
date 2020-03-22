@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		015F7031241F463B004ED20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7030241F463B004ED20A /* AppDelegate.swift */; };
-		015F7035241F463B004ED20A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7034241F463B004ED20A /* ViewController.swift */; };
 		015F703A241F463C004ED20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015F7039241F463C004ED20A /* Assets.xcassets */; };
 		015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015F703B241F463C004ED20A /* LaunchScreen.storyboard */; };
 		015F7048241F463D004ED20A /* ComicRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7047241F463D004ED20A /* ComicRatingTests.swift */; };
@@ -20,7 +19,6 @@
 		015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706A24209415004ED20A /* ShowComicViewController.swift */; };
 		015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706B24209415004ED20A /* ShowComicViewInput.swift */; };
 		015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706C24209415004ED20A /* ShowComicViewOutput.swift */; };
-		015F707E24209415004ED20A /* ShowComicInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706E24209415004ED20A /* ShowComicInitializer.swift */; };
 		015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706F24209415004ED20A /* ShowComicConfigurator.swift */; };
 		015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707124209415004ED20A /* ShowComicInteractor.swift */; };
 		015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707224209415004ED20A /* ShowComicInteractorInput.swift */; };
@@ -50,7 +48,6 @@
 /* Begin PBXFileReference section */
 		015F702D241F463B004ED20A /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015F7030241F463B004ED20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		015F7034241F463B004ED20A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		015F7039241F463C004ED20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		015F703C241F463C004ED20A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		015F703E241F463C004ED20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		015F706A24209415004ED20A /* ShowComicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewController.swift; sourceTree = "<group>"; };
 		015F706B24209415004ED20A /* ShowComicViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewInput.swift; sourceTree = "<group>"; };
 		015F706C24209415004ED20A /* ShowComicViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewOutput.swift; sourceTree = "<group>"; };
-		015F706E24209415004ED20A /* ShowComicInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInitializer.swift; sourceTree = "<group>"; };
 		015F706F24209415004ED20A /* ShowComicConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicConfigurator.swift; sourceTree = "<group>"; };
 		015F707124209415004ED20A /* ShowComicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInteractor.swift; sourceTree = "<group>"; };
 		015F707224209415004ED20A /* ShowComicInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicInteractorInput.swift; sourceTree = "<group>"; };
@@ -128,7 +124,6 @@
 				015F706324209415004ED20A /* Modules */,
 				015F707724209415004ED20A /* AppDependencies.swift */,
 				015F7030241F463B004ED20A /* AppDelegate.swift */,
-				015F7034241F463B004ED20A /* ViewController.swift */,
 				015F7039241F463C004ED20A /* Assets.xcassets */,
 				015F703B241F463C004ED20A /* LaunchScreen.storyboard */,
 				015F703E241F463C004ED20A /* Info.plist */,
@@ -198,7 +193,6 @@
 		015F706D24209415004ED20A /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				015F706E24209415004ED20A /* ShowComicInitializer.swift */,
 				015F706F24209415004ED20A /* ShowComicConfigurator.swift */,
 			);
 			path = Configurator;
@@ -355,7 +349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015F7035241F463B004ED20A /* ViewController.swift in Sources */,
 				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
@@ -366,7 +359,6 @@
 				015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */,
 				015F708224209415004ED20A /* ShowComicInteractorOutput.swift in Sources */,
 				015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */,
-				015F707E24209415004ED20A /* ShowComicInitializer.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
