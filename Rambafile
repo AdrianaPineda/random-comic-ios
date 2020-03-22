@@ -1,0 +1,36 @@
+### Headers settings
+company: Adriana Pineda
+
+### Xcode project settings
+project_name: ComicRating
+xcodeproj_path: ComicRating.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: ComicRating
+
+# The file path for new modules
+project_file_path: ComicRating/Modules
+
+# The Xcode group path to new modules
+project_group_path: ComicRating/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: ComicRatingTests
+
+# The file path for new tests
+test_file_path: ComicRatingTests/Modules
+
+# The Xcode group path to new tests
+test_group_path: ComicRatingTests
+
+### Dependencies settings section
+
+cartfile_path: Cartfile
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
