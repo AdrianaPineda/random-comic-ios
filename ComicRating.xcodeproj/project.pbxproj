@@ -126,9 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				015F706324209415004ED20A /* Modules */,
+				015F707724209415004ED20A /* AppDependencies.swift */,
 				015F7030241F463B004ED20A /* AppDelegate.swift */,
 				015F7034241F463B004ED20A /* ViewController.swift */,
-				015F707724209415004ED20A /* AppDependencies.swift */,
 				015F7039241F463C004ED20A /* Assets.xcassets */,
 				015F703B241F463C004ED20A /* LaunchScreen.storyboard */,
 				015F703E241F463C004ED20A /* Info.plist */,
@@ -166,11 +166,11 @@
 		015F706424209415004ED20A /* ShowComic */ = {
 			isa = PBXGroup;
 			children = (
-				015F706524209415004ED20A /* Presenter */,
 				015F706824209415004ED20A /* View */,
-				015F706D24209415004ED20A /* Configurator */,
+				015F706524209415004ED20A /* Presenter */,
 				015F707024209415004ED20A /* Interactor */,
 				015F707424209415004ED20A /* Router */,
+				015F706D24209415004ED20A /* Configurator */,
 			);
 			path = ShowComic;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 		015F706524209415004ED20A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				015F706624209415004ED20A /* ShowComicPresenter.swift */,
 				015F706724209415004ED20A /* ShowComicModuleInput.swift */,
+				015F706624209415004ED20A /* ShowComicPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 		015F706824209415004ED20A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				015F706924209415004ED20A /* ShowComicViewController.xib */,
-				015F706A24209415004ED20A /* ShowComicViewController.swift */,
 				015F706B24209415004ED20A /* ShowComicViewInput.swift */,
 				015F706C24209415004ED20A /* ShowComicViewOutput.swift */,
+				015F706A24209415004ED20A /* ShowComicViewController.swift */,
+				015F706924209415004ED20A /* ShowComicViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 		015F707024209415004ED20A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				015F707124209415004ED20A /* ShowComicInteractor.swift */,
 				015F707224209415004ED20A /* ShowComicInteractorInput.swift */,
 				015F707324209415004ED20A /* ShowComicInteractorOutput.swift */,
+				015F707124209415004ED20A /* ShowComicInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 		015F707424209415004ED20A /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				015F707524209415004ED20A /* ShowComicRouter.swift */,
 				015F707624209415004ED20A /* ShowComicRouterInput.swift */,
+				015F707524209415004ED20A /* ShowComicRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
