@@ -9,5 +9,6 @@
 class ShowComicInteractor: ShowComicInteractorInput {
 
     weak var output: ShowComicInteractorOutput!
+    var apiService: ComicApiServiceInterface!
 
 }

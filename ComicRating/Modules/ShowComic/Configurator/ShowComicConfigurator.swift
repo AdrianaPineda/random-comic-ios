@@ -19,8 +19,11 @@ class ShowComicModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
+        let apiService = ComicApiService()
+
         let interactor = ShowComicInteractor()
         interactor.output = presenter
+        interactor.apiService = apiService
 
         presenter.interactor = interactor
         viewController.output = presenter
