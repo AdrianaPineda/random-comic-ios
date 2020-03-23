@@ -9,6 +9,12 @@
 import UIKit
 
 class ComicApiService: ComicApiServiceInterface {
+    var baseUrl: String
+
+    init(baseUrl: String) {
+        self.baseUrl = baseUrl
+    }
+
     func getComic(id: Int) -> Comic {
         return Comic(month: 1, year: 1, title: "a", safeTitle: "", img: UIImage())
     }

@@ -16,6 +16,7 @@ struct Comic {
     var img: UIImage
 }
 
-protocol ComicApiServiceInterface {
+protocol ComicApiServiceInterface: ServiceInterface {
+    var baseUrl: String { get set }
     func getComic(id: Int) -> Comic
 }

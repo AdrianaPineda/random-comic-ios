@@ -10,7 +10,7 @@ import UIKit
 
 class ShowComicModuleConfigurator {
 
-    func configure() -> ShowComicRouter {
+    func configure(services: ServiceBuilderInterface) -> ShowComicRouter {
 
         let viewController = ShowComicViewController()
         let router = ShowComicRouter()
@@ -19,7 +19,7 @@ class ShowComicModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let apiService = ComicApiService()
+        let apiService = services.comicApi
 
         let interactor = ShowComicInteractor()
         interactor.output = presenter

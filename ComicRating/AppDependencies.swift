@@ -13,8 +13,10 @@ class AppDependencies {
     var showComicRouter: ShowComicRouter?
 
     func initDependencies() {
+        let serviceBuilder = ServiceBuilder()
+
         let showComicModuleConfigurator = ShowComicModuleConfigurator()
-        self.showComicRouter = showComicModuleConfigurator.configure()
+        self.showComicRouter = showComicModuleConfigurator.configure(services: serviceBuilder)
     }
 
     func setRootViewControllerInWindow(window: UIWindow) {
