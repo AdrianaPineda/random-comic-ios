@@ -6,9 +6,13 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-class ShowComicInteractor: ShowComicInteractorInput {
-
+class ShowComicInteractor {
     weak var output: ShowComicInteractorOutput!
-    var apiService: ComicApiServiceInterface!
+    let apiService: ComicApiServiceInterface
 
+    init(apiService: ComicApiServiceInterface) {
+        self.apiService = apiService
+    }
 }
+
+extension ShowComicInteractor: ShowComicInteractorInput {}

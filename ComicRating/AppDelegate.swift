@@ -9,16 +9,14 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder {
     var window: UIWindow?
+    let dependencies = AppDependencies()
+}
 
+extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
-        let dependencies = AppDependencies()
-        dependencies.initDependencies()
-
-        self.window = UIWindow()
         if let window = self.window {
             dependencies.setRootViewControllerInWindow(window: window)
         }
