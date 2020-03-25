@@ -14,4 +14,5 @@ protocol ShowComicViewOutput {
     */
 
     func viewIsReady()
+    func nextButtonClicked()
 }

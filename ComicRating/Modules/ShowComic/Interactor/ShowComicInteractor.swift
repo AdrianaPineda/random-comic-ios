@@ -9,16 +9,23 @@
 class ShowComicInteractor {
     weak var output: ShowComicInteractorOutput!
     let apiService: ComicApiServiceInterface
+    let randomNumber: RandomNumber
 
-    init(apiService: ComicApiServiceInterface) {
+    init(apiService: ComicApiServiceInterface, randomNumber: RandomNumber) {
         self.apiService = apiService
+        self.randomNumber = randomNumber
     }
 }
 
 extension ShowComicInteractor: ShowComicInteractorInput {
     func fetchComic() {
-        let randomId = 2
-        let comic = self.apiService.getComic(id: randomId)
+        let randomComicNumber = self.getRandomComicNumber()
+        let comic = self.apiService.getComic(id: randomComicNumber)
         self.output.comicFetched(comic: comic)
+    }
+
+    func getRandomComicNumber() -> Int {
+        let lastComic = self.apiService.getLastComic()
+        return self.randomNumber.get(from: 1, to: lastComic.number)
     }
 }

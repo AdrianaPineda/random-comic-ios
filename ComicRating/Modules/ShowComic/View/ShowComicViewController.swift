@@ -9,8 +9,9 @@
 import UIKit
 
 class ShowComicViewController: UIViewController {
-    @IBOutlet var comicTitle: UILabel!
-    @IBOutlet weak var comicImage: UIImageView!
+    @IBOutlet var comicTitleLabel: UILabel!
+    @IBOutlet weak var comicImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     var output: ShowComicViewOutput!
 
     // MARK: Life cycle
@@ -23,10 +24,15 @@ class ShowComicViewController: UIViewController {
     // MARK: ShowComicViewInput
 
     func setupInitialState() {}
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        self.output.nextButtonClicked()
+    }
 }
 
+// MARK: - ShowComicViewInput
 extension ShowComicViewController: ShowComicViewInput {
     func showComic(comic: Comic) {
-        comicTitle.text = comic.title
+        comicTitleLabel.text = comic.title
+        comicImageView.image = comic.img
     }
 }

@@ -20,7 +20,8 @@ class ShowComicModuleConfigurator {
         presenter.router = router
 
         let comicApi = App.shared.services.comicApi
-        let interactor = ShowComicInteractor(apiService: comicApi)
+        let intRandomNumber = IntRandomNumber()
+        let interactor = ShowComicInteractor(apiService: comicApi, randomNumber: intRandomNumber)
         interactor.output = presenter
 
         presenter.interactor = interactor

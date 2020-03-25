@@ -9,6 +9,7 @@
 import UIKit
 
 struct Comic {
+    var number: Int
     var month: Int
     var year: Int
     var day: Int
@@ -20,4 +21,5 @@ struct Comic {
 protocol ComicApiServiceInterface: ServiceInterface {
     var baseUrl: String { get set }
     func getComic(id: Int) -> Comic
+    func getLastComic() -> Comic
 }

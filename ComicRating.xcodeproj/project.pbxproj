@@ -34,6 +34,8 @@
 		01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */; };
 		01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A40242889E800883D93 /* ServiceBuilder.swift */; };
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
+		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
+		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
 		01878A40242889E800883D93 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				01878A2F2427779E00883D93 /* Services */,
+				01A5DDD8242B1B7600F77F4F /* Common */,
 				015F706324209415004ED20A /* Modules */,
 				015F707724209415004ED20A /* AppDependencies.swift */,
 				01878A422429C95000883D93 /* App.swift */,
@@ -254,6 +259,15 @@
 				01878A392427817E00883D93 /* ComicApiService.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		01A5DDD8242B1B7600F77F4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */,
+				01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,8 +422,10 @@
 				015F708224209415004ED20A /* ShowComicInteractorOutput.swift in Sources */,
 				015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */,
 				01878A432429C95000883D93 /* App.swift in Sources */,
+				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
+				01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
 				01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */,

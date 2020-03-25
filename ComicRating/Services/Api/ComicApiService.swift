@@ -16,6 +16,10 @@ class ComicApiService: ComicApiServiceInterface {
     }
 
     func getComic(id: Int) -> Comic {
-        return Comic(month: 1, year: 1, day: 3, title: "a", safeTitle: "", img: UIImage())
+        return Comic(number: 1, month: 1, year: 1, day: 3, title: "random title", safeTitle: "", img: UIImage())
+    }
+
+    func getLastComic() -> Comic {
+        return Comic(number: 123456, month: 1, year: 1, day: 3, title: "random title", safeTitle: "", img: UIImage())
     }
 }
