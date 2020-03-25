@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowComicViewController" customModule="ComicRating" customModuleProvider="target">
             <connections>
-                <outlet property="testLabel" destination="VHH-nj-aiN" id="1wn-MG-hoa"/>
+                <outlet property="comicImage" destination="BEj-95-jFs" id="TFo-sO-af2"/>
+                <outlet property="comicTitle" destination="VHH-nj-aiN" id="1wn-MG-hoa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="x91-eS-bzM"/>
             </connections>
         </placeholder>

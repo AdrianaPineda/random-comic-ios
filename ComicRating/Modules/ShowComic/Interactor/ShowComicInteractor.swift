@@ -15,4 +15,10 @@ class ShowComicInteractor {
     }
 }
 
-extension ShowComicInteractor: ShowComicInteractorInput {}
+extension ShowComicInteractor: ShowComicInteractorInput {
+    func fetchComic() {
+        let randomId = 2
+        let comic = self.apiService.getComic(id: randomId)
+        self.output.comicFetched(comic: comic)
+    }
+}

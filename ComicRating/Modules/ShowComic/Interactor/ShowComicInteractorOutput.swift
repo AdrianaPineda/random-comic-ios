@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ShowComicInteractorOutput: class {
-
+    func comicFetched(comic: Comic)
 }

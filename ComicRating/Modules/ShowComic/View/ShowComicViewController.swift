@@ -8,19 +8,25 @@
 
 import UIKit
 
-class ShowComicViewController: UIViewController, ShowComicViewInput {
-
-    @IBOutlet weak var testLabel: UILabel!
+class ShowComicViewController: UIViewController {
+    @IBOutlet var comicTitle: UILabel!
+    @IBOutlet weak var comicImage: UIImageView!
     var output: ShowComicViewOutput!
 
     // MARK: Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        output.viewIsReady()
+        output.viewIsReady()
     }
 
-
     // MARK: ShowComicViewInput
-    func setupInitialState() {
+
+    func setupInitialState() {}
+}
+
+extension ShowComicViewController: ShowComicViewInput {
+    func showComic(comic: Comic) {
+        comicTitle.text = comic.title
     }
 }
