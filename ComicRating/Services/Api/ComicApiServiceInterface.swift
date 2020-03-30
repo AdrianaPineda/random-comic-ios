@@ -20,6 +20,6 @@ struct Comic {
 
 protocol ComicApiServiceInterface: ServiceInterface {
     var baseUrl: String { get set }
-    func getComic(id: Int) -> Comic
-    func getLastComic() -> Comic
+    func getComic(id: Int, completion: @escaping ((Comic) -> Void))
+    func getLastComic(completion: @escaping ((Comic) -> Void))
 }

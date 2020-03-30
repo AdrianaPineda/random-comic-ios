@@ -36,6 +36,7 @@
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
+		01AA441E242DC5B300612796 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
+		01AA441D242DC5B300612796 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				01878A3724277E1700883D93 /* NetworkProtocol.swift */,
+				01AA441D242DC5B300612796 /* HttpClient.swift */,
 				01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */,
 				01878A392427817E00883D93 /* ComicApiService.swift */,
 			);
@@ -425,6 +428,7 @@
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
+				01AA441E242DC5B300612796 /* HttpClient.swift in Sources */,
 				01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,

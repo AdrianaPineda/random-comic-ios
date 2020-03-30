@@ -19,13 +19,18 @@ class ShowComicInteractor {
 
 extension ShowComicInteractor: ShowComicInteractorInput {
     func fetchComic() {
-        let randomComicNumber = self.getRandomComicNumber()
-        let comic = self.apiService.getComic(id: randomComicNumber)
-        self.output.comicFetched(comic: comic)
+        // TODO -> Promises?
+        self.getRandomComicNumber { randomComicNumber in
+            self.apiService.getComic(id: randomComicNumber) { comic in
+                self.output.comicFetched(comic: comic)
+            }
+        }
     }
 
-    func getRandomComicNumber() -> Int {
-        let lastComic = self.apiService.getLastComic()
-        return self.randomNumber.get(from: 1, to: lastComic.number)
+    func getRandomComicNumber(completion: @escaping ((Int) -> Void)) {
+        self.apiService.getLastComic { comic in
+            let randomNumber = self.randomNumber.get(from: 1, to: comic.number)
+            completion(randomNumber)
+        }
     }
 }

@@ -7,7 +7,8 @@
 //
 
 class ServiceBuilder: ServiceBuilderInterface {
+    let httpClient = HttpClient()
     lazy var comicApi: ComicApiServiceInterface = {
-        ComicApiService(baseUrl: "https://xkcd.com")
+        ComicApiService(baseUrl: "https://xkcd.com", httpClient: httpClient)
     }()
 }
