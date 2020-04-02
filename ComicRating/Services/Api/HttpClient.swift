@@ -11,14 +11,25 @@ import UIKit
 import PromiseKit
 
 class HttpClient: NetworkProtocol {
-    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, RequestError>) -> Void) where T : Decodable {
+
+    func getAlamofireHttpMethod(method: Http.Method) -> HTTPMethod {
+        switch method {
+            case .get:
+                return HTTPMethod.get
+            default:
+                return HTTPMethod.post
+        }
+    }
+
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T : Decodable {
         // TODP map method
-        AF.request(url, method: .get, parameters: params).responseJSON { response in
+        let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
+        AF.request(url, method: alamofireHttpMethod, parameters: params).responseJSON { response in
 
             print("====", response)
 
             guard let data = response.data else {
-                completion(.failure(RequestError.invalidResponse("invalid data")))
+                completion(.failure(Http.RequestError.invalidResponse("invalid data")))
                 return;
             }
 
@@ -27,12 +38,12 @@ class HttpClient: NetworkProtocol {
                 let response = try decoder.decode(responseType, from: data)
                 completion(.success(response))
             } catch let error {
-                completion(.failure(RequestError.invalidResponse(error.localizedDescription)))
+                completion(.failure(Http.RequestError.invalidResponse(error.localizedDescription)))
             }
         }
     }
 
-    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
         // TODP map method
 
         return Promise { seal in
@@ -40,7 +51,7 @@ class HttpClient: NetworkProtocol {
                 print("====", response)
 
                 guard let data = response.data else {
-                    seal.reject(RequestError.invalidResponse("invalid data"))
+                    seal.reject(Http.RequestError.invalidResponse("invalid data"))
                     return
                 }
 
@@ -49,7 +60,7 @@ class HttpClient: NetworkProtocol {
                     let response = try decoder.decode(responseType, from: data)
                     seal.fulfill(response)
                 } catch {
-                    seal.reject(RequestError.invalidResponse(error.localizedDescription))
+                    seal.reject(Http.RequestError.invalidResponse(error.localizedDescription))
                 }
             }
         }

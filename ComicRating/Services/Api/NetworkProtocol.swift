@@ -19,19 +19,22 @@
 // }
 import PromiseKit
 
-enum MyHTTPMethod {
-    case GET
-    case POST
-}
+enum Http {
+    enum Method {
+        case get
+        case post
+    }
 
-enum RequestError: Error {
-    case invalidResponse(String?)
-    case statusCode(Int)
-    case unknown(Swift.Error)
+    enum RequestError: Error {
+        case invalidResponse(String?)
+        case statusCode(Int)
+        case unknown(Swift.Error)
+    }
+
 }
 
 
 protocol NetworkProtocol {
-    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, RequestError>) -> Void) where T: Decodable
-    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable
 }
