@@ -7,11 +7,10 @@
 //
 
 import Alamofire
-import UIKit
 import PromiseKit
+import UIKit
 
 class HttpClient: NetworkProtocol {
-
     func getAlamofireHttpMethod(method: Http.Method) -> HTTPMethod {
         switch method {
             case .get:
@@ -21,7 +20,7 @@ class HttpClient: NetworkProtocol {
         }
     }
 
-    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T : Decodable {
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
         // TODP map method
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
         AF.request(url, method: alamofireHttpMethod, parameters: params).responseJSON { response in
@@ -30,14 +29,14 @@ class HttpClient: NetworkProtocol {
 
             guard let data = response.data else {
                 completion(.failure(Http.RequestError.invalidResponse("invalid data")))
-                return;
+                return
             }
 
             do {
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(responseType, from: data)
                 completion(.success(response))
-            } catch let error {
+            } catch {
                 completion(.failure(Http.RequestError.invalidResponse(error.localizedDescription)))
             }
         }

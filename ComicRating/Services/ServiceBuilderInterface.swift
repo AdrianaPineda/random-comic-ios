@@ -12,7 +12,6 @@ protocol ServiceBuilderInterface {
 }
 
 extension ServiceBuilderInterface {
-
     func setup() {
         self.comicApi.setup()
     }

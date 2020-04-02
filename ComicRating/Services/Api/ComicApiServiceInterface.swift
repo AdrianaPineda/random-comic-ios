@@ -6,8 +6,8 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-import UIKit
 import PromiseKit
+import UIKit
 
 protocol ComicApiServiceInterface: ServiceInterface {
     var baseUrl: String { get set }

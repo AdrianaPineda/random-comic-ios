@@ -30,9 +30,7 @@ enum Http {
         case statusCode(Int)
         case unknown(Swift.Error)
     }
-
 }
-
 
 protocol NetworkProtocol {
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable
