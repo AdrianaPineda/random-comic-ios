@@ -7,19 +7,12 @@
 //
 
 import UIKit
-
-struct Comic {
-    var number: Int
-    var month: Int
-    var year: Int
-    var day: Int
-    var title: String
-    var safeTitle: String
-    var img: UIImage
-}
+import PromiseKit
 
 protocol ComicApiServiceInterface: ServiceInterface {
     var baseUrl: String { get set }
     func getComic(id: Int, completion: @escaping ((Comic) -> Void))
     func getLastComic(completion: @escaping ((Comic) -> Void))
+    func getComic(id: Int) -> Promise<Comic>
+    func getLastComic() -> Promise<Comic>
 }

@@ -6,27 +6,8 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
+import PromiseKit
 import UIKit
-
-struct ComicResponse: Codable {
-    var number: Int
-    var month: String
-    var year: String
-    var day: String
-    var title: String
-    var safeTitle: String
-    var img: String
-
-    enum CodingKeys: String, CodingKey {
-        case number = "num"
-        case month
-        case year
-        case day
-        case title
-        case safeTitle = "safe_title"
-        case img
-    }
-}
 
 class ComicApiService: ComicApiServiceInterface {
     var baseUrl: String
@@ -60,6 +41,32 @@ class ComicApiService: ComicApiServiceInterface {
                     print(error)
             }
         }
+    }
+
+    func getComic(id: Int) -> Promise<Comic> {
+        // Promise?
+        let url = "\(self.baseUrl)/\(id)/info.0.json"
+        return self.getComic(url: url)
+    }
+
+    func getLastComic() -> Promise<Comic> { 
+        let url = "\(self.baseUrl)/info.0.json"
+        return self.getComic(url: url)
+    }
+
+    private func getComic(url: String) -> Promise<Comic> {
+        let promise = firstly {
+            self.httpClient.request(method: .GET, url: url, params: nil, responseType: ComicResponse.self)
+        }.then { (comicResponse: ComicResponse) -> Promise<Comic> in
+            return Promise<Comic>.value(self.toComic(comicResponse: comicResponse))
+        }
+
+        promise.catch { error in
+            // TODO:
+            print(error)
+        }
+
+        return promise
     }
 
     private func toComic(comicResponse: ComicResponse) -> Comic {

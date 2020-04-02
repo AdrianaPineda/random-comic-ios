@@ -37,6 +37,9 @@
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpClient.swift */; };
+		01AA44242432FC3B00612796 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA44232432FC3B00612796 /* PromiseKit */; };
+		01AA44262432FC5200612796 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA44252432FC5200612796 /* Comic.swift */; };
+		01AA44302435981D00612796 /* ComicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA442F2435981D00612796 /* ComicResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,8 @@
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		01AA44252432FC5200612796 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		01AA442F2435981D00612796 /* ComicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01878A3424277C8B00883D93 /* Alamofire in Frameworks */,
+				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +235,7 @@
 				015F707224209415004ED20A /* ShowComicInteractorInput.swift */,
 				015F707324209415004ED20A /* ShowComicInteractorOutput.swift */,
 				015F707124209415004ED20A /* ShowComicInteractor.swift */,
+				01AA44252432FC5200612796 /* Comic.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 				01AA441D242DC5B300612796 /* HttpClient.swift */,
 				01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */,
 				01878A392427817E00883D93 /* ComicApiService.swift */,
+				01AA442F2435981D00612796 /* ComicResponse.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 			name = ComicRating;
 			packageProductDependencies = (
 				01878A3324277C8B00883D93 /* Alamofire */,
+				01AA44232432FC3B00612796 /* PromiseKit */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -366,6 +375,7 @@
 			mainGroup = 015F7024241F463B004ED20A;
 			packageReferences = (
 				01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -412,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
+				01AA44262432FC5200612796 /* Comic.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
 				01878A3824277E1700883D93 /* NetworkProtocol.swift in Sources */,
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
@@ -429,6 +440,7 @@
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpClient.swift in Sources */,
+				01AA44302435981D00612796 /* ComicResponse.swift in Sources */,
 				01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
@@ -758,6 +770,14 @@
 				minimumVersion = 5.0.4;
 			};
 		};
+		01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.13.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -765,6 +785,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		01AA44232432FC3B00612796 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

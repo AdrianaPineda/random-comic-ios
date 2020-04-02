@@ -17,6 +17,7 @@
 //        case unknown(Swift.Error)
 //    }
 // }
+import PromiseKit
 
 enum MyHTTPMethod {
     case GET
@@ -29,6 +30,8 @@ enum RequestError: Error {
     case unknown(Swift.Error)
 }
 
+
 protocol NetworkProtocol {
-    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Result<T, RequestError>) -> Void) where T: Decodable
+    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, RequestError>) -> Void) where T: Decodable
+    func request<T>(method: MyHTTPMethod, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable
 }
