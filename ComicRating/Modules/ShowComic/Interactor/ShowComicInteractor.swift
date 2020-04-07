@@ -1,4 +1,5 @@
 //
+import Foundation
 //  ShowComicShowComicInteractor.swift
 //  ComicRating
 //
@@ -10,10 +11,12 @@ import PromiseKit
 class ShowComicInteractor {
     weak var output: ShowComicInteractorOutput!
     let apiService: ComicApiServiceInterface
+    let imageDownloader: ImageDownloaderServiceInterface
     let randomNumber: RandomNumber
 
-    init(apiService: ComicApiServiceInterface, randomNumber: RandomNumber) {
+    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface, randomNumber: RandomNumber) {
         self.apiService = apiService
+        self.imageDownloader = imageDownloader
         self.randomNumber = randomNumber
     }
 }
@@ -22,13 +25,24 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     // MARK: - Promises
 
     func fetchComic() {
+
         self.getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
-        }.done { comic in
-            self.output.comicFetched(comic: comic)
-        }.catch { _ in
+        }.then { (comic: Comic) in
+            // TODO: fix
+            self.imageDownloader.fetchImage(fromUrl: comic.img).done { (data: Data) in
+                let upcomingComic = self.toUpcomicComic(comic: comic, imgData: data)
+                self.output.comicFetched(comic: upcomingComic)
+            }
+        }
+        .catch { _ in
             // TODO:
         }
+    }
+
+    func toUpcomicComic(comic: Comic, imgData: Data) -> UpcomingComic {
+        let upcomingComic = UpcomingComic(number: comic.number, month: comic.month, year: comic.year, day: comic.day, title: comic.title, safeTitle: comic.safeTitle, img: imgData)
+        return upcomingComic
     }
 
     func getRandomComicNumber() -> Promise<Int> {

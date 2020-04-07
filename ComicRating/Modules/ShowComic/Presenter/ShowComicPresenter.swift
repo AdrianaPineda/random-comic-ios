@@ -23,7 +23,7 @@ extension ShowComicPresenter: ShowComicViewOutput {
 }
 
 extension ShowComicPresenter: ShowComicInteractorOutput {
-    func comicFetched(comic: Comic) {
+    func comicFetched(comic: UpcomingComic) {
         self.view.showComic(comic: comic)
     }
 }

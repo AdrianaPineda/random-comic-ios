@@ -10,7 +10,7 @@ import Alamofire
 import PromiseKit
 import UIKit
 
-class HttpClient: NetworkProtocol {
+class HttpClient: HttpClientInterface {
     func getAlamofireHttpMethod(method: Http.Method) -> HTTPMethod {
         switch method {
             case .get:

@@ -14,5 +14,5 @@ protocol ShowComicViewInput: class {
     */
 
     func setupInitialState()
-    func showComic(comic: Comic)
+    func showComic(comic: UpcomingComic)
 }

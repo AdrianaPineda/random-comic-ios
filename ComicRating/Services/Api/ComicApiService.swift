@@ -11,9 +11,9 @@ import UIKit
 
 class ComicApiService: ComicApiServiceInterface {
     var baseUrl: String
-    var httpClient: NetworkProtocol
+    var httpClient: HttpClientInterface
 
-    init(baseUrl: String, httpClient: NetworkProtocol) {
+    init(baseUrl: String, httpClient: HttpClientInterface) {
         self.baseUrl = baseUrl
         self.httpClient = httpClient
     }
@@ -73,6 +73,10 @@ class ComicApiService: ComicApiServiceInterface {
     // MARK: - Common
 
     private func toComic(comicResponse: ComicResponse) -> Comic {
-        return Comic(number: comicResponse.number, month: 1, year: 1, day: 3, title: comicResponse.title, safeTitle: "", img: UIImage())
+        let month = Int(comicResponse.month) ?? 0
+        let year = Int(comicResponse.year) ?? 0
+        let day = Int(comicResponse.day) ?? 0
+
+        return Comic(number: comicResponse.number, month: month, year: year, day: day, title: comicResponse.title, safeTitle: comicResponse.safeTitle, img: comicResponse.img)
     }
 }

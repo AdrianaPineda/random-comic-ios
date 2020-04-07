@@ -31,8 +31,8 @@ class ShowComicViewController: UIViewController {
 
 // MARK: - ShowComicViewInput
 extension ShowComicViewController: ShowComicViewInput {
-    func showComic(comic: Comic) {
+    func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
-        comicImageView.image = comic.img
+        comicImageView.image = UIImage(data: comic.img)
     }
 }

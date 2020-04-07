@@ -28,7 +28,7 @@
 		015F708524209415004ED20A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707724209415004ED20A /* AppDependencies.swift */; };
 		01878A3424277C8B00883D93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01878A3324277C8B00883D93 /* Alamofire */; };
 		01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */; };
-		01878A3824277E1700883D93 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3724277E1700883D93 /* NetworkProtocol.swift */; };
+		01878A3824277E1700883D93 /* HttpClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3724277E1700883D93 /* HttpClientInterface.swift */; };
 		01878A3A2427817E00883D93 /* ComicApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A392427817E00883D93 /* ComicApiService.swift */; };
 		01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3B242887C800883D93 /* ServiceInterface.swift */; };
 		01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */; };
@@ -40,6 +40,10 @@
 		01AA44242432FC3B00612796 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA44232432FC3B00612796 /* PromiseKit */; };
 		01AA44262432FC5200612796 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA44252432FC5200612796 /* Comic.swift */; };
 		01AA44302435981D00612796 /* ComicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA442F2435981D00612796 /* ComicResponse.swift */; };
+		01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */; };
+		01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA4435243C34A200612796 /* ImageDownloaderService.swift */; };
+		01AA4439243C351600612796 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA4438243C351600612796 /* AlamofireImage */; };
+		01AA443B243C386600612796 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA443A243C386600612796 /* Http.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +90,7 @@
 		015F707624209415004ED20A /* ShowComicRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouterInput.swift; sourceTree = "<group>"; };
 		015F707724209415004ED20A /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiServiceInterface.swift; sourceTree = "<group>"; };
-		01878A3724277E1700883D93 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		01878A3724277E1700883D93 /* HttpClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientInterface.swift; sourceTree = "<group>"; };
 		01878A392427817E00883D93 /* ComicApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiService.swift; sourceTree = "<group>"; };
 		01878A3B242887C800883D93 /* ServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
@@ -97,6 +101,9 @@
 		01AA441D242DC5B300612796 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		01AA44252432FC5200612796 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		01AA442F2435981D00612796 /* ComicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicResponse.swift; sourceTree = "<group>"; };
+		01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderServiceInterface.swift; sourceTree = "<group>"; };
+		01AA4435243C34A200612796 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
+		01AA443A243C386600612796 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +113,7 @@
 			files = (
 				01878A3424277C8B00883D93 /* Alamofire in Frameworks */,
 				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
+				01AA4439243C351600612796 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +271,14 @@
 		01878A3D2428885200883D93 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				01878A3724277E1700883D93 /* NetworkProtocol.swift */,
+				01AA443A243C386600612796 /* Http.swift */,
+				01878A3724277E1700883D93 /* HttpClientInterface.swift */,
 				01AA441D242DC5B300612796 /* HttpClient.swift */,
 				01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */,
 				01878A392427817E00883D93 /* ComicApiService.swift */,
 				01AA442F2435981D00612796 /* ComicResponse.swift */,
+				01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */,
+				01AA4435243C34A200612796 /* ImageDownloaderService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -300,6 +311,7 @@
 			packageProductDependencies = (
 				01878A3324277C8B00883D93 /* Alamofire */,
 				01AA44232432FC3B00612796 /* PromiseKit */,
+				01AA4438243C351600612796 /* AlamofireImage */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -376,6 +388,7 @@
 			packageReferences = (
 				01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -423,8 +436,9 @@
 			files = (
 				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
+				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
-				01878A3824277E1700883D93 /* NetworkProtocol.swift in Sources */,
+				01878A3824277E1700883D93 /* HttpClientInterface.swift in Sources */,
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
 				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,
@@ -433,9 +447,11 @@
 				015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */,
 				01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */,
 				015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */,
+				01AA443B243C386600612796 /* Http.swift in Sources */,
 				015F708224209415004ED20A /* ShowComicInteractorOutput.swift in Sources */,
 				015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */,
 				01878A432429C95000883D93 /* App.swift in Sources */,
+				01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */,
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
@@ -778,6 +794,14 @@
 				minimumVersion = 6.13.1;
 			};
 		};
+		01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -790,6 +814,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		01AA4438243C351600612796 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
