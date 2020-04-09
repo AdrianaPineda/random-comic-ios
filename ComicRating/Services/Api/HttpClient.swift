@@ -20,6 +20,7 @@ class HttpClient: HttpClientInterface {
         }
     }
 
+    // MARK: - Completion handlers
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
         // TODP map method
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
@@ -42,6 +43,7 @@ class HttpClient: HttpClientInterface {
         }
     }
 
+    // MARK: - Promises
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
         // TODP map method
 
