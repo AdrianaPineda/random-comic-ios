@@ -11,11 +11,11 @@ import UIKit
 
 class ComicApiService: ComicApiServiceInterface {
     var baseUrl: String
-    var httpClient: HttpClientInterface
+    var httpService: HttpServiceInterface
 
-    init(baseUrl: String, httpClient: HttpClientInterface) {
+    init(baseUrl: String, httpService: HttpServiceInterface) {
         self.baseUrl = baseUrl
-        self.httpClient = httpClient
+        self.httpService = httpService
     }
 
     // MARK: - Completion handlers
@@ -31,7 +31,7 @@ class ComicApiService: ComicApiServiceInterface {
     }
 
     private func getComic(url: String, completion: @escaping ((Comic) -> Void)) {
-        self.httpClient.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
+        self.httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
 
             switch result {
                 case .success(let comicResponse):
@@ -57,7 +57,7 @@ class ComicApiService: ComicApiServiceInterface {
 
     private func getComic(url: String) -> Promise<Comic> {
         let promise = firstly {
-            self.httpClient.request(method: .get, url: url, params: nil, responseType: ComicResponse.self)
+            self.httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self)
         }.then { (comicResponse: ComicResponse) -> Promise<Comic> in
             Promise<Comic>.value(self.toComic(comicResponse: comicResponse))
         }

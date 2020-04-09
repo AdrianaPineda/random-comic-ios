@@ -1,5 +1,5 @@
 //
-//  HttpClientInterface.swift
+//  HttpServiceInterface.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 22/03/2020.
@@ -8,7 +8,7 @@
 
 import PromiseKit
 
-protocol HttpClientInterface {
+protocol HttpServiceInterface {
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable
 }

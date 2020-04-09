@@ -27,7 +27,7 @@
 		015F708524209415004ED20A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707724209415004ED20A /* AppDependencies.swift */; };
 		01878A3424277C8B00883D93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01878A3324277C8B00883D93 /* Alamofire */; };
 		01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */; };
-		01878A3824277E1700883D93 /* HttpClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3724277E1700883D93 /* HttpClientInterface.swift */; };
+		01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3724277E1700883D93 /* HttpServiceInterface.swift */; };
 		01878A3A2427817E00883D93 /* ComicApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A392427817E00883D93 /* ComicApiService.swift */; };
 		01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3B242887C800883D93 /* ServiceInterface.swift */; };
 		01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */; };
@@ -35,7 +35,7 @@
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
-		01AA441E242DC5B300612796 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpClient.swift */; };
+		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
 		01AA44242432FC3B00612796 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA44232432FC3B00612796 /* PromiseKit */; };
 		01AA44262432FC5200612796 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA44252432FC5200612796 /* Comic.swift */; };
 		01AA44302435981D00612796 /* ComicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA442F2435981D00612796 /* ComicResponse.swift */; };
@@ -88,7 +88,7 @@
 		015F707624209415004ED20A /* ShowComicRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouterInput.swift; sourceTree = "<group>"; };
 		015F707724209415004ED20A /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiServiceInterface.swift; sourceTree = "<group>"; };
-		01878A3724277E1700883D93 /* HttpClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientInterface.swift; sourceTree = "<group>"; };
+		01878A3724277E1700883D93 /* HttpServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceInterface.swift; sourceTree = "<group>"; };
 		01878A392427817E00883D93 /* ComicApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiService.swift; sourceTree = "<group>"; };
 		01878A3B242887C800883D93 /* ServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
-		01AA441D242DC5B300612796 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		01AA44252432FC5200612796 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		01AA442F2435981D00612796 /* ComicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicResponse.swift; sourceTree = "<group>"; };
 		01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderServiceInterface.swift; sourceTree = "<group>"; };
@@ -269,8 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				01AA443A243C386600612796 /* Http.swift */,
-				01878A3724277E1700883D93 /* HttpClientInterface.swift */,
-				01AA441D242DC5B300612796 /* HttpClient.swift */,
+				01878A3724277E1700883D93 /* HttpServiceInterface.swift */,
+				01AA441D242DC5B300612796 /* HttpService.swift */,
 				01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */,
 				01878A392427817E00883D93 /* ComicApiService.swift */,
 				01AA442F2435981D00612796 /* ComicResponse.swift */,
@@ -434,7 +434,7 @@
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
-				01878A3824277E1700883D93 /* HttpClientInterface.swift in Sources */,
+				01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */,
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
 				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,
@@ -451,7 +451,7 @@
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
-				01AA441E242DC5B300612796 /* HttpClient.swift in Sources */,
+				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
 				01AA44302435981D00612796 /* ComicResponse.swift in Sources */,
 				01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,

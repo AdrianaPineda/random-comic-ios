@@ -1,5 +1,5 @@
 //
-//  HttpClient.swift
+//  HttpService.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 27/03/2020.
@@ -10,7 +10,7 @@ import Alamofire
 import PromiseKit
 import UIKit
 
-class HttpClient: HttpClientInterface {
+class HttpService: HttpServiceInterface {
     func getAlamofireHttpMethod(method: Http.Method) -> HTTPMethod {
         switch method {
             case .get:
