@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Cosmos",
+        "repositoryURL": "https://github.com/evgenyneu/Cosmos.git",
+        "state": {
+          "branch": null,
+          "revision": "0b3a83379ec3ea4ae91b1944ea768a9a598047ee",
+          "version": "21.0.0"
+        }
+      },
+      {
         "package": "PromiseKit",
         "repositoryURL": "https://github.com/mxcl/PromiseKit",
         "state": {

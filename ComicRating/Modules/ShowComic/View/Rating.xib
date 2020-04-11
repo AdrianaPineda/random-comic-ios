@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Rating" customModule="ComicRating" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="iN0-l3-epB" id="Vmr-gL-8HV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="4C6-Yw-ygX">
+                    <rect key="frame" x="10" y="23" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iVa-qJ-fMV"/>
+                        <constraint firstAttribute="width" constant="40" id="qSb-0z-lMF"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-JO-YOl">
+                    <rect key="frame" x="70" y="23" width="40" height="40"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-bn-zhI">
+                    <rect key="frame" x="130" y="23" width="40" height="40"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-3B-cni">
+                    <rect key="frame" x="190" y="23" width="40" height="40"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="m27-PQ-WSK">
+                    <rect key="frame" x="250" y="23" width="40" height="40"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ncL-3B-cni" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="7:5" id="4bd-7K-nly"/>
+                <constraint firstItem="m27-PQ-WSK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="71H-Hs-xgv"/>
+                <constraint firstItem="S1K-bn-zhI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ex4-JB-bib"/>
+                <constraint firstItem="VLw-JO-YOl" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="FYa-bW-ioK"/>
+                <constraint firstItem="VLw-JO-YOl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HrG-Ye-Hr5"/>
+                <constraint firstItem="m27-PQ-WSK" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="IVU-1V-sRm"/>
+                <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JK5-6t-4ir"/>
+                <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1:5" id="Jw0-PH-7kz"/>
+                <constraint firstItem="S1K-bn-zhI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="5:5" id="Mos-j6-rdL"/>
+                <constraint firstItem="ncL-3B-cni" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="S8M-IP-EvJ"/>
+                <constraint firstItem="S1K-bn-zhI" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="VR1-8Y-Qry"/>
+                <constraint firstItem="m27-PQ-WSK" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="VaY-mJ-4O4"/>
+                <constraint firstItem="m27-PQ-WSK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="9:5" id="d1O-42-zpD"/>
+                <constraint firstItem="VLw-JO-YOl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="3:5" id="eKq-dW-8dZ"/>
+                <constraint firstItem="S1K-bn-zhI" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="f8U-ba-YEe"/>
+                <constraint firstItem="ncL-3B-cni" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jIq-xE-dyW"/>
+                <constraint firstItem="ncL-3B-cni" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="vgC-NZ-kGd"/>
+                <constraint firstItem="VLw-JO-YOl" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="vw7-7Q-UUb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="186.23188405797103" y="91.071428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="emptied_star" width="55" height="53"/>
+    </resources>
+</document>

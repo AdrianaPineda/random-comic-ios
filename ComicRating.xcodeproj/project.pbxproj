@@ -33,6 +33,9 @@
 		01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */; };
 		01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A40242889E800883D93 /* ServiceBuilder.swift */; };
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
+		01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 01927CB12441977E00D2BCC4 /* Cosmos */; };
+		01927CB4244197DB00D2BCC4 /* Rating.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* Rating.xib */; };
+		01927CB624419C0E00D2BCC4 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* Rating.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
@@ -94,6 +97,8 @@
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
 		01878A40242889E800883D93 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		01927CB3244197DB00D2BCC4 /* Rating.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Rating.xib; sourceTree = "<group>"; };
+		01927CB524419C0E00D2BCC4 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 			files = (
 				01878A3424277C8B00883D93 /* Alamofire in Frameworks */,
 				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
+				01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */,
 				01AA4439243C351600612796 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +228,8 @@
 				015F706C24209415004ED20A /* ShowComicViewOutput.swift */,
 				015F706A24209415004ED20A /* ShowComicViewController.swift */,
 				015F706924209415004ED20A /* ShowComicViewController.xib */,
+				01927CB524419C0E00D2BCC4 /* Rating.swift */,
+				01927CB3244197DB00D2BCC4 /* Rating.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 				01878A3324277C8B00883D93 /* Alamofire */,
 				01AA44232432FC3B00612796 /* PromiseKit */,
 				01AA4438243C351600612796 /* AlamofireImage */,
+				01927CB12441977E00D2BCC4 /* Cosmos */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -386,6 +395,7 @@
 				01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -403,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01927CB4244197DB00D2BCC4 /* Rating.xib in Resources */,
 				015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */,
 				015F703A241F463C004ED20A /* Assets.xcassets in Resources */,
 				015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */,
@@ -450,6 +461,7 @@
 				01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */,
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
+				01927CB624419C0E00D2BCC4 /* Rating.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
 				01AA44302435981D00612796 /* ComicResponse.swift in Sources */,
@@ -782,6 +794,14 @@
 				minimumVersion = 5.0.4;
 			};
 		};
+		01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
 		01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit";
@@ -805,6 +825,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		01927CB12441977E00D2BCC4 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 		01AA44232432FC3B00612796 /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
