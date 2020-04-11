@@ -161,6 +161,7 @@
 		015F702F241F463B004ED20A /* ComicRating */ = {
 			isa = PBXGroup;
 			children = (
+				01927CB72441A87600D2BCC4 /* App */,
 				01A5DDD8242B1B7600F77F4F /* Common */,
 				01878A2F2427779E00883D93 /* Services */,
 				015F706324209415004ED20A /* Modules */,
@@ -228,8 +229,6 @@
 				015F706C24209415004ED20A /* ShowComicViewOutput.swift */,
 				015F706A24209415004ED20A /* ShowComicViewController.swift */,
 				015F706924209415004ED20A /* ShowComicViewController.xib */,
-				01927CB524419C0E00D2BCC4 /* Rating.swift */,
-				01927CB3244197DB00D2BCC4 /* Rating.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +285,23 @@
 				01AA4435243C34A200612796 /* ImageDownloaderService.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		01927CB72441A87600D2BCC4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01927CB82441A88100D2BCC4 /* CustomViews */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01927CB82441A88100D2BCC4 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				01927CB524419C0E00D2BCC4 /* Rating.swift */,
+				01927CB3244197DB00D2BCC4 /* Rating.xib */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		01A5DDD8242B1B7600F77F4F /* Common */ = {
