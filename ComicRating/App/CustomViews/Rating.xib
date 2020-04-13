@@ -10,6 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Rating" customModule="ComicRating" customModuleProvider="target">
             <connections>
                 <outlet property="container" destination="iN0-l3-epB" id="Vmr-gL-8HV"/>
+                <outlet property="ratingFive" destination="m27-PQ-WSK" id="qMc-Zc-2hC"/>
+                <outlet property="ratingFour" destination="ncL-3B-cni" id="OY5-XN-cWw"/>
+                <outlet property="ratingOne" destination="4C6-Yw-ygX" id="zDe-5J-qPM"/>
+                <outlet property="ratingThree" destination="S1K-bn-zhI" id="MxB-bf-LDp"/>
+                <outlet property="ratingTwo" destination="VLw-JO-YOl" id="zl0-lr-Ief"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,24 +22,48 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="4C6-Yw-ygX">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="4C6-Yw-ygX">
                     <rect key="frame" x="10" y="23" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="star_one"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="iVa-qJ-fMV"/>
                         <constraint firstAttribute="width" constant="40" id="qSb-0z-lMF"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dHy-02-3Qf" appends="YES" id="Dfm-MU-avy"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-JO-YOl">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-JO-YOl">
                     <rect key="frame" x="70" y="23" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="star_two"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="wJE-Bh-mYW" appends="YES" id="VBx-pD-cXR"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-bn-zhI">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-bn-zhI">
                     <rect key="frame" x="130" y="23" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="star_three"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="1Tl-pL-bq2" appends="YES" id="yQc-BB-73D"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-3B-cni">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-3B-cni">
                     <rect key="frame" x="190" y="23" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="star_four"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="5rG-5m-SJk" appends="YES" id="syN-d6-t6g"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="m27-PQ-WSK">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="m27-PQ-WSK">
                     <rect key="frame" x="250" y="23" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="star_five"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Wop-tP-yFG" appends="YES" id="Tjf-1c-iaA"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +72,6 @@
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="71H-Hs-xgv"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ex4-JB-bib"/>
                 <constraint firstItem="VLw-JO-YOl" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="FYa-bW-ioK"/>
-                <constraint firstItem="VLw-JO-YOl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HrG-Ye-Hr5"/>
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="IVU-1V-sRm"/>
                 <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JK5-6t-4ir"/>
                 <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1:5" id="Jw0-PH-7kz"/>
@@ -53,6 +81,7 @@
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="VaY-mJ-4O4"/>
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="9:5" id="d1O-42-zpD"/>
                 <constraint firstItem="VLw-JO-YOl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="3:5" id="eKq-dW-8dZ"/>
+                <constraint firstItem="VLw-JO-YOl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="epB-n9-Ge3"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="f8U-ba-YEe"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jIq-xE-dyW"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="vgC-NZ-kGd"/>
@@ -60,8 +89,33 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="186.23188405797103" y="91.071428571428569"/>
+            <point key="canvasLocation" x="268" y="88"/>
         </view>
+        <tapGestureRecognizer id="dHy-02-3Qf">
+            <connections>
+                <action selector="didClickStar:" destination="-1" id="jhR-mt-n1z"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="wJE-Bh-mYW">
+            <connections>
+                <action selector="didClickStar:" destination="-1" id="75J-r4-PL9"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="1Tl-pL-bq2">
+            <connections>
+                <action selector="didClickStar:" destination="-1" id="Rn5-d2-mHM"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="5rG-5m-SJk">
+            <connections>
+                <action selector="didClickStar:" destination="-1" id="5uw-Qi-ib5"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="Wop-tP-yFG">
+            <connections>
+                <action selector="didClickStar:" destination="-1" id="iNv-aZ-Zog"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="emptied_star" width="55" height="53"/>
