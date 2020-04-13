@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum StarRating: String {
+private enum StarRating: String {
     case One = "star_one"
     case Two = "star_two"
     case Three = "star_three"
@@ -29,11 +29,12 @@ enum StarRating: String {
                 return 5
         }
     }
-
 }
 
-let filledImageStarName = "filled_star"
-let emptiedImageStarName = "emptied_star"
+private struct StarImageNames {
+    static let filled = "filled_star"
+    static let emptied = "emptied_star"
+}
 
 class Rating: UIView {
     @IBOutlet var container: UIView!
@@ -43,6 +44,8 @@ class Rating: UIView {
     @IBOutlet var thirdStar: UIImageView!
     @IBOutlet var fourthStar: UIImageView!
     @IBOutlet var fifthStar: UIImageView!
+
+    weak var delegate: RatingDelegateProtocol?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,10 +79,22 @@ class Rating: UIView {
     }
 
     func fillStarsWithRating(rating: Int) {
-        self.firstStar.image = UIImage(named: rating >= StarRating.One.value ? filledImageStarName : emptiedImageStarName)
-        self.secondStar.image = UIImage(named: rating >= StarRating.Two.value ? filledImageStarName : emptiedImageStarName)
-        self.thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? filledImageStarName : emptiedImageStarName)
-        self.fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? filledImageStarName : emptiedImageStarName)
-        self.fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? filledImageStarName : emptiedImageStarName)
+        self.firstStar.image = UIImage(named: rating >= StarRating.One.value ? StarImageNames.filled : StarImageNames.emptied)
+        self.secondStar.image = UIImage(named: rating >= StarRating.Two.value ? StarImageNames.filled : StarImageNames.emptied)
+        self.thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? StarImageNames.filled : StarImageNames.emptied)
+        self.fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? StarImageNames.filled : StarImageNames.emptied)
+        self.fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? StarImageNames.filled : StarImageNames.emptied)
+
+        self.delegate?.didRate(rating: rating)
+    }
+}
+
+extension Rating: RatingInterface {
+    func resetRating() {
+        self.firstStar.image = UIImage(named: StarImageNames.emptied)
+        self.secondStar.image = UIImage(named: StarImageNames.emptied)
+        self.thirdStar.image = UIImage(named: StarImageNames.emptied)
+        self.fourthStar.image = UIImage(named: StarImageNames.emptied)
+        self.fifthStar.image = UIImage(named: StarImageNames.emptied)
     }
 }

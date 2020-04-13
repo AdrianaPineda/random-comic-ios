@@ -12,6 +12,8 @@ class ShowComicViewController: UIViewController {
     @IBOutlet var comicTitleLabel: UILabel!
     @IBOutlet weak var comicImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var ratingView: Rating!
+
     var output: ShowComicViewOutput!
 
     // MARK: Life cycle
@@ -19,6 +21,7 @@ class ShowComicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        self.ratingView.delegate = self
     }
 
     // MARK: ShowComicViewInput
@@ -34,5 +37,16 @@ extension ShowComicViewController: ShowComicViewInput {
     func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
         comicImageView.image = UIImage(data: comic.img)
+    }
+
+    func resetRating() {
+        self.ratingView.resetRating()
+    }
+}
+
+extension ShowComicViewController: RatingDelegateProtocol {
+    func didRate(rating: Int) {
+        print("Comic rated: ", rating)
+        self.output.comicRated(rating: rating)
     }
 }

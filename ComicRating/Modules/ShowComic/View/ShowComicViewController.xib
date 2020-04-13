@@ -12,6 +12,7 @@
                 <outlet property="comicImageView" destination="BEj-95-jFs" id="TFo-sO-af2"/>
                 <outlet property="comicTitleLabel" destination="VHH-nj-aiN" id="1wn-MG-hoa"/>
                 <outlet property="nextButton" destination="ATV-JV-HXZ" id="f3f-l6-tHB"/>
+                <outlet property="ratingView" destination="VHm-vg-L7s" id="MeX-qA-h0S"/>
                 <outlet property="view" destination="iN0-l3-epB" id="x91-eS-bzM"/>
             </connections>
         </placeholder>

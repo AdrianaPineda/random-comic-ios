@@ -25,5 +25,10 @@ extension ShowComicPresenter: ShowComicViewOutput {
 extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: UpcomingComic) {
         self.view.showComic(comic: comic)
+        self.view.resetRating()
+    }
+
+    func comicRated(rating: Int) {
+        print("TODO")
     }
 }
