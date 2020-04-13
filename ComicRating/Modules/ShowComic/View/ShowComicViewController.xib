@@ -41,7 +41,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-vg-L7s" customClass="Rating" customModule="ComicRating" customModuleProvider="target">
                     <rect key="frame" x="50" y="467" width="314" height="109"/>
-                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="109" id="fag-hD-lac"/>
                     </constraints>

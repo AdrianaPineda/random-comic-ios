@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum StarRating {
-    case One
-    case Two
-    case Three
-    case Four
-    case Five
+enum StarRating: String {
+    case One = "star_one"
+    case Two = "star_two"
+    case Three = "star_three"
+    case Four = "star_four"
+    case Five = "star_five"
 
     var value: Int {
         switch self {
@@ -30,20 +30,6 @@ enum StarRating {
         }
     }
 
-    static func getStarRating(identifier: String) -> StarRating {
-        switch identifier {
-            case "star_one":
-                return StarRating.One
-            case "star_two":
-                return StarRating.Two
-            case "star_three":
-                return StarRating.Three
-            case "star_four":
-                return StarRating.Four
-            default:
-                return StarRating.Five
-        }
-    }
 }
 
 let filledImageStarName = "filled_star"
@@ -52,11 +38,11 @@ let emptiedImageStarName = "emptied_star"
 class Rating: UIView {
     @IBOutlet var container: UIView!
 
-    @IBOutlet var ratingOne: UIImageView!
-    @IBOutlet var ratingTwo: UIImageView!
-    @IBOutlet var ratingThree: UIImageView!
-    @IBOutlet var ratingFour: UIImageView!
-    @IBOutlet var ratingFive: UIImageView!
+    @IBOutlet var firstStar: UIImageView!
+    @IBOutlet var secondStar: UIImageView!
+    @IBOutlet var thirdStar: UIImageView!
+    @IBOutlet var fourthStar: UIImageView!
+    @IBOutlet var fifthStar: UIImageView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,15 +67,19 @@ class Rating: UIView {
         guard let identifier = gesture.view?.accessibilityIdentifier else {
             return
         }
-        let rating = StarRating.getStarRating(identifier: identifier)
+
+        guard let rating = StarRating(rawValue: identifier) else {
+            return
+        }
+
         self.fillStarsWithRating(rating: rating.value)
     }
 
     func fillStarsWithRating(rating: Int) {
-        self.ratingOne.image = UIImage(named: rating >= StarRating.One.value ? filledImageStarName : emptiedImageStarName)
-        self.ratingTwo.image = UIImage(named: rating >= StarRating.Two.value ? filledImageStarName : emptiedImageStarName)
-        self.ratingThree.image = UIImage(named: rating >= StarRating.Three.value ? filledImageStarName : emptiedImageStarName)
-        self.ratingFour.image = UIImage(named: rating >= StarRating.Four.value ? filledImageStarName : emptiedImageStarName)
-        self.ratingFive.image = UIImage(named: rating >= StarRating.Five.value ? filledImageStarName : emptiedImageStarName)
+        self.firstStar.image = UIImage(named: rating >= StarRating.One.value ? filledImageStarName : emptiedImageStarName)
+        self.secondStar.image = UIImage(named: rating >= StarRating.Two.value ? filledImageStarName : emptiedImageStarName)
+        self.thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? filledImageStarName : emptiedImageStarName)
+        self.fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? filledImageStarName : emptiedImageStarName)
+        self.fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? filledImageStarName : emptiedImageStarName)
     }
 }
