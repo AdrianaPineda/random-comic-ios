@@ -45,7 +45,7 @@ class Rating: UIView {
     @IBOutlet var fourthStar: UIImageView!
     @IBOutlet var fifthStar: UIImageView!
 
-    weak var delegate: RatingDelegateProtocol?
+    weak var delegate: RatingDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)

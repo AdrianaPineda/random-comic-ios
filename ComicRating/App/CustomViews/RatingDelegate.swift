@@ -6,6 +6,6 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-protocol RatingDelegateProtocol: class {
+protocol RatingDelegate: class {
     func didRate(rating: Int)
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class ShowComicViewController: UIViewController {
-    @IBOutlet var comicTitleLabel: UILabel!
+    @IBOutlet weak var comicTitleLabel: UILabel!
     @IBOutlet weak var comicImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var ratingView: Rating!
@@ -44,7 +44,7 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 }
 
-extension ShowComicViewController: RatingDelegateProtocol {
+extension ShowComicViewController: RatingDelegate {
     func didRate(rating: Int) {
         print("Comic rated: ", rating)
         self.output.comicRated(rating: rating)
