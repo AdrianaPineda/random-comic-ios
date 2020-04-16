@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="comicImageView" destination="BEj-95-jFs" id="TFo-sO-af2"/>
                 <outlet property="comicTitleLabel" destination="VHH-nj-aiN" id="1wn-MG-hoa"/>
+                <outlet property="loadingIndicator" destination="rbd-Az-lnY" id="aWE-D1-KsZ"/>
                 <outlet property="nextButton" destination="ATV-JV-HXZ" id="f3f-l6-tHB"/>
                 <outlet property="ratingView" destination="VHm-vg-L7s" id="MeX-qA-h0S"/>
                 <outlet property="view" destination="iN0-l3-epB" id="x91-eS-bzM"/>
@@ -47,6 +48,11 @@
                         <constraint firstAttribute="height" constant="109" id="fag-hD-lac"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-Az-lnY">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

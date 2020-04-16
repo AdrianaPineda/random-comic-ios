@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ShowComicViewController: UIViewController {
-    @IBOutlet weak var comicTitleLabel: UILabel!
-    @IBOutlet weak var comicImageView: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var ratingView: Rating!
+class ShowComicViewController: DimmableViewController {
+    @IBOutlet var comicTitleLabel: UILabel!
+    @IBOutlet var comicImageView: UIImageView!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var ratingView: Rating!
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
 
     var output: ShowComicViewOutput!
 
@@ -20,7 +21,7 @@ class ShowComicViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        self.output.viewIsReady()
         self.ratingView.delegate = self
     }
 
@@ -33,14 +34,26 @@ class ShowComicViewController: UIViewController {
 }
 
 // MARK: - ShowComicViewInput
+
 extension ShowComicViewController: ShowComicViewInput {
     func showComic(comic: UpcomingComic) {
-        comicTitleLabel.text = comic.title
-        comicImageView.image = UIImage(data: comic.img)
+        self.comicTitleLabel.text = comic.title
+        self.comicImageView.image = UIImage(data: comic.img)
     }
 
     func resetRating() {
         self.ratingView.resetRating()
+    }
+
+    func showLoadingIndicator() {
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
+        self.addDim()
+    }
+
+    func stopLoadingIndicator() {
+        self.loadingIndicator.stopAnimating()
+        self.removeDim()
     }
 }
 

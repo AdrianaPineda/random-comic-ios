@@ -14,11 +14,16 @@ class ShowComicPresenter: ShowComicModuleInput {
 
 extension ShowComicPresenter: ShowComicViewOutput {
     func viewIsReady() {
-        self.interactor.fetchComic()
+        self.fetchComic()
     }
 
     func nextButtonClicked() {
+        self.fetchComic()
+    }
+
+    private func fetchComic() {
         self.interactor.fetchComic()
+        self.view.showLoadingIndicator()
     }
 }
 
@@ -26,6 +31,7 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: UpcomingComic) {
         self.view.showComic(comic: comic)
         self.view.resetRating()
+        self.view.stopLoadingIndicator()
     }
 
     func comicRated(rating: Int) {
