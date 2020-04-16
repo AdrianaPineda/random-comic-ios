@@ -11,6 +11,8 @@
 		0150BA4F24443093000E226C /* RatingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4E24443093000E226C /* RatingInterface.swift */; };
 		0150BA5124457BA5000E226C /* Dimmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5024457BA5000E226C /* Dimmable.swift */; };
 		0150BA552445825F000E226C /* DimmableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA542445825F000E226C /* DimmableViewController.swift */; };
+		0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */; };
+		0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA59244814EB000E226C /* ComicStorageService.swift */; };
 		015F7031241F463B004ED20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7030241F463B004ED20A /* AppDelegate.swift */; };
 		015F703A241F463C004ED20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015F7039241F463C004ED20A /* Assets.xcassets */; };
 		015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015F703B241F463C004ED20A /* LaunchScreen.storyboard */; };
@@ -74,6 +76,8 @@
 		0150BA4E24443093000E226C /* RatingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInterface.swift; sourceTree = "<group>"; };
 		0150BA5024457BA5000E226C /* Dimmable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimmable.swift; sourceTree = "<group>"; };
 		0150BA542445825F000E226C /* DimmableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmableViewController.swift; sourceTree = "<group>"; };
+		0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageServiceInterface.swift; sourceTree = "<group>"; };
+		0150BA59244814EB000E226C /* ComicStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageService.swift; sourceTree = "<group>"; };
 		015F702D241F463B004ED20A /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015F7030241F463B004ED20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015F7039241F463C004ED20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0150BA58244814AA000E226C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */,
+				0150BA59244814EB000E226C /* ComicStorageService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		015F7024241F463B004ED20A = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 		01878A2F2427779E00883D93 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0150BA58244814AA000E226C /* Storage */,
 				01878A3D2428885200883D93 /* Api */,
 				01878A3B242887C800883D93 /* ServiceInterface.swift */,
 				01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */,
@@ -480,6 +494,7 @@
 				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,
 				01878A3A2427817E00883D93 /* ComicApiService.swift in Sources */,
 				0150BA552445825F000E226C /* DimmableViewController.swift in Sources */,
+				0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */,
 				015F708324209415004ED20A /* ShowComicRouter.swift in Sources */,
 				015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */,
 				01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */,
@@ -493,6 +508,7 @@
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* Rating.swift in Sources */,
+				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,

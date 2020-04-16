@@ -35,6 +35,6 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     }
 
     func comicRated(rating: Int) {
-        print("TODO")
+        self.interactor.comicRated(rating: rating)
     }
 }

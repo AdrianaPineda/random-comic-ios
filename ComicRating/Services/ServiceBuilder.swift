@@ -14,4 +14,7 @@ class ServiceBuilder: ServiceBuilderInterface {
     lazy var imageDownloader: ImageDownloaderServiceInterface = {
         ImageDownloaderService()
     }()
+    lazy var comicStorage: ComicStorageServiceInterface = {
+        ComicStorageService()
+    }()
 }

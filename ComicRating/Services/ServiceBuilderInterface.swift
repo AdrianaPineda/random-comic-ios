@@ -9,6 +9,7 @@
 protocol ServiceBuilderInterface {
     var comicApi: ComicApiServiceInterface { get }
     var imageDownloader: ImageDownloaderServiceInterface { get }
+    var comicStorage: ComicStorageServiceInterface { get }
     func setup()
 }
 
@@ -16,5 +17,6 @@ extension ServiceBuilderInterface {
     func setup() {
         self.comicApi.setup()
         self.imageDownloader.setup()
+        self.comicStorage.setup()
     }
 }

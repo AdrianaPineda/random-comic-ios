@@ -12,12 +12,16 @@ class ShowComicInteractor {
     weak var output: ShowComicInteractorOutput!
     let apiService: ComicApiServiceInterface
     let imageDownloader: ImageDownloaderServiceInterface
+    let storageService: ComicStorageServiceInterface
     let randomNumber: RandomNumber
 
-    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface, randomNumber: RandomNumber) {
+    var currentComic: Comic?
+
+    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface, storageService: ComicStorageServiceInterface, randomNumber: RandomNumber) {
         self.apiService = apiService
         self.imageDownloader = imageDownloader
         self.randomNumber = randomNumber
+        self.storageService = storageService
     }
 }
 
@@ -25,14 +29,15 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     // MARK: - Promises
 
     func fetchComic() {
-
         self.getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
         }.then { (comic: Comic) in
             // TODO: fix
-            self.imageDownloader.fetchImage(fromUrl: comic.img).done { (data: Data) in
+            self.imageDownloader.fetchImage(fromUrl: comic.img).done { [weak self] (data: Data) in
+                guard let self = self else { return }
                 let upcomingComic = self.toUpcomicComic(comic: comic, imgData: data)
                 self.output.comicFetched(comic: upcomingComic)
+                self.currentComic = comic
             }
         }
         .catch { _ in
@@ -68,4 +73,11 @@ extension ShowComicInteractor: ShowComicInteractorInput {
              completion(randomNumber)
          }
      }*/
+
+    func comicRated(rating: Int) {
+        print("1. Store locally")
+        guard let comic = self.currentComic else { return }
+        self.storageService.saveRating(comic: comic, rating: rating)
+        print("1. Send it to a backend")
+    }
 }
