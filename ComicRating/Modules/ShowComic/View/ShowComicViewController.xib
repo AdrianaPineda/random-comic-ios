@@ -41,7 +41,7 @@
                         <action selector="nextButtonClicked:" destination="-1" eventType="touchUpInside" id="2oB-Rf-0UU"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-vg-L7s" customClass="Rating" customModule="ComicRating" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-vg-L7s" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
                     <rect key="frame" x="20" y="527" width="374" height="109"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>

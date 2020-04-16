@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Rating" customModule="ComicRating" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
             <connections>
                 <outlet property="container" destination="iN0-l3-epB" id="Vmr-gL-8HV"/>
                 <outlet property="fifthStar" destination="m27-PQ-WSK" id="qMc-Zc-2hC"/>

@@ -40,8 +40,8 @@
 		01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A40242889E800883D93 /* ServiceBuilder.swift */; };
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
 		01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 01927CB12441977E00D2BCC4 /* Cosmos */; };
-		01927CB4244197DB00D2BCC4 /* Rating.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* Rating.xib */; };
-		01927CB624419C0E00D2BCC4 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* Rating.swift */; };
+		01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* RatingView.xib */; };
+		01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* RatingView.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
@@ -109,8 +109,8 @@
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
 		01878A40242889E800883D93 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		01927CB3244197DB00D2BCC4 /* Rating.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Rating.xib; sourceTree = "<group>"; };
-		01927CB524419C0E00D2BCC4 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		01927CB3244197DB00D2BCC4 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
+		01927CB524419C0E00D2BCC4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -322,8 +322,8 @@
 			children = (
 				0150BA4C24442F57000E226C /* RatingDelegate.swift */,
 				0150BA4E24443093000E226C /* RatingInterface.swift */,
-				01927CB524419C0E00D2BCC4 /* Rating.swift */,
-				01927CB3244197DB00D2BCC4 /* Rating.xib */,
+				01927CB524419C0E00D2BCC4 /* RatingView.swift */,
+				01927CB3244197DB00D2BCC4 /* RatingView.xib */,
 				0150BA5024457BA5000E226C /* Dimmable.swift */,
 				0150BA542445825F000E226C /* DimmableViewController.swift */,
 			);
@@ -455,7 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01927CB4244197DB00D2BCC4 /* Rating.xib in Resources */,
+				01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */,
 				015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */,
 				015F703A241F463C004ED20A /* Assets.xcassets in Resources */,
 				015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */,
@@ -507,7 +507,7 @@
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
-				01927CB624419C0E00D2BCC4 /* Rating.swift in Sources */,
+				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,

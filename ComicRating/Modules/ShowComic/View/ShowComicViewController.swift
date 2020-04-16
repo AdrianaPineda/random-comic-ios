@@ -12,7 +12,7 @@ class ShowComicViewController: DimmableViewController {
     @IBOutlet var comicTitleLabel: UILabel!
     @IBOutlet var comicImageView: UIImageView!
     @IBOutlet var nextButton: UIButton!
-    @IBOutlet var ratingView: Rating!
+    @IBOutlet var ratingView: RatingView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
 
     var output: ShowComicViewOutput!

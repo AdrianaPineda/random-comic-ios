@@ -1,5 +1,5 @@
 //
-//  Rating.swift
+//  RatingView.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 11/04/2020.
@@ -36,7 +36,7 @@ private struct StarImageNames {
     static let emptied = "emptied_star"
 }
 
-class Rating: UIView {
+class RatingView: UIView {
     @IBOutlet var container: UIView!
 
     @IBOutlet var firstStar: UIImageView!
@@ -58,7 +58,7 @@ class Rating: UIView {
     }
 
     private func setupView() {
-        Bundle.main.loadNibNamed("Rating", owner: self, options: nil)
+        Bundle.main.loadNibNamed("RatingView", owner: self, options: nil)
         addSubview(self.container)
         self.container.frame = self.bounds
         self.container.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -89,12 +89,16 @@ class Rating: UIView {
     }
 }
 
-extension Rating: RatingInterface {
+extension RatingView: RatingInterface {
     func resetRating() {
         self.firstStar.image = UIImage(named: StarImageNames.emptied)
         self.secondStar.image = UIImage(named: StarImageNames.emptied)
         self.thirdStar.image = UIImage(named: StarImageNames.emptied)
         self.fourthStar.image = UIImage(named: StarImageNames.emptied)
         self.fifthStar.image = UIImage(named: StarImageNames.emptied)
+    }
+
+    func setRating(rating: Int) {
+        self.fillStarsWithRating(rating: rating)
     }
 }
