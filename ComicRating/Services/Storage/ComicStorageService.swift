@@ -8,11 +8,11 @@
 
 import Foundation
 class ComicStorageService: ComicStorageServiceInterface {
-    func saveRating(comic: Comic, rating: Int) {
+    func saveComic(comic: Comic) {
 
     }
 
-    func fetchRatings() -> [(Comic, Int)] {
+    func fetchComic() -> [Comic] {
         return []
     }
 }

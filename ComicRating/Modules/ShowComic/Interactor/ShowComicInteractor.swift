@@ -76,8 +76,11 @@ extension ShowComicInteractor: ShowComicInteractorInput {
 
     func comicRated(rating: Int) {
         print("1. Store locally")
+//        self.currentComic?.rating = rating // TODO ???
         guard let comic = self.currentComic else { return }
-        self.storageService.saveRating(comic: comic, rating: rating)
+        self.storageService.saveComic(comic: comic) // send another model (just id and rating)
         print("1. Send it to a backend")
+
+        // TODO: create an struct with rating?
     }
 }
