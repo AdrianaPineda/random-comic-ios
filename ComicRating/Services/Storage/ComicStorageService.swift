@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class ComicStorageService: ComicStorageServiceInterface {
-    private let entityName = "Comic"
+    private let entityName = "ComicRatings"
 
     private lazy var persistentContainer: NSPersistentContainer? = {
         if let appDelegate =
