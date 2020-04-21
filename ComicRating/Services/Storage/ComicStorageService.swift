@@ -11,26 +11,25 @@ import Foundation
 import UIKit
 
 class ComicStorageService: ComicStorageServiceInterface {
-    private let entityName = "ComicRatings"
+    private let entityName = "Rating"
 
-    private lazy var persistentContainer: NSPersistentContainer? = {
+    private lazy var viewContext: NSManagedObjectContext? = {
         if let appDelegate =
             UIApplication.shared.delegate as? AppDelegate {
-            return appDelegate.persistentContainer
+            return appDelegate.persistentContainer.viewContext
         }
         return nil
     }()
 
     func saveComicRating(comicRating: ComicRating) {
-        guard let managedContext = self.persistentContainer?.viewContext else {
+        guard let managedContext = self.viewContext else {
             return
         }
 
-        guard let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedContext) else {
+        guard let comicManagedObject = self.getManagedObject(id: comicRating.id, managedContext: managedContext) else {
             return
         }
 
-        let comicManagedObject = NSManagedObject(entity: entity, insertInto: managedContext)
         comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
         comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating") // TODO:
 
@@ -42,21 +41,41 @@ class ComicStorageService: ComicStorageServiceInterface {
         }
     }
 
+    private func getManagedObject(id: Int, managedContext: NSManagedObjectContext) -> NSManagedObject? {
+        let predicate = NSPredicate(format: "id == \(id)")
+        let comicsManagedObjects = self.fetchComicRating(withPredicate: predicate, managedContext: managedContext) // send context?
+
+        if comicsManagedObjects.isEmpty {
+            guard let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedContext) else {
+                return nil
+            }
+
+            return NSManagedObject(entity: entity, insertInto: managedContext)
+        }
+        return comicsManagedObjects[0]
+    }
+
     func fetchComicRating() -> [ComicRating] {
-        guard let managedContext = self.persistentContainer?.viewContext else {
+        guard let managedContext = self.viewContext else {
             return []
         }
 
+        let comicsManagedObjects = self.fetchComicRating(withPredicate: nil, managedContext: managedContext)
+        let comics = self.toComics(managedObjects: comicsManagedObjects)
+        return comics
+    }
+
+    private func fetchComicRating(withPredicate predicate: NSPredicate?, managedContext: NSManagedObjectContext) -> [NSManagedObject] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
-        var comics: [ComicRating] = []
+        fetchRequest.predicate = predicate
+        var result: [NSManagedObject] = []
         do {
-            let comicsManagedObjects = try managedContext.fetch(fetchRequest)
-            comics = self.toComics(managedObjects: comicsManagedObjects)
+            result = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not load comics: \(error.localizedDescription)")
         }
 
-        return comics
+        return result
     }
 
     private func toComics(managedObjects: [NSManagedObject]) -> [ComicRating] {
