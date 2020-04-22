@@ -3,6 +3,11 @@
     <entity name="Rating" representedClassName="Rating" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" attributeType="Integer 16" minValueString="1" maxValueString="5" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="Rating" positionX="-63" positionY="-18" width="128" height="73"/>

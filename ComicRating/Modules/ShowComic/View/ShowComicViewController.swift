@@ -9,11 +9,12 @@
 import UIKit
 
 class ShowComicViewController: DimmableViewController {
-    @IBOutlet var comicTitleLabel: UILabel!
-    @IBOutlet var comicImageView: UIImageView!
-    @IBOutlet var nextButton: UIButton!
-    @IBOutlet var ratingView: RatingView!
-    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var comicTitleLabel: UILabel!
+    @IBOutlet weak var comicNumberLabel: UILabel!
+    @IBOutlet weak var comicImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var ratingView: RatingView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 
     var output: ShowComicViewOutput!
 
@@ -38,6 +39,7 @@ class ShowComicViewController: DimmableViewController {
 extension ShowComicViewController: ShowComicViewInput {
     func showComic(comic: UpcomingComic) {
         self.comicTitleLabel.text = comic.title
+        self.comicNumberLabel.text = "#\(comic.number)"
         self.comicImageView.image = UIImage(data: comic.img)
     }
 

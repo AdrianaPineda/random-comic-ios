@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowComicViewController" customModule="ComicRating" customModuleProvider="target">
             <connections>
                 <outlet property="comicImageView" destination="BEj-95-jFs" id="TFo-sO-af2"/>
+                <outlet property="comicNumberLabel" destination="0zZ-au-J7U" id="V1g-il-FmC"/>
                 <outlet property="comicTitleLabel" destination="VHH-nj-aiN" id="1wn-MG-hoa"/>
                 <outlet property="loadingIndicator" destination="rbd-Az-lnY" id="aWE-D1-KsZ"/>
                 <outlet property="nextButton" destination="ATV-JV-HXZ" id="f3f-l6-tHB"/>
@@ -24,6 +25,12 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHH-nj-aiN">
                     <rect key="frame" x="163.5" y="147" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zZ-au-J7U">
+                    <rect key="frame" x="176" y="176" width="62" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -56,17 +63,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="0zZ-au-J7U" firstAttribute="top" secondItem="VHH-nj-aiN" secondAttribute="bottom" constant="8" id="2os-7m-ep2"/>
                 <constraint firstItem="VHH-nj-aiN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="103" id="5jd-Le-uuZ"/>
+                <constraint firstItem="BEj-95-jFs" firstAttribute="top" secondItem="0zZ-au-J7U" secondAttribute="bottom" constant="39" id="6hv-Vs-qZG"/>
                 <constraint firstItem="ATV-JV-HXZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8cu-m1-fpV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BEj-95-jFs" secondAttribute="trailing" constant="20" id="Fir-m0-vin"/>
                 <constraint firstItem="VHm-vg-L7s" firstAttribute="leading" secondItem="BEj-95-jFs" secondAttribute="leading" id="PwQ-be-qeE"/>
                 <constraint firstItem="BEj-95-jFs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bd8-2I-37c"/>
+                <constraint firstItem="0zZ-au-J7U" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fDi-qd-8dt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ATV-JV-HXZ" secondAttribute="trailing" constant="20" id="gMf-8q-02N"/>
                 <constraint firstItem="VHH-nj-aiN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hCT-Pf-ouG"/>
                 <constraint firstItem="BEj-95-jFs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hsJ-g4-3qf"/>
                 <constraint firstItem="VHm-vg-L7s" firstAttribute="top" secondItem="BEj-95-jFs" secondAttribute="bottom" constant="91" id="vHO-BE-nnH"/>
                 <constraint firstItem="VHm-vg-L7s" firstAttribute="trailing" secondItem="BEj-95-jFs" secondAttribute="trailing" id="xWW-MO-jWS"/>
-                <constraint firstItem="BEj-95-jFs" firstAttribute="top" secondItem="VHH-nj-aiN" secondAttribute="bottom" constant="68" id="yK8-cn-clW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="105.80357142857143"/>
