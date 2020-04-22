@@ -78,7 +78,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         print("1. Store locally")
         guard let comic = self.currentComic else { return }
         let comicRating = ComicRating(id: comic.number, rating: rating)
-        self.storageService.saveComicRating(comicRating: comicRating)
-        print("1. Send it to a backend")
+        self.storageService.upsertComicRating(comicRating: comicRating)
+        print("1. Send it to a backend", self.storageService.fetchComicRating())
     }
 }

@@ -14,21 +14,21 @@ class ComicStorageService: ComicStorageServiceInterface {
     private let entityName = "Rating"
 
     private lazy var viewContext: NSManagedObjectContext? = {
-        if let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate {
-            return appDelegate.persistentContainer.viewContext
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+            return nil
         }
-        return nil
+        let viewContext = appDelegate.persistentContainer.viewContext
+        viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        return viewContext
     }()
 
-    func saveComicRating(comicRating: ComicRating) {
+    func upsertComicRating(comicRating: ComicRating) {
         guard let managedContext = self.viewContext else {
             return
         }
 
-        guard let comicManagedObject = self.getManagedObject(id: comicRating.id, managedContext: managedContext) else {
-            return
-        }
+        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: self.entityName, into: managedContext)
 
         comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
         comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating") // TODO:
@@ -92,7 +92,7 @@ class ComicStorageService: ComicStorageServiceInterface {
 
 extension NSManagedObject {
     func toComicRating() -> ComicRating? {
-        guard let id: Int = self.value(forKey: "number") as? Int else {
+        guard let id: Int = self.value(forKey: "id") as? Int else {
             return nil
         }
 

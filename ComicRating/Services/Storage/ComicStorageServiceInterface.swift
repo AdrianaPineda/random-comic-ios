@@ -7,6 +7,6 @@
 //
 
 protocol ComicStorageServiceInterface: ServiceInterface {
-    func saveComicRating(comicRating: ComicRating)
+    func upsertComicRating(comicRating: ComicRating)
     func fetchComicRating() -> [ComicRating]
 }
