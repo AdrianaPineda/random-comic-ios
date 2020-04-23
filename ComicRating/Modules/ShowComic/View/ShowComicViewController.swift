@@ -48,14 +48,31 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 
     func showLoadingIndicator() {
-        self.loadingIndicator.isHidden = false
-        self.loadingIndicator.startAnimating()
+//        self.loadingIndicator.isHidden = false
+//        self.loadingIndicator.startAnimating()
+        self.animateSkeletonView()
         self.addDim()
     }
 
     func stopLoadingIndicator() {
-        self.loadingIndicator.stopAnimating()
+//        self.loadingIndicator.stopAnimating()
+        self.stopSkeletonViewAnimation()
         self.removeDim()
+    }
+
+    // MARK: My Skeleton View
+    private func animateSkeletonView() {
+        self.comicImageView.animateSkeletonView()
+        self.comicTitleLabel.animateSkeletonView()
+        self.comicNumberLabel.animateSkeletonView()
+        self.ratingView.animateSkeletonView()
+    }
+
+    private func stopSkeletonViewAnimation() {
+        self.comicImageView.stopSkeletonViewAnimation()
+        self.comicTitleLabel.stopSkeletonViewAnimation()
+        self.comicNumberLabel.stopSkeletonViewAnimation()
+        self.ratingView.stopSkeletonViewAnimation()
     }
 }
 

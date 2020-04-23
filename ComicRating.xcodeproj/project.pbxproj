@@ -34,6 +34,8 @@
 		015F708324209415004ED20A /* ShowComicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707524209415004ED20A /* ShowComicRouter.swift */; };
 		015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707624209415004ED20A /* ShowComicRouterInput.swift */; };
 		015F708524209415004ED20A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707724209415004ED20A /* AppDependencies.swift */; };
+		01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01635ABB2451463D005BE30F /* MySkeletonView.swift */; };
+		01635ABF2451534B005BE30F /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 01635ABE2451534B005BE30F /* SkeletonView */; };
 		01878A3424277C8B00883D93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01878A3324277C8B00883D93 /* Alamofire */; };
 		01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */; };
 		01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3724277E1700883D93 /* HttpServiceInterface.swift */; };
@@ -108,6 +110,7 @@
 		015F707524209415004ED20A /* ShowComicRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouter.swift; sourceTree = "<group>"; };
 		015F707624209415004ED20A /* ShowComicRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouterInput.swift; sourceTree = "<group>"; };
 		015F707724209415004ED20A /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		01635ABB2451463D005BE30F /* MySkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySkeletonView.swift; sourceTree = "<group>"; };
 		01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiServiceInterface.swift; sourceTree = "<group>"; };
 		01878A3724277E1700883D93 /* HttpServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceInterface.swift; sourceTree = "<group>"; };
 		01878A392427817E00883D93 /* ComicApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiService.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
 				01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */,
 				01AA4439243C351600612796 /* AlamofireImage in Frameworks */,
+				01635ABF2451534B005BE30F /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +339,7 @@
 				01927CB3244197DB00D2BCC4 /* RatingView.xib */,
 				0150BA5024457BA5000E226C /* Dimmable.swift */,
 				0150BA542445825F000E226C /* DimmableViewController.swift */,
+				01635ABB2451463D005BE30F /* MySkeletonView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				01AA44232432FC3B00612796 /* PromiseKit */,
 				01AA4438243C351600612796 /* AlamofireImage */,
 				01927CB12441977E00D2BCC4 /* Cosmos */,
+				01635ABE2451534B005BE30F /* SkeletonView */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -447,6 +453,7 @@
 				01AA44222432FC3B00612796 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				01635ABD2451534B005BE30F /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -516,6 +523,7 @@
 				015F708124209415004ED20A /* ShowComicInteractorInput.swift in Sources */,
 				01878A432429C95000883D93 /* App.swift in Sources */,
 				01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */,
+				01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */,
 				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
@@ -846,6 +854,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		01635ABD2451534B005BE30F /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.7;
+			};
+		};
 		01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -881,6 +897,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		01635ABE2451534B005BE30F /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01635ABD2451534B005BE30F /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
 		01878A3324277C8B00883D93 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 01878A3224277C8B00883D93 /* XCRemoteSwiftPackageReference "Alamofire" */;
