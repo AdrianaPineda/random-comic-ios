@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class ShowComicViewController: DimmableViewController {
     @IBOutlet weak var comicTitleLabel: UILabel!
@@ -50,14 +51,32 @@ extension ShowComicViewController: ShowComicViewInput {
     func showLoadingIndicator() {
 //        self.loadingIndicator.isHidden = false
 //        self.loadingIndicator.startAnimating()
-        self.animateSkeletonView()
+//        self.animateSkeletonView()
+        self.showAnimatedGradient()
         self.addDim()
     }
 
     func stopLoadingIndicator() {
 //        self.loadingIndicator.stopAnimating()
-        self.stopSkeletonViewAnimation()
+//        self.stopSkeletonViewAnimation()
+        self.stopAnimatedGradient()
         self.removeDim()
+    }
+
+    // MARK: Skeleton view lib
+    private func showAnimatedGradient() {
+        self.comicImageView.showAnimatedGradientSkeleton()
+        self.comicTitleLabel.showAnimatedGradientSkeleton()
+        self.comicNumberLabel.showAnimatedGradientSkeleton()
+        self.ratingView.showAnimatedGradientSkeleton()
+    }
+
+    private func stopAnimatedGradient() {
+        self.view.stopSkeletonAnimation()
+        self.comicImageView.hideSkeleton()
+        self.comicTitleLabel.hideSkeleton()
+        self.comicNumberLabel.hideSkeleton()
+        self.ratingView.hideSkeleton()
     }
 
     // MARK: My Skeleton View
