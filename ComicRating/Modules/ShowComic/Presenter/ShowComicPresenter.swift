@@ -29,9 +29,9 @@ extension ShowComicPresenter: ShowComicViewOutput {
 
 extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: UpcomingComic) {
-        self.view.showComic(comic: comic)
         self.view.resetRating()
         self.view.stopLoadingContent()
+        self.view.showComic(comic: comic) // needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
     }
 
     func comicRated(rating: Int) {

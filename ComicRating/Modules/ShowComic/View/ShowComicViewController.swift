@@ -6,8 +6,8 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-import UIKit
 import SkeletonView
+import UIKit
 
 class ShowComicViewController: DimmableViewController {
     @IBOutlet weak var comicTitleLabel: UILabel!
