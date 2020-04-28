@@ -20,7 +20,7 @@ extension UIView {
         gradientLayer.add(animationGroup, forKey: animation.keyPath)
     }
 
-    private func configureGradientLayer(startLocations:  [NSNumber]) -> CAGradientLayer {
+    private func configureGradientLayer(startLocations: [NSNumber]) -> CAGradientLayer {
         let gradientBackgroundColor: CGColor = UIColor(white: 0.85, alpha: 1.0).cgColor
         let gradientMovingColor: CGColor = UIColor(white: 0.75, alpha: 1.0).cgColor
 
@@ -38,7 +38,7 @@ extension UIView {
         return gradientLayer
     }
 
-    private func configureAnimation(startLocations: [NSNumber], endLocations:  [NSNumber]) -> (CABasicAnimation, CAAnimationGroup)  {
+    private func configureAnimation(startLocations: [NSNumber], endLocations: [NSNumber]) -> (CABasicAnimation, CAAnimationGroup) {
         let movingAnimationDuration: CFTimeInterval = 1.8
         let delayBetweenAnimationLoops: CFTimeInterval = 0.3
 
