@@ -48,22 +48,29 @@ extension ShowComicViewController: ShowComicViewInput {
         self.ratingView.resetRating()
     }
 
-    func showLoadingIndicator() {
-//        self.loadingIndicator.isHidden = false
-//        self.loadingIndicator.startAnimating()
-//        self.animateSkeletonView()
+    func showLoadingContent() {
+        //        self.animateSkeletonView() // custom skeleton
         self.showAnimatedGradient()
+    }
+
+    private func showLoadingIndicatorAndDim() {
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
         self.addDim()
     }
 
-    func stopLoadingIndicator() {
-//        self.loadingIndicator.stopAnimating()
-//        self.stopSkeletonViewAnimation()
+    func stopLoadingContent() {
+//        self.stopSkeletonViewAnimation() // custom skeleton
         self.stopAnimatedGradient()
+    }
+
+    private func stopLoadingIndicatorAndDim() {
+        self.loadingIndicator.stopAnimating()
         self.removeDim()
     }
 
     // MARK: Skeleton view lib
+
     private func showAnimatedGradient() {
         self.comicImageView.showAnimatedGradientSkeleton()
         self.comicTitleLabel.showAnimatedGradientSkeleton()
@@ -72,7 +79,6 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 
     private func stopAnimatedGradient() {
-        self.view.stopSkeletonAnimation()
         self.comicImageView.hideSkeleton()
         self.comicTitleLabel.hideSkeleton()
         self.comicNumberLabel.hideSkeleton()
@@ -80,6 +86,7 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 
     // MARK: My Skeleton View
+
     private func animateSkeletonView() {
         self.comicImageView.animateSkeletonView()
         self.comicTitleLabel.animateSkeletonView()

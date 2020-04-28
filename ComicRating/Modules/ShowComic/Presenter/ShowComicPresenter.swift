@@ -23,7 +23,7 @@ extension ShowComicPresenter: ShowComicViewOutput {
 
     private func fetchComic() {
         self.interactor.fetchComic()
-        self.view.showLoadingIndicator()
+        self.view.showLoadingContent()
     }
 }
 
@@ -31,7 +31,7 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: UpcomingComic) {
         self.view.showComic(comic: comic)
         self.view.resetRating()
-        self.view.stopLoadingIndicator()
+        self.view.stopLoadingContent()
     }
 
     func comicRated(rating: Int) {

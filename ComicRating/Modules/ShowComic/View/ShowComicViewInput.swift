@@ -16,6 +16,6 @@ protocol ShowComicViewInput: class {
     func setupInitialState()
     func showComic(comic: UpcomingComic)
     func resetRating()
-    func showLoadingIndicator()
-    func stopLoadingIndicator()
+    func showLoadingContent()
+    func stopLoadingContent()
 }
