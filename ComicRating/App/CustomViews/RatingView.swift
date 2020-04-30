@@ -9,21 +9,21 @@
 import UIKit
 
 private enum StarRating: String {
-    case One = "star_one"
-    case Two = "star_two"
-    case Three = "star_three"
-    case Four = "star_four"
-    case Five = "star_five"
+    case one = "star_one"
+    case two = "star_two"
+    case three = "star_three"
+    case four = "star_four"
+    case five = "star_five"
 
     var value: Int {
         switch self {
-        case .One:
+        case .one:
             return 1
-        case .Two:
+        case .two:
             return 2
-        case .Three:
+        case .three:
             return 3
-        case .Four:
+        case .four:
             return 4
         default:
             return 5
@@ -79,11 +79,11 @@ class RatingView: UIView {
     }
 
     func fillStarsWithRating(rating: Int) {
-        firstStar.image = UIImage(named: rating >= StarRating.One.value ? StarImageNames.filled : StarImageNames.emptied)
-        secondStar.image = UIImage(named: rating >= StarRating.Two.value ? StarImageNames.filled : StarImageNames.emptied)
-        thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? StarImageNames.filled : StarImageNames.emptied)
-        fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? StarImageNames.filled : StarImageNames.emptied)
-        fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? StarImageNames.filled : StarImageNames.emptied)
+        firstStar.image = UIImage(named: rating >= StarRating.one.value ? StarImageNames.filled : StarImageNames.emptied)
+        secondStar.image = UIImage(named: rating >= StarRating.two.value ? StarImageNames.filled : StarImageNames.emptied)
+        thirdStar.image = UIImage(named: rating >= StarRating.three.value ? StarImageNames.filled : StarImageNames.emptied)
+        fourthStar.image = UIImage(named: rating >= StarRating.four.value ? StarImageNames.filled : StarImageNames.emptied)
+        fifthStar.image = UIImage(named: rating >= StarRating.five.value ? StarImageNames.filled : StarImageNames.emptied)
 
         delegate?.didRate(rating: rating)
     }
