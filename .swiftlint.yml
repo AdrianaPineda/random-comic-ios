@@ -1,0 +1,7 @@
+included:
+  - ComicRating
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+  - explicit_self
+reporter: "xcode"
