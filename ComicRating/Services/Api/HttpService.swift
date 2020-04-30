@@ -13,14 +13,15 @@ import UIKit
 class HttpService: HttpServiceInterface {
     func getAlamofireHttpMethod(method: Http.Method) -> HTTPMethod {
         switch method {
-            case .get:
-                return HTTPMethod.get
-            default:
-                return HTTPMethod.post
+        case .get:
+            return HTTPMethod.get
+        default:
+            return HTTPMethod.post
         }
     }
 
     // MARK: - Completion handlers
+
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
         // TODP map method
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
@@ -44,7 +45,8 @@ class HttpService: HttpServiceInterface {
     }
 
     // MARK: - Promises
-    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
+
+    func request<T>(method _: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
         // TODP map method
 
         return Promise { seal in

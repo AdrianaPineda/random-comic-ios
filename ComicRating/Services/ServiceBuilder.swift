@@ -11,9 +11,11 @@ class ServiceBuilder: ServiceBuilderInterface {
     lazy var comicApi: ComicApiServiceInterface = {
         ComicApiService(baseUrl: "https://xkcd.com", httpService: httpService)
     }()
+
     lazy var imageDownloader: ImageDownloaderServiceInterface = {
         ImageDownloaderService()
     }()
+
     lazy var comicStorage: ComicStorageServiceInterface = {
         ComicStorageService()
     }()

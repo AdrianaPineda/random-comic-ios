@@ -8,7 +8,6 @@
 import UIKit
 
 class ShowComicRouter: ShowComicRouterInput {
-
     weak var showComicPresenter: ShowComicModuleInput?
     var showComicViewController: ShowComicViewController?
 
@@ -16,5 +15,4 @@ class ShowComicRouter: ShowComicRouterInput {
         window.rootViewController = showComicViewController
         window.makeKeyAndVisible()
     }
-
 }

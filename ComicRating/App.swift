@@ -20,6 +20,6 @@ final class App {
     // MARK: - init
 
     private init() {
-        self.services.setup()
+        services.setup()
     }
 }

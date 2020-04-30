@@ -17,16 +17,16 @@ private enum StarRating: String {
 
     var value: Int {
         switch self {
-            case .One:
-                return 1
-            case .Two:
-                return 2
-            case .Three:
-                return 3
-            case .Four:
-                return 4
-            default:
-                return 5
+        case .One:
+            return 1
+        case .Two:
+            return 2
+        case .Three:
+            return 3
+        case .Four:
+            return 4
+        default:
+            return 5
         }
     }
 }
@@ -49,19 +49,19 @@ class RatingView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupView()
+        setupView()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupView()
+        setupView()
     }
 
     private func setupView() {
         Bundle.main.loadNibNamed("RatingView", owner: self, options: nil)
-        addSubview(self.container)
-        self.container.frame = self.bounds
-        self.container.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(container)
+        container.frame = bounds
+        container.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
     // MARK: - Clicked Star
@@ -75,30 +75,30 @@ class RatingView: UIView {
             return
         }
 
-        self.fillStarsWithRating(rating: rating.value)
+        fillStarsWithRating(rating: rating.value)
     }
 
     func fillStarsWithRating(rating: Int) {
-        self.firstStar.image = UIImage(named: rating >= StarRating.One.value ? StarImageNames.filled : StarImageNames.emptied)
-        self.secondStar.image = UIImage(named: rating >= StarRating.Two.value ? StarImageNames.filled : StarImageNames.emptied)
-        self.thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? StarImageNames.filled : StarImageNames.emptied)
-        self.fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? StarImageNames.filled : StarImageNames.emptied)
-        self.fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? StarImageNames.filled : StarImageNames.emptied)
+        firstStar.image = UIImage(named: rating >= StarRating.One.value ? StarImageNames.filled : StarImageNames.emptied)
+        secondStar.image = UIImage(named: rating >= StarRating.Two.value ? StarImageNames.filled : StarImageNames.emptied)
+        thirdStar.image = UIImage(named: rating >= StarRating.Three.value ? StarImageNames.filled : StarImageNames.emptied)
+        fourthStar.image = UIImage(named: rating >= StarRating.Four.value ? StarImageNames.filled : StarImageNames.emptied)
+        fifthStar.image = UIImage(named: rating >= StarRating.Five.value ? StarImageNames.filled : StarImageNames.emptied)
 
-        self.delegate?.didRate(rating: rating)
+        delegate?.didRate(rating: rating)
     }
 }
 
 extension RatingView: RatingInterface {
     func resetRating() {
-        self.firstStar.image = UIImage(named: StarImageNames.emptied)
-        self.secondStar.image = UIImage(named: StarImageNames.emptied)
-        self.thirdStar.image = UIImage(named: StarImageNames.emptied)
-        self.fourthStar.image = UIImage(named: StarImageNames.emptied)
-        self.fifthStar.image = UIImage(named: StarImageNames.emptied)
+        firstStar.image = UIImage(named: StarImageNames.emptied)
+        secondStar.image = UIImage(named: StarImageNames.emptied)
+        thirdStar.image = UIImage(named: StarImageNames.emptied)
+        fourthStar.image = UIImage(named: StarImageNames.emptied)
+        fifthStar.image = UIImage(named: StarImageNames.emptied)
     }
 
     func setRating(rating: Int) {
-        self.fillStarsWithRating(rating: rating)
+        fillStarsWithRating(rating: rating)
     }
 }

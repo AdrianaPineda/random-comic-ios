@@ -11,10 +11,14 @@ import UIKit
 
 protocol ComicApiServiceInterface: ServiceInterface {
     var baseUrl: String { get set }
+
     // MARK: - Completion handlers
+
     func getComic(id: Int, completion: @escaping ((Comic) -> Void))
     func getLastComic(completion: @escaping ((Comic) -> Void))
+
     // MARK: - Promises
+
     func getComic(id: Int) -> Promise<Comic>
     func getLastComic() -> Promise<Comic>
 }

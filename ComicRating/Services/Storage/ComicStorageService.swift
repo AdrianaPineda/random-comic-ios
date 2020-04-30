@@ -28,7 +28,7 @@ class ComicStorageService: ComicStorageServiceInterface {
             return
         }
 
-        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: self.entityName, into: managedContext)
+        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
 
         comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
         comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating") // TODO:
@@ -50,7 +50,7 @@ class ComicStorageService: ComicStorageServiceInterface {
         var comics: [ComicRating] = []
         do {
             let comicsManagedObjects = try managedContext.fetch(fetchRequest)
-            comics = self.toComics(managedObjects: comicsManagedObjects)
+            comics = toComics(managedObjects: comicsManagedObjects)
         } catch let error as NSError {
             print("Could not load comics: \(error.localizedDescription)")
         }

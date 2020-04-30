@@ -10,6 +10,6 @@ import UIKit
 
 class IntRandomNumber: RandomNumber {
     func get(from: Int, to: Int) -> Int {
-        return Int.random(in: from...to)
+        return Int.random(in: from ... to)
     }
 }

@@ -8,5 +8,5 @@
 
 struct ComicRating {
     var id: Int
-    var rating: Int // TODO change to UIInt8
+    var rating: Int // TODO: change to UIInt8
 }

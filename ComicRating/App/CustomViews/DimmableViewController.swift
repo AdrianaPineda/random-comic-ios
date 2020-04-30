@@ -14,13 +14,13 @@ class DimmableViewController: UIViewController {
 
 extension DimmableViewController: Dimmable {
     func addDim(color: UIColor? = UIColor.black, alpha: CGFloat? = 0.1) {
-        self.dimView.frame = self.view.frame
-        self.dimView.backgroundColor = color
-        self.dimView.alpha = alpha ?? 0
-        self.view.addSubview(self.dimView)
+        dimView.frame = view.frame
+        dimView.backgroundColor = color
+        dimView.alpha = alpha ?? 0
+        view.addSubview(dimView)
     }
 
     func removeDim() {
-        self.dimView.removeFromSuperview()
+        dimView.removeFromSuperview()
     }
 }

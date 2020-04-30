@@ -7,11 +7,10 @@
 //
 
 protocol ShowComicViewInput: class {
-
     /**
-        @author Adriana Pineda
-        Setup initial state of the view
-    */
+     @author Adriana Pineda
+     Setup initial state of the view
+     */
 
     func setupInitialState()
     func showComic(comic: UpcomingComic)

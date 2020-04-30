@@ -21,23 +21,23 @@ class ComicApiService: ComicApiServiceInterface {
     // MARK: - Completion handlers
 
     func getComic(id: Int, completion: @escaping ((Comic) -> Void)) {
-        let url = "\(self.baseUrl)/\(id)/info.0.json"
-        self.getComic(url: url, completion: completion)
+        let url = "\(baseUrl)/\(id)/info.0.json"
+        getComic(url: url, completion: completion)
     }
 
     func getLastComic(completion: @escaping ((Comic) -> Void)) {
-        let url = "\(self.baseUrl)/info.0.json"
-        self.getComic(url: url, completion: completion)
+        let url = "\(baseUrl)/info.0.json"
+        getComic(url: url, completion: completion)
     }
 
     private func getComic(url: String, completion: @escaping ((Comic) -> Void)) {
-        self.httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
+        httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
 
             switch result {
-                case .success(let comicResponse):
-                    completion(self.toComic(comicResponse: comicResponse))
-                case .failure(let error):
-                    print(error) // TODO:
+            case let .success(comicResponse):
+                completion(self.toComic(comicResponse: comicResponse))
+            case let .failure(error):
+                print(error) // TODO:
             }
         }
     }
@@ -45,14 +45,13 @@ class ComicApiService: ComicApiServiceInterface {
     // MARK: - Promises
 
     func getComic(id: Int) -> Promise<Comic> {
-        // Promise?
-        let url = "\(self.baseUrl)/\(id)/info.0.json"
-        return self.getComic(url: url)
+        let url = "\(baseUrl)/\(id)/info.0.json"
+        return getComic(url: url)
     }
 
     func getLastComic() -> Promise<Comic> {
-        let url = "\(self.baseUrl)/info.0.json"
-        return self.getComic(url: url)
+        let url = "\(baseUrl)/info.0.json"
+        return getComic(url: url)
     }
 
     private func getComic(url: String) -> Promise<Comic> {

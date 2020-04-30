@@ -15,8 +15,8 @@ protocol ServiceBuilderInterface {
 
 extension ServiceBuilderInterface {
     func setup() {
-        self.comicApi.setup()
-        self.imageDownloader.setup()
-        self.comicStorage.setup()
+        comicApi.setup()
+        imageDownloader.setup()
+        comicStorage.setup()
     }
 }

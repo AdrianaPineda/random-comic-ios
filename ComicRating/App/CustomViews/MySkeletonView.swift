@@ -13,10 +13,10 @@ extension UIView {
         let startLocations: [NSNumber] = [-1.0, -0.5, 0.0]
         let endLocations: [NSNumber] = [1.0, 1.5, 2.0]
 
-        let gradientLayer = self.configureGradientLayer(startLocations: startLocations)
-        self.layer.addSublayer(gradientLayer)
+        let gradientLayer = configureGradientLayer(startLocations: startLocations)
+        layer.addSublayer(gradientLayer)
 
-        let (animation, animationGroup) = self.configureAnimation(startLocations: startLocations, endLocations: endLocations)
+        let (animation, animationGroup) = configureAnimation(startLocations: startLocations, endLocations: endLocations)
         gradientLayer.add(animationGroup, forKey: animation.keyPath)
     }
 
@@ -25,7 +25,7 @@ extension UIView {
         let gradientMovingColor: CGColor = UIColor(white: 0.75, alpha: 1.0).cgColor
 
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
+        gradientLayer.frame = bounds
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         gradientLayer.colors = [
@@ -57,7 +57,7 @@ extension UIView {
     }
 
     func stopSkeletonViewAnimation() {
-        self.layer.sublayers = self.layer.sublayers?.filter { theLayer in
+        layer.sublayers = layer.sublayers?.filter { theLayer in
             !theLayer.isKind(of: CAGradientLayer.classForCoder())
         }
     }

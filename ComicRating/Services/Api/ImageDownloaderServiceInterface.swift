@@ -10,5 +10,6 @@ import PromiseKit
 
 protocol ImageDownloaderServiceInterface: ServiceInterface {
     // MARK: - Promises
+
     func fetchImage(fromUrl url: String) -> Promise<Data>
 }

@@ -29,7 +29,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     // MARK: - Promises
 
     func fetchComic() {
-        self.getRandomComicNumber().then { (randomComicNumber: Int) in
+        getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
         }.then { (comic: Comic) in
             // TODO: fix
@@ -51,7 +51,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     }
 
     func getRandomComicNumber() -> Promise<Int> {
-        return self.apiService.getLastComic().map { comic in
+        return apiService.getLastComic().map { comic in
             let randomNumber = self.randomNumber.get(from: 1, to: comic.number)
             return randomNumber
         }
@@ -78,7 +78,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         print("1. Store locally")
         guard let comic = self.currentComic else { return }
         let comicRating = ComicRating(id: comic.number, rating: rating)
-        self.storageService.upsertComicRating(comicRating: comicRating)
-        print("1. Send it to a backend", self.storageService.fetchComicRating())
+        storageService.upsertComicRating(comicRating: comicRating)
+        print("1. Send it to a backend", storageService.fetchComicRating())
     }
 }

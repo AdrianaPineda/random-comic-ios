@@ -9,9 +9,7 @@
 import UIKit
 
 class ShowComicModuleConfigurator {
-
     func configure() -> ShowComicRouter {
-
         let viewController = ShowComicViewController()
         let router = ShowComicRouter()
 
@@ -34,5 +32,4 @@ class ShowComicModuleConfigurator {
 
         return router
     }
-
 }

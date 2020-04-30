@@ -14,27 +14,28 @@ class ShowComicPresenter: ShowComicModuleInput {
 
 extension ShowComicPresenter: ShowComicViewOutput {
     func viewIsReady() {
-        self.fetchComic()
+        fetchComic()
     }
 
     func nextButtonClicked() {
-        self.fetchComic()
+        fetchComic()
     }
 
     private func fetchComic() {
-        self.interactor.fetchComic()
-        self.view.showLoadingContent()
+        interactor.fetchComic()
+        view.showLoadingContent()
     }
 }
 
 extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: UpcomingComic) {
-        self.view.resetRating()
-        self.view.stopLoadingContent()
-        self.view.showComic(comic: comic) // needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
+        view.resetRating()
+        view.stopLoadingContent()
+        view.showComic(comic: comic)
+        // ^ needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
     }
 
     func comicRated(rating: Int) {
-        self.interactor.comicRated(rating: rating)
+        interactor.comicRated(rating: rating)
     }
 }
