@@ -41,7 +41,7 @@ class ComicStorageService: ComicStorageServiceInterface {
         }
     }
 
-    func fetchComicRating() -> [ComicRating] {
+    func getComicRating() -> [ComicRating] {
         guard let managedContext = self.viewContext else {
             return []
         }
