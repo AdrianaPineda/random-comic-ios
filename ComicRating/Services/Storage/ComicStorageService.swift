@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 
 class ComicStorageService: ComicStorageServiceInterface {
-    private let entityName = "Rating"
 
     private lazy var viewContext: NSManagedObjectContext? = {
         guard let appDelegate =
@@ -32,8 +31,9 @@ class ComicStorageService: ComicStorageServiceInterface {
         rating.id = Int16(comicRating.id)
         rating.rating = Int16(comicRating.rating)
 
-        comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
-        comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating") // TODO:
+//        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
+//        comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
+//        comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating")
 
         do {
             try managedContext.save()
