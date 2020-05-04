@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		01472DDB244C57ED008A5ED1 /* ComicRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDA244C57ED008A5ED1 /* ComicRating.swift */; };
 		01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDF244EB0A1008A5ED1 /* ComicRating.xcdatamodeld */; };
-		01472DE3244EB48C008A5ED1 /* ComicRatingManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01472DE2244EB48C008A5ED1 /* ComicRatingManagedObject.swift */; };
 		0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4C24442F57000E226C /* RatingDelegate.swift */; };
 		0150BA4F24443093000E226C /* RatingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4E24443093000E226C /* RatingInterface.swift */; };
 		0150BA5124457BA5000E226C /* Dimmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5024457BA5000E226C /* Dimmable.swift */; };
@@ -81,7 +80,6 @@
 /* Begin PBXFileReference section */
 		01472DDA244C57ED008A5ED1 /* ComicRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRating.swift; sourceTree = "<group>"; };
 		01472DE0244EB0A1008A5ED1 /* ComicRating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComicRating.xcdatamodel; sourceTree = "<group>"; };
-		01472DE2244EB48C008A5ED1 /* ComicRatingManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRatingManagedObject.swift; sourceTree = "<group>"; };
 		0150BA4C24442F57000E226C /* RatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDelegate.swift; sourceTree = "<group>"; };
 		0150BA4E24443093000E226C /* RatingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInterface.swift; sourceTree = "<group>"; };
 		0150BA5024457BA5000E226C /* Dimmable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimmable.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				0160DFE7245BDFE600DE9BAF /* Rating+CoreDataClass.swift */,
 				0160DFE8245BDFE600DE9BAF /* Rating+CoreDataProperties.swift */,
-				01472DE2244EB48C008A5ED1 /* ComicRatingManagedObject.swift */,
 				0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */,
 				0150BA59244814EB000E226C /* ComicStorageService.swift */,
 				01472DDF244EB0A1008A5ED1 /* ComicRating.xcdatamodeld */,
@@ -538,7 +535,6 @@
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
 				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,
-				01472DE3244EB48C008A5ED1 /* ComicRatingManagedObject.swift in Sources */,
 				01878A3A2427817E00883D93 /* ComicApiService.swift in Sources */,
 				0150BA552445825F000E226C /* DimmableViewController.swift in Sources */,
 				0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */,
