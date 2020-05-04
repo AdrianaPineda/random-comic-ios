@@ -4,3 +4,6 @@ analyzer_rules:
   - unused_declaration
   - unused_import
 reporter: "xcode"
+identifier_name:
+  excluded:
+    - id
