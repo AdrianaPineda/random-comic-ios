@@ -6,6 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
+//  TODO: return to interactor??? https://theswiftdev.com/how-to-write-services-for-viper/
 struct ComicResponse: Codable {
     var number: Int
     var month: String

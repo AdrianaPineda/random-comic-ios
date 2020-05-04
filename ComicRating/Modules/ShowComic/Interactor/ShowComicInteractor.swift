@@ -45,6 +45,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         }
     }
 
+    //  TODO: change, send Comic to Presenter. Presenter should transform to UpcomingComic
     func toUpcomicComic(comic: Comic, imgData: Data) -> UpcomingComic {
         let upcomingComic = UpcomingComic(number: comic.number, month: comic.month, year: comic.year, day: comic.day, title: comic.title, safeTitle: comic.safeTitle, img: imgData)
         return upcomingComic
