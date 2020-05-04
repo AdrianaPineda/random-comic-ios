@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G4032" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Rating" representedClassName="Rating" syncable="YES" codeGenerationType="class">
+    <entity name="Rating" representedClassName="Rating" syncable="YES">
         <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" attributeType="Integer 16" minValueString="1" maxValueString="5" usesScalarValueType="YES"/>
         <uniquenessConstraints>

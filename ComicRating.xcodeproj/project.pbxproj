@@ -34,6 +34,8 @@
 		015F708324209415004ED20A /* ShowComicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707524209415004ED20A /* ShowComicRouter.swift */; };
 		015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707624209415004ED20A /* ShowComicRouterInput.swift */; };
 		015F708524209415004ED20A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F707724209415004ED20A /* AppDependencies.swift */; };
+		0160DFE9245BDFE600DE9BAF /* Rating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160DFE7245BDFE600DE9BAF /* Rating+CoreDataClass.swift */; };
+		0160DFEA245BDFE600DE9BAF /* Rating+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160DFE8245BDFE600DE9BAF /* Rating+CoreDataProperties.swift */; };
 		01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01635ABB2451463D005BE30F /* MySkeletonView.swift */; };
 		01635ABF2451534B005BE30F /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 01635ABE2451534B005BE30F /* SkeletonView */; };
 		01878A3424277C8B00883D93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01878A3324277C8B00883D93 /* Alamofire */; };
@@ -110,6 +112,8 @@
 		015F707524209415004ED20A /* ShowComicRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouter.swift; sourceTree = "<group>"; };
 		015F707624209415004ED20A /* ShowComicRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicRouterInput.swift; sourceTree = "<group>"; };
 		015F707724209415004ED20A /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		0160DFE7245BDFE600DE9BAF /* Rating+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rating+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0160DFE8245BDFE600DE9BAF /* Rating+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rating+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		01635ABB2451463D005BE30F /* MySkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySkeletonView.swift; sourceTree = "<group>"; };
 		01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiServiceInterface.swift; sourceTree = "<group>"; };
 		01878A3724277E1700883D93 /* HttpServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceInterface.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		0150BA58244814AA000E226C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				0160DFE7245BDFE600DE9BAF /* Rating+CoreDataClass.swift */,
+				0160DFE8245BDFE600DE9BAF /* Rating+CoreDataProperties.swift */,
 				01472DE2244EB48C008A5ED1 /* ComicRatingManagedObject.swift */,
 				0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */,
 				0150BA59244814EB000E226C /* ComicStorageService.swift */,
@@ -551,6 +557,7 @@
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
+				0160DFEA245BDFE600DE9BAF /* Rating+CoreDataProperties.swift in Sources */,
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
@@ -559,6 +566,7 @@
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
 				01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */,
+				0160DFE9245BDFE600DE9BAF /* Rating+CoreDataClass.swift in Sources */,
 				01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

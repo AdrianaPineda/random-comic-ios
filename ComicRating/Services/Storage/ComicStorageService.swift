@@ -28,7 +28,9 @@ class ComicStorageService: ComicStorageServiceInterface {
             return
         }
 
-        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
+        let rating = Rating(context: managedContext)
+        rating.id = Int16(comicRating.id)
+        rating.rating = Int16(comicRating.rating)
 
         comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
         comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating") // TODO:
@@ -46,7 +48,7 @@ class ComicStorageService: ComicStorageServiceInterface {
             return []
         }
 
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        let fetchRequest = Rating.createFetchRequest()
         var comics: [ComicRating] = []
         do {
             let comicsManagedObjects = try managedContext.fetch(fetchRequest)
