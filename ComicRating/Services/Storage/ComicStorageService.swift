@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 
 class ComicStorageService: ComicStorageServiceInterface {
-
     private lazy var viewContext: NSManagedObjectContext? = {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -23,7 +22,7 @@ class ComicStorageService: ComicStorageServiceInterface {
     }()
 
     func upsertComicRating(comicRating: ComicRating) {
-        guard let managedContext = self.viewContext else {
+        guard let managedContext = viewContext else {
             return
         }
 
@@ -37,14 +36,13 @@ class ComicStorageService: ComicStorageServiceInterface {
 
         do {
             try managedContext.save()
-
         } catch let error as NSError {
             print("Comic could not be saved: \(error.localizedDescription)")
         }
     }
 
     func getComicRating() -> [ComicRating] {
-        guard let managedContext = self.viewContext else {
+        guard let managedContext = viewContext else {
             return []
         }
 
@@ -74,11 +72,11 @@ class ComicStorageService: ComicStorageServiceInterface {
 
 extension NSManagedObject {
     func toComicRating() -> ComicRating? {
-        guard let id: Int = self.value(forKey: "id") as? Int else {
+        guard let id: Int = value(forKey: "id") as? Int else {
             return nil
         }
 
-        guard let rating: Int = self.value(forKey: "rating") as? Int else {
+        guard let rating: Int = value(forKey: "rating") as? Int else {
             return nil
         }
 
