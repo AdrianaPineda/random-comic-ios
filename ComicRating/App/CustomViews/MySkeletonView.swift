@@ -38,7 +38,8 @@ extension UIView {
         return gradientLayer
     }
 
-    private func configureAnimation(startLocations: [NSNumber], endLocations: [NSNumber]) -> (CABasicAnimation, CAAnimationGroup) {
+    private func configureAnimation(startLocations: [NSNumber], endLocations: [NSNumber]) -> (CABasicAnimation,
+                                                                                              CAAnimationGroup) {
         let movingAnimationDuration: CFTimeInterval = 1.8
         let delayBetweenAnimationLoops: CFTimeInterval = 0.3
 

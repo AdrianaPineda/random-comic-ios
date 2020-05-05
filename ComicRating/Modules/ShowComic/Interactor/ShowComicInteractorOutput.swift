@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ShowComicInteractorOutput: class {
-    func comicFetched(comic: UpcomingComic)
+protocol ShowComicInteractorOutput: AnyObject {
+    func comicFetched(comic: Comic, imgData: Data)
 }

@@ -9,4 +9,5 @@
 import Foundation
 protocol RandomNumber {
     func get(from: Int, to: Int) -> Int
+    // TODO: static?
 }

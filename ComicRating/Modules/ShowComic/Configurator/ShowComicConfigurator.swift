@@ -11,6 +11,7 @@ import UIKit
 class ShowComicModuleConfigurator {
     func configure() -> ShowComicRouter {
         let viewController = ShowComicViewController()
+
         let router = ShowComicRouter()
 
         let presenter = ShowComicPresenter()
@@ -21,7 +22,8 @@ class ShowComicModuleConfigurator {
         let imageDownloader = App.shared.services.imageDownloader
         let intRandomNumber = IntRandomNumber()
         let comicStorage = App.shared.services.comicStorage
-        let interactor = ShowComicInteractor(apiService: comicApi, imageDownloader: imageDownloader, storageService: comicStorage, randomNumber: intRandomNumber)
+        let interactor = ShowComicInteractor(apiService: comicApi, imageDownloader: imageDownloader,
+                                             storageService: comicStorage, randomNumber: intRandomNumber)
         interactor.output = presenter
 
         presenter.interactor = interactor

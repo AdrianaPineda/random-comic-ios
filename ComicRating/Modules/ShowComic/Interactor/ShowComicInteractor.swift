@@ -1,11 +1,11 @@
 //
-import Foundation
 //  ShowComicShowComicInteractor.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 17/02/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import Foundation
 import PromiseKit
 
 class ShowComicInteractor {
@@ -17,7 +17,8 @@ class ShowComicInteractor {
 
     var currentComic: Comic?
 
-    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface, storageService: ComicStorageServiceInterface, randomNumber: RandomNumber) {
+    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface,
+         storageService: ComicStorageServiceInterface, randomNumber: RandomNumber) {
         self.apiService = apiService
         self.imageDownloader = imageDownloader
         self.randomNumber = randomNumber
@@ -32,23 +33,16 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
         }.then { (comic: Comic) in
-            // TODO: fix
+            // TODO: where and when should we download the image
             self.imageDownloader.fetchImage(fromUrl: comic.img).done { [weak self] (data: Data) in
                 guard let self = self else { return }
-                let upcomingComic = self.toUpcomicComic(comic: comic, imgData: data)
-                self.output.comicFetched(comic: upcomingComic)
+                self.output.comicFetched(comic: comic, imgData: data)
                 self.currentComic = comic
             }
         }
         .catch { _ in
             // TODO:
         }
-    }
-
-    //  TODO: change, send Comic to Presenter. Presenter should transform to UpcomingComic
-    func toUpcomicComic(comic: Comic, imgData: Data) -> UpcomingComic {
-        let upcomingComic = UpcomingComic(number: comic.number, month: comic.month, year: comic.year, day: comic.day, title: comic.title, safeTitle: comic.safeTitle, img: imgData)
-        return upcomingComic
     }
 
     func getRandomComicNumber() -> Promise<Int> {
@@ -77,7 +71,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
 
     func comicRated(rating: Int) {
         print("1. Store locally")
-        guard let comic = self.currentComic else { return }
+        guard let comic = currentComic else { return }
         let comicRating = ComicRating(id: comic.number, rating: rating)
         storageService.upsertComicRating(comicRating: comicRating)
         print("1. Send it to a backend", storageService.getComicRating())

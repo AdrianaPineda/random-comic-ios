@@ -77,6 +77,7 @@ class ComicApiService: ComicApiServiceInterface {
         let year = Int(comicResponse.year) ?? 0
         let day = Int(comicResponse.day) ?? 0
 
-        return Comic(number: comicResponse.number, month: month, year: year, day: day, title: comicResponse.title, safeTitle: comicResponse.safeTitle, img: comicResponse.img)
+        return Comic(number: comicResponse.number, month: month, year: year, day: day, title: comicResponse.title,
+                     safeTitle: comicResponse.safeTitle, img: comicResponse.img)
     }
 }

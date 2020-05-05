@@ -22,7 +22,8 @@ class HttpService: HttpServiceInterface {
 
     // MARK: - Completion handlers
 
-    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type, completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
+    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type,
+                    completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
         //  TODO: map method
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
         AF.request(url, method: alamofireHttpMethod, parameters: params).responseJSON { response in
@@ -46,7 +47,8 @@ class HttpService: HttpServiceInterface {
 
     // MARK: - Promises
 
-    func request<T>(method _: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T> where T: Decodable {
+    func request<T>(method _: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T>
+        where T: Decodable {
         //  TODO: map method
 
         return Promise { seal in
