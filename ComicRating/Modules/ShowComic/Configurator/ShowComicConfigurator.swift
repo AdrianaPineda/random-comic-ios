@@ -9,9 +9,7 @@
 import UIKit
 
 class ShowComicModuleConfigurator {
-    func configure() -> ShowComicRouter {
-        let viewController = ShowComicViewController()
-
+    func configure(viewController: ShowComicViewController) -> ShowComicRouter {
         let router = ShowComicRouter()
 
         let presenter = ShowComicPresenter()

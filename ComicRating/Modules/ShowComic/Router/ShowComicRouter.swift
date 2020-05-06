@@ -9,10 +9,6 @@ import UIKit
 
 class ShowComicRouter: ShowComicRouterInput {
     weak var showComicPresenter: ShowComicModuleInput?
-    var showComicViewController: ShowComicViewController? // TODO: change to weak once tabbar is used
-
-    func presentShowComicControllerFromWindow(window: UIWindow) {
-        window.rootViewController = showComicViewController
-        window.makeKeyAndVisible()
-    }
+    weak var showComicViewController: ShowComicViewController?
+    var tabBarController: UITabBarController?
 }

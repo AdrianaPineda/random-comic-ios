@@ -48,6 +48,10 @@
 		01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 01927CB12441977E00D2BCC4 /* Cosmos */; };
 		01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* RatingView.xib */; };
 		01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* RatingView.swift */; };
+		01A0A882245FD4770013BEEA /* ComicRating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A0A881245FD4770013BEEA /* ComicRating.storyboard */; };
+		01A0A88724626B630013BEEA /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88624626B630013BEEA /* MainConfigurator.swift */; };
+		01A0A88924626B760013BEEA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88824626B760013BEEA /* MainRouter.swift */; };
+		01A0A88B24626E530013BEEA /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88A24626E530013BEEA /* MainRouterInput.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
@@ -122,6 +126,10 @@
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		01927CB3244197DB00D2BCC4 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		01927CB524419C0E00D2BCC4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		01A0A881245FD4770013BEEA /* ComicRating.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicRating.storyboard; sourceTree = "<group>"; };
+		01A0A88624626B630013BEEA /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		01A0A88824626B760013BEEA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		01A0A88A24626E530013BEEA /* MainRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -232,6 +240,8 @@
 		015F706324209415004ED20A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				01A0A88324626B380013BEEA /* Main */,
+				01A0A880245FD4620013BEEA /* Common */,
 				015F706424209415004ED20A /* ShowComic */,
 			);
 			path = Modules;
@@ -345,6 +355,40 @@
 				01635ABB2451463D005BE30F /* MySkeletonView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		01A0A880245FD4620013BEEA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A881245FD4770013BEEA /* ComicRating.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		01A0A88324626B380013BEEA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A88424626B3F0013BEEA /* Router */,
+				01A0A88524626B480013BEEA /* Configurator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		01A0A88424626B3F0013BEEA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A88A24626E530013BEEA /* MainRouterInput.swift */,
+				01A0A88824626B760013BEEA /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		01A0A88524626B480013BEEA /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A88624626B630013BEEA /* MainConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		01A5DDD8242B1B7600F77F4F /* Common */ = {
@@ -478,6 +522,7 @@
 				01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */,
 				015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */,
 				015F703A241F463C004ED20A /* Assets.xcassets in Resources */,
+				01A0A882245FD4770013BEEA /* ComicRating.storyboard in Resources */,
 				015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +575,7 @@
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
+				01A0A88B24626E530013BEEA /* MainRouterInput.swift in Sources */,
 				0150BA5124457BA5000E226C /* Dimmable.swift in Sources */,
 				01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */,
 				015F708524209415004ED20A /* AppDependencies.swift in Sources */,
@@ -553,6 +599,8 @@
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
+				01A0A88924626B760013BEEA /* MainRouter.swift in Sources */,
+				01A0A88724626B630013BEEA /* MainConfigurator.swift in Sources */,
 				0160DFEA245BDFE600DE9BAF /* Rating+CoreDataProperties.swift in Sources */,
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,

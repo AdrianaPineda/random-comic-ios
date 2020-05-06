@@ -9,6 +9,4 @@
 import Foundation
 import UIKit
 
-protocol ShowComicRouterInput {
-    func presentShowComicControllerFromWindow(window: UIWindow)
-}
+protocol ShowComicRouterInput {}
