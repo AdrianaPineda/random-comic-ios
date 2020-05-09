@@ -10,5 +10,4 @@ import UIKit
 class ShowComicRouter: ShowComicRouterInput {
     weak var showComicPresenter: ShowComicModuleInput?
     weak var showComicViewController: ShowComicViewController?
-    var tabBarController: UITabBarController?
 }

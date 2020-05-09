@@ -12,20 +12,18 @@ import UIKit
 class MainConfigurator {
     func configure() -> MainRouter {
         let showComicConfigurator = ShowComicModuleConfigurator()
-        let showComicViewController = ShowComicViewController()
-        let showComicRouter = showComicConfigurator.configure(viewController: showComicViewController)
+        let viewController = ShowComicViewController()
+        let showComicRouter = showComicConfigurator.configure(viewController: viewController) // TODO: alternative?
 
         let mainRouter = MainRouter()
         mainRouter.showComicRouter = showComicRouter
 
-        let tabBarController = UITabBarController()
-
-        let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        showComicViewController.tabBarItem = showComicTabBarItem
-
-        tabBarController.viewControllers = [showComicViewController]
-
-        mainRouter.tabBarController = tabBarController
+        if let showComicViewController = showComicRouter.showComicViewController {
+            let tabSections = (showComic: showComicViewController, history: UIViewController())
+            let tabBarConfigurator = TabBarConfigurator()
+            let tabBarController = tabBarConfigurator.configure(tabSections: tabSections)
+            mainRouter.tabBarController = tabBarController
+        }
 
         return mainRouter
     }

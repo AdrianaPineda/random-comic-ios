@@ -52,6 +52,7 @@
 		01A0A88724626B630013BEEA /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88624626B630013BEEA /* MainConfigurator.swift */; };
 		01A0A88924626B760013BEEA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88824626B760013BEEA /* MainRouter.swift */; };
 		01A0A88B24626E530013BEEA /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88A24626E530013BEEA /* MainRouterInput.swift */; };
+		01A0A88F2466BAAC0013BEEA /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */; };
 		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
 		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
@@ -130,6 +131,7 @@
 		01A0A88624626B630013BEEA /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
 		01A0A88824626B760013BEEA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		01A0A88A24626E530013BEEA /* MainRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
+		01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
 		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				01A0A88324626B380013BEEA /* Main */,
+				01A0A88C2466BA7D0013BEEA /* TabBar */,
 				01A0A880245FD4620013BEEA /* Common */,
 				015F706424209415004ED20A /* ShowComic */,
 			);
@@ -387,6 +390,22 @@
 			isa = PBXGroup;
 			children = (
 				01A0A88624626B630013BEEA /* MainConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		01A0A88C2466BA7D0013BEEA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A88D2466BA8F0013BEEA /* Configurator */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		01A0A88D2466BA8F0013BEEA /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -571,6 +590,7 @@
 			files = (
 				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
 				01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */,
+				01A0A88F2466BAAC0013BEEA /* TabBarConfigurator.swift in Sources */,
 				01472DDB244C57ED008A5ED1 /* ComicRating.swift in Sources */,
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,

@@ -1,0 +1,28 @@
+//
+//  TabBarConfigurator.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 09/05/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+typealias TabSections = (
+    showComic: UIViewController,
+    history: UIViewController
+)
+
+class TabBarConfigurator {
+    func configure(tabSections: TabSections) -> UITabBarController {
+        let tabBarController = UITabBarController()
+
+        let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        tabSections.showComic.tabBarItem = showComicTabBarItem
+
+        tabBarController.viewControllers = [tabSections.showComic]
+
+        return tabBarController
+    }
+}
