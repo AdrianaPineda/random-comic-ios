@@ -7,7 +7,5 @@
 //
 
 class ComicHistoryInteractor: ComicHistoryInteractorInput {
-
     weak var output: ComicHistoryInteractorOutput!
-
 }

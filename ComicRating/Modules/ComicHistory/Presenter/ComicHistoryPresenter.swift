@@ -7,12 +7,9 @@
 //
 
 class ComicHistoryPresenter: ComicHistoryModuleInput, ComicHistoryViewOutput, ComicHistoryInteractorOutput {
-
     weak var view: ComicHistoryViewInput!
     var interactor: ComicHistoryInteractorInput!
     var router: ComicHistoryRouterInput!
 
-    func viewIsReady() {
-
-    }
+    func viewIsReady() {}
 }

@@ -9,14 +9,11 @@
 import UIKit
 
 class ComicHistoryModuleInitializer: NSObject {
-
-    //Connect with object on storyboard
-    @IBOutlet weak var comichistoryViewController: ComicHistoryViewController!
+    // Connect with object on storyboard
+    @IBOutlet var comichistoryViewController: ComicHistoryViewController!
 
     override func awakeFromNib() {
-
         let configurator = ComicHistoryModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: comichistoryViewController)
     }
-
 }

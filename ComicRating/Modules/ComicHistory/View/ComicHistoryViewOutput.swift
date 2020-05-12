@@ -7,11 +7,10 @@
 //
 
 protocol ComicHistoryViewOutput {
-
     /**
-        @author Adriana Pineda
-        Notify presenter that view is ready
-    */
+     @author Adriana Pineda
+     Notify presenter that view is ready
+     */
 
     func viewIsReady()
 }

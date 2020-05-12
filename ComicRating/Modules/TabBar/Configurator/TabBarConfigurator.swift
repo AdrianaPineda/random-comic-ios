@@ -21,7 +21,10 @@ class TabBarConfigurator {
         let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         tabSections.showComic.tabBarItem = showComicTabBarItem
 
-        tabBarController.viewControllers = [tabSections.showComic]
+        let comicHistoryTabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        tabSections.history.tabBarItem = comicHistoryTabBarItem
+
+        tabBarController.viewControllers = [tabSections.showComic, tabSections.history]
 
         return tabBarController
     }

@@ -9,17 +9,16 @@
 import UIKit
 
 class ComicHistoryViewController: UIViewController, ComicHistoryViewInput {
-
     var output: ComicHistoryViewOutput!
 
     // MARK: Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
     // MARK: ComicHistoryViewInput
-    func setupInitialState() {
-    }
+
+    func setupInitialState() {}
 }

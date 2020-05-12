@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol ComicHistoryInteractorInput {
-
-}
+protocol ComicHistoryInteractorInput {}
