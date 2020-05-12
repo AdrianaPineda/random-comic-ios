@@ -6,7 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-protocol ShowComicViewInput: class {
+protocol ShowComicViewInput: AnyObject {
     /**
      @author Adriana Pineda
      Setup initial state of the view
