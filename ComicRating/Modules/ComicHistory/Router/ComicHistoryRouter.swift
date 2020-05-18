@@ -6,4 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-class ComicHistoryRouter: ComicHistoryRouterInput {}
+class ComicHistoryRouter: ComicHistoryRouterInput {
+    weak var comicHistoryPresenter: ComicHistoryPresenter?
+    weak var comicHistoryViewController: ComicHistoryViewController?
+}

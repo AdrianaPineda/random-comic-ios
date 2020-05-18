@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Comichistory View Controller-->
+        <!--Comic History View Controller-->
         <scene sceneID="Vk1-iF-Fqr">
             <objects>
                 <viewController storyboardIdentifier="comicHistoryVC" id="roX-0o-n0v" customClass="ComicHistoryViewController" customModule="ComicRating" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFz-4c-mAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="j1T-Dr-yX4" customClass="ComicHistoryModuleInitializer" customModule="ComicRating" customModuleProvider="target">
                     <connections>
-                        <outlet property="comichistoryViewController" destination="roX-0o-n0v" id="8ln-oh-dm3"/>
+                        <outlet property="comicHistoryViewController" destination="roX-0o-n0v" id="8ln-oh-dm3"/>
                     </connections>
                 </customObject>
             </objects>

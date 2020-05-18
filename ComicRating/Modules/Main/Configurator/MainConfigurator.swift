@@ -9,37 +9,29 @@
 import Foundation
 import UIKit
 
-let KComicHistoryViewControllerIdentifier = "comicHistoryVC"
-
 class MainConfigurator {
-    func comicHistoryViewControllerFromStoryboard() -> ComicHistoryViewController? {
-        let storyboard = UIStoryboard(name: "ComicHistory", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier) as? ComicHistoryViewController
-        return viewController
-    }
-
     func configure() -> MainRouter {
+        // Testing 2 alternatives to conifgure modules:
+
+        // Show Comic: manually init view controller and call configure
         let showComicConfigurator = ShowComicModuleConfigurator()
         let showComicViewController = ShowComicViewController()
-        _ = showComicConfigurator
-            .configure(viewController: showComicViewController) // TODO: alternative?
+        showComicConfigurator.configure(viewController: showComicViewController)
+
+        // Comic History: call initializer to get view controller which calls configure in `awakeFromNib` when
+        // view controller is instantiated from storyboard
+        let comicHistoryViewController = ComicHistoryModuleInitializer.comicHistoryViewController()
 
         let mainRouter = MainRouter()
-//        mainRouter.showComicRouter = showComicRouter
-
-        let comicHistoryConfigurator = ComicHistoryModuleConfigurator()
-        let comicHistoryViewController = comicHistoryViewControllerFromStoryboard()
-
         guard let comicHistoryVC = comicHistoryViewController else {
             return mainRouter
         }
 
-        _ = comicHistoryConfigurator
-            .configureModuleForViewInput(viewInput: comicHistoryViewController)
-
+        // TabBar
         let tabSections = (showComic: showComicViewController, history: comicHistoryVC)
         let tabBarConfigurator = TabBarConfigurator()
         let tabBarController = tabBarConfigurator.configure(tabSections: tabSections)
+
         mainRouter.tabBarController = tabBarController
 
         return mainRouter

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class MainRouter {
-    var showComicRouter: ShowComicRouterInput?
     var tabBarController: UITabBarController?
 
     func presentTabBarControllerFromWindow(window: UIWindow) {

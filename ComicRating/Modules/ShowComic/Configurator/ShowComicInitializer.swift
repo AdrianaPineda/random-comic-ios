@@ -1,21 +1,20 @@
 //
-//  ComicHistoryComicHistoryInitializer.swift
+//  ShowComicInitializer.swift
 //  ComicRating
 //
-//  Created by Adriana Pineda on 12/05/2020.
+//  Created by Adriana Pineda on 18/05/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
 import UIKit
-let KComicHistoryViewControllerIdentifier = "comicHistoryVC"
+let KShowComicViewControllerIdentifier = "showComicVC"
 
-class ComicHistoryModuleInitializer: NSObject {
-    // Connect with object on storyboard
-    @IBOutlet var comicHistoryViewController: ComicHistoryViewController!
+class ShowComicModuleInitializer: NSObject {
+    @IBOutlet var showComicViewController: ComicHistoryViewController!
 
     override func awakeFromNib() {
-        let configurator = ComicHistoryModuleConfigurator()
-        configurator.configureModuleForViewInput(viewInput: comicHistoryViewController)
+        let configurator = ShowComicModuleConfigurator()
+        configurator.configureModuleForViewInput(viewInput: showComicViewController)
     }
 
     static func comicHistoryViewController() -> ComicHistoryViewController? {

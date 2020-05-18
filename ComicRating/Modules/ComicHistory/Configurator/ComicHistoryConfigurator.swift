@@ -9,16 +9,13 @@
 import UIKit
 
 class ComicHistoryModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? ComicHistoryViewController {
             configure(viewController: viewController)
         }
     }
 
     private func configure(viewController: ComicHistoryViewController) {
-
         let router = ComicHistoryRouter()
 
         let presenter = ComicHistoryPresenter()
@@ -30,6 +27,8 @@ class ComicHistoryModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
-    }
 
+        router.comicHistoryViewController = viewController
+        router.comicHistoryPresenter = presenter
+    }
 }
