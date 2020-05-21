@@ -16,7 +16,7 @@ typealias TabSections = (
 
 class TabBarConfigurator {
     func configure(tabSections: TabSections) -> UITabBarController {
-        let tabBarController = UITabBarController()
+        let tabBarController = TabBarInitializer.tabBarController() ?? UITabBarController()
 
         let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         tabSections.showComic.tabBarItem = showComicTabBarItem
