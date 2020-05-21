@@ -10,9 +10,6 @@ import UIKit
 let KTabBarControllerIdentifier = "tabBarC"
 
 class TabBarInitializer: NSObject {
-    // Connect with object on storyboard
-    @IBOutlet var tabBarController: UITabBarController!
-
     static func tabBarController() -> UITabBarController? {
         let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier)

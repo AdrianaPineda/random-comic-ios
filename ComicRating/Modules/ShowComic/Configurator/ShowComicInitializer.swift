@@ -10,16 +10,16 @@ import UIKit
 let KShowComicViewControllerIdentifier = "showComicVC"
 
 class ShowComicModuleInitializer: NSObject {
-    @IBOutlet var showComicViewController: ComicHistoryViewController!
+    @IBOutlet var showComicViewController: ShowComicViewController!
 
     override func awakeFromNib() {
         let configurator = ShowComicModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: showComicViewController)
     }
 
-    static func comicHistoryViewController() -> ComicHistoryViewController? {
-        let storyboard = UIStoryboard(name: "ComicHistory", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier)
-        return viewController as? ComicHistoryViewController
+    static func showComicViewController() -> ShowComicViewController? {
+        let storyboard = UIStoryboard(name: "ShowComic", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: KShowComicViewControllerIdentifier)
+        return viewController as? ShowComicViewController
     }
 }

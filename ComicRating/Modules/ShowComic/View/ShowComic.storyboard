@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--A-->
+        <scene sceneID="mIX-Ne-Jee">
+            <objects>
+                <viewController storyboardIdentifier="showComicVC" id="TrJ-KX-CfX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VdJ-Y8-zVs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAy-vf-4Ms">
+                                <rect key="frame" x="163.5" y="147" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-eO-jfi">
+                                <rect key="frame" x="176" y="176" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfh-qU-8jn">
+                                <rect key="frame" x="20" y="236" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YmZ-Ql-6nn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTP-Qg-e3n">
+                                <rect key="frame" x="362" y="44" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh1-Cn-Qdx" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
+                                <rect key="frame" x="20" y="527" width="374" height="109"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="pzP-pZ-Seg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-UY-GkP">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="CTP-Qg-e3n" secondAttribute="trailing" constant="20" id="CWJ-gZ-sCm"/>
+                            <constraint firstItem="QZi-eO-jfi" firstAttribute="centerX" secondItem="VdJ-Y8-zVs" secondAttribute="centerX" id="ND8-2Q-pFS"/>
+                            <constraint firstItem="zh1-Cn-Qdx" firstAttribute="trailing" secondItem="xfh-qU-8jn" secondAttribute="trailing" id="ONA-QQ-HhO"/>
+                            <constraint firstItem="xfh-qU-8jn" firstAttribute="top" secondItem="QZi-eO-jfi" secondAttribute="bottom" constant="39" id="Q52-8e-kFq"/>
+                            <constraint firstItem="zh1-Cn-Qdx" firstAttribute="leading" secondItem="xfh-qU-8jn" secondAttribute="leading" id="S3F-Uf-g04"/>
+                            <constraint firstItem="CTP-Qg-e3n" firstAttribute="top" secondItem="dio-c3-86P" secondAttribute="top" id="Wro-7n-0B7"/>
+                            <constraint firstItem="xfh-qU-8jn" firstAttribute="centerX" secondItem="VdJ-Y8-zVs" secondAttribute="centerX" id="dIt-Oe-CRV"/>
+                            <constraint firstItem="zh1-Cn-Qdx" firstAttribute="top" secondItem="xfh-qU-8jn" secondAttribute="bottom" constant="91" id="ehW-cK-cSC"/>
+                            <constraint firstItem="xfh-qU-8jn" firstAttribute="leading" secondItem="dio-c3-86P" secondAttribute="leading" constant="20" id="fom-KF-hdO"/>
+                            <constraint firstItem="hAy-vf-4Ms" firstAttribute="top" secondItem="dio-c3-86P" secondAttribute="top" constant="103" id="gb9-MB-ZSh"/>
+                            <constraint firstItem="QZi-eO-jfi" firstAttribute="top" secondItem="hAy-vf-4Ms" secondAttribute="bottom" constant="8" id="oEy-Kq-XaD"/>
+                            <constraint firstItem="hAy-vf-4Ms" firstAttribute="centerX" secondItem="VdJ-Y8-zVs" secondAttribute="centerX" id="xKD-3P-rKX"/>
+                            <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="xfh-qU-8jn" secondAttribute="trailing" constant="20" id="zyD-gA-XEO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dio-c3-86P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhy-U0-YZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="J7G-el-mzs" customClass="ShowComicModuleInitializer" customModule="ComicRating" customModuleProvider="target">
+                    <connections>
+                        <outlet property="a" destination="TrJ-KX-CfX" id="RLw-H2-B5v"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-765" y="-638"/>
+        </scene>
+    </scenes>
+</document>

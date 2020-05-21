@@ -11,24 +11,16 @@ import UIKit
 
 class MainConfigurator {
     func configure() -> MainRouter {
-        // Testing 2 alternatives to configure modules:
-
-        // Show Comic: manually init view controller and call configure
-        let showComicConfigurator = ShowComicModuleConfigurator()
-        let showComicViewController = ShowComicViewController()
-        showComicConfigurator.configure(viewController: showComicViewController)
-
-        // Comic History: call initializer to get view controller which calls configure in `awakeFromNib` when
-        // view controller is instantiated from storyboard
+        let showComicViewController = ShowComicModuleInitializer.showComicViewController()
         let comicHistoryViewController = ComicHistoryModuleInitializer.comicHistoryViewController()
 
         let mainRouter = MainRouter()
-        guard let comicHistoryVC = comicHistoryViewController else {
+        guard let comicHistoryVC = comicHistoryViewController, let showComicVC = showComicViewController else {
             return mainRouter
         }
 
         // TabBar
-        let tabSections = (showComic: showComicViewController, history: comicHistoryVC)
+        let tabSections = (showComic: showComicVC, history: comicHistoryVC)
         let tabBarConfigurator = TabBarConfigurator()
         let tabBarController = tabBarConfigurator.configure(tabSections: tabSections)
 
