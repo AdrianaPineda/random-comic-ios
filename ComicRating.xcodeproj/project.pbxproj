@@ -58,8 +58,6 @@
 		01A0A895246A5E7B0013BEEA /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */; };
 		01A0A897246A5E8D0013BEEA /* TabBarRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A896246A5E8D0013BEEA /* TabBarRouterInput.swift */; };
 		01A0A89924724C1F0013BEEA /* ShowComicInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A89824724C1E0013BEEA /* ShowComicInitializer.swift */; };
-		01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */; };
-		01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */; };
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
 		01AA44242432FC3B00612796 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA44232432FC3B00612796 /* PromiseKit */; };
 		01AA44262432FC5200612796 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA44252432FC5200612796 /* Comic.swift */; };
@@ -157,8 +155,6 @@
 		01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		01A0A896246A5E8D0013BEEA /* TabBarRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouterInput.swift; sourceTree = "<group>"; };
 		01A0A89824724C1E0013BEEA /* ShowComicInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowComicInitializer.swift; sourceTree = "<group>"; };
-		01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
-		01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRandomNumber.swift; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		01AA44252432FC5200612796 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		01AA442F2435981D00612796 /* ComicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicResponse.swift; sourceTree = "<group>"; };
@@ -250,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				01927CB72441A87600D2BCC4 /* App */,
-				01A5DDD8242B1B7600F77F4F /* Common */,
 				01878A2F2427779E00883D93 /* Services */,
 				015F706324209415004ED20A /* Modules */,
 				015F707724209415004ED20A /* AppDependencies.swift */,
@@ -463,15 +458,6 @@
 				01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		01A5DDD8242B1B7600F77F4F /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				01A5DDD9242B1BBD00F77F4F /* RandomNumber.swift */,
-				01A5DDDB242B1C1E00F77F4F /* IntRandomNumber.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		06698FC10242705328D37951 /* ComicHistory */ = {
@@ -795,7 +781,6 @@
 				01878A432429C95000883D93 /* App.swift in Sources */,
 				01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */,
 				01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */,
-				01A5DDDA242B1BBD00F77F4F /* RandomNumber.swift in Sources */,
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
@@ -809,7 +794,6 @@
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
 				01AA44302435981D00612796 /* ComicResponse.swift in Sources */,
-				01A5DDDC242B1C1E00F77F4F /* IntRandomNumber.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
 				01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */,

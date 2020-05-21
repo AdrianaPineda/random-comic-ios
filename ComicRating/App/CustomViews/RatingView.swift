@@ -79,13 +79,26 @@ class RatingView: UIView {
     }
 
     func fillStarsWithRating(rating: Int) {
-        firstStar.image = UIImage(named: rating >= StarRating.one.value ? StarImageNames.filled : StarImageNames.emptied)
-        secondStar.image = UIImage(named: rating >= StarRating.two.value ? StarImageNames.filled : StarImageNames.emptied)
-        thirdStar.image = UIImage(named: rating >= StarRating.three.value ? StarImageNames.filled : StarImageNames.emptied)
-        fourthStar.image = UIImage(named: rating >= StarRating.four.value ? StarImageNames.filled : StarImageNames.emptied)
-        fifthStar.image = UIImage(named: rating >= StarRating.five.value ? StarImageNames.filled : StarImageNames.emptied)
+        let firstStarImageName = getImageName(rating: rating, starRating: StarRating.one)
+        firstStar.image = UIImage(named: firstStarImageName)
+
+        let secondStarImageName = getImageName(rating: rating, starRating: StarRating.two)
+        secondStar.image = UIImage(named: secondStarImageName)
+
+        let thirdStarImageName = getImageName(rating: rating, starRating: StarRating.three)
+        thirdStar.image = UIImage(named: thirdStarImageName)
+
+        let fourthStarImageName = getImageName(rating: rating, starRating: StarRating.four)
+        fourthStar.image = UIImage(named: fourthStarImageName)
+
+        let fifthStarImageName = getImageName(rating: rating, starRating: StarRating.five)
+        fifthStar.image = UIImage(named: fifthStarImageName)
 
         delegate?.didRate(rating: rating)
+    }
+
+    private func getImageName(rating: Int, starRating: StarRating) -> String {
+        return rating >= starRating.value ? StarImageNames.filled : StarImageNames.emptied
     }
 }
 

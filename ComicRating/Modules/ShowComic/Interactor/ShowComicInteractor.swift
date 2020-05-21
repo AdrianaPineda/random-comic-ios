@@ -13,15 +13,13 @@ class ShowComicInteractor {
     let apiService: ComicApiServiceInterface
     let imageDownloader: ImageDownloaderServiceInterface
     let storageService: ComicStorageServiceInterface
-    let randomNumber: RandomNumber
 
     var currentComic: Comic?
 
     init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface,
-         storageService: ComicStorageServiceInterface, randomNumber: RandomNumber) {
+         storageService: ComicStorageServiceInterface) {
         self.apiService = apiService
         self.imageDownloader = imageDownloader
-        self.randomNumber = randomNumber
         self.storageService = storageService
     }
 }
@@ -47,7 +45,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
 
     func getRandomComicNumber() -> Promise<Int> {
         return apiService.getLastComic().map { comic in
-            let randomNumber = self.randomNumber.get(from: 1, to: comic.number)
+            let randomNumber = Int.random(in: 1 ... comic.number)
             return randomNumber
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 
 class MainConfigurator {
     func configure() -> MainRouter {
-        // Testing 2 alternatives to conifgure modules:
+        // Testing 2 alternatives to configure modules:
 
         // Show Comic: manually init view controller and call configure
         let showComicConfigurator = ShowComicModuleConfigurator()

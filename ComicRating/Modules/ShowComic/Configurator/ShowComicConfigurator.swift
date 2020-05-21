@@ -24,10 +24,9 @@ class ShowComicModuleConfigurator {
 
         let comicApi = App.shared.services.comicApi
         let imageDownloader = App.shared.services.imageDownloader
-        let intRandomNumber = IntRandomNumber()
         let comicStorage = App.shared.services.comicStorage
         let interactor = ShowComicInteractor(apiService: comicApi, imageDownloader: imageDownloader,
-                                             storageService: comicStorage, randomNumber: intRandomNumber)
+                                             storageService: comicStorage)
         interactor.output = presenter
 
         presenter.interactor = interactor
