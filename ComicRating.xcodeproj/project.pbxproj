@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
+		012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A30CE247795CB00AC9921 /* UpcomingComic.swift */; };
 		01472DDB244C57ED008A5ED1 /* ComicRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDA244C57ED008A5ED1 /* ComicRating.swift */; };
 		01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDF244EB0A1008A5ED1 /* ComicRating.xcdatamodeld */; };
 		0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4C24442F57000E226C /* RatingDelegate.swift */; };
@@ -102,6 +103,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012A30CE247795CB00AC9921 /* UpcomingComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComic.swift; sourceTree = "<group>"; };
 		01472DDA244C57ED008A5ED1 /* ComicRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRating.swift; sourceTree = "<group>"; };
 		01472DE0244EB0A1008A5ED1 /* ComicRating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComicRating.xcdatamodel; sourceTree = "<group>"; };
 		0150BA4C24442F57000E226C /* RatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDelegate.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			children = (
 				015F706724209415004ED20A /* ShowComicModuleInput.swift */,
 				015F706624209415004ED20A /* ShowComicPresenter.swift */,
+				012A30CE247795CB00AC9921 /* UpcomingComic.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				01878A3A2427817E00883D93 /* ComicApiService.swift in Sources */,
 				0150BA552445825F000E226C /* DimmableViewController.swift in Sources */,
 				0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */,
+				012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */,
 				015F708324209415004ED20A /* ShowComicRouter.swift in Sources */,
 				015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */,
 				01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */,
