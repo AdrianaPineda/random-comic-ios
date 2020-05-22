@@ -14,8 +14,8 @@ protocol ComicApiServiceInterface: ServiceInterface {
 
     // MARK: - Completion handlers
 
-    func getComic(id: Int, completion: @escaping ((Comic) -> Void))
-    func getLastComic(completion: @escaping ((Comic) -> Void))
+    func getComic(id: Int, completion: @escaping ((Comic?) -> Void))
+    func getLastComic(completion: @escaping ((Comic?) -> Void))
 
     // MARK: - Promises
 

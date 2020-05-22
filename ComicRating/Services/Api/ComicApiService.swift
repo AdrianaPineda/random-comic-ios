@@ -22,24 +22,25 @@ class ComicApiService: ComicApiServiceInterface {
 
     // MARK: - Completion handlers
 
-    func getComic(id: Int, completion: @escaping ((Comic) -> Void)) {
+    func getComic(id: Int, completion: @escaping ((Comic?) -> Void)) {
         let url = "\(baseUrl)/\(id)/info.0.json"
         getComic(url: url, completion: completion)
     }
 
-    func getLastComic(completion: @escaping ((Comic) -> Void)) {
+    func getLastComic(completion: @escaping ((Comic?) -> Void)) {
         let url = "\(baseUrl)/info.0.json"
         getComic(url: url, completion: completion)
     }
 
-    private func getComic(url: String, completion: @escaping ((Comic) -> Void)) {
+    private func getComic(url: String, completion: @escaping ((Comic?) -> Void)) {
         httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
 
             switch result {
             case let .success(comicResponse):
                 completion(self.toComic(comicResponse: comicResponse))
             case let .failure(error):
-                print(error) // TODO:
+                print(error)
+                completion(nil)
             }
         }
     }
@@ -73,7 +74,7 @@ class ComicApiService: ComicApiServiceInterface {
         let year = Int(comicResponse.year) ?? 0
         let day = Int(comicResponse.day) ?? 0
 
-        return Comic(number: comicResponse.number, month: month, year: year, day: day, title: comicResponse.title,
+        return Comic(number: comicResponse.num, month: month, year: year, day: day, title: comicResponse.title,
                      safeTitle: comicResponse.safeTitle, img: comicResponse.img)
     }
 }

@@ -24,7 +24,6 @@ class HttpService: HttpServiceInterface {
 
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type,
                     completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
-        //  TODO: map method
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
         AF.request(url, method: alamofireHttpMethod, parameters: params).responseJSON { response in
 
