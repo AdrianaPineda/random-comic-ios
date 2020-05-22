@@ -69,6 +69,13 @@ extension ShowComicViewController: ShowComicViewInput {
         removeDim()
     }
 
+    func showOkAlertMessage(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+
     // MARK: Skeleton view lib
 
     private func showAnimatedGradient() {

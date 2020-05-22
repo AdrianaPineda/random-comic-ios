@@ -46,4 +46,8 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicRated(rating: Int) {
         interactor.comicRated(rating: rating)
     }
+
+    func comicFetchFailed(message: String) {
+        view.showOkAlertMessage(title: "Error", message: message)
+    }
 }

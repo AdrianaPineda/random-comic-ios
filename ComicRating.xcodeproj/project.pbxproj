@@ -23,7 +23,6 @@
 		015F7053241F463D004ED20A /* ComicRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7052241F463D004ED20A /* ComicRatingUITests.swift */; };
 		015F707824209415004ED20A /* ShowComicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706624209415004ED20A /* ShowComicPresenter.swift */; };
 		015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706724209415004ED20A /* ShowComicModuleInput.swift */; };
-		015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015F706924209415004ED20A /* ShowComicViewController.xib */; };
 		015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706A24209415004ED20A /* ShowComicViewController.swift */; };
 		015F707C24209415004ED20A /* ShowComicViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706B24209415004ED20A /* ShowComicViewInput.swift */; };
 		015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F706C24209415004ED20A /* ShowComicViewOutput.swift */; };
@@ -124,7 +123,6 @@
 		015F7054241F463D004ED20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015F706624209415004ED20A /* ShowComicPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicPresenter.swift; sourceTree = "<group>"; };
 		015F706724209415004ED20A /* ShowComicModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicModuleInput.swift; sourceTree = "<group>"; };
-		015F706924209415004ED20A /* ShowComicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowComicViewController.xib; sourceTree = "<group>"; };
 		015F706A24209415004ED20A /* ShowComicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewController.swift; sourceTree = "<group>"; };
 		015F706B24209415004ED20A /* ShowComicViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewInput.swift; sourceTree = "<group>"; };
 		015F706C24209415004ED20A /* ShowComicViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowComicViewOutput.swift; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 				015F706B24209415004ED20A /* ShowComicViewInput.swift */,
 				015F706C24209415004ED20A /* ShowComicViewOutput.swift */,
 				015F706A24209415004ED20A /* ShowComicViewController.swift */,
-				015F706924209415004ED20A /* ShowComicViewController.xib */,
 				01A0A89D247640F40013BEEA /* ShowComic.storyboard */,
 			);
 			path = View;
@@ -703,7 +700,6 @@
 				01A0A89E247640F40013BEEA /* ShowComic.storyboard in Resources */,
 				01A0A892246A5D0E0013BEEA /* ComicHistory.storyboard in Resources */,
 				015F703A241F463C004ED20A /* Assets.xcassets in Resources */,
-				015F707A24209415004ED20A /* ShowComicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

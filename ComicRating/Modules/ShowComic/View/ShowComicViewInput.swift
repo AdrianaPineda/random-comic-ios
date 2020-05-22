@@ -17,4 +17,5 @@ protocol ShowComicViewInput: AnyObject {
     func resetRating()
     func showLoadingContent()
     func stopLoadingContent()
+    func showOkAlertMessage(title: String, message: String)
 }

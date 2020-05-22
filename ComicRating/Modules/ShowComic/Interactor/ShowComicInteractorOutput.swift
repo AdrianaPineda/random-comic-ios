@@ -10,4 +10,5 @@ import Foundation
 
 protocol ShowComicInteractorOutput: AnyObject {
     func comicFetched(comic: Comic, imgData: Data)
+    func comicFetchFailed(message: String)
 }

@@ -6,7 +6,8 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-//  TODO: check > https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908
+// TODO: check >
+// https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908
 import PromiseKit
 import UIKit
 
@@ -60,11 +61,6 @@ class ComicApiService: ComicApiServiceInterface {
             self.httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self)
         }.then { (comicResponse: ComicResponse) -> Promise<Comic> in
             Promise<Comic>.value(self.toComic(comicResponse: comicResponse))
-        }
-
-        promise.catch { error in
-            // TODO:
-            print(error)
         }
 
         return promise

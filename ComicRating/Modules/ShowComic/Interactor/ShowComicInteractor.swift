@@ -39,7 +39,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
             }
         }
         .catch { _ in
-            // TODO:
+            self.output.comicFetchFailed(message: "Could not fetch comic")
         }
     }
 

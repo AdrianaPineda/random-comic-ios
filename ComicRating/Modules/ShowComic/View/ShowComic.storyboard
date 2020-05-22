@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--A-->
+        <!--Show Comic View Controller-->
         <scene sceneID="mIX-Ne-Jee">
             <objects>
-                <viewController storyboardIdentifier="showComicVC" id="TrJ-KX-CfX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showComicVC" id="TrJ-KX-CfX" customClass="ShowComicViewController" customModule="ComicRating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VdJ-Y8-zVs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTP-Qg-e3n">
                                 <rect key="frame" x="362" y="44" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonClicked:" destination="TrJ-KX-CfX" eventType="touchUpInside" id="tUw-hk-O0Z"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh1-Cn-Qdx" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
                                 <rect key="frame" x="20" y="527" width="374" height="109"/>
@@ -80,11 +83,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dio-c3-86P"/>
                     </view>
+                    <connections>
+                        <outlet property="comicImageView" destination="xfh-qU-8jn" id="pfA-yh-kep"/>
+                        <outlet property="comicNumberLabel" destination="QZi-eO-jfi" id="wY0-pU-EYp"/>
+                        <outlet property="comicTitleLabel" destination="hAy-vf-4Ms" id="uE1-Qj-dxM"/>
+                        <outlet property="loadingIndicator" destination="XaC-UY-GkP" id="oII-dD-I97"/>
+                        <outlet property="nextButton" destination="CTP-Qg-e3n" id="Qui-10-zY4"/>
+                        <outlet property="ratingView" destination="zh1-Cn-Qdx" id="PDq-EC-J6D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhy-U0-YZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="J7G-el-mzs" customClass="ShowComicModuleInitializer" customModule="ComicRating" customModuleProvider="target">
+                <customObject id="D2j-Zq-cMF" customClass="ShowComicModuleInitializer" customModule="ComicRating" customModuleProvider="target">
                     <connections>
-                        <outlet property="a" destination="TrJ-KX-CfX" id="RLw-H2-B5v"/>
+                        <outlet property="showComicViewController" destination="TrJ-KX-CfX" id="7Gw-TR-0Tw"/>
                     </connections>
                 </customObject>
             </objects>
