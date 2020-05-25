@@ -33,11 +33,11 @@ class ComicApiService: ComicApiServiceInterface {
     }
 
     private func getComic(url: String, completion: @escaping ((Comic?) -> Void)) {
-        httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self) { result in
+        httpService.request(method: .get, url: url, params: nil, responseType: Comic.self) { result in
 
             switch result {
-            case let .success(comicResponse):
-                completion(self.toComic(comicResponse: comicResponse))
+            case let .success(comic):
+                completion(comic)
             case let .failure(error):
                 print(error)
                 completion(nil)
@@ -58,23 +58,18 @@ class ComicApiService: ComicApiServiceInterface {
     }
 
     private func getComic(url: String) -> Promise<Comic> {
-        let promise = firstly {
-            self.httpService.request(method: .get, url: url, params: nil, responseType: ComicResponse.self)
-        }.then { (comicResponse: ComicResponse) -> Promise<Comic> in
-            Promise<Comic>.value(self.toComic(comicResponse: comicResponse))
-        }
-
-        return promise
+        return httpService.request(method: .get, url: url, params: nil, responseType: Comic.self)
     }
 
-    // MARK: - Common
-
-    private func toComic(comicResponse: ComicResponse) -> Comic {
-        let month = Int(comicResponse.month) ?? 0
-        let year = Int(comicResponse.year) ?? 0
-        let day = Int(comicResponse.day) ?? 0
-
-        return Comic(number: comicResponse.num, month: month, year: year, day: day, title: comicResponse.title,
-                     safeTitle: comicResponse.safeTitle, img: comicResponse.img)
-    }
+    // TODO:
+//    // MARK: - Common
+//
+//    private func toComic(comicResponse: Comic) -> Comic {
+//        let month = Int(comicResponse.month) ?? 0
+//        let year = Int(comicResponse.year) ?? 0
+//        let day = Int(comicResponse.day) ?? 0
+//
+//        return Comic(number: comicResponse.num, month: month, year: year, day: day, title: comicResponse.title,
+//                     safeTitle: comicResponse.safeTitle, img: comicResponse.img)
+//    }
 }
