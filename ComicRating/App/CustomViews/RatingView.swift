@@ -15,7 +15,7 @@ private enum StarRating: String {
     case four = "star_four"
     case five = "star_five"
 
-    var value: Int {
+    var value: UInt8 {
         switch self {
         case .one:
             return 1
@@ -78,7 +78,7 @@ class RatingView: UIView {
         fillStarsWithRating(rating: rating.value)
     }
 
-    func fillStarsWithRating(rating: Int) {
+    func fillStarsWithRating(rating: UInt8) {
         let firstStarImageName = getImageName(rating: rating, starRating: StarRating.one)
         firstStar.image = UIImage(named: firstStarImageName)
 
@@ -97,7 +97,7 @@ class RatingView: UIView {
         delegate?.didRate(rating: rating)
     }
 
-    private func getImageName(rating: Int, starRating: StarRating) -> String {
+    private func getImageName(rating: UInt8, starRating: StarRating) -> String {
         return rating >= starRating.value ? StarImageNames.filled : StarImageNames.emptied
     }
 }
@@ -111,7 +111,7 @@ extension RatingView: RatingInterface {
         fifthStar.image = UIImage(named: StarImageNames.emptied)
     }
 
-    func setRating(rating: Int) {
+    func setRating(rating: UInt8) {
         fillStarsWithRating(rating: rating)
     }
 }

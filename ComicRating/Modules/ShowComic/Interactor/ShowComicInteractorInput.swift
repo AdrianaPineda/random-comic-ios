@@ -10,5 +10,5 @@ import Foundation
 
 protocol ShowComicInteractorInput {
     func fetchComic()
-    func comicRated(rating: Int)
+    func comicRated(rating: UInt8)
 }

@@ -10,5 +10,5 @@ import UIKit
 protocol RatingInterface: UIView {
     var delegate: RatingDelegate? { get }
     func resetRating()
-    func setRating(rating: Int)
+    func setRating(rating: UInt8)
 }

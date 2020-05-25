@@ -67,7 +67,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
          }
      }*/
 
-    func comicRated(rating: Int) {
+    func comicRated(rating: UInt8) {
         print("1. Store locally")
         guard let comic = currentComic else { return }
         let comicRating = ComicRating(id: comic.number, rating: rating)

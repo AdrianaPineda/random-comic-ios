@@ -7,5 +7,5 @@
 //
 
 protocol RatingDelegate: AnyObject {
-    func didRate(rating: Int)
+    func didRate(rating: UInt8)
 }

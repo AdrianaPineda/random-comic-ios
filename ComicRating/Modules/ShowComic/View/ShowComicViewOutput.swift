@@ -14,5 +14,5 @@ protocol ShowComicViewOutput {
 
     func viewIsReady()
     func nextButtonClicked()
-    func comicRated(rating: Int)
+    func comicRated(rating: UInt8)
 }

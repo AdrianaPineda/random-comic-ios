@@ -110,7 +110,7 @@ extension ShowComicViewController: ShowComicViewInput {
 }
 
 extension ShowComicViewController: RatingDelegate {
-    func didRate(rating: Int) {
+    func didRate(rating: UInt8) {
         print("Comic rated: ", rating)
         output.comicRated(rating: rating)
     }

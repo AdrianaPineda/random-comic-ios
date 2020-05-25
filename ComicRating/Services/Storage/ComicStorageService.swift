@@ -76,11 +76,11 @@ extension NSManagedObject {
             return nil
         }
 
-        guard let rating: Int = value(forKey: "rating") as? Int else {
+        guard let rating: Int16 = value(forKey: "rating") as? Int16 else {
             return nil
         }
 
-        let comic = ComicRating(id: id, rating: rating)
+        let comic = ComicRating(id: id, rating: UInt8(rating))
         return comic
     }
 }
