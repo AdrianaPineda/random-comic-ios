@@ -60,16 +60,4 @@ class ComicApiService: ComicApiServiceInterface {
     private func getComic(url: String) -> Promise<Comic> {
         return httpService.request(method: .get, url: url, params: nil, responseType: Comic.self)
     }
-
-    // TODO:
-//    // MARK: - Common
-//
-//    private func toComic(comicResponse: Comic) -> Comic {
-//        let month = Int(comicResponse.month) ?? 0
-//        let year = Int(comicResponse.year) ?? 0
-//        let day = Int(comicResponse.day) ?? 0
-//
-//        return Comic(number: comicResponse.num, month: month, year: year, day: day, title: comicResponse.title,
-//                     safeTitle: comicResponse.safeTitle, img: comicResponse.img)
-//    }
 }
