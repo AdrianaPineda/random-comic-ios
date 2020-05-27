@@ -1,25 +1,11 @@
 //
-//  ComicResponse.swift
+//  Comic+Decodable.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 02/04/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-// var month: String
-// var num: Int
-// var link: String
-// var year: String
-// var news: String
-// var safeTitle: String
-// var transcript: String
-// var alt: String
-// var img: String
-// var title: String
-// var day: String
-
-// TODO: cast other values
-// Change file name
 extension Comic: Decodable {
     enum CodingKeys: String, CodingKey {
         case month

@@ -62,7 +62,7 @@
 		01AA441E242DC5B300612796 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA441D242DC5B300612796 /* HttpService.swift */; };
 		01AA44242432FC3B00612796 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA44232432FC3B00612796 /* PromiseKit */; };
 		01AA44262432FC5200612796 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA44252432FC5200612796 /* Comic.swift */; };
-		01AA44302435981D00612796 /* ComicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA442F2435981D00612796 /* ComicResponse.swift */; };
+		01AA44302435981D00612796 /* Comic+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA442F2435981D00612796 /* Comic+Decodable.swift */; };
 		01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */; };
 		01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA4435243C34A200612796 /* ImageDownloaderService.swift */; };
 		01AA4439243C351600612796 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA4438243C351600612796 /* AlamofireImage */; };
@@ -159,7 +159,7 @@
 		01A0A89D247640F40013BEEA /* ShowComic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowComic.storyboard; sourceTree = "<group>"; };
 		01AA441D242DC5B300612796 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		01AA44252432FC5200612796 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
-		01AA442F2435981D00612796 /* ComicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicResponse.swift; sourceTree = "<group>"; };
+		01AA442F2435981D00612796 /* Comic+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+Decodable.swift"; sourceTree = "<group>"; };
 		01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderServiceInterface.swift; sourceTree = "<group>"; };
 		01AA4435243C34A200612796 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		01AA443A243C386600612796 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 				01AA441D242DC5B300612796 /* HttpService.swift */,
 				01878A3524277D2400883D93 /* ComicApiServiceInterface.swift */,
 				01878A392427817E00883D93 /* ComicApiService.swift */,
-				01AA442F2435981D00612796 /* ComicResponse.swift */,
+				01AA442F2435981D00612796 /* Comic+Decodable.swift */,
 				01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */,
 				01AA4435243C34A200612796 /* ImageDownloaderService.swift */,
 			);
@@ -789,7 +789,7 @@
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
-				01AA44302435981D00612796 /* ComicResponse.swift in Sources */,
+				01AA44302435981D00612796 /* Comic+Decodable.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
 				01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */,
