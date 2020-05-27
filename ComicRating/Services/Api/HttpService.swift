@@ -48,11 +48,9 @@ class HttpService: HttpServiceInterface {
 
     func request<T>(method _: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T>
         where T: Decodable {
-        //  TODO: map method
-
         return Promise { seal in
             AF.request(url, method: .get, parameters: params).responseJSON { response in
-                print("====", response)
+                print("====>", response)
 
                 guard let data = response.data else {
                     seal.reject(Http.RequestError.invalidResponse("invalid data"))
