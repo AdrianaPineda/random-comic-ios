@@ -30,6 +30,7 @@ class ComicStorageService: ComicStorageServiceInterface {
         rating.id = Int16(comicRating.id)
         rating.rating = Int16(comicRating.rating)
 
+        // Manually:
 //        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
 //        comicManagedObject.setValue(comicRating.id, forKeyPath: "id")
 //        comicManagedObject.setValue(comicRating.rating, forKeyPath: "rating")
