@@ -10,14 +10,17 @@ import Foundation
 import UIKit
 
 class AppDependencies {
-    var mainRouter: MainRouter?
+    var mainRouter: MainRouterInput?
 
-    public init() {
-        let mainConfigurator = MainConfigurator()
-        mainRouter = mainConfigurator.configureMainRouter()
+    init() {
+        mainRouter = MainRouterFactory.build()
     }
 
     func setRootViewControllerInWindow(window: UIWindow) {
-        mainRouter?.presentViewControllerFromWindow(window: window)
+        guard let mainRouter = mainRouter else {
+            print("Invalid main view controller")
+            return
+        }
+        mainRouter.presentViewControllerFromWindow(window: window)
     }
 }

@@ -17,6 +17,7 @@
 		0150BA552445825F000E226C /* DimmableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA542445825F000E226C /* DimmableViewController.swift */; };
 		0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */; };
 		0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA59244814EB000E226C /* ComicStorageService.swift */; };
+		0155324924A3B33700AB7794 /* MainRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155324824A3B33700AB7794 /* MainRouterFactory.swift */; };
 		015F7031241F463B004ED20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7030241F463B004ED20A /* AppDelegate.swift */; };
 		015F703A241F463C004ED20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015F7039241F463C004ED20A /* Assets.xcassets */; };
 		015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015F703B241F463C004ED20A /* LaunchScreen.storyboard */; };
@@ -49,7 +50,6 @@
 		01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 01927CB12441977E00D2BCC4 /* Cosmos */; };
 		01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* RatingView.xib */; };
 		01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* RatingView.swift */; };
-		01A0A88724626B630013BEEA /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88624626B630013BEEA /* MainConfigurator.swift */; };
 		01A0A88924626B760013BEEA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88824626B760013BEEA /* MainRouter.swift */; };
 		01A0A88B24626E530013BEEA /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88A24626E530013BEEA /* MainRouterInput.swift */; };
 		01A0A88F2466BAAC0013BEEA /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */; };
@@ -112,6 +112,7 @@
 		0150BA542445825F000E226C /* DimmableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmableViewController.swift; sourceTree = "<group>"; };
 		0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageServiceInterface.swift; sourceTree = "<group>"; };
 		0150BA59244814EB000E226C /* ComicStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageService.swift; sourceTree = "<group>"; };
+		0155324824A3B33700AB7794 /* MainRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterFactory.swift; sourceTree = "<group>"; };
 		015F702D241F463B004ED20A /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015F7030241F463B004ED20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015F7039241F463C004ED20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		01927CB3244197DB00D2BCC4 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		01927CB524419C0E00D2BCC4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		01A0A88624626B630013BEEA /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
 		01A0A88824626B760013BEEA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		01A0A88A24626E530013BEEA /* MainRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
 		01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
@@ -406,7 +406,6 @@
 			isa = PBXGroup;
 			children = (
 				01A0A88424626B3F0013BEEA /* Router */,
-				01A0A88524626B480013BEEA /* Configurator */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -416,16 +415,9 @@
 			children = (
 				01A0A88A24626E530013BEEA /* MainRouterInput.swift */,
 				01A0A88824626B760013BEEA /* MainRouter.swift */,
+				0155324824A3B33700AB7794 /* MainRouterFactory.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		01A0A88524626B480013BEEA /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				01A0A88624626B630013BEEA /* MainConfigurator.swift */,
-			);
-			path = Configurator;
 			sourceTree = "<group>";
 		};
 		01A0A88C2466BA7D0013BEEA /* TabBar */ = {
@@ -779,11 +771,11 @@
 				01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */,
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
+				0155324924A3B33700AB7794 /* MainRouterFactory.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				01A0A89924724C1F0013BEEA /* ShowComicInitializer.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
 				01A0A88924626B760013BEEA /* MainRouter.swift in Sources */,
-				01A0A88724626B630013BEEA /* MainConfigurator.swift in Sources */,
 				01A0A895246A5E7B0013BEEA /* TabBarRouter.swift in Sources */,
 				0160DFEA245BDFE600DE9BAF /* Rating+CoreDataProperties.swift in Sources */,
 				0150BA4F24443093000E226C /* RatingInterface.swift in Sources */,
