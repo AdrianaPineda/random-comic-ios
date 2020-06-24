@@ -1,5 +1,5 @@
 //
-//  MainRouterFactory.swift
+//  MainViewController.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 24/06/2020.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class MainRouterFactory {
-    static func build() -> MainRouterInput? {
-        guard let mainViewController = configureMainViewController() else { return nil }
-        return MainRouter(mainViewController: mainViewController)
-    }
-
-    private static func configureMainViewController() -> UIViewController? {
+class MainViewController {
+    static func get() -> UIViewController? {
         guard let tabSections = getTabSections() else {
             return nil
         }

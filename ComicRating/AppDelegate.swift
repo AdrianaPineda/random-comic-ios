@@ -12,7 +12,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder {
     var window: UIWindow?
-    let dependencies = AppDependencies()
 
     // MARK: - Core Data stack
 
@@ -69,7 +68,8 @@ extension AppDelegate: UIApplicationDelegate {
     func application(_: UIApplication,
                      didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let window = self.window {
-            dependencies.setRootViewControllerInWindow(window: window)
+            window.rootViewController = MainViewController.get()
+            window.makeKeyAndVisible()
         }
         return true
     }
