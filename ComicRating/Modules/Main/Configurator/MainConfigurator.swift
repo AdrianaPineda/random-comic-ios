@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MainConfigurator {
-    func configure() -> MainRouter {
+    func configureMainRouter() -> MainRouter {
         let showComicViewController = ShowComicModuleInitializer.showComicViewController()
         let comicHistoryViewController = ComicHistoryModuleInitializer.comicHistoryViewController()
 

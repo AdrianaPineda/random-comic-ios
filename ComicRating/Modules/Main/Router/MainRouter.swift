@@ -12,7 +12,7 @@ import UIKit
 class MainRouter {
     var tabBarController: UITabBarController?
 
-    func presentTabBarControllerFromWindow(window: UIWindow) {
+    func presentViewControllerFromWindow(window: UIWindow) {
         if tabBarController == nil {
             print("Invalid tabBarController")
             return

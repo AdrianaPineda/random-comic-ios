@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol MainRouterInput {
-    func presentTabBarControllerFromWindow(window: UIWindow)
+    func presentViewControllerFromWindow(window: UIWindow)
 }
