@@ -9,13 +9,17 @@
 import UIKit
 let KTabBarControllerIdentifier = "tabBarC"
 
+typealias TabSections = (
+    showComic: UIViewController,
+    history: UIViewController
+)
+
 class TabBarInitializer: NSObject {
-    static func tabBarController() -> UITabBarController? {
-        return nil
-        // TODO:
-//        let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
-//        let viewController = storyboard.instantiateViewController(
-        // withIdentifier: KComicHistoryViewControllerIdentifier)
-//        return viewController as? UITabBarController
+    static func tabBarController(tabSections: TabSections) -> UITabBarController {
+        let tabBarController = UITabBarController()
+        let tabBarConfigurator = TabBarConfigurator()
+        tabBarConfigurator.configure(tabBarController: tabBarController, tabSections: tabSections)
+
+        return tabBarController
     }
 }

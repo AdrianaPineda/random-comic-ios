@@ -9,15 +9,8 @@
 import Foundation
 import UIKit
 
-typealias TabSections = (
-    showComic: UIViewController,
-    history: UIViewController
-)
-
 class TabBarConfigurator {
-    func configure(tabSections: TabSections) -> UITabBarController {
-        let tabBarController = TabBarInitializer.tabBarController() ?? UITabBarController()
-
+    func configure(tabBarController: UITabBarController, tabSections: TabSections) {
         let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         tabSections.showComic.tabBarItem = showComicTabBarItem
 
@@ -25,7 +18,5 @@ class TabBarConfigurator {
         tabSections.history.tabBarItem = comicHistoryTabBarItem
 
         tabBarController.viewControllers = [tabSections.showComic, tabSections.history]
-
-        return tabBarController
     }
 }

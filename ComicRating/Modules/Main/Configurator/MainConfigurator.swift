@@ -21,8 +21,7 @@ class MainConfigurator {
 
         // TabBar
         let tabSections = (showComic: showComicVC, history: comicHistoryVC)
-        let tabBarConfigurator = TabBarConfigurator()
-        let tabBarController = tabBarConfigurator.configure(tabSections: tabSections)
+        let tabBarController = TabBarInitializer.tabBarController(tabSections: tabSections)
 
         mainRouter.tabBarController = tabBarController
 
