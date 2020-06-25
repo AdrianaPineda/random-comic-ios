@@ -23,3 +23,17 @@ class TabBarInitializer: NSObject {
         return tabBarController
     }
 }
+
+//
+// class TabBarModuleInitializer: NSObject {
+//
+//    //Connect with object on storyboard
+//    @IBOutlet weak var tabbarViewController: TabBarViewController!
+//
+//    override func awakeFromNib() {
+//
+//        let configurator = TabBarModuleConfigurator()
+//        configurator.configureModuleForViewInput(viewInput: tabbarViewController)
+//    }
+//
+// }
