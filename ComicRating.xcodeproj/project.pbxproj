@@ -17,7 +17,7 @@
 		0150BA552445825F000E226C /* DimmableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA542445825F000E226C /* DimmableViewController.swift */; };
 		0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */; };
 		0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA59244814EB000E226C /* ComicStorageService.swift */; };
-		0155324B24A3C13300AB7794 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155324A24A3C13300AB7794 /* MainViewController.swift */; };
+		0155324B24A3C13300AB7794 /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155324A24A3C13300AB7794 /* RootViewControllerFactory.swift */; };
 		015F7031241F463B004ED20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7030241F463B004ED20A /* AppDelegate.swift */; };
 		015F703A241F463C004ED20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015F7039241F463C004ED20A /* Assets.xcassets */; };
 		015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015F703B241F463C004ED20A /* LaunchScreen.storyboard */; };
@@ -109,7 +109,7 @@
 		0150BA542445825F000E226C /* DimmableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmableViewController.swift; sourceTree = "<group>"; };
 		0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageServiceInterface.swift; sourceTree = "<group>"; };
 		0150BA59244814EB000E226C /* ComicStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageService.swift; sourceTree = "<group>"; };
-		0155324A24A3C13300AB7794 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0155324A24A3C13300AB7794 /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
 		015F702D241F463B004ED20A /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015F7030241F463B004ED20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015F7039241F463C004ED20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 				01927CB72441A87600D2BCC4 /* App */,
 				01878A2F2427779E00883D93 /* Services */,
 				015F706324209415004ED20A /* Modules */,
-				0155324A24A3C13300AB7794 /* MainViewController.swift */,
+				0155324A24A3C13300AB7794 /* RootViewControllerFactory.swift */,
 				01878A422429C95000883D93 /* App.swift */,
 				015F7030241F463B004ED20A /* AppDelegate.swift */,
 				015F7039241F463C004ED20A /* Assets.xcassets */,
@@ -733,7 +733,7 @@
 				01635ABC2451463D005BE30F /* MySkeletonView.swift in Sources */,
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
-				0155324B24A3C13300AB7794 /* MainViewController.swift in Sources */,
+				0155324B24A3C13300AB7794 /* RootViewControllerFactory.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				01A0A89924724C1F0013BEEA /* ShowComicInitializer.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,

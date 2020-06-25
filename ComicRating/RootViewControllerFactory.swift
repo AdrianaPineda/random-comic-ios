@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  RootViewControllerFactory.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 24/06/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController {
+class RootViewControllerFactory {
     static func get() -> UIViewController? {
         guard let tabSections = getTabSections() else {
             return nil
