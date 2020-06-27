@@ -10,39 +10,26 @@ import Foundation
 import UIKit
 
 class TabBarConfigurator {
-    func configure(tabBarController: UITabBarController, tabSections: TabSections) {
-        let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        tabSections.showComic.tabBarItem = showComicTabBarItem
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+        if let viewController = viewInput as? TabBarViewController {
+            configure(viewController: viewController)
+        }
+    }
 
-        let comicHistoryTabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
-        tabSections.history.tabBarItem = comicHistoryTabBarItem
+    private func configure(viewController: TabBarViewController) {
+        let router = TabBarRouter()
 
-        tabBarController.viewControllers = [tabSections.showComic, tabSections.history]
+        let presenter = TabBarPresenter()
+        presenter.view = viewController
+        presenter.router = router
+
+        let interactor = TabBarInteractor()
+        interactor.output = presenter
+
+        presenter.interactor = interactor
+        viewController.output = presenter
+
+        router.tabBarController = viewController
+        router.tabBarPresenter = presenter
     }
 }
-
-// class TabBarModuleConfigurator {
-//
-//    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-//
-//        if let viewController = viewInput as? TabBarViewController {
-//            configure(viewController: viewController)
-//        }
-//    }
-//
-//    private func configure(viewController: TabBarViewController) {
-//
-//        let router = TabBarRouter()
-//
-//        let presenter = TabBarPresenter()
-//        presenter.view = viewController
-//        presenter.router = router
-//
-//        let interactor = TabBarInteractor()
-//        interactor.output = presenter
-//
-//        presenter.interactor = interactor
-//        viewController.output = presenter
-//    }
-//
-// }

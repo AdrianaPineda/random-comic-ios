@@ -7,33 +7,19 @@
 //
 
 import UIKit
-let KTabBarControllerIdentifier = "tabBarC"
-
-typealias TabSections = (
-    showComic: UIViewController,
-    history: UIViewController
-)
+let KTabBarControllerIdentifier = "tabBarVC"
 
 class TabBarInitializer: NSObject {
-    static func tabBarController(tabSections: TabSections) -> UITabBarController {
-        let tabBarController = UITabBarController()
-        let tabBarConfigurator = TabBarConfigurator()
-        tabBarConfigurator.configure(tabBarController: tabBarController, tabSections: tabSections)
+    @IBOutlet var tabBarController: TabBarViewController!
 
-        return tabBarController
+    override func awakeFromNib() {
+        let tabBarConfigurator = TabBarConfigurator()
+        tabBarConfigurator.configureModuleForViewInput(viewInput: tabBarController)
+    }
+
+    static func tabBarController() -> TabBarViewController? {
+        let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: KTabBarControllerIdentifier)
+        return viewController as? TabBarViewController
     }
 }
-
-//
-// class TabBarModuleInitializer: NSObject {
-//
-//    //Connect with object on storyboard
-//    @IBOutlet weak var tabbarViewController: TabBarViewController!
-//
-//    override func awakeFromNib() {
-//
-//        let configurator = TabBarModuleConfigurator()
-//        configurator.configureModuleForViewInput(viewInput: tabbarViewController)
-//    }
-//
-// }

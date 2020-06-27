@@ -11,5 +11,11 @@ class TabBarPresenter: TabBarModuleInput, TabBarViewOutput, TabBarInteractorOutp
     var interactor: TabBarInteractorInput!
     var router: TabBarRouterInput!
 
-    func viewIsReady() {}
+    func viewIsReady() {
+        guard let tabSections = router.getTabSections() else {
+            return
+        }
+        let viewControllers = [tabSections.showComic, tabSections.history]
+        view.setup(viewControllers: viewControllers)
+    }
 }

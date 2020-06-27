@@ -5,12 +5,12 @@
 //  Created by Adriana Pineda on 25/06/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import UIKit
 
 protocol TabBarViewInput: AnyObject {
     /**
      @author Adriana Pineda
-     Setup initial state of the view
+     Setup view controllers
      */
-
-    func setupInitialState()
+    func setup(viewControllers: [UIViewController])
 }

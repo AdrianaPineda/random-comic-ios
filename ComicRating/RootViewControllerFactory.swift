@@ -10,21 +10,7 @@ import UIKit
 
 class RootViewControllerFactory {
     static func get() -> UIViewController? {
-        guard let tabSections = getTabSections() else {
-            return nil
-        }
-        let tabBarController = TabBarInitializer.tabBarController(tabSections: tabSections)
+        let tabBarController = TabBarInitializer.tabBarController()
         return tabBarController
-    }
-
-    private static func getTabSections() -> TabSections? {
-        let showComicViewController = ShowComicModuleInitializer.showComicViewController()
-        let comicHistoryViewController = ComicHistoryModuleInitializer.comicHistoryViewController()
-
-        guard let comicHistoryVC = comicHistoryViewController, let showComicVC = showComicViewController else {
-            return nil
-        }
-
-        return (showComic: showComicVC, history: comicHistoryVC)
     }
 }

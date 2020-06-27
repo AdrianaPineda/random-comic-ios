@@ -6,4 +6,6 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
-protocol TabBarRouterInput {}
+protocol TabBarRouterInput {
+    func getTabSections() -> TabSections?
+}

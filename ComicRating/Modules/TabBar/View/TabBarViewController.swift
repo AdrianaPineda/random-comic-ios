@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController, TabBarViewInput {
+class TabBarViewController: UITabBarController {
     var output: TabBarViewOutput!
 
     // MARK: Life cycle
@@ -17,8 +17,12 @@ class TabBarViewController: UITabBarController, TabBarViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+}
 
-    // MARK: TabBarViewInput
+// MARK: TabBarViewInput
 
-    func setupInitialState() {}
+extension TabBarViewController: TabBarViewInput {
+    func setup(viewControllers: [UIViewController]) {
+        self.viewControllers = viewControllers
+    }
 }
