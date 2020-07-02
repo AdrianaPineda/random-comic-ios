@@ -25,13 +25,13 @@ class TabBarRouter: TabBarRouterInput {
             return nil
         }
 
-        let tabSections = (showComic: showComicVC, history: comicHistoryVC)
         let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        tabSections.showComic.tabBarItem = showComicTabBarItem
+        showComicVC.tabBarItem = showComicTabBarItem
 
         let comicHistoryTabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
-        tabSections.history.tabBarItem = comicHistoryTabBarItem
+        comicHistoryVC.tabBarItem = comicHistoryTabBarItem
 
+        let tabSections = (showComic: showComicVC, history: comicHistoryVC)
         return tabSections
     }
 }
