@@ -18,6 +18,8 @@
 		0150BA5724481358000E226C /* ComicStorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */; };
 		0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA59244814EB000E226C /* ComicStorageService.swift */; };
 		0155324B24A3C13300AB7794 /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155324A24A3C13300AB7794 /* RootViewControllerFactory.swift */; };
+		015AAAB524B58BD200E88B52 /* ComicHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015AAAB424B58BD200E88B52 /* ComicHistoryCell.xib */; };
+		015AAAB724B58D1600E88B52 /* ComicHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015AAAB624B58D1600E88B52 /* ComicHistoryCollectionViewCell.swift */; };
 		015F7031241F463B004ED20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F7030241F463B004ED20A /* AppDelegate.swift */; };
 		015F703A241F463C004ED20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015F7039241F463C004ED20A /* Assets.xcassets */; };
 		015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015F703B241F463C004ED20A /* LaunchScreen.storyboard */; };
@@ -124,6 +126,8 @@
 		0150BA5624481358000E226C /* ComicStorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageServiceInterface.swift; sourceTree = "<group>"; };
 		0150BA59244814EB000E226C /* ComicStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStorageService.swift; sourceTree = "<group>"; };
 		0155324A24A3C13300AB7794 /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
+		015AAAB424B58BD200E88B52 /* ComicHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicHistoryCell.xib; sourceTree = "<group>"; };
+		015AAAB624B58D1600E88B52 /* ComicHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		015F702D241F463B004ED20A /* ComicRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015F7030241F463B004ED20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015F7039241F463C004ED20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -516,6 +520,8 @@
 				F7AFC8C842FB4C9AC4A4268B /* ComicHistoryViewOutput.swift */,
 				F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */,
 				01A0A891246A5D0E0013BEEA /* ComicHistory.storyboard */,
+				015AAAB424B58BD200E88B52 /* ComicHistoryCell.xib */,
+				015AAAB624B58D1600E88B52 /* ComicHistoryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -770,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */,
+				015AAAB524B58BD200E88B52 /* ComicHistoryCell.xib in Resources */,
 				015F703D241F463C004ED20A /* LaunchScreen.storyboard in Resources */,
 				01A0A89E247640F40013BEEA /* ShowComic.storyboard in Resources */,
 				01A0A892246A5D0E0013BEEA /* ComicHistory.storyboard in Resources */,
@@ -850,6 +857,7 @@
 				0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */,
 				015F707F24209415004ED20A /* ShowComicConfigurator.swift in Sources */,
 				0155324B24A3C13300AB7794 /* RootViewControllerFactory.swift in Sources */,
+				015AAAB724B58D1600E88B52 /* ComicHistoryCollectionViewCell.swift in Sources */,
 				01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */,
 				01A0A89924724C1F0013BEEA /* ShowComicInitializer.swift in Sources */,
 				0150BA5A244814EB000E226C /* ComicStorageService.swift in Sources */,
