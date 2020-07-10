@@ -1,5 +1,5 @@
 //
-//  ComicHistoryCollectionViewCell.swift
+//  ComicHistoryCell.swift
 //  ComicRating
 //
 //  Created by Adriana Pineda on 08/07/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComicHistoryCollectionViewCell: UICollectionViewCell {
+class ComicHistoryCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var comicLabel: UILabel!
 //    @IBOutlet var ratingView: RatingView!

@@ -60,7 +60,7 @@ extension ComicHistoryViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        guard let comicHistoryCell = cell as? ComicHistoryCollectionViewCell else { return cell }
+        guard let comicHistoryCell = cell as? ComicHistoryCell else { return cell }
 
         // Configure the cell
         comicHistoryCell.comicLabel.text = items[indexPath.row]
