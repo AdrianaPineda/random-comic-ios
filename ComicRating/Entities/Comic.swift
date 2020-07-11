@@ -15,4 +15,5 @@ struct Comic {
     var title: String
     var safeTitle: String
     var img: URL
+    var rating: UInt8?
 }

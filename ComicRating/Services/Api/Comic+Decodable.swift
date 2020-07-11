@@ -31,5 +31,6 @@ extension Comic: Decodable {
         title = try values.decode(String.self, forKey: .title)
         safeTitle = try values.decode(String.self, forKey: .safeTitle)
         img = try values.decode(URL.self, forKey: .img)
+        rating = nil
     }
 }

@@ -273,6 +273,7 @@
 		015F702F241F463B004ED20A /* ComicRating */ = {
 			isa = PBXGroup;
 			children = (
+				01FB7BC524B99243007B00DC /* Entities */,
 				01927CB72441A87600D2BCC4 /* App */,
 				01878A2F2427779E00883D93 /* Services */,
 				015F706324209415004ED20A /* Modules */,
@@ -364,8 +365,6 @@
 				015F707224209415004ED20A /* ShowComicInteractorInput.swift */,
 				015F707324209415004ED20A /* ShowComicInteractorOutput.swift */,
 				015F707124209415004ED20A /* ShowComicInteractor.swift */,
-				01AA44252432FC5200612796 /* Comic.swift */,
-				01472DDA244C57ED008A5ED1 /* ComicRating.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -456,6 +455,15 @@
 				01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		01FB7BC524B99243007B00DC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				01AA44252432FC5200612796 /* Comic.swift */,
+				01472DDA244C57ED008A5ED1 /* ComicRating.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		06698FC10242705328D37951 /* ComicHistory */ = {
