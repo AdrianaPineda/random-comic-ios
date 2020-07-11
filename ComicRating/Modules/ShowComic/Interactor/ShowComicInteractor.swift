@@ -30,16 +30,19 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     func fetchComic() {
         getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
-        }.then { (comic: Comic) in
-            // TODO: where and when should we download the image
-            self.imageDownloader.fetchImage(fromUrl: comic.img).done { [weak self] (data: Data) in
-                guard let self = self else { return }
-                self.output.comicFetched(comic: comic, imgData: data)
-                self.currentComic = comic
-            }
-        }
-        .catch { _ in
+        }.done { (comic: Comic) in
+            self.output.comicFetched(comic: comic)
+        }.catch { _ in
             self.output.comicFetchFailed(message: "Could not fetch comic")
+        }
+    }
+
+    func fetchImage(fromUrl url: URL) {
+        imageDownloader.fetchImage(fromUrl: url).done { [weak self] (data: Data) in
+            guard let self = self else { return }
+            self.output.imageFetched(imageData: data)
+        }.catch { _ in
+            self.output.comicFetchFailed(message: "Could not fetch comic image")
         }
     }
 

@@ -10,5 +10,6 @@ import Foundation
 
 protocol ShowComicInteractorInput {
     func fetchComic()
+    func fetchImage(fromUrl url: URL)
     func comicRated(rating: UInt8)
 }

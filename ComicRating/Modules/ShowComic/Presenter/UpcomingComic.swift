@@ -9,10 +9,5 @@ import Foundation
 
 struct UpcomingComic {
     var number: Int
-    var month: Int
-    var year: Int
-    var day: Int
     var title: String
-    var safeTitle: String
-    var img: Data
 }

@@ -5,6 +5,7 @@
 //  Created by Adriana Pineda on 02/04/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import Foundation
 
 extension Comic: Decodable {
     enum CodingKeys: String, CodingKey {
@@ -29,6 +30,6 @@ extension Comic: Decodable {
         day = try Int(values.decode(String.self, forKey: .day)) ?? 0
         title = try values.decode(String.self, forKey: .title)
         safeTitle = try values.decode(String.self, forKey: .safeTitle)
-        img = try values.decode(String.self, forKey: .img)
+        img = try values.decode(URL.self, forKey: .img)
     }
 }

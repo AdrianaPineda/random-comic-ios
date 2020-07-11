@@ -41,27 +41,44 @@ extension ShowComicViewController: ShowComicViewInput {
     func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
         comicNumberLabel.text = "#\(comic.number)"
-        comicImageView.image = UIImage(data: comic.img)
+    }
+
+    func showImage(imageData: Data) {
+        comicImageView.image = UIImage(data: imageData)
     }
 
     func resetRating() {
         ratingView.resetRating()
     }
 
-    func showLoadingContent() {
-        //        self.animateSkeletonView() // custom skeleton
-        showAnimatedGradient()
+    func showLoadingContent(onElement element: Element) {
+        switch element {
+        case .text:
+            comicTitleLabel.showAnimatedGradientSkeleton()
+            comicNumberLabel.showAnimatedGradientSkeleton()
+        case .image:
+            comicImageView.showAnimatedGradientSkeleton()
+        case .rating:
+            ratingView.showAnimatedGradientSkeleton()
+        }
+    }
+
+    func stopLoadingContent(onElement element: Element) {
+        switch element {
+        case .text:
+            comicTitleLabel.hideSkeleton()
+            comicNumberLabel.hideSkeleton()
+        case .image:
+            comicImageView.hideSkeleton()
+        case .rating:
+            ratingView.hideSkeleton()
+        }
     }
 
     private func showLoadingIndicatorAndDim() {
         loadingIndicator.isHidden = false
         loadingIndicator.startAnimating()
         addDim()
-    }
-
-    func stopLoadingContent() {
-//        self.stopSkeletonViewAnimation() // custom skeleton
-        stopAnimatedGradient()
     }
 
     private func stopLoadingIndicatorAndDim() {
@@ -76,23 +93,7 @@ extension ShowComicViewController: ShowComicViewInput {
         present(alertController, animated: true, completion: nil)
     }
 
-    // MARK: Skeleton view lib
-
-    private func showAnimatedGradient() {
-        comicImageView.showAnimatedGradientSkeleton()
-        comicTitleLabel.showAnimatedGradientSkeleton()
-        comicNumberLabel.showAnimatedGradientSkeleton()
-        ratingView.showAnimatedGradientSkeleton()
-    }
-
-    private func stopAnimatedGradient() {
-        comicImageView.hideSkeleton()
-        comicTitleLabel.hideSkeleton()
-        comicNumberLabel.hideSkeleton()
-        ratingView.hideSkeleton()
-    }
-
-    // MARK: My Skeleton View
+    // MARK: My (custom) Skeleton View
 
     private func animateSkeletonView() {
         comicImageView.animateSkeletonView()
