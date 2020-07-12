@@ -20,6 +20,7 @@ class ComicHistoryViewController: UICollectionViewController {
                                              left: 8,
                                              bottom: 10.0,
                                              right: 8)
+    private let starSize = CGSize(width: 20, height: 20)
 
     var comics: [ComicForCell] = []
 
@@ -33,7 +34,10 @@ class ComicHistoryViewController: UICollectionViewController {
 
         // Take into account safe area for content adjustment
         collectionView.contentInsetAdjustmentBehavior = .always
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         output.viewIsReady()
     }
 
@@ -65,6 +69,8 @@ extension ComicHistoryViewController {
         // Configure the cell
         let comic = comics[indexPath.row]
         comicHistoryCell.comicLabel.text = comic.title
+        comicHistoryCell.ratingView.setStarSize(size: starSize)
+        comicHistoryCell.ratingView.fillStarsWithRating(rating: comic.rating)
         if let image = comic.img {
             comicHistoryCell.imageView.image = UIImage(data: image)
         }
@@ -82,7 +88,7 @@ extension ComicHistoryViewController: UICollectionViewDelegateFlowLayout {
         let padding = Int(sectionInsets.left + sectionInsets.right)
         let currentSize = Int(view.safeAreaLayoutGuide.layoutFrame.width)
         let cells = currentSize / (minCellWidth + padding)
-        let cellsWithPaddingWidth = currentSize / cells
+        let cellsWithPaddingWidth = cells > 0 ? currentSize / cells : currentSize
         let cellsWidth = cellsWithPaddingWidth - padding
 
         return CGSize(width: cellsWidth, height: cellHeight)

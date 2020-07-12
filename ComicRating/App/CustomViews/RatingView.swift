@@ -45,6 +45,9 @@ class RatingView: UIView {
     @IBOutlet var fourthStar: UIImageView!
     @IBOutlet var fifthStar: UIImageView!
 
+    @IBOutlet var starHeight: NSLayoutConstraint!
+    @IBOutlet var starWidth: NSLayoutConstraint!
+
     weak var delegate: RatingDelegate?
 
     override init(frame: CGRect) {
@@ -113,5 +116,10 @@ extension RatingView: RatingInterface {
 
     func setRating(rating: UInt8) {
         fillStarsWithRating(rating: rating)
+    }
+
+    func setStarSize(size: CGSize) {
+        starWidth.constant = size.width
+        starHeight.constant = size.height
     }
 }

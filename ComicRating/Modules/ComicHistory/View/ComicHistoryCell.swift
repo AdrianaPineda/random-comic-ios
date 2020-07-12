@@ -11,5 +11,5 @@ import UIKit
 class ComicHistoryCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var comicLabel: UILabel!
-//    @IBOutlet var ratingView: RatingView!
+    @IBOutlet var ratingView: RatingView!
 }

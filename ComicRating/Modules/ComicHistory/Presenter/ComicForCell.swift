@@ -10,10 +10,12 @@ import Foundation
 struct ComicForCell {
     var number: Int
     var title: String
+    var rating: UInt8
     var img: Data?
 
     static func fromComic(comic: Comic) -> ComicForCell {
-        let comic = ComicForCell(number: comic.id, title: comic.title)
-        return comic
+        let rating = comic.rating ?? 0
+        let comicForCell = ComicForCell(number: comic.id, title: comic.title, rating: rating)
+        return comicForCell
     }
 }
