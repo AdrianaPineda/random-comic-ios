@@ -31,9 +31,11 @@ class ComicStorageService: ComicStorageServiceInterface {
         rating.date = comic.date
         rating.title = comic.title
         rating.img = comic.img
-        if let ratingValue = comic.rating {
-            rating.rating = Int16(ratingValue)
+        guard let ratingValue = comic.rating else {
+            print("Cannot store comic without rating")
+            return
         }
+        rating.rating = Int16(ratingValue)
 
         // Manually:
 //        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
@@ -67,8 +69,8 @@ class ComicStorageService: ComicStorageServiceInterface {
     private func toComics(managedObjects: [NSManagedObject]) -> [Comic] {
         var comics: [Comic] = []
         for object in managedObjects {
-            if let comicRating = object.toComic() {
-                comics.append(comicRating)
+            if let comic = object.toComic() {
+                comics.append(comic)
             }
         }
 
