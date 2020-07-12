@@ -32,7 +32,7 @@ extension ShowComicPresenter: ShowComicViewOutput {
 
 extension ShowComicPresenter: ShowComicInteractorOutput {
     func comicFetched(comic: Comic) {
-        let upcomingComic = toUpcomicComic(comic: comic)
+        let upcomingComic = UpcomingComic.fromComic(comic: comic)
         view.resetRating()
         view.stopLoadingContent(onElement: .text)
         view.showComic(comic: upcomingComic)
@@ -45,11 +45,6 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
         view.stopLoadingContent(onElement: .image)
         // ^ needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
         view.showImage(imageData: imageData)
-    }
-
-    private func toUpcomicComic(comic: Comic) -> UpcomingComic {
-        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title)
-        return upcomingComic
     }
 
     func comicRated(rating: UInt8) {

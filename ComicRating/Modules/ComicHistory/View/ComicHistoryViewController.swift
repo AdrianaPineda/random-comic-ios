@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ComicHistoryCell"
 
-class ComicHistoryViewController: UICollectionViewController, ComicHistoryViewInput {
+class ComicHistoryViewController: UICollectionViewController {
     var output: ComicHistoryViewOutput!
 
     let sections = 1
@@ -21,7 +21,7 @@ class ComicHistoryViewController: UICollectionViewController, ComicHistoryViewIn
                                              bottom: 10.0,
                                              right: 8)
 
-    var items: [String] = ["Sample 1", "Sample 2", "Sample 3"]
+    var comics: [ComicForCell] = []
 
     // MARK: Life cycle
 
@@ -55,7 +55,7 @@ extension ComicHistoryViewController {
     }
 
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return items.count
+        return comics.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,7 +63,11 @@ extension ComicHistoryViewController {
         guard let comicHistoryCell = cell as? ComicHistoryCell else { return cell }
 
         // Configure the cell
-        comicHistoryCell.comicLabel.text = items[indexPath.row]
+        let comic = comics[indexPath.row]
+        comicHistoryCell.comicLabel.text = comic.title
+        if let image = comic.img {
+            comicHistoryCell.imageView.image = UIImage(data: image)
+        }
 
         return cell
     }
@@ -94,5 +98,18 @@ extension ComicHistoryViewController: UICollectionViewDelegateFlowLayout {
                         layout _: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt _: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+extension ComicHistoryViewController: ComicHistoryViewInput {
+    func showComics(comics: [ComicForCell]) {
+        self.comics = comics
+        collectionView.reloadData()
+    }
+
+    func showImageAtIndex(index: Int, image: Data) {
+        let indexPath = IndexPath(row: index, section: 0)
+        comics[index].img = image
+        collectionView.reloadItems(at: [indexPath])
     }
 }

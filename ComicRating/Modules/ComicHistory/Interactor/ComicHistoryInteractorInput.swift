@@ -8,4 +8,7 @@
 
 import Foundation
 
-protocol ComicHistoryInteractorInput {}
+protocol ComicHistoryInteractorInput {
+    func getComics()
+    func fetchImage(fromUrl url: URL, id: Int)
+}

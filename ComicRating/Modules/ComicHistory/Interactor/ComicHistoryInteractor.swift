@@ -5,7 +5,31 @@
 //  Created by Adriana Pineda on 12/05/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import Foundation
 
-class ComicHistoryInteractor: ComicHistoryInteractorInput {
+class ComicHistoryInteractor {
     weak var output: ComicHistoryInteractorOutput!
+    let storageService: ComicStorageServiceInterface
+    let imageDownloader: ImageDownloaderServiceInterface
+
+    init(storageService: ComicStorageServiceInterface, imageDownloader: ImageDownloaderServiceInterface) {
+        self.storageService = storageService
+        self.imageDownloader = imageDownloader
+    }
+}
+
+extension ComicHistoryInteractor: ComicHistoryInteractorInput {
+    func getComics() {
+        let comics = storageService.getComics()
+        output.comicsLoaded(comics: comics)
+    }
+
+    func fetchImage(fromUrl url: URL, id: Int) {
+        imageDownloader.fetchImage(fromUrl: url).done { [weak self] (data: Data) in
+            guard let self = self else { return }
+            self.output.imageFetched(imageData: data, id: id)
+        }.catch { _ in
+            self.output.comicFetchFailed(message: "Could not fetch comic image")
+        }
+    }
 }

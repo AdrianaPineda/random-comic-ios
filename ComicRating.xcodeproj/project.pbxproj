@@ -48,6 +48,7 @@
 		01878A3F2428897200883D93 /* ServiceBuilderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */; };
 		01878A41242889E800883D93 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A40242889E800883D93 /* ServiceBuilder.swift */; };
 		01878A432429C95000883D93 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01878A422429C95000883D93 /* App.swift */; };
+		01894F6324BB10D700CC4AE8 /* ComicForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01894F6224BB10D700CC4AE8 /* ComicForCell.swift */; };
 		01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 01927CB12441977E00D2BCC4 /* Cosmos */; };
 		01927CB4244197DB00D2BCC4 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01927CB3244197DB00D2BCC4 /* RatingView.xib */; };
 		01927CB624419C0E00D2BCC4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01927CB524419C0E00D2BCC4 /* RatingView.swift */; };
@@ -160,6 +161,7 @@
 		01878A3E2428897200883D93 /* ServiceBuilderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderInterface.swift; sourceTree = "<group>"; };
 		01878A40242889E800883D93 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
 		01878A422429C95000883D93 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		01894F6224BB10D700CC4AE8 /* ComicForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicForCell.swift; sourceTree = "<group>"; };
 		01927CB3244197DB00D2BCC4 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		01927CB524419C0E00D2BCC4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		01A0A88E2466BAAC0013BEEA /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 			children = (
 				E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */,
 				26F3552FAF93C97ECC885963 /* ComicHistoryPresenter.swift */,
+				01894F6224BB10D700CC4AE8 /* ComicForCell.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
 				0150BA5124457BA5000E226C /* Dimmable.swift in Sources */,
+				01894F6324BB10D700CC4AE8 /* ComicForCell.swift in Sources */,
 				01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
 				015F708424209415004ED20A /* ShowComicRouterInput.swift in Sources */,

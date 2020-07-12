@@ -5,6 +5,7 @@
 //  Created by Adriana Pineda on 12/05/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import Foundation
 
 protocol ComicHistoryViewInput: AnyObject {
     /**
@@ -13,4 +14,6 @@ protocol ComicHistoryViewInput: AnyObject {
      */
 
     func setupInitialState()
+    func showComics(comics: [ComicForCell])
+    func showImageAtIndex(index: Int, image: Data)
 }
