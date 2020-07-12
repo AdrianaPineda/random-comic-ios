@@ -10,7 +10,7 @@ import Foundation
 extension Comic: Decodable {
     enum CodingKeys: String, CodingKey {
         case month
-        case num
+        case id = "num"
         case link
         case year
         case news
@@ -24,7 +24,7 @@ extension Comic: Decodable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        number = try values.decode(Int.self, forKey: .num)
+        id = try values.decode(Int.self, forKey: .id)
         month = try Int(values.decode(String.self, forKey: .month)) ?? 0
         year = try Int(values.decode(String.self, forKey: .year)) ?? 0
         day = try Int(values.decode(String.self, forKey: .day)) ?? 0

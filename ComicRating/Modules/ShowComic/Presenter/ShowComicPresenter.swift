@@ -48,7 +48,7 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     }
 
     private func toUpcomicComic(comic: Comic) -> UpcomingComic {
-        let upcomingComic = UpcomingComic(number: comic.number, title: comic.title)
+        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title)
         return upcomingComic
     }
 

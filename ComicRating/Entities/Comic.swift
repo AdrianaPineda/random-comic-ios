@@ -8,7 +8,7 @@
 import Foundation
 
 struct Comic {
-    var number: Int
+    var id: Int
     var month: Int
     var year: Int
     var day: Int
