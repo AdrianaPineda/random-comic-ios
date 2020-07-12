@@ -31,6 +31,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
         }.done { (comic: Comic) in
+            self.currentComic = comic
             self.output.comicFetched(comic: comic)
         }.catch { _ in
             self.output.comicFetchFailed(message: "Could not fetch comic")
@@ -73,7 +74,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     func comicRated(rating: UInt8) {
         print("1. Store locally")
         guard let comic = currentComic else { return }
-        let comicRating = ComicRating(id: comic.number, rating: rating)
+        let comicRating = ComicRating(id: comic.number, title: comic.title, img: comic.img, rating: rating)
         storageService.upsertComicRating(comicRating: comicRating)
         print("1. Send it to a backend", storageService.getComicRating())
     }

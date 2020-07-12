@@ -28,6 +28,8 @@ class ComicStorageService: ComicStorageServiceInterface {
 
         let rating = Rating(context: managedContext)
         rating.id = Int16(comicRating.id)
+        rating.title = comicRating.title
+        rating.img = comicRating.img
         rating.rating = Int16(comicRating.rating)
 
         // Manually:
@@ -77,11 +79,19 @@ extension NSManagedObject {
             return nil
         }
 
+        guard let title: String = value(forKey: "title") as? String else {
+            return nil
+        }
+
+        guard let img: URL = value(forKey: "img") as? URL else {
+            return nil
+        }
+
         guard let rating: Int16 = value(forKey: "rating") as? Int16 else {
             return nil
         }
 
-        let comic = ComicRating(id: id, rating: UInt8(rating))
+        let comic = ComicRating(id: id, title: title, img: img, rating: UInt8(rating))
         return comic
     }
 }

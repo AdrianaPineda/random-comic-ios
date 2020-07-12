@@ -16,5 +16,7 @@ extension Rating {
     }
 
     @NSManaged public var id: Int16
+    @NSManaged public var title: String
+    @NSManaged public var img: URL
     @NSManaged public var rating: Int16
 }
