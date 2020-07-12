@@ -8,4 +8,8 @@
 
 import Foundation
 
-protocol ComicHistoryInteractorOutput: AnyObject {}
+protocol ComicHistoryInteractorOutput: AnyObject {
+    func comicsLoaded(comics: [Comic])
+    func imageFetched(imageData: Data, id: Int)
+    func comicFetchFailed(message: String)
+}

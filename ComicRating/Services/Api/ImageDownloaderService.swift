@@ -14,7 +14,7 @@ import PromiseKit
 class ImageDownloaderService: ImageDownloaderServiceInterface {
     // MARK: - Promises
 
-    func fetchImage(fromUrl url: String) -> Promise<Data> {
+    func fetchImage(fromUrl url: URL) -> Promise<Data> {
         return Promise { seal in
             AF.request(url).responseImage { (response: AFDataResponse<Image>) in
 

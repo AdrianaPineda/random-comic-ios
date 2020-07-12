@@ -30,22 +30,26 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     func fetchComic() {
         getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
-        }.then { (comic: Comic) in
-            // TODO: where and when should we download the image
-            self.imageDownloader.fetchImage(fromUrl: comic.img).done { [weak self] (data: Data) in
-                guard let self = self else { return }
-                self.output.comicFetched(comic: comic, imgData: data)
-                self.currentComic = comic
-            }
-        }
-        .catch { _ in
+        }.done { (comic: Comic) in
+            self.currentComic = comic
+            self.output.comicFetched(comic: comic)
+        }.catch { _ in
             self.output.comicFetchFailed(message: "Could not fetch comic")
+        }
+    }
+
+    func fetchImage(fromUrl url: URL) {
+        imageDownloader.fetchImage(fromUrl: url).done { [weak self] (data: Data) in
+            guard let self = self else { return }
+            self.output.imageFetched(imageData: data)
+        }.catch { _ in
+            self.output.comicFetchFailed(message: "Could not fetch comic image")
         }
     }
 
     func getRandomComicNumber() -> Promise<Int> {
         return apiService.getLastComic().map { comic in
-            let randomNumber = Int.random(in: 1 ... comic.number)
+            let randomNumber = Int.random(in: 1 ... comic.id)
             return randomNumber
         }
     }
@@ -67,11 +71,12 @@ extension ShowComicInteractor: ShowComicInteractorInput {
          }
      }*/
 
-    func comicRated(rating: UInt8) {
+    func comicRated(_ rating: UInt8) {
         print("1. Store locally")
-        guard let comic = currentComic else { return }
-        let comicRating = ComicRating(id: comic.number, rating: rating)
-        storageService.upsertComicRating(comicRating: comicRating)
-        print("1. Send it to a backend", storageService.getComicRating())
+        guard var comic = currentComic else { return }
+        comic.rating = rating
+        // TODO: fix ^
+        storageService.upsertComic(comic: comic)
+        print("1. Send it to a backend", storageService.getComics())
     }
 }

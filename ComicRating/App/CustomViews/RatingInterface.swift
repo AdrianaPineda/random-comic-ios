@@ -11,4 +11,5 @@ protocol RatingInterface: UIView {
     var delegate: RatingDelegate? { get }
     func resetRating()
     func setRating(rating: UInt8)
+    func setStarSize(size: CGSize)
 }

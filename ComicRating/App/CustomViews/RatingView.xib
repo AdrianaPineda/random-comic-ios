@@ -14,6 +14,8 @@
                 <outlet property="firstStar" destination="4C6-Yw-ygX" id="mi9-QQ-Xng"/>
                 <outlet property="fourthStar" destination="ncL-3B-cni" id="OY5-XN-cWw"/>
                 <outlet property="secondStar" destination="VLw-JO-YOl" id="zl0-lr-Ief"/>
+                <outlet property="starHeight" destination="iVa-qJ-fMV" id="OID-TY-v2J"/>
+                <outlet property="starWidth" destination="qSb-0z-lMF" id="zB1-ZU-GeB"/>
                 <outlet property="thirdStar" destination="S1K-bn-zhI" id="MxB-bf-LDp"/>
             </connections>
         </placeholder>

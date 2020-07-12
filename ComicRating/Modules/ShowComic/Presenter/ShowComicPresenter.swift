@@ -24,27 +24,31 @@ extension ShowComicPresenter: ShowComicViewOutput {
 
     private func fetchComic() {
         interactor.fetchComic()
-        view.showLoadingContent()
+        view.showLoadingContent(onElement: .text)
+        view.showLoadingContent(onElement: .rating)
+        view.showLoadingContent(onElement: .image)
     }
 }
 
 extension ShowComicPresenter: ShowComicInteractorOutput {
-    func comicFetched(comic: Comic, imgData: Data) {
-        let upcomingComic = toUpcomicComic(comic: comic, imgData: imgData)
+    func comicFetched(comic: Comic) {
+        let upcomingComic = UpcomingComic.fromComic(comic: comic)
         view.resetRating()
-        view.stopLoadingContent()
+        view.stopLoadingContent(onElement: .text)
         view.showComic(comic: upcomingComic)
         // ^ needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
+        interactor.fetchImage(fromUrl: comic.img)
     }
 
-    private func toUpcomicComic(comic: Comic, imgData: Data) -> UpcomingComic {
-        let upcomingComic = UpcomingComic(number: comic.number, month: comic.month, year: comic.year, day: comic.day,
-                                          title: comic.title, safeTitle: comic.safeTitle, img: imgData)
-        return upcomingComic
+    func imageFetched(imageData: Data) {
+        view.stopLoadingContent(onElement: .rating)
+        view.stopLoadingContent(onElement: .image)
+        // ^ needs to be done after stopping the content => https://github.com/Juanpe/SkeletonView/issues/226
+        view.showImage(imageData: imageData)
     }
 
     func comicRated(rating: UInt8) {
-        interactor.comicRated(rating: rating)
+        interactor.comicRated(rating)
     }
 
     func comicFetchFailed(message: String) {

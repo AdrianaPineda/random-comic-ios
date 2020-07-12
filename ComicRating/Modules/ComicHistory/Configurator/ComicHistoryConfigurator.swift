@@ -22,7 +22,9 @@ class ComicHistoryModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = ComicHistoryInteractor()
+        let comicStorage = App.shared.services.comicStorage
+        let imageDownloader = App.shared.services.imageDownloader
+        let interactor = ComicHistoryInteractor(storageService: comicStorage, imageDownloader: imageDownloader)
         interactor.output = presenter
 
         presenter.interactor = interactor

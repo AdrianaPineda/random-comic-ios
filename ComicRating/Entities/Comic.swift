@@ -5,13 +5,12 @@
 //  Created by Adriana Pineda on 31/03/2020.
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
+import Foundation
 
 struct Comic {
-    var number: Int
-    var month: Int
-    var year: Int
-    var day: Int
+    var id: Int
+    var date: Date
     var title: String
-    var safeTitle: String
-    var img: String
+    var img: URL
+    var rating: UInt8?
 }

@@ -10,5 +10,5 @@
 import CoreData
 import Foundation
 
-@objc(Rating)
-public class Rating: NSManagedObject {}
+@objc(Comic)
+public class ComicMO: NSManagedObject {}
