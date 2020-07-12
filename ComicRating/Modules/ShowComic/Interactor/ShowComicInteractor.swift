@@ -71,12 +71,12 @@ extension ShowComicInteractor: ShowComicInteractorInput {
          }
      }*/
 
-    func comicRated(rating rating: UInt8) {
+    func comicRated(_ rating: UInt8) {
         print("1. Store locally")
-        guard let comic = currentComic else { return }
-        let comicUpdated = Comic(id: comic.id, date: comic.date, title: comic.title, img: comic.img, rating: rating)
+        guard var comic = currentComic else { return }
+        comic.rating = rating
         // TODO: fix ^
-        storageService.upsertComic(comic: comicUpdated)
+        storageService.upsertComic(comic: comic)
         print("1. Send it to a backend", storageService.getComics())
     }
 }

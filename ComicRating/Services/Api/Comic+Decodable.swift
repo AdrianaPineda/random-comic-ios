@@ -7,6 +7,10 @@
 //
 import Foundation
 
+enum ComicError: Error {
+    case invalidComic
+}
+
 extension Comic: Decodable {
     enum CodingKeys: String, CodingKey {
         case month
@@ -27,8 +31,10 @@ extension Comic: Decodable {
         let year = try Int(values.decode(String.self, forKey: .year)) ?? 0
         let month = try Int(values.decode(String.self, forKey: .month)) ?? 0
         let day = try Int(values.decode(String.self, forKey: .day)) ?? 0
-        date = Date.from(day: day, month: month, year: year) ?? Date()
-        // TODO: ^ what happens if this is not valid?, return nil?
+        guard let dateDecoded = Date.from(day: day, month: month, year: year) else {
+            throw ComicError.invalidComic
+        }
+        date = dateDecoded
         title = try values.decode(String.self, forKey: .title)
         img = try values.decode(URL.self, forKey: .img)
         rating = nil

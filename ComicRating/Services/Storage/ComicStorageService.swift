@@ -26,7 +26,7 @@ class ComicStorageService: ComicStorageServiceInterface {
             return
         }
 
-        let rating = Rating(context: managedContext)
+        let rating = ComicMO(context: managedContext)
         rating.id = Int16(comic.id)
         rating.date = comic.date
         rating.title = comic.title
@@ -52,7 +52,7 @@ class ComicStorageService: ComicStorageServiceInterface {
             return []
         }
 
-        let fetchRequest = Rating.createFetchRequest()
+        let fetchRequest = ComicMO.createFetchRequest()
         var comics: [Comic] = []
         do {
             let comicsManagedObjects = try managedContext.fetch(fetchRequest)

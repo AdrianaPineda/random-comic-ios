@@ -10,9 +10,9 @@
 import CoreData
 import Foundation
 
-extension Rating {
-    @nonobjc public class func createFetchRequest() -> NSFetchRequest<Rating> {
-        return NSFetchRequest<Rating>(entityName: "Rating")
+extension ComicMO {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<ComicMO> {
+        return NSFetchRequest<ComicMO>(entityName: "Comic")
     }
 
     @NSManaged public var date: Date

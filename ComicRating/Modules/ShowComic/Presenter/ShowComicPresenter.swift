@@ -53,7 +53,7 @@ extension ShowComicPresenter: ShowComicInteractorOutput {
     }
 
     func comicRated(rating: UInt8) {
-        interactor.comicRated(rating: rating)
+        interactor.comicRated(rating)
     }
 
     func comicFetchFailed(message: String) {
