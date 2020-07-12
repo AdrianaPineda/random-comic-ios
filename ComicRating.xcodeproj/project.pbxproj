@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
 		012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A30CE247795CB00AC9921 /* UpcomingComic.swift */; };
-		01472DDB244C57ED008A5ED1 /* ComicRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDA244C57ED008A5ED1 /* ComicRating.swift */; };
 		01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDF244EB0A1008A5ED1 /* ComicRating.xcdatamodeld */; };
 		0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4C24442F57000E226C /* RatingDelegate.swift */; };
 		0150BA4F24443093000E226C /* RatingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4E24443093000E226C /* RatingInterface.swift */; };
@@ -68,6 +67,7 @@
 		01AA4439243C351600612796 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA4438243C351600612796 /* AlamofireImage */; };
 		01AA443B243C386600612796 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA443A243C386600612796 /* Http.swift */; };
 		01E1C2E27653ECF18FAF9C97 /* TabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742BF891B1A5E504C7DA5EE /* TabBarPresenterTests.swift */; };
+		01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB7BC724BB0408007B00DC /* Date+Extensions.swift */; };
 		0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */; };
 		11FED9EF6CF0CF37D8FF9AFF /* ComicHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */; };
 		163F1961285AF91B35E6489E /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC0131C2FF2FB815EBDF9 /* TabBarInteractor.swift */; };
@@ -117,7 +117,6 @@
 
 /* Begin PBXFileReference section */
 		012A30CE247795CB00AC9921 /* UpcomingComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComic.swift; sourceTree = "<group>"; };
-		01472DDA244C57ED008A5ED1 /* ComicRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRating.swift; sourceTree = "<group>"; };
 		01472DE0244EB0A1008A5ED1 /* ComicRating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComicRating.xcdatamodel; sourceTree = "<group>"; };
 		0150BA4C24442F57000E226C /* RatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDelegate.swift; sourceTree = "<group>"; };
 		0150BA4E24443093000E226C /* RatingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInterface.swift; sourceTree = "<group>"; };
@@ -176,6 +175,7 @@
 		01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderServiceInterface.swift; sourceTree = "<group>"; };
 		01AA4435243C34A200612796 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		01AA443A243C386600612796 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		01FB7BC724BB0408007B00DC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorTests.swift; sourceTree = "<group>"; };
 		03FC33C54EE34BB874F4F244 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0B79E64C4EEDBF570A7BEC7C /* ComicHistoryInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorInput.swift; sourceTree = "<group>"; };
@@ -408,6 +408,7 @@
 		01927CB72441A87600D2BCC4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				01FB7BC624BB03F8007B00DC /* Utils */,
 				01927CB82441A88100D2BCC4 /* CustomViews */,
 			);
 			path = App;
@@ -461,9 +462,16 @@
 			isa = PBXGroup;
 			children = (
 				01AA44252432FC5200612796 /* Comic.swift */,
-				01472DDA244C57ED008A5ED1 /* ComicRating.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		01FB7BC624BB03F8007B00DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				01FB7BC724BB0408007B00DC /* Date+Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		06698FC10242705328D37951 /* ComicHistory */ = {
@@ -838,7 +846,7 @@
 				015F708024209415004ED20A /* ShowComicInteractor.swift in Sources */,
 				01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */,
 				01A0A88F2466BAAC0013BEEA /* TabBarConfigurator.swift in Sources */,
-				01472DDB244C57ED008A5ED1 /* ComicRating.swift in Sources */,
+				01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */,
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
 				01A0A897246A5E8D0013BEEA /* TabBarRouterInput.swift in Sources */,
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,

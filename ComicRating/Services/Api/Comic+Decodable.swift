@@ -14,7 +14,6 @@ extension Comic: Decodable {
         case link
         case year
         case news
-        case safeTitle = "safe_title"
         case transcript
         case alt
         case img
@@ -25,11 +24,12 @@ extension Comic: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
-        month = try Int(values.decode(String.self, forKey: .month)) ?? 0
-        year = try Int(values.decode(String.self, forKey: .year)) ?? 0
-        day = try Int(values.decode(String.self, forKey: .day)) ?? 0
+        let year = try Int(values.decode(String.self, forKey: .year)) ?? 0
+        let month = try Int(values.decode(String.self, forKey: .month)) ?? 0
+        let day = try Int(values.decode(String.self, forKey: .day)) ?? 0
+        date = Date.from(day: day, month: month, year: year) ?? Date()
+        // TODO: ^ what happens if this is not valid?, return nil?
         title = try values.decode(String.self, forKey: .title)
-        safeTitle = try values.decode(String.self, forKey: .safeTitle)
         img = try values.decode(URL.self, forKey: .img)
         rating = nil
     }

@@ -9,11 +9,8 @@ import Foundation
 
 struct Comic {
     var id: Int
-    var month: Int
-    var year: Int
-    var day: Int
+    var date: Date
     var title: String
-    var safeTitle: String
     var img: URL
     var rating: UInt8?
 }

@@ -15,6 +15,7 @@ extension Rating {
         return NSFetchRequest<Rating>(entityName: "Rating")
     }
 
+    @NSManaged public var date: Date
     @NSManaged public var id: Int16
     @NSManaged public var title: String
     @NSManaged public var img: URL

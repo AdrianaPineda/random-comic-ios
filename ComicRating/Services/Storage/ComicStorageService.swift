@@ -21,16 +21,19 @@ class ComicStorageService: ComicStorageServiceInterface {
         return viewContext
     }()
 
-    func upsertComicRating(comicRating: ComicRating) {
+    func upsertComic(comic: Comic) {
         guard let managedContext = viewContext else {
             return
         }
 
         let rating = Rating(context: managedContext)
-        rating.id = Int16(comicRating.id)
-        rating.title = comicRating.title
-        rating.img = comicRating.img
-        rating.rating = Int16(comicRating.rating)
+        rating.id = Int16(comic.id)
+        rating.date = comic.date
+        rating.title = comic.title
+        rating.img = comic.img
+        if let ratingValue = comic.rating {
+            rating.rating = Int16(ratingValue)
+        }
 
         // Manually:
 //        let comicManagedObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext)
@@ -44,13 +47,13 @@ class ComicStorageService: ComicStorageServiceInterface {
         }
     }
 
-    func getComicRating() -> [ComicRating] {
+    func getComics() -> [Comic] {
         guard let managedContext = viewContext else {
             return []
         }
 
         let fetchRequest = Rating.createFetchRequest()
-        var comics: [ComicRating] = []
+        var comics: [Comic] = []
         do {
             let comicsManagedObjects = try managedContext.fetch(fetchRequest)
             comics = toComics(managedObjects: comicsManagedObjects)
@@ -61,10 +64,10 @@ class ComicStorageService: ComicStorageServiceInterface {
         return comics
     }
 
-    private func toComics(managedObjects: [NSManagedObject]) -> [ComicRating] {
-        var comics: [ComicRating] = []
+    private func toComics(managedObjects: [NSManagedObject]) -> [Comic] {
+        var comics: [Comic] = []
         for object in managedObjects {
-            if let comicRating = object.toComicRating() {
+            if let comicRating = object.toComic() {
                 comics.append(comicRating)
             }
         }
@@ -74,8 +77,12 @@ class ComicStorageService: ComicStorageServiceInterface {
 }
 
 extension NSManagedObject {
-    func toComicRating() -> ComicRating? {
+    func toComic() -> Comic? {
         guard let id: Int = value(forKey: "id") as? Int else {
+            return nil
+        }
+
+        guard let date: Date = value(forKey: "date") as? Date else {
             return nil
         }
 
@@ -91,7 +98,7 @@ extension NSManagedObject {
             return nil
         }
 
-        let comic = ComicRating(id: id, title: title, img: img, rating: UInt8(rating))
+        let comic = Comic(id: id, date: date, title: title, img: img, rating: UInt8(rating))
         return comic
     }
 }
