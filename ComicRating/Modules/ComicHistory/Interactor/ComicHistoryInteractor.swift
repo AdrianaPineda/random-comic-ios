@@ -28,8 +28,9 @@ extension ComicHistoryInteractor: ComicHistoryInteractorInput {
         imageDownloader.fetchImage(fromUrl: url).done { [weak self] (data: Data) in
             guard let self = self else { return }
             self.output.imageFetched(imageData: data, id: id)
-        }.catch { _ in
-            self.output.comicFetchFailed(message: "Could not fetch comic image")
+        }.catch { error in
+            print("Error fetching image: \(error.localizedDescription)")
+            self.output.fetchImageFailed(id: id)
         }
     }
 }

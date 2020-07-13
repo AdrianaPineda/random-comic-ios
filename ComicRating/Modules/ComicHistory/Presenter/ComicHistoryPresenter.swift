@@ -14,6 +14,7 @@ class ComicHistoryPresenter: ComicHistoryModuleInput, ComicHistoryViewOutput {
 
     func viewIsReady() {
         interactor.getComics()
+        view.showLoadingOnImages()
     }
 }
 
@@ -31,10 +32,10 @@ extension ComicHistoryPresenter: ComicHistoryInteractorOutput {
     }
 
     func imageFetched(imageData: Data, id: Int) {
-        view.showImageAtIndex(index: id, image: imageData)
+        view.showImageAtIndex(index: id, image: .data(imageData))
     }
 
-    func comicFetchFailed(message _: String) {
-//        view.showOkAlertMessage(title: "Error", message: message)
+    func fetchImageFailed(id: Int) {
+        view.showImageAtIndex(index: id, image: .name("warning"))
     }
 }
