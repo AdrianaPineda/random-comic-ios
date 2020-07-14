@@ -23,7 +23,7 @@ class ComicHistoryViewController: UICollectionViewController {
     private let starSize = CGSize(width: 20, height: 20)
 
     var comics: [ComicForCell] = []
-    var showLoadingOnImages = false
+    var animateImageViews = false
 
     // MARK: Life cycle
 
@@ -76,7 +76,7 @@ extension ComicHistoryViewController {
             comicHistoryCell.imageView.hideSkeleton()
             comicHistoryCell.imageView.image = image
         } else {
-            if showLoadingOnImages {
+            if animateImageViews {
                 comicHistoryCell.imageView.showAnimatedGradientSkeleton()
             }
         }
@@ -140,6 +140,6 @@ extension ComicHistoryViewController: ComicHistoryViewInput {
     }
 
     func showLoadingOnImages() {
-        showLoadingOnImages = true
+        animateImageViews = true
     }
 }
