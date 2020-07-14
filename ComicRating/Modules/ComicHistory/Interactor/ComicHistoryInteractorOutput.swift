@@ -11,5 +11,5 @@ import Foundation
 protocol ComicHistoryInteractorOutput: AnyObject {
     func comicsLoaded(comics: [Comic])
     func imageFetched(imageData: Data, id: Int)
-    func fetchImageFailed(id: Int)
+    func imageFetchFailed(id: Int)
 }

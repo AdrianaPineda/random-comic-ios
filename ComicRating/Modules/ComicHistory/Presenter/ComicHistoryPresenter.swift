@@ -35,7 +35,7 @@ extension ComicHistoryPresenter: ComicHistoryInteractorOutput {
         view.showImageAtIndex(index: id, image: .data(imageData))
     }
 
-    func fetchImageFailed(id: Int) {
+    func imageFetchFailed(id: Int) {
         view.showImageAtIndex(index: id, image: .name("warning"))
     }
 }

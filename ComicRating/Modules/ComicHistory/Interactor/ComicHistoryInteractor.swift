@@ -30,7 +30,7 @@ extension ComicHistoryInteractor: ComicHistoryInteractorInput {
             self.output.imageFetched(imageData: data, id: id)
         }.catch { error in
             print("Error fetching image: \(error.localizedDescription)")
-            self.output.fetchImageFailed(id: id)
+            self.output.imageFetchFailed(id: id)
         }
     }
 }
