@@ -15,5 +15,6 @@ protocol ComicHistoryViewInput: AnyObject {
 
     func setupInitialState()
     func showComics(comics: [ComicForCell])
-    func showImageAtIndex(index: Int, image: Data)
+    func showLoadingOnImages()
+    func showImageAtIndex(index: Int, image: ComicImage)
 }

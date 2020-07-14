@@ -7,11 +7,16 @@
 //
 
 import Foundation
+enum ComicImage {
+    case data(Data)
+    case name(String)
+}
+
 struct ComicForCell {
     var number: Int
     var title: String
     var rating: UInt8
-    var img: Data?
+    var img: ComicImage?
 
     static func fromComic(comic: Comic) -> ComicForCell {
         let rating = comic.rating ?? 0

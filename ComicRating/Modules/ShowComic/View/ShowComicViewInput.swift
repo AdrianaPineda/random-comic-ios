@@ -8,7 +8,9 @@
 import Foundation
 
 enum Element {
-    case text, image, rating
+    case text
+    case image
+    case rating
 }
 
 protocol ShowComicViewInput: AnyObject {

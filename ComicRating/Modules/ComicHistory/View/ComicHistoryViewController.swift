@@ -23,6 +23,7 @@ class ComicHistoryViewController: UICollectionViewController {
     private let starSize = CGSize(width: 20, height: 20)
 
     var comics: [ComicForCell] = []
+    var animateImageViews = false
 
     // MARK: Life cycle
 
@@ -71,11 +72,30 @@ extension ComicHistoryViewController {
         comicHistoryCell.comicLabel.text = "\(comic.title) (#\(comic.number))"
         comicHistoryCell.ratingView.setStarSize(size: starSize)
         comicHistoryCell.ratingView.fillStarsWithRating(rating: comic.rating)
-        if let image = comic.img {
-            comicHistoryCell.imageView.image = UIImage(data: image)
+        if let image = getImageForComic(comic) {
+            comicHistoryCell.imageView.hideSkeleton()
+            comicHistoryCell.imageView.image = image
+        } else {
+            if animateImageViews {
+                comicHistoryCell.imageView.showAnimatedGradientSkeleton()
+            }
         }
 
         return cell
+    }
+
+    fileprivate func getImageForComic(_ comic: ComicForCell) -> UIImage? {
+        guard let image = comic.img else {
+            return nil
+        }
+        var uiImage: UIImage?
+        switch image {
+        case let .data(value):
+            uiImage = UIImage(data: value)
+        case let .name(value):
+            uiImage = UIImage(named: value)
+        }
+        return uiImage
     }
 }
 
@@ -113,9 +133,13 @@ extension ComicHistoryViewController: ComicHistoryViewInput {
         collectionView.reloadData()
     }
 
-    func showImageAtIndex(index: Int, image: Data) {
+    func showImageAtIndex(index: Int, image: ComicImage) {
         let indexPath = IndexPath(row: index, section: 0)
         comics[index].img = image
         collectionView.reloadItems(at: [indexPath])
+    }
+
+    func showLoadingOnImages() {
+        animateImageViews = true
     }
 }
