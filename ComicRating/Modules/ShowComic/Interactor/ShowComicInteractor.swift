@@ -75,7 +75,6 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         print("1. Store locally")
         guard var comic = currentComic else { return }
         comic.rating = rating
-        // TODO: fix ^
         storageService.upsertComic(comic: comic)
         print("1. Send it to a backend", storageService.getComics())
     }
