@@ -296,6 +296,7 @@
 			children = (
 				015F7047241F463D004ED20A /* ComicRatingTests.swift */,
 				015F7049241F463D004ED20A /* Info.plist */,
+				01EB91CC24BF72A400687CD9 /* Services */,
 				01894F6824BE2F1B00CC4AE8 /* Modules */,
 			);
 			path = ComicRatingTests;
@@ -476,6 +477,29 @@
 				01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		01EB91CC24BF72A400687CD9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01EB91CE24BF72B400687CD9 /* Api */,
+				01EB91CD24BF72B000687CD9 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01EB91CD24BF72B000687CD9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		01EB91CE24BF72B400687CD9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		01FB7BC524B99243007B00DC /* Entities */ = {

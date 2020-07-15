@@ -9,8 +9,8 @@ import Foundation
 
 class ComicHistoryInteractor {
     weak var output: ComicHistoryInteractorOutput!
-    let storageService: ComicStorageServiceInterface
-    let imageDownloader: ImageDownloaderServiceInterface
+    private let storageService: ComicStorageServiceInterface
+    private let imageDownloader: ImageDownloaderServiceInterface
 
     init(storageService: ComicStorageServiceInterface, imageDownloader: ImageDownloaderServiceInterface) {
         self.storageService = storageService
