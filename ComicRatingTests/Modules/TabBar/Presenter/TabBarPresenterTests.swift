@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import ComicRating
+
 class TabBarPresenterTest: XCTestCase {
     override func setUp() {
         super.setUp()

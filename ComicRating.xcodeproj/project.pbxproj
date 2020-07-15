@@ -68,6 +68,7 @@
 		01AA4439243C351600612796 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA4438243C351600612796 /* AlamofireImage */; };
 		01AA443B243C386600612796 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA443A243C386600612796 /* Http.swift */; };
 		01E1C2E27653ECF18FAF9C97 /* TabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742BF891B1A5E504C7DA5EE /* TabBarPresenterTests.swift */; };
+		01EB91C924BF704100687CD9 /* ComicHistoryViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01894F6A24BE306500CC4AE8 /* ComicHistoryViewControllerMock.swift */; };
 		01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB7BC724BB0408007B00DC /* Date+Extensions.swift */; };
 		0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */; };
 		11FED9EF6CF0CF37D8FF9AFF /* ComicHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */; };
@@ -936,6 +937,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015F7048241F463D004ED20A /* ComicRatingTests.swift in Sources */,
+				01EB91C924BF704100687CD9 /* ComicHistoryViewControllerMock.swift in Sources */,
 				7E392433328C26D59B846834 /* ComicHistoryConfiguratorTests.swift in Sources */,
 				2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewTests.swift in Sources */,
 				0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */,

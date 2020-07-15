@@ -6,6 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 
+@testable import ComicRating
 import XCTest
 
 class ComicHistoryModuleConfiguratorTests: XCTestCase {
@@ -38,13 +39,5 @@ class ComicHistoryModuleConfiguratorTests: XCTestCase {
 
         let interactor: ComicHistoryInteractor = presenter.interactor as! ComicHistoryInteractor
         XCTAssertNotNil(interactor.output, "output in ComicHistoryInteractor is nil after configuration")
-    }
-
-    class ComicHistoryViewControllerMock: ComicHistoryViewController {
-        var setupInitialStateDidCall = false
-
-        override func setupInitialState() {
-            setupInitialStateDidCall = true
-        }
     }
 }
