@@ -6,6 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 @testable import ComicRating
+import Cuckoo
 import XCTest
 
 class ComicHistoryInteractorTests: XCTestCase {
@@ -19,5 +20,17 @@ class ComicHistoryInteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    class MockPresenter: ComicHistoryInteractorOutput {}
+    // MARK: ComicHistoryInteractorInput
+
+    func testFetchImage() {
+        let comicStorageService = MockComicStorageService()
+        let output = MockComicHistoryPresenter()
+        let imageDownloaderService = MockImageDownloaderService()
+
+        let comicHistoryInteractor = ComicHistoryInteractor(storageService: comicStorageService, imageDownloader: imageDownloaderService)
+
+        comicHistoryInteractor.getComics()
+
+        
+    }
 }

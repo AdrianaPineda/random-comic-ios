@@ -69,6 +69,9 @@
 		01AA443B243C386600612796 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA443A243C386600612796 /* Http.swift */; };
 		01E1C2E27653ECF18FAF9C97 /* TabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742BF891B1A5E504C7DA5EE /* TabBarPresenterTests.swift */; };
 		01EB91C924BF704100687CD9 /* ComicHistoryViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01894F6A24BE306500CC4AE8 /* ComicHistoryViewControllerMock.swift */; };
+		01EB91CB24BF718300687CD9 /* ComicHistoryPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB91CA24BF718300687CD9 /* ComicHistoryPresenterMock.swift */; };
+		01EB91D324BF751300687CD9 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 01EB91D224BF751300687CD9 /* Cuckoo */; };
+		01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB91D524BF783900687CD9 /* GeneratedMocks.swift */; };
 		01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB7BC724BB0408007B00DC /* Date+Extensions.swift */; };
 		0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */; };
 		11FED9EF6CF0CF37D8FF9AFF /* ComicHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */; };
@@ -179,6 +182,8 @@
 		01AA4433243C340800612796 /* ImageDownloaderServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderServiceInterface.swift; sourceTree = "<group>"; };
 		01AA4435243C34A200612796 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		01AA443A243C386600612796 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		01EB91CA24BF718300687CD9 /* ComicHistoryPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicHistoryPresenterMock.swift; sourceTree = "<group>"; };
+		01EB91D524BF783900687CD9 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		01FB7BC724BB0408007B00DC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorTests.swift; sourceTree = "<group>"; };
 		03FC33C54EE34BB874F4F244 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +224,7 @@
 			files = (
 				01878A3424277C8B00883D93 /* Alamofire in Frameworks */,
 				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
+				01EB91D324BF751300687CD9 /* Cuckoo in Frameworks */,
 				01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */,
 				01AA4439243C351600612796 /* AlamofireImage in Frameworks */,
 				01635ABF2451534B005BE30F /* SkeletonView in Frameworks */,
@@ -294,6 +300,7 @@
 		015F7046241F463D004ED20A /* ComicRatingTests */ = {
 			isa = PBXGroup;
 			children = (
+				01EB91D524BF783900687CD9 /* GeneratedMocks.swift */,
 				015F7047241F463D004ED20A /* ComicRatingTests.swift */,
 				015F7049241F463D004ED20A /* Info.plist */,
 				01EB91CC24BF72A400687CD9 /* Services */,
@@ -561,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC3AA4093575108DAA40D52 /* ComicHistoryPresenterTests.swift */,
+				01EB91CA24BF718300687CD9 /* ComicHistoryPresenterMock.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -723,6 +731,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 015F7057241F463D004ED20A /* Build configuration list for PBXNativeTarget "ComicRating" */;
 			buildPhases = (
+				01EB91D424BF76FF00687CD9 /* Cuckoo */,
 				015F7029241F463B004ED20A /* Sources */,
 				015F702A241F463B004ED20A /* Frameworks */,
 				015F702B241F463B004ED20A /* Resources */,
@@ -739,6 +748,7 @@
 				01AA4438243C351600612796 /* AlamofireImage */,
 				01927CB12441977E00D2BCC4 /* Cosmos */,
 				01635ABE2451534B005BE30F /* SkeletonView */,
+				01EB91D224BF751300687CD9 /* Cuckoo */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -818,6 +828,7 @@
 				01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				01635ABD2451534B005BE30F /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -879,6 +890,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftformat >/dev/null && which swiftlint >/dev/null; then\n  swiftformat --config .swiftformat . \n  swiftlint --config .swiftlint.yml\nelse\n  echo \"warning: SwiftFormat or SwiftLint not installed, download from https://github.com/nicklockwood/SwiftFormat or https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		01EB91D424BF76FF00687CD9 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Presenter/ComicHistoryPresenter.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -967,9 +998,11 @@
 				0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */,
 				30140FB19BABB5136539A997 /* ComicHistoryPresenterTests.swift in Sources */,
 				6C818EC776CA01B2F6D78DB7 /* ComicHistoryRouterTests.swift in Sources */,
+				01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */,
 				CDD6D87A8A2A09A82245C1E7 /* TabBarConfiguratorTests.swift in Sources */,
 				F06AF5214DF52BEA147A91C3 /* TabBarViewTests.swift in Sources */,
 				F1567AE545CEC8573F71D60A /* TabBarInteractorTests.swift in Sources */,
+				01EB91CB24BF718300687CD9 /* ComicHistoryPresenterMock.swift in Sources */,
 				01E1C2E27653ECF18FAF9C97 /* TabBarPresenterTests.swift in Sources */,
 				3F0928E73124C2DA862355F4 /* TabBarRouterTests.swift in Sources */,
 			);
@@ -1322,6 +1355,14 @@
 				minimumVersion = 4.1.0;
 			};
 		};
+		01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1349,6 +1390,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		01EB91D224BF751300687CD9 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
 
