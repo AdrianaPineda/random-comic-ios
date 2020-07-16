@@ -43,6 +43,6 @@ class ComicHistoryInteractorTests: XCTestCase {
         comicHistoryInteractor.getComics()
 
         verify(comicStorageService).getComics()
-        verify(output).comicsLoaded(comics: any())
+        verify(output).comicsLoaded(comics: equal(to: comics))
     }
 }
