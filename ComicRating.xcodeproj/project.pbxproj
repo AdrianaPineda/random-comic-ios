@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
 		012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A30CE247795CB00AC9921 /* UpcomingComic.swift */; };
+		012A9E6324C0C7870025B1C2 /* ComicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6224C0C7870025B1C2 /* ComicFactory.swift */; };
+		012A9E6524C0C8680025B1C2 /* ComicsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */; };
+		012A9E6724C0C9AA0025B1C2 /* Comic+Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6624C0C9AA0025B1C2 /* Comic+Matchable.swift */; };
 		01472DE1244EB0A1008A5ED1 /* ComicRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01472DDF244EB0A1008A5ED1 /* ComicRating.xcdatamodeld */; };
 		0150BA4D24442F57000E226C /* RatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4C24442F57000E226C /* RatingDelegate.swift */; };
 		0150BA4F24443093000E226C /* RatingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150BA4E24443093000E226C /* RatingInterface.swift */; };
@@ -122,6 +125,9 @@
 
 /* Begin PBXFileReference section */
 		012A30CE247795CB00AC9921 /* UpcomingComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComic.swift; sourceTree = "<group>"; };
+		012A9E6224C0C7870025B1C2 /* ComicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicFactory.swift; sourceTree = "<group>"; };
+		012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsFactory.swift; sourceTree = "<group>"; };
+		012A9E6624C0C9AA0025B1C2 /* Comic+Matchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comic+Matchable.swift"; sourceTree = "<group>"; };
 		01472DE0244EB0A1008A5ED1 /* ComicRating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComicRating.xcdatamodel; sourceTree = "<group>"; };
 		0150BA4C24442F57000E226C /* RatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDelegate.swift; sourceTree = "<group>"; };
 		0150BA4E24443093000E226C /* RatingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInterface.swift; sourceTree = "<group>"; };
@@ -248,6 +254,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012A9E6124C0C73D0025B1C2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				012A9E6224C0C7870025B1C2 /* ComicFactory.swift */,
+				012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */,
+				012A9E6624C0C9AA0025B1C2 /* Comic+Matchable.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		0150BA58244814AA000E226C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +319,7 @@
 				01EB91D524BF783900687CD9 /* GeneratedMocks.swift */,
 				015F7047241F463D004ED20A /* ComicRatingTests.swift */,
 				015F7049241F463D004ED20A /* Info.plist */,
+				012A9E6124C0C73D0025B1C2 /* Entities */,
 				01EB91CC24BF72A400687CD9 /* Services */,
 				01894F6824BE2F1B00CC4AE8 /* Modules */,
 			);
@@ -909,7 +926,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Presenter/ComicHistoryPresenter.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -993,7 +1010,10 @@
 			files = (
 				015F7048241F463D004ED20A /* ComicRatingTests.swift in Sources */,
 				01EB91C924BF704100687CD9 /* ComicHistoryViewControllerMock.swift in Sources */,
+				012A9E6324C0C7870025B1C2 /* ComicFactory.swift in Sources */,
 				7E392433328C26D59B846834 /* ComicHistoryConfiguratorTests.swift in Sources */,
+				012A9E6524C0C8680025B1C2 /* ComicsFactory.swift in Sources */,
+				012A9E6724C0C9AA0025B1C2 /* Comic+Matchable.swift in Sources */,
 				2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewTests.swift in Sources */,
 				0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */,
 				30140FB19BABB5136539A997 /* ComicHistoryPresenterTests.swift in Sources */,

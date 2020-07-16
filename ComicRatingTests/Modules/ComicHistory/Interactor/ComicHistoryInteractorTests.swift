@@ -22,15 +22,27 @@ class ComicHistoryInteractorTests: XCTestCase {
 
     // MARK: ComicHistoryInteractorInput
 
-    func testFetchImage() {
+    func testGetComics() {
         let comicStorageService = MockComicStorageService()
-        let output = MockComicHistoryPresenter()
+        let output = MockComicHistoryInteractorOutput()
         let imageDownloaderService = MockImageDownloaderService()
 
-        let comicHistoryInteractor = ComicHistoryInteractor(storageService: comicStorageService, imageDownloader: imageDownloaderService)
+        let comics = ComicsFactory.getComics(number: 5)
+        stub(comicStorageService) { stub in
+            when(stub.getComics()).thenReturn(comics)
+        }
+
+        stub(output) { stub in
+            when(stub.comicsLoaded(comics: any())).thenDoNothing()
+        }
+
+        let comicHistoryInteractor = ComicHistoryInteractor(storageService: comicStorageService,
+                                                            imageDownloader: imageDownloaderService)
+        comicHistoryInteractor.output = output
 
         comicHistoryInteractor.getComics()
 
-        
+        verify(comicStorageService).getComics()
+        verify(output).comicsLoaded(comics: any())
     }
 }
