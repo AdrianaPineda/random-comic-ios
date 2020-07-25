@@ -9,6 +9,8 @@
 @testable import ComicRating
 import XCTest
 
+class ComicHistoryViewControllerMock: ComicHistoryViewController {}
+
 class ComicHistoryModuleConfiguratorTests: XCTestCase {
     func testConfigureModuleForViewController() {
         // Arrange
