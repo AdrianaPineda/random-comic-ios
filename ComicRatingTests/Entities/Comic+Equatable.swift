@@ -11,7 +11,7 @@ import Foundation
 
 extension Comic: Equatable {
     public static func == (lhs: Comic, rhs: Comic) -> Bool {
-        lhs.id == rhs.id && lhs.title == rhs.title && lhs.date == rhs.date && lhs.img == rhs.img && lhs.rating == rhs.rating
+        return lhs.id == rhs.id && lhs.title == rhs.title && lhs.date == rhs.date && lhs.img == rhs.img && lhs.rating == rhs.rating
     }
 
     func equal(to value: Comic) -> ParameterMatcher<Comic> {

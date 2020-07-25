@@ -11,7 +11,7 @@ import Foundation
 class ComicsFactory {
     static func getComics(number: Int) -> [Comic] {
         var comics: [Comic] = []
-        for i in 0 ... number {
+        for i in 1 ... number {
             let comic = ComicFactory.getComic(id: i)
             comics.append(comic)
         }

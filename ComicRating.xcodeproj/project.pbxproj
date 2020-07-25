@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
+		011F78EF24CC8DE400C87A01 /* ComicForCell+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */; };
 		012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A30CE247795CB00AC9921 /* UpcomingComic.swift */; };
 		012A9E6324C0C7870025B1C2 /* ComicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6224C0C7870025B1C2 /* ComicFactory.swift */; };
 		012A9E6524C0C8680025B1C2 /* ComicsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */; };
@@ -124,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicForCell+Equatable.swift"; sourceTree = "<group>"; };
 		012A30CE247795CB00AC9921 /* UpcomingComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComic.swift; sourceTree = "<group>"; };
 		012A9E6224C0C7870025B1C2 /* ComicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicFactory.swift; sourceTree = "<group>"; };
 		012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsFactory.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 		1D77309D58F89E02E260C3C7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */,
 				ACC3AA4093575108DAA40D52 /* ComicHistoryPresenterTests.swift */,
 				01EB91CA24BF718300687CD9 /* ComicHistoryPresenterMock.swift */,
 			);
@@ -926,7 +929,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/View/ComicHistoryViewInput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift\" \n\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1020,6 +1023,7 @@
 				6C818EC776CA01B2F6D78DB7 /* ComicHistoryRouterTests.swift in Sources */,
 				01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */,
 				CDD6D87A8A2A09A82245C1E7 /* TabBarConfiguratorTests.swift in Sources */,
+				011F78EF24CC8DE400C87A01 /* ComicForCell+Equatable.swift in Sources */,
 				F06AF5214DF52BEA147A91C3 /* TabBarViewTests.swift in Sources */,
 				F1567AE545CEC8573F71D60A /* TabBarInteractorTests.swift in Sources */,
 				01EB91CB24BF718300687CD9 /* ComicHistoryPresenterMock.swift in Sources */,
