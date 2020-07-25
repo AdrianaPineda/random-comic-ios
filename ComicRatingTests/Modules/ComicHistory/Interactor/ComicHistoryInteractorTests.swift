@@ -44,13 +44,16 @@ class ComicHistoryInteractorTests: XCTestCase {
     // MARK: getComics()
 
     func testGetComics() {
+        // Arrange
         let comics = ComicsFactory.getComics(number: 5)
         stub(comicStorageService) { stub in
             when(stub.getComics()).thenReturn(comics)
         }
 
+        // Act
         comicHistoryInteractor?.getComics()
 
+        // Assert
         verify(comicStorageService).getComics()
         verify(output).comicsLoaded(comics: equal(to: comics))
     }
@@ -58,11 +61,13 @@ class ComicHistoryInteractorTests: XCTestCase {
     // MARK: fetchImage(fromUrl, id)
 
     func testFetchImage_OutputImageFetchedCalled() {
+        // Arrange
         let (promise, seal) = Promise<Data>.pending()
         stub(imageDownloaderService) { stub in
             when(stub.fetchImage(fromUrl: any())).thenReturn(promise)
         }
 
+        // Act
         let url = URL(string: "my-url")!
         comicHistoryInteractor?.fetchImage(fromUrl: url, id: 123)
 
@@ -74,17 +79,20 @@ class ComicHistoryInteractorTests: XCTestCase {
             expectation.fulfill()
         }.cauterize()
 
+        // Assert
         waitForExpectations(timeout: 5, handler: nil)
         verify(imageDownloaderService).fetchImage(fromUrl: equal(to: url))
         verify(output).imageFetched(imageData: equal(to: data), id: 123)
     }
 
     func testFetch_OutputImageFetchedFailedCalled() {
+        // Arrange
         let (promise, seal) = Promise<Data>.pending()
         stub(imageDownloaderService) { stub in
             when(stub.fetchImage(fromUrl: any())).thenReturn(promise)
         }
 
+        // Act
         let url = URL(string: "my-url")!
         comicHistoryInteractor?.fetchImage(fromUrl: url, id: 123)
 
@@ -96,6 +104,7 @@ class ComicHistoryInteractorTests: XCTestCase {
             expectation.fulfill()
         }.cauterize()
 
+        // Assert
         waitForExpectations(timeout: 5, handler: nil)
         verify(imageDownloaderService).fetchImage(fromUrl: equal(to: url))
         verify(output).imageFetchFailed(id: 123)
