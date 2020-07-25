@@ -11,14 +11,14 @@ import XCTest
 
 class ComicHistoryModuleConfiguratorTests: XCTestCase {
     func testConfigureModuleForViewController() {
-        // given
+        // Arrange
         let viewController = ComicHistoryViewControllerMock()
         let configurator = ComicHistoryModuleConfigurator()
 
-        // when
+        // Act
         configurator.configureModuleForViewInput(viewInput: viewController)
 
-        // then
+        // Assert
         XCTAssertNotNil(viewController.output, "ComicHistoryViewController is nil after configuration")
         XCTAssertTrue(viewController.output is ComicHistoryPresenter, "output is not ComicHistoryPresenter")
 
@@ -26,6 +26,7 @@ class ComicHistoryModuleConfiguratorTests: XCTestCase {
         XCTAssertNotNil(presenter.view, "view in ComicHistoryPresenter is nil after configuration")
         XCTAssertNotNil(presenter.router, "router in ComicHistoryPresenter is nil after configuration")
         XCTAssertTrue(presenter.router is ComicHistoryRouter, "router is not ComicHistoryRouter")
+        XCTAssertTrue(presenter.interactor is ComicHistoryInteractor, "interactor is not ComicHistoryInteractor")
 
         let interactor: ComicHistoryInteractor = presenter.interactor as! ComicHistoryInteractor
         XCTAssertNotNil(interactor.output, "output in ComicHistoryInteractor is nil after configuration")
