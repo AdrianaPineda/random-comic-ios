@@ -687,9 +687,9 @@
 		B439D95ECC5C608AD6FF622D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				01894F6224BB10D700CC4AE8 /* ComicForCell.swift */,
 				E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */,
 				26F3552FAF93C97ECC885963 /* ComicHistoryPresenter.swift */,
-				01894F6224BB10D700CC4AE8 /* ComicForCell.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
