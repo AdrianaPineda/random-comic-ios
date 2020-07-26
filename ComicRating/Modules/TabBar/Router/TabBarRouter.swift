@@ -8,10 +8,8 @@
 
 import UIKit
 
-typealias TabSections = (
-    showComic: UIViewController,
-    history: UIViewController
-)
+typealias TabSections = (showComic: UIViewController,
+                         history: UIViewController)
 
 class TabBarRouter: TabBarRouterInput {
     weak var tabBarPresenter: TabBarPresenter?

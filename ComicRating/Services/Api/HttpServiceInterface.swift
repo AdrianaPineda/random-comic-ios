@@ -9,7 +9,10 @@
 import PromiseKit
 
 protocol HttpServiceInterface {
-    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type,
+    func request<T>(method: Http.Method,
+                    url: String,
+                    params: [String: Any]?,
+                    responseType: T.Type,
                     completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable
     func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type) -> Promise<T>
         where T: Decodable

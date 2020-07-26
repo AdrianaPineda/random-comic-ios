@@ -28,7 +28,8 @@ class ComicHistoryModuleConfiguratorTests: XCTestCase {
         XCTAssertNotNil(presenter.view, "view in ComicHistoryPresenter is nil after configuration")
         XCTAssertNotNil(presenter.router, "router in ComicHistoryPresenter is nil after configuration")
         XCTAssertTrue(presenter.router is ComicHistoryRouter, "router is not ComicHistoryRouter")
-        XCTAssertTrue(presenter.interactor is ComicHistoryInteractor, "interactor is not ComicHistoryInteractor")
+        XCTAssertTrue(presenter.interactor is ComicHistoryInteractor,
+                      "interactor is not ComicHistoryInteractor")
 
         let interactor: ComicHistoryInteractor = presenter.interactor as! ComicHistoryInteractor
         XCTAssertNotNil(interactor.output, "output in ComicHistoryInteractor is nil after configuration")

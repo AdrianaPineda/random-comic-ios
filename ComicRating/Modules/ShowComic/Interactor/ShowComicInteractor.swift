@@ -16,7 +16,8 @@ class ShowComicInteractor {
 
     var currentComic: Comic?
 
-    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface,
+    init(apiService: ComicApiServiceInterface,
+         imageDownloader: ImageDownloaderServiceInterface,
          storageService: ComicStorageServiceInterface) {
         self.apiService = apiService
         self.imageDownloader = imageDownloader

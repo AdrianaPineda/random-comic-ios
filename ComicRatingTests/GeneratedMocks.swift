@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -65,8 +65,10 @@ class MockComicHistoryInteractorInput: ComicHistoryInteractorInput, Cuckoo.Proto
 
         func fetchImage<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(fromUrl url: M1, id: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(URL,
                                                                                                                                     Int)> where M1.MatchedType == URL, M2.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(URL, Int)>] = [wrap(matchable: url) { $0.0 },
-                                                                   wrap(matchable: id) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(URL, Int)>] = [
+                wrap(matchable: url) { $0.0 },
+                wrap(matchable: id) { $0.1 }
+            ]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryInteractorInput.self,
                                                          method: "fetchImage(fromUrl: URL, id: Int)",
                                                          parameterMatchers: matchers))
@@ -93,8 +95,10 @@ class MockComicHistoryInteractorInput: ComicHistoryInteractorInput, Cuckoo.Proto
         @discardableResult
         func fetchImage<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(fromUrl url: M1, id: M2) -> Cuckoo.__DoNotUse<(URL,
                                                                                                                   Int), Void> where M1.MatchedType == URL, M2.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(URL, Int)>] = [wrap(matchable: url) { $0.0 },
-                                                                   wrap(matchable: id) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(URL, Int)>] = [
+                wrap(matchable: url) { $0.0 },
+                wrap(matchable: id) { $0.1 }
+            ]
             return cuckoo_manager.verify("fetchImage(fromUrl: URL, id: Int)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
     }
@@ -110,7 +114,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -180,7 +184,9 @@ class MockComicHistoryInteractorOutput: ComicHistoryInteractorOutput, Cuckoo.Pro
             cuckoo_manager = manager
         }
 
-        func comicsLoaded<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.ProtocolStubNoReturnFunction<[Comic]> where M1.MatchedType == [Comic] {
+        func comicsLoaded<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.ProtocolStubNoReturnFunction<[Comic]> where M1.MatchedType == [
+            Comic
+        ] {
             let matchers: [Cuckoo.ParameterMatcher<[Comic]>] = [wrap(matchable: comics) { $0 }]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryInteractorOutput.self,
                                                          method: "comicsLoaded(comics: [Comic])",
@@ -189,8 +195,10 @@ class MockComicHistoryInteractorOutput: ComicHistoryInteractorOutput, Cuckoo.Pro
 
         func imageFetched<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(imageData: M1, id: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(Data,
                                                                                                                                     Int)> where M1.MatchedType == Data, M2.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(Data, Int)>] = [wrap(matchable: imageData) { $0.0 },
-                                                                    wrap(matchable: id) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Data, Int)>] = [
+                wrap(matchable: imageData) { $0.0 },
+                wrap(matchable: id) { $0.1 }
+            ]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryInteractorOutput.self,
                                                          method: "imageFetched(imageData: Data, id: Int)",
                                                          parameterMatchers: matchers))
@@ -216,7 +224,9 @@ class MockComicHistoryInteractorOutput: ComicHistoryInteractorOutput, Cuckoo.Pro
         }
 
         @discardableResult
-        func comicsLoaded<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.__DoNotUse<[Comic], Void> where M1.MatchedType == [Comic] {
+        func comicsLoaded<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.__DoNotUse<[Comic], Void> where M1.MatchedType == [
+            Comic
+        ] {
             let matchers: [Cuckoo.ParameterMatcher<[Comic]>] = [wrap(matchable: comics) { $0 }]
             return cuckoo_manager.verify("comicsLoaded(comics: [Comic])", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
@@ -224,8 +234,10 @@ class MockComicHistoryInteractorOutput: ComicHistoryInteractorOutput, Cuckoo.Pro
         @discardableResult
         func imageFetched<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(imageData: M1, id: M2) -> Cuckoo.__DoNotUse<(Data,
                                                                                                                   Int), Void> where M1.MatchedType == Data, M2.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(Data, Int)>] = [wrap(matchable: imageData) { $0.0 },
-                                                                    wrap(matchable: id) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Data, Int)>] = [
+                wrap(matchable: imageData) { $0.0 },
+                wrap(matchable: id) { $0.1 }
+            ]
             return cuckoo_manager.verify("imageFetched(imageData: Data, id: Int)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
 
@@ -251,7 +263,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewController.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewController.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ComicHistoryViewController.swift
@@ -422,8 +434,10 @@ class MockComicHistoryViewController: ComicHistoryViewController, Cuckoo.ClassMo
 
         func viewWillTransition<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(to size: M1, with coordinator: M2) -> Cuckoo.ClassStubNoReturnFunction<(CGSize,
                                                                                                                                                    UIViewControllerTransitionCoordinator)> where M1.MatchedType == CGSize, M2.MatchedType == UIViewControllerTransitionCoordinator {
-            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [wrap(matchable: size) { $0.0 },
-                                                                                                        wrap(matchable: coordinator) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [
+                wrap(matchable: size) { $0.0 },
+                wrap(matchable: coordinator) { $0.1 }
+            ]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewController.self,
                                                          method: "viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator)",
                                                          parameterMatchers: matchers))
@@ -477,8 +491,10 @@ class MockComicHistoryViewController: ComicHistoryViewController, Cuckoo.ClassMo
         @discardableResult
         func viewWillTransition<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(to size: M1, with coordinator: M2) -> Cuckoo.__DoNotUse<(CGSize,
                                                                                                                                     UIViewControllerTransitionCoordinator), Void> where M1.MatchedType == CGSize, M2.MatchedType == UIViewControllerTransitionCoordinator {
-            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [wrap(matchable: size) { $0.0 },
-                                                                                                        wrap(matchable: coordinator) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [
+                wrap(matchable: size) { $0.0 },
+                wrap(matchable: coordinator) { $0.1 }
+            ]
             return cuckoo_manager.verify("viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
 
@@ -532,7 +548,7 @@ class ComicHistoryViewControllerStub: ComicHistoryViewController {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-07-26 09:08:50 +0000
 
 @testable import ComicRating
 //
@@ -618,7 +634,9 @@ class MockComicHistoryViewInput: ComicHistoryViewInput, Cuckoo.ProtocolMock {
                                                          method: "setupInitialState()", parameterMatchers: matchers))
         }
 
-        func showComics<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.ProtocolStubNoReturnFunction<[ComicForCell]> where M1.MatchedType == [ComicForCell] {
+        func showComics<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.ProtocolStubNoReturnFunction<[ComicForCell]> where M1.MatchedType == [
+            ComicForCell
+        ] {
             let matchers: [Cuckoo.ParameterMatcher<[ComicForCell]>] = [wrap(matchable: comics) { $0 }]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewInput.self,
                                                          method: "showComics(comics: [ComicForCell])",
@@ -633,8 +651,10 @@ class MockComicHistoryViewInput: ComicHistoryViewInput, Cuckoo.ProtocolMock {
 
         func showImageAtIndex<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(index: M1, image: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(Int,
                                                                                                                                        ComicImage)> where M1.MatchedType == Int, M2.MatchedType == ComicImage {
-            let matchers: [Cuckoo.ParameterMatcher<(Int, ComicImage)>] = [wrap(matchable: index) { $0.0 },
-                                                                          wrap(matchable: image) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Int, ComicImage)>] = [
+                wrap(matchable: index) { $0.0 },
+                wrap(matchable: image) { $0.1 }
+            ]
             return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewInput.self,
                                                          method: "showImageAtIndex(index: Int, image: ComicImage)",
                                                          parameterMatchers: matchers))
@@ -659,7 +679,9 @@ class MockComicHistoryViewInput: ComicHistoryViewInput, Cuckoo.ProtocolMock {
         }
 
         @discardableResult
-        func showComics<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.__DoNotUse<[ComicForCell], Void> where M1.MatchedType == [ComicForCell] {
+        func showComics<M1: Cuckoo.Matchable>(comics: M1) -> Cuckoo.__DoNotUse<[ComicForCell], Void> where M1.MatchedType == [
+            ComicForCell
+        ] {
             let matchers: [Cuckoo.ParameterMatcher<[ComicForCell]>] = [wrap(matchable: comics) { $0 }]
             return cuckoo_manager.verify("showComics(comics: [ComicForCell])", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
@@ -673,8 +695,10 @@ class MockComicHistoryViewInput: ComicHistoryViewInput, Cuckoo.ProtocolMock {
         @discardableResult
         func showImageAtIndex<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(index: M1, image: M2) -> Cuckoo.__DoNotUse<(Int,
                                                                                                                      ComicImage), Void> where M1.MatchedType == Int, M2.MatchedType == ComicImage {
-            let matchers: [Cuckoo.ParameterMatcher<(Int, ComicImage)>] = [wrap(matchable: index) { $0.0 },
-                                                                          wrap(matchable: image) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Int, ComicImage)>] = [
+                wrap(matchable: index) { $0.0 },
+                wrap(matchable: image) { $0.1 }
+            ]
             return cuckoo_manager.verify("showImageAtIndex(index: Int, image: ComicImage)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
     }
@@ -698,7 +722,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ComicApiService.swift
@@ -832,8 +856,10 @@ class MockComicApiService: ComicApiService, Cuckoo.ClassMock {
 
         func getComic<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(id: M1, completion: M2) -> Cuckoo.ClassStubNoReturnFunction<(Int,
                                                                                                                               (Comic?) -> Void)> where M1.MatchedType == Int, M2.MatchedType == ((Comic?) -> Void) {
-            let matchers: [Cuckoo.ParameterMatcher<(Int, (Comic?) -> Void)>] = [wrap(matchable: id) { $0.0 },
-                                                                                wrap(matchable: completion) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Int, (Comic?) -> Void)>] = [
+                wrap(matchable: id) { $0.0 },
+                wrap(matchable: completion) { $0.1 }
+            ]
             return .init(stub: cuckoo_manager.createStub(for: MockComicApiService.self,
                                                          method: "getComic(id: Int, completion: @escaping ((Comic?) -> Void))",
                                                          parameterMatchers: matchers))
@@ -885,8 +911,10 @@ class MockComicApiService: ComicApiService, Cuckoo.ClassMock {
         @discardableResult
         func getComic<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(id: M1, completion: M2) -> Cuckoo.__DoNotUse<(Int,
                                                                                                                (Comic?) -> Void), Void> where M1.MatchedType == Int, M2.MatchedType == ((Comic?) -> Void) {
-            let matchers: [Cuckoo.ParameterMatcher<(Int, (Comic?) -> Void)>] = [wrap(matchable: id) { $0.0 },
-                                                                                wrap(matchable: completion) { $0.1 }]
+            let matchers: [Cuckoo.ParameterMatcher<(Int, (Comic?) -> Void)>] = [
+                wrap(matchable: id) { $0.0 },
+                wrap(matchable: completion) { $0.1 }
+            ]
             return cuckoo_manager.verify("getComic(id: Int, completion: @escaping ((Comic?) -> Void))", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
 
@@ -944,7 +972,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ImageDownloader.swift
@@ -1028,7 +1056,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-07-26 08:55:04 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-07-26 09:08:50 +0000
 
 //
 //  ComicStorageService.swift
