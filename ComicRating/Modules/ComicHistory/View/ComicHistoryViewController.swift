@@ -13,7 +13,7 @@ private let reuseIdentifier = "ComicHistoryCell"
 class ComicHistoryViewController: UICollectionViewController {
     var output: ComicHistoryViewOutput!
 
-    let sections = 1
+    private let sections = 1
     private let minCellWidth = 200
     private let cellHeight = 120
     private let sectionInsets = UIEdgeInsets(top: 10.0,
@@ -22,8 +22,8 @@ class ComicHistoryViewController: UICollectionViewController {
                                              right: 8)
     private let starSize = CGSize(width: 20, height: 20)
 
-    var comics: [ComicForCell] = []
-    var animateImageViews = false
+    private var comics: [ComicForCell] = []
+    private var animateImageViews = false
 
     // MARK: Life cycle
 

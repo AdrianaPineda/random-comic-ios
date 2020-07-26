@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
 		011F78EF24CC8DE400C87A01 /* ComicForCell+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */; };
+		011F78F724CD830900C87A01 /* ShowComicConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78F624CD830900C87A01 /* ShowComicConfiguratorTests.swift */; };
 		012A30CF247795CB00AC9921 /* UpcomingComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A30CE247795CB00AC9921 /* UpcomingComic.swift */; };
 		012A9E6324C0C7870025B1C2 /* ComicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6224C0C7870025B1C2 /* ComicFactory.swift */; };
 		012A9E6524C0C8680025B1C2 /* ComicsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */; };
@@ -124,6 +125,7 @@
 
 /* Begin PBXFileReference section */
 		011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicForCell+Equatable.swift"; sourceTree = "<group>"; };
+		011F78F624CD830900C87A01 /* ShowComicConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowComicConfiguratorTests.swift; sourceTree = "<group>"; };
 		012A30CE247795CB00AC9921 /* UpcomingComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComic.swift; sourceTree = "<group>"; };
 		012A9E6224C0C7870025B1C2 /* ComicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicFactory.swift; sourceTree = "<group>"; };
 		012A9E6424C0C8680025B1C2 /* ComicsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsFactory.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011F78F524CD824600C87A01 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				011F78F624CD830900C87A01 /* ShowComicConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		012A9E6124C0C73D0025B1C2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +454,7 @@
 		01894F6924BE2F6500CC4AE8 /* ShowComic */ = {
 			isa = PBXGroup;
 			children = (
+				011F78F524CD824600C87A01 /* Configurator */,
 			);
 			path = ShowComic;
 			sourceTree = "<group>";
@@ -923,7 +934,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/View/ComicHistoryViewController.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/View/ComicHistoryViewInput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift\" \n\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Storage/ComicStorageService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ComicApiService.swift\" \\\n\"${INPUT_DIR}/Services/Api/ImageDownloaderService.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/View/ComicHistoryViewInput.swift\" \\\n\"${INPUT_DIR}/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift\" \n\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1012,6 +1023,7 @@
 				012A9E6724C0C9AA0025B1C2 /* Comic+Equatable.swift in Sources */,
 				2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewTests.swift in Sources */,
 				0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */,
+				011F78F724CD830900C87A01 /* ShowComicConfiguratorTests.swift in Sources */,
 				30140FB19BABB5136539A997 /* ComicHistoryPresenterTests.swift in Sources */,
 				6C818EC776CA01B2F6D78DB7 /* ComicHistoryRouterTests.swift in Sources */,
 				01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */,
