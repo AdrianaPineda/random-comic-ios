@@ -37,6 +37,8 @@ class ComicHistoryPresenterTest: XCTestCase {
 
     // MARK: - ComicHistoryInteractorOutput
 
+    // MARK: comicsLoaded(comics)
+
     func testComicsLoaded_WithEmptyArray() {
         // Act
         let comics: [Comic] = []
@@ -66,5 +68,28 @@ class ComicHistoryPresenterTest: XCTestCase {
             ComicForCell.fromComic(comic: comics[4])
         ]
         verify(view).showComics(comics: equal(to: comicsForCell))
+    }
+
+    // MARK: imageFetched(imageData, id)
+
+    func testImageFetched() {
+        // Act
+        let data = Data()
+        comicHistoryPresenter.imageFetched(imageData: data, id: 12345)
+
+        // Assert
+        let image: ComicImage = .data(data)
+        verify(view).showImageAtIndex(index: 12345, image: equal(to: image))
+    }
+
+    // MARK: imageFetchFailed(id)
+
+    func testImageFetchFailed() {
+        // Act
+        comicHistoryPresenter.imageFetchFailed(id: 4567)
+
+        // Assert
+        let image: ComicImage = .name("warning")
+        verify(view).showImageAtIndex(index: 4567, image: equal(to: image))
     }
 }

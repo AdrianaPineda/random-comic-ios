@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum ComicImage {
+enum ComicImage: Equatable {
     case data(Data)
     case name(String)
 }

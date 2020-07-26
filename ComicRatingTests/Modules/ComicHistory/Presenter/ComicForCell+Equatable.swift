@@ -10,26 +10,8 @@ import Cuckoo
 import Foundation
 
 extension ComicForCell: Equatable {
-    private static func areImagesEqual(lhs: ComicImage?, rhs: ComicImage?) -> Bool {
-        guard let _ = lhs, let _ = rhs else {
-            return true
-        }
-
-        var areEqual = false
-        if case let .data(dataLhs) = lhs, case let .data(dataRhs) = rhs {
-            areEqual = dataLhs == dataRhs
-        }
-
-        if case let .name(nameLhs) = lhs, case let .name(nameRhs) = rhs {
-            areEqual = nameLhs == nameRhs
-        }
-
-        return areEqual
-    }
-
     public static func == (lhs: ComicForCell, rhs: ComicForCell) -> Bool {
-        let equalImages = areImagesEqual(lhs: lhs.img, rhs: rhs.img)
-        return lhs.number == rhs.number && lhs.rating == rhs.rating && lhs.title == rhs.title && equalImages
+        return lhs.number == rhs.number && lhs.rating == rhs.rating && lhs.title == rhs.title && lhs.img == rhs.img
     }
 
     func equal(to value: ComicForCell) -> ParameterMatcher<ComicForCell> {
