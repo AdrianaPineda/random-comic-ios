@@ -29,10 +29,10 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     // MARK: - Promises
 
     func fetchComic() {
-        getRandomComicNumber().then { (randomComicNumber: Int) in
-            self.apiService.getComic(id: randomComicNumber)
-        }.done { [weak self] (comic: Comic) in
-            guard let self = self else { return }
+        apiService.getLastComic().then { (comic: Comic) -> Promise<Comic> in
+            let randomNumber = Int.random(in: 1 ... comic.id)
+            return self.apiService.getComic(id: randomNumber)
+        }.done { (comic: Comic) -> Void in
             self.currentComic = comic
             self.output.comicFetched(comic: comic)
         }.catch { _ in

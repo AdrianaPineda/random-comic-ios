@@ -24,11 +24,25 @@ class ShowComicInteractorTests: XCTestCase {
     let showComicInteractorOutput = MockShowComicInteractorOutput()
     var showComicInteractor: ShowComicInteractor?
 
+    let (getLastComicPromise, getLastComicSeal) = Promise<Comic>.pending()
+    let (getComicPromise, getComicSeal) = Promise<Comic>.pending()
+
     override func setUp() {
         showComicInteractor = ShowComicInteractor(apiService: apiService, imageDownloader: imageDownloader,
                                                   storageService: storageService)
         showComicInteractor?.output = showComicInteractorOutput
+        setupApiServiceStub()
+        setupComicInteractorOutputStub()
+    }
 
+    private func setupApiServiceStub() {
+        stub(apiService) { stub in
+            when(stub.getLastComic()).thenReturn(getLastComicPromise)
+            when(stub.getComic(id: anyInt())).thenReturn(getComicPromise)
+        }
+    }
+
+    private func setupComicInteractorOutputStub() {
         stub(showComicInteractorOutput) { stub in
             when(stub.comicFetched(comic: any(Comic.self))).thenDoNothing()
             when(stub.comicFetchFailed(message: any())).thenDoNothing()
@@ -39,49 +53,39 @@ class ShowComicInteractorTests: XCTestCase {
 
     func testFetchComic_Successful() {
         // Arrange
-        let deferredLastComic = Promise<Comic>.pending()
-        let deferredGetComic = Promise<Comic>.pending()
-        stub(apiService) { stub in
-            when(stub.getLastComic()).thenReturn(deferredLastComic.promise)
-            when(stub.getComic(id: anyInt())).thenReturn(deferredGetComic.promise)
-        }
 
         // Act
         showComicInteractor?.fetchComic()
 
         let comic = ComicFactory.getComic(id: 200)
-        deferredLastComic.resolver.fulfill(comic)
-        deferredGetComic.resolver.fulfill(comic)
+        getLastComicSeal.fulfill(comic)
 
-        let expectationPromiseChain = expectation(description: "Finish promise chaining")
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-            expectationPromiseChain.fulfill()
-        }
+        let getLastComicExpectation = expectation(description: "Get last comic")
+        getLastComicPromise.ensure {
+            getLastComicExpectation.fulfill()
+            self.getComicSeal.fulfill(comic) // resolve second promise in chain, after first one is resolved
+        }.cauterize()
 
-        wait(for: [expectationPromiseChain], timeout: 5)
+        let getComicExpectation = expectation(description: "Get comic")
+        getComicPromise.ensure {
+            getComicExpectation.fulfill()
+        }.cauterize()
 
         // Assert
+        wait(for: [getLastComicExpectation, getComicExpectation], timeout: 5)
         verify(apiService).getLastComic()
         verify(apiService).getComic(id: anyInt())
         verify(showComicInteractorOutput).comicFetched(comic: equal(to: comic))
     }
 
     func testFetchComic_GetLastComicFailed() {
-        // Arrange
-        let deferredLastComic = Promise<Comic>.pending()
-        let deferredGetComic = Promise<Comic>.pending()
-        stub(apiService) { stub in
-            when(stub.getLastComic()).thenReturn(deferredLastComic.promise)
-            when(stub.getComic(id: anyInt())).thenReturn(deferredGetComic.promise)
-        }
-
-        // Act
+        // Arrange - Act
         showComicInteractor?.fetchComic()
 
-        deferredLastComic.resolver.reject(ShowComicInteractorError.getLastComicFailed)
+        getLastComicSeal.reject(ShowComicInteractorError.getLastComicFailed)
 
         let expectationPromiseChain = expectation(description: "Finish promise chaining")
-        deferredLastComic.promise.ensure {
+        getLastComicPromise.ensure {
             expectationPromiseChain.fulfill()
         }.cauterize()
 
@@ -93,27 +97,25 @@ class ShowComicInteractorTests: XCTestCase {
     }
 
     func testFetchComic_GetComicFailed() {
-        // Arrange
-        let deferredLastComic = Promise<Comic>.pending()
-        let deferredGetComic = Promise<Comic>.pending()
-        stub(apiService) { stub in
-            when(stub.getLastComic()).thenReturn(deferredLastComic.promise)
-            when(stub.getComic(id: anyInt())).thenReturn(deferredGetComic.promise)
-        }
-
-        // Act
+        // Arrange - Act
         showComicInteractor?.fetchComic()
 
         let comic = ComicFactory.getComic(id: 200)
-        deferredLastComic.resolver.fulfill(comic)
-        deferredGetComic.resolver.reject(ShowComicInteractorError.getComicFailed)
 
-        let expectationPromiseChain = expectation(description: "Finish promise chaining")
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-            expectationPromiseChain.fulfill()
-        }
+        getLastComicSeal.fulfill(comic)
 
-        wait(for: [expectationPromiseChain], timeout: 5)
+        let expectationGetLastComic = expectation(description: "Get last comic")
+        getLastComicPromise.ensure {
+            expectationGetLastComic.fulfill()
+            self.getComicSeal.reject(ShowComicInteractorError.getComicFailed) // reject second promise in chain, after first one is resolved
+        }.cauterize()
+
+        let expectationGetComic = expectation(description: "Get comic")
+        getComicPromise.ensure {
+            expectationGetComic.fulfill()
+        }.cauterize()
+
+        wait(for: [expectationGetLastComic, expectationGetComic], timeout: 5)
 
         // Assert
         verify(apiService).getLastComic()
