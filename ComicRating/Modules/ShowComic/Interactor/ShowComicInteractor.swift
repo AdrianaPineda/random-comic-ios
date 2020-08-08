@@ -49,13 +49,6 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         }
     }
 
-    private func getRandomComicNumber() -> Promise<Int> {
-        return apiService.getLastComic().map { comic in
-            let randomNumber = Int.random(in: 1 ... comic.id)
-            return randomNumber
-        }
-    }
-
     /*
      // MARK: - Completion handlers
      func fetchComic() {
