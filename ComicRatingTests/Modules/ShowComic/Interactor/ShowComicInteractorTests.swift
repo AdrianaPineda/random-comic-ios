@@ -20,7 +20,7 @@ enum ShowComicInteractorError: Error {
 class ShowComicInteractorTests: XCTestCase {
     let apiService = MockComicApiServiceInterface()
     let imageDownloader = MockImageDownloaderServiceInterface()
-    let storageService = MockComicStorageService()
+    let storageService = MockComicStorageServiceInterface()
     let showComicInteractorOutput = MockShowComicInteractorOutput()
     var showComicInteractor: ShowComicInteractor?
 

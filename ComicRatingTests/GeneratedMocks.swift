@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -114,7 +114,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -263,7 +263,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-08 12:33:05 +0000
 
 @testable import ComicRating
 //
@@ -437,7 +437,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -574,7 +574,7 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ComicApiService.swift
@@ -824,7 +824,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ComicApiClient.swift
@@ -1036,7 +1036,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ImageDownloader.swift
@@ -1120,7 +1120,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-08 12:33:05 +0000
 
 @testable import ComicRating
 //
@@ -1201,7 +1201,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-08 12:31:53 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-08 12:33:05 +0000
 
 //
 //  ComicStorageService.swift
@@ -1307,6 +1307,112 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 
     override func getComics() -> [Comic] {
+        return DefaultValueRegistry.defaultValue(for: [Comic].self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-08 12:33:05 +0000
+
+//
+//  ComicStorageServiceInterface.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 16/04/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+class MockComicStorageServiceInterface: ComicStorageServiceInterface, Cuckoo.ProtocolMock {
+    typealias MocksType = ComicStorageServiceInterface
+
+    typealias Stubbing = __StubbingProxy_ComicStorageServiceInterface
+    typealias Verification = __VerificationProxy_ComicStorageServiceInterface
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: ComicStorageServiceInterface?
+
+    func enableDefaultImplementation(_ stub: ComicStorageServiceInterface) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    func upsertComic(comic: Comic) {
+        return cuckoo_manager.call("upsertComic(comic: Comic)",
+                                   parameters: comic,
+                                   escapingParameters: comic,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.upsertComic(comic: comic))
+    }
+
+    func getComics() -> [Comic] {
+        return cuckoo_manager.call("getComics() -> [Comic]",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.getComics())
+    }
+
+    struct __StubbingProxy_ComicStorageServiceInterface: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func upsertComic<M1: Cuckoo.Matchable>(comic: M1) -> Cuckoo.ProtocolStubNoReturnFunction<Comic> where M1.MatchedType == Comic {
+            let matchers: [Cuckoo.ParameterMatcher<Comic>] = [wrap(matchable: comic) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockComicStorageServiceInterface.self,
+                                                         method: "upsertComic(comic: Comic)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func getComics() -> Cuckoo.ProtocolStubFunction<Void, [Comic]> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockComicStorageServiceInterface.self,
+                                                         method: "getComics() -> [Comic]", parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ComicStorageServiceInterface: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func upsertComic<M1: Cuckoo.Matchable>(comic: M1) -> Cuckoo.__DoNotUse<Comic, Void> where M1.MatchedType == Comic {
+            let matchers: [Cuckoo.ParameterMatcher<Comic>] = [wrap(matchable: comic) { $0 }]
+            return cuckoo_manager.verify("upsertComic(comic: Comic)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func getComics() -> Cuckoo.__DoNotUse<Void, [Comic]> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("getComics() -> [Comic]", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ComicStorageServiceInterfaceStub: ComicStorageServiceInterface {
+    func upsertComic(comic _: Comic) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func getComics() -> [Comic] {
         return DefaultValueRegistry.defaultValue(for: [Comic].self)
     }
 }
