@@ -31,7 +31,8 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     func fetchComic() {
         getRandomComicNumber().then { (randomComicNumber: Int) in
             self.apiService.getComic(id: randomComicNumber)
-        }.done { (comic: Comic) in
+        }.done { [weak self] (comic: Comic) in
+            guard let self = self else { return }
             self.currentComic = comic
             self.output.comicFetched(comic: comic)
         }.catch { _ in
@@ -48,7 +49,7 @@ extension ShowComicInteractor: ShowComicInteractorInput {
         }
     }
 
-    func getRandomComicNumber() -> Promise<Int> {
+    private func getRandomComicNumber() -> Promise<Int> {
         return apiService.getLastComic().map { comic in
             let randomNumber = Int.random(in: 1 ... comic.id)
             return randomNumber
