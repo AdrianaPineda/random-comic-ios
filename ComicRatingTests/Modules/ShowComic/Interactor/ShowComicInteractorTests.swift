@@ -12,9 +12,10 @@ import Foundation
 import PromiseKit
 import XCTest
 
-enum ShowComicInteractorError: Error {
+enum ShowComicInteractorTestsError: Error {
     case getLastComicFailed
     case getComicFailed
+    case fetchImageFailed
 }
 
 class ShowComicInteractorTests: XCTestCase {
@@ -46,10 +47,13 @@ class ShowComicInteractorTests: XCTestCase {
         stub(showComicInteractorOutput) { stub in
             when(stub.comicFetched(comic: any(Comic.self))).thenDoNothing()
             when(stub.comicFetchFailed(message: any())).thenDoNothing()
+            when(stub.imageFetched(imageData: any())).thenDoNothing()
         }
     }
 
     // MARK: - ShowComicInteractorInput
+
+    // MARK: fetchComic
 
     func testFetchComic_Successful() {
         // Arrange
@@ -82,7 +86,7 @@ class ShowComicInteractorTests: XCTestCase {
         // Arrange - Act
         showComicInteractor?.fetchComic()
 
-        getLastComicSeal.reject(ShowComicInteractorError.getLastComicFailed)
+        getLastComicSeal.reject(ShowComicInteractorTestsError.getLastComicFailed)
 
         let expectationPromiseChain = expectation(description: "Finish promise chaining")
         getLastComicPromise.ensure {
@@ -107,7 +111,7 @@ class ShowComicInteractorTests: XCTestCase {
         let expectationGetLastComic = expectation(description: "Get last comic")
         getLastComicPromise.ensure {
             expectationGetLastComic.fulfill()
-            self.getComicSeal.reject(ShowComicInteractorError.getComicFailed) // reject second promise in chain, after first one is resolved
+            self.getComicSeal.reject(ShowComicInteractorTestsError.getComicFailed) // reject second promise in chain, after first one is resolved
         }.cauterize()
 
         let expectationGetComic = expectation(description: "Get comic")
@@ -120,5 +124,57 @@ class ShowComicInteractorTests: XCTestCase {
         // Assert
         verify(apiService).getLastComic()
         verify(showComicInteractorOutput).comicFetchFailed(message: "Could not fetch comic")
+    }
+
+    // MARK: fetchImage(fromURL)
+
+    func testFetchImage_OutputImageFetchedCalled() {
+        // Arrange
+        let (promise, seal) = Promise<Data>.pending()
+        stub(imageDownloader) { stub in
+            when(stub.fetchImage(fromUrl: any())).thenReturn(promise)
+        }
+
+        // Act
+        let url = URL(string: "my-url")!
+        showComicInteractor?.fetchImage(fromUrl: url)
+
+        let data = Data()
+        seal.fulfill(data)
+
+        let expectation = self.expectation(description: "Image fetched")
+        promise.ensure {
+            expectation.fulfill()
+        }.cauterize()
+
+        // Assert
+        waitForExpectations(timeout: 5, handler: nil)
+        verify(imageDownloader).fetchImage(fromUrl: equal(to: url))
+        verify(showComicInteractorOutput).imageFetched(imageData: equal(to: data))
+    }
+
+    func testFetch_OutputImageFetchedFailedCalled() {
+        // Arrange
+        let (promise, seal) = Promise<Data>.pending()
+        stub(imageDownloader) { stub in
+            when(stub.fetchImage(fromUrl: any())).thenReturn(promise)
+        }
+
+        // Act
+        let url = URL(string: "my-url")!
+        showComicInteractor?.fetchImage(fromUrl: url)
+
+        let error = ShowComicInteractorTestsError.fetchImageFailed
+        seal.reject(error)
+
+        let expectation = self.expectation(description: "Image fetched")
+        promise.ensure {
+            expectation.fulfill()
+        }.cauterize()
+
+        // Assert
+        waitForExpectations(timeout: 5, handler: nil)
+        verify(imageDownloader).fetchImage(fromUrl: equal(to: url))
+        verify(showComicInteractorOutput).comicFetchFailed(message: equal(to: "Could not fetch comic image"))
     }
 }

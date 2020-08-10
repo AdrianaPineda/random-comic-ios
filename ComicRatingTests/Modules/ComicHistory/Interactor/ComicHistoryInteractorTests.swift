@@ -11,7 +11,7 @@ import PromiseKit
 import XCTest
 
 class ComicHistoryInteractorTests: XCTestCase {
-    enum MyError: Error {
+    enum ComicHistoryInteractorTestsError: Error {
         case invalidImage
     }
 
@@ -96,7 +96,7 @@ class ComicHistoryInteractorTests: XCTestCase {
         let url = URL(string: "my-url")!
         comicHistoryInteractor?.fetchImage(fromUrl: url, id: 123)
 
-        let error = MyError.invalidImage
+        let error = ComicHistoryInteractorTestsError.invalidImage
         seal.reject(error)
 
         let expectation = self.expectation(description: "Image fetched")
