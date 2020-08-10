@@ -34,6 +34,7 @@ class ShowComicInteractorTests: XCTestCase {
         showComicInteractor?.output = showComicInteractorOutput
         setupApiServiceStub()
         setupComicInteractorOutputStub()
+        setupStorageServiceStub()
     }
 
     private func setupApiServiceStub() {
@@ -48,6 +49,13 @@ class ShowComicInteractorTests: XCTestCase {
             when(stub.comicFetched(comic: any(Comic.self))).thenDoNothing()
             when(stub.comicFetchFailed(message: any())).thenDoNothing()
             when(stub.imageFetched(imageData: any())).thenDoNothing()
+        }
+    }
+
+    private func setupStorageServiceStub() {
+        stub(storageService) { stub in
+            when(stub.upsertComic(comic: any(Comic.self))).thenDoNothing()
+            when(stub.getComics()).thenReturn([])
         }
     }
 
@@ -176,5 +184,32 @@ class ShowComicInteractorTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
         verify(imageDownloader).fetchImage(fromUrl: equal(to: url))
         verify(showComicInteractorOutput).comicFetchFailed(message: equal(to: "Could not fetch comic image"))
+    }
+
+    // MARK: comicRated(rating)
+
+    func testComicRated_WhenCurrentComicIsInvalid() {
+        // Arrange - Act
+        let rating: UInt8 = 8
+        showComicInteractor?.comicRated(rating)
+
+        // Assert
+        verify(storageService, times(0)).upsertComic(comic: any(Comic.self))
+        verify(storageService, times(0)).getComics()
+    }
+
+    func testComicRated_WhenCurrentComicIsValid() {
+        // Arrange
+        var comic = ComicFactory.getComic(id: 3)
+        showComicInteractor?.currentComic = comic
+
+        // Act
+        let rating: UInt8 = 8
+        showComicInteractor?.comicRated(rating)
+
+        // Assert
+        comic.rating = rating
+        verify(storageService).upsertComic(comic: equal(to: comic))
+        verify(storageService).getComics()
     }
 }
