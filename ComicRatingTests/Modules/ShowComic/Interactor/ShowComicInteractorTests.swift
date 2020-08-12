@@ -64,9 +64,7 @@ class ShowComicInteractorTests: XCTestCase {
     // MARK: fetchComic
 
     func testFetchComic_Successful() {
-        // Arrange
-
-        // Act
+        // Arrange - Act
         showComicInteractor?.fetchComic()
 
         let comic = ComicFactory.getComic(id: 200)

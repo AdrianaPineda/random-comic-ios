@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -114,7 +114,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -263,7 +263,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-12 20:17:00 +0000
 
 @testable import ComicRating
 //
@@ -437,7 +437,142 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-12 20:17:00 +0000
+
+//
+//  ShowComicShowComicInteractorInput.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 17/02/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import Foundation
+
+class MockShowComicInteractorInput: ShowComicInteractorInput, Cuckoo.ProtocolMock {
+    typealias MocksType = ShowComicInteractorInput
+
+    typealias Stubbing = __StubbingProxy_ShowComicInteractorInput
+    typealias Verification = __VerificationProxy_ShowComicInteractorInput
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: ShowComicInteractorInput?
+
+    func enableDefaultImplementation(_ stub: ShowComicInteractorInput) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    func fetchComic() {
+        return cuckoo_manager.call("fetchComic()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.fetchComic())
+    }
+
+    func fetchImage(fromUrl url: URL) {
+        return cuckoo_manager.call("fetchImage(fromUrl: URL)",
+                                   parameters: url,
+                                   escapingParameters: url,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.fetchImage(fromUrl: url))
+    }
+
+    func comicRated(_ rating: UInt8) {
+        return cuckoo_manager.call("comicRated(_: UInt8)",
+                                   parameters: rating,
+                                   escapingParameters: rating,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.comicRated(rating))
+    }
+
+    struct __StubbingProxy_ShowComicInteractorInput: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func fetchComic() -> Cuckoo.ProtocolStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicInteractorInput.self, method: "fetchComic()",
+                                                         parameterMatchers: matchers))
+        }
+
+        func fetchImage<M1: Cuckoo.Matchable>(fromUrl url: M1) -> Cuckoo.ProtocolStubNoReturnFunction<URL> where M1.MatchedType == URL {
+            let matchers: [Cuckoo.ParameterMatcher<URL>] = [wrap(matchable: url) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicInteractorInput.self,
+                                                         method: "fetchImage(fromUrl: URL)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func comicRated<M1: Cuckoo.Matchable>(_ rating: M1) -> Cuckoo.ProtocolStubNoReturnFunction<UInt8> where M1.MatchedType == UInt8 {
+            let matchers: [Cuckoo.ParameterMatcher<UInt8>] = [wrap(matchable: rating) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicInteractorInput.self,
+                                                         method: "comicRated(_: UInt8)", parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ShowComicInteractorInput: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func fetchComic() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("fetchComic()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func fetchImage<M1: Cuckoo.Matchable>(fromUrl url: M1) -> Cuckoo.__DoNotUse<URL, Void> where M1.MatchedType == URL {
+            let matchers: [Cuckoo.ParameterMatcher<URL>] = [wrap(matchable: url) { $0 }]
+            return cuckoo_manager.verify("fetchImage(fromUrl: URL)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func comicRated<M1: Cuckoo.Matchable>(_ rating: M1) -> Cuckoo.__DoNotUse<UInt8, Void> where M1.MatchedType == UInt8 {
+            let matchers: [Cuckoo.ParameterMatcher<UInt8>] = [wrap(matchable: rating) { $0 }]
+            return cuckoo_manager.verify("comicRated(_: UInt8)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ShowComicInteractorInputStub: ShowComicInteractorInput {
+    func fetchComic() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func fetchImage(fromUrl _: URL) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func comicRated(_: UInt8) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -574,7 +709,261 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-12 20:17:00 +0000
+
+@testable import ComicRating
+//
+//  ShowComicShowComicViewInput.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 17/02/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+import Cuckoo
+
+import Foundation
+
+class MockShowComicViewInput: ShowComicViewInput, Cuckoo.ProtocolMock {
+    typealias MocksType = ShowComicViewInput
+
+    typealias Stubbing = __StubbingProxy_ShowComicViewInput
+    typealias Verification = __VerificationProxy_ShowComicViewInput
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: ShowComicViewInput?
+
+    func enableDefaultImplementation(_ stub: ShowComicViewInput) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    func setupInitialState() {
+        return cuckoo_manager.call("setupInitialState()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.setupInitialState())
+    }
+
+    func showComic(comic: UpcomingComic) {
+        return cuckoo_manager.call("showComic(comic: UpcomingComic)",
+                                   parameters: comic,
+                                   escapingParameters: comic,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.showComic(comic: comic))
+    }
+
+    func showImage(imageData: Data) {
+        return cuckoo_manager.call("showImage(imageData: Data)",
+                                   parameters: imageData,
+                                   escapingParameters: imageData,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.showImage(imageData: imageData))
+    }
+
+    func resetRating() {
+        return cuckoo_manager.call("resetRating()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.resetRating())
+    }
+
+    func showLoadingContent(onElement element: Element) {
+        return cuckoo_manager.call("showLoadingContent(onElement: Element)",
+                                   parameters: element,
+                                   escapingParameters: element,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.showLoadingContent(onElement: element))
+    }
+
+    func stopLoadingContent(onElement element: Element) {
+        return cuckoo_manager.call("stopLoadingContent(onElement: Element)",
+                                   parameters: element,
+                                   escapingParameters: element,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.stopLoadingContent(onElement: element))
+    }
+
+    func showOkAlertMessage(title: String, message: String) {
+        return cuckoo_manager.call("showOkAlertMessage(title: String, message: String)",
+                                   parameters: (title, message),
+                                   escapingParameters: (title, message),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.showOkAlertMessage(title: title, message: message))
+    }
+
+    struct __StubbingProxy_ShowComicViewInput: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func setupInitialState() -> Cuckoo.ProtocolStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "setupInitialState()", parameterMatchers: matchers))
+        }
+
+        func showComic<M1: Cuckoo.Matchable>(comic: M1) -> Cuckoo.ProtocolStubNoReturnFunction<UpcomingComic> where M1.MatchedType == UpcomingComic {
+            let matchers: [Cuckoo.ParameterMatcher<UpcomingComic>] = [wrap(matchable: comic) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "showComic(comic: UpcomingComic)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func showImage<M1: Cuckoo.Matchable>(imageData: M1) -> Cuckoo.ProtocolStubNoReturnFunction<Data> where M1.MatchedType == Data {
+            let matchers: [Cuckoo.ParameterMatcher<Data>] = [wrap(matchable: imageData) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "showImage(imageData: Data)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func resetRating() -> Cuckoo.ProtocolStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self, method: "resetRating()",
+                                                         parameterMatchers: matchers))
+        }
+
+        func showLoadingContent<M1: Cuckoo.Matchable>(onElement element: M1) -> Cuckoo.ProtocolStubNoReturnFunction<Element> where M1.MatchedType == Element {
+            let matchers: [Cuckoo.ParameterMatcher<Element>] = [wrap(matchable: element) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "showLoadingContent(onElement: Element)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func stopLoadingContent<M1: Cuckoo.Matchable>(onElement element: M1) -> Cuckoo.ProtocolStubNoReturnFunction<Element> where M1.MatchedType == Element {
+            let matchers: [Cuckoo.ParameterMatcher<Element>] = [wrap(matchable: element) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "stopLoadingContent(onElement: Element)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func showOkAlertMessage<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(title: M1, message: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(String,
+                                                                                                                                           String)> where M1.MatchedType == String, M2.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String, String)>] = [
+                wrap(matchable: title) { $0.0 },
+                wrap(matchable: message) { $0.1 }
+            ]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewInput.self,
+                                                         method: "showOkAlertMessage(title: String, message: String)",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ShowComicViewInput: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func setupInitialState() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("setupInitialState()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func showComic<M1: Cuckoo.Matchable>(comic: M1) -> Cuckoo.__DoNotUse<UpcomingComic, Void> where M1.MatchedType == UpcomingComic {
+            let matchers: [Cuckoo.ParameterMatcher<UpcomingComic>] = [wrap(matchable: comic) { $0 }]
+            return cuckoo_manager.verify("showComic(comic: UpcomingComic)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func showImage<M1: Cuckoo.Matchable>(imageData: M1) -> Cuckoo.__DoNotUse<Data, Void> where M1.MatchedType == Data {
+            let matchers: [Cuckoo.ParameterMatcher<Data>] = [wrap(matchable: imageData) { $0 }]
+            return cuckoo_manager.verify("showImage(imageData: Data)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func resetRating() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("resetRating()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func showLoadingContent<M1: Cuckoo.Matchable>(onElement element: M1) -> Cuckoo.__DoNotUse<Element, Void> where M1.MatchedType == Element {
+            let matchers: [Cuckoo.ParameterMatcher<Element>] = [wrap(matchable: element) { $0 }]
+            return cuckoo_manager.verify("showLoadingContent(onElement: Element)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func stopLoadingContent<M1: Cuckoo.Matchable>(onElement element: M1) -> Cuckoo.__DoNotUse<Element, Void> where M1.MatchedType == Element {
+            let matchers: [Cuckoo.ParameterMatcher<Element>] = [wrap(matchable: element) { $0 }]
+            return cuckoo_manager.verify("stopLoadingContent(onElement: Element)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func showOkAlertMessage<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(title: M1, message: M2) -> Cuckoo.__DoNotUse<(String,
+                                                                                                                         String), Void> where M1.MatchedType == String, M2.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String, String)>] = [
+                wrap(matchable: title) { $0.0 },
+                wrap(matchable: message) { $0.1 }
+            ]
+            return cuckoo_manager.verify("showOkAlertMessage(title: String, message: String)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ShowComicViewInputStub: ShowComicViewInput {
+    func setupInitialState() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func showComic(comic _: UpcomingComic) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func showImage(imageData _: Data) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func resetRating() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func showLoadingContent(onElement _: Element) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func stopLoadingContent(onElement _: Element) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    func showOkAlertMessage(title _: String, message _: String) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicApiService.swift
@@ -824,7 +1213,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicApiClient.swift
@@ -1036,7 +1425,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ImageDownloader.swift
@@ -1120,7 +1509,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-12 20:17:00 +0000
 
 @testable import ComicRating
 //
@@ -1201,7 +1590,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicStorageService.swift
@@ -1311,7 +1700,7 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-10 17:36:26 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-12 20:17:00 +0000
 
 //
 //  ComicStorageServiceInterface.swift
