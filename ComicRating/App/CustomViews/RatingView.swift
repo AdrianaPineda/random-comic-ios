@@ -36,7 +36,7 @@ private struct StarImageNames {
     static let emptied = "emptied_star"
 }
 
-class RatingView: UIView {
+class RatingView: UIView, RatingInterface {
     @IBOutlet var container: UIView!
 
     @IBOutlet var firstStar: UIImageView!
@@ -103,9 +103,9 @@ class RatingView: UIView {
     private func getImageName(rating: UInt8, starRating: StarRating) -> String {
         return rating >= starRating.value ? StarImageNames.filled : StarImageNames.emptied
     }
-}
 
-extension RatingView: RatingInterface {
+    // MARK: - RatingInterface
+
     func resetRating() {
         firstStar.image = UIImage(named: StarImageNames.emptied)
         secondStar.image = UIImage(named: StarImageNames.emptied)
