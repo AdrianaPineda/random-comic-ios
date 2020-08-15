@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -114,7 +114,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -263,7 +263,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-15 08:41:44 +0000
 
 @testable import ComicRating
 //
@@ -437,7 +437,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ShowComicShowComicInteractorInput.swift
@@ -572,7 +572,7 @@ class ShowComicInteractorInputStub: ShowComicInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -709,7 +709,7 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-15 08:41:44 +0000
 
 @testable import ComicRating
 //
@@ -963,7 +963,7 @@ class ShowComicViewInputStub: ShowComicViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicApiService.swift
@@ -1213,7 +1213,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicApiClient.swift
@@ -1425,7 +1425,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ImageDownloader.swift
@@ -1509,7 +1509,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-15 08:41:44 +0000
 
 @testable import ComicRating
 //
@@ -1590,7 +1590,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicStorageService.swift
@@ -1700,7 +1700,7 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-12 20:17:00 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-15 08:41:44 +0000
 
 //
 //  ComicStorageServiceInterface.swift
