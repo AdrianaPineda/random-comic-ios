@@ -9,7 +9,8 @@
 import Cuckoo
 import XCTest
 
-@objc class MockRatingView: RatingView {
+// TODO: use Cuckoo
+class MockRatingView: RatingView {
     override func setRating(rating _: UInt8) {}
 
     override func setStarSize(size _: CGSize) {}
