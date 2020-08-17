@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -114,7 +114,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -263,7 +263,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-17 09:58:51 +0000
 
 @testable import ComicRating
 //
@@ -437,7 +437,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicHistoryComicHistoryViewOutput.swift
@@ -515,7 +515,7 @@ class ComicHistoryViewOutputStub: ComicHistoryViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ShowComicShowComicInteractorInput.swift
@@ -650,7 +650,7 @@ class ShowComicInteractorInputStub: ShowComicInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -787,7 +787,7 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-17 09:58:51 +0000
 
 @testable import ComicRating
 //
@@ -1041,7 +1041,7 @@ class ShowComicViewInputStub: ShowComicViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ShowComicShowComicViewOutput.swift
@@ -1174,7 +1174,223 @@ class ShowComicViewOutputStub: ShowComicViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Interactor/TabBarInteractorInput.swift at 2020-08-17 09:58:51 +0000
+
+//
+//  TabBarTabBarInteractorInput.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 25/06/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import Foundation
+
+class MockTabBarInteractorInput: TabBarInteractorInput, Cuckoo.ProtocolMock {
+    typealias MocksType = TabBarInteractorInput
+
+    typealias Stubbing = __StubbingProxy_TabBarInteractorInput
+    typealias Verification = __VerificationProxy_TabBarInteractorInput
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: TabBarInteractorInput?
+
+    func enableDefaultImplementation(_ stub: TabBarInteractorInput) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    struct __StubbingProxy_TabBarInteractorInput: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+    }
+
+    struct __VerificationProxy_TabBarInteractorInput: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+    }
+}
+
+class TabBarInteractorInputStub: TabBarInteractorInput {}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Router/TabBarRouterInput.swift at 2020-08-17 09:58:51 +0000
+
+//
+//  TabBarRouterInput.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 12/05/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+class MockTabBarRouterInput: TabBarRouterInput, Cuckoo.ProtocolMock {
+    typealias MocksType = TabBarRouterInput
+
+    typealias Stubbing = __StubbingProxy_TabBarRouterInput
+    typealias Verification = __VerificationProxy_TabBarRouterInput
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: TabBarRouterInput?
+
+    func enableDefaultImplementation(_ stub: TabBarRouterInput) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    func getTabSections() -> TabSections? {
+        return cuckoo_manager.call("getTabSections() -> TabSections?",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.getTabSections())
+    }
+
+    struct __StubbingProxy_TabBarRouterInput: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func getTabSections() -> Cuckoo.ProtocolStubFunction<Void, TabSections?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockTabBarRouterInput.self,
+                                                         method: "getTabSections() -> TabSections?",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_TabBarRouterInput: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func getTabSections() -> Cuckoo.__DoNotUse<Void, TabSections?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("getTabSections() -> TabSections?", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class TabBarRouterInputStub: TabBarRouterInput {
+    func getTabSections() -> TabSections? {
+        return DefaultValueRegistry.defaultValue(for: (TabSections?).self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewInput.swift at 2020-08-17 09:58:51 +0000
+
+@testable import ComicRating
+//
+//  TabBarTabBarViewInput.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 25/06/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+import Cuckoo
+
+import UIKit
+
+class MockTabBarViewInput: TabBarViewInput, Cuckoo.ProtocolMock {
+    typealias MocksType = TabBarViewInput
+
+    typealias Stubbing = __StubbingProxy_TabBarViewInput
+    typealias Verification = __VerificationProxy_TabBarViewInput
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: TabBarViewInput?
+
+    func enableDefaultImplementation(_ stub: TabBarViewInput) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    func setup(viewControllers: [UIViewController]) {
+        return cuckoo_manager.call("setup(viewControllers: [UIViewController])",
+                                   parameters: viewControllers,
+                                   escapingParameters: viewControllers,
+                                   superclassCall:
+
+                                   Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+
+                                   defaultCall: __defaultImplStub!.setup(viewControllers: viewControllers))
+    }
+
+    struct __StubbingProxy_TabBarViewInput: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func setup<M1: Cuckoo.Matchable>(viewControllers: M1) -> Cuckoo.ProtocolStubNoReturnFunction<[UIViewController]> where M1.MatchedType == [
+            UIViewController
+        ] {
+            let matchers: [Cuckoo.ParameterMatcher<[UIViewController]>] = [wrap(matchable: viewControllers) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockTabBarViewInput.self,
+                                                         method: "setup(viewControllers: [UIViewController])",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_TabBarViewInput: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func setup<M1: Cuckoo.Matchable>(viewControllers: M1) -> Cuckoo.__DoNotUse<[UIViewController], Void> where M1.MatchedType == [
+            UIViewController
+        ] {
+            let matchers: [Cuckoo.ParameterMatcher<[UIViewController]>] = [wrap(matchable: viewControllers) { $0 }]
+            return cuckoo_manager.verify("setup(viewControllers: [UIViewController])", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class TabBarViewInputStub: TabBarViewInput {
+    func setup(viewControllers _: [UIViewController]) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicApiService.swift
@@ -1424,7 +1640,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicApiClient.swift
@@ -1636,7 +1852,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ImageDownloader.swift
@@ -1720,7 +1936,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-17 09:58:51 +0000
 
 @testable import ComicRating
 //
@@ -1801,7 +2017,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicStorageService.swift
@@ -1911,7 +2127,7 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-17 09:19:20 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-17 09:58:51 +0000
 
 //
 //  ComicStorageServiceInterface.swift
