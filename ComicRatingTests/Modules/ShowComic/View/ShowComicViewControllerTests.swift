@@ -7,9 +7,9 @@
 //
 @testable import ComicRating
 import Cuckoo
+import SkeletonView
 import XCTest
 
-// TODO: use Cuckoo
 class MockRatingView: RatingView {
     override func setRating(rating _: UInt8) {}
 
@@ -23,6 +23,7 @@ class MockRatingView: RatingView {
 }
 
 let KShowComicViewControllerIdentifier = "showComicVC"
+
 class ShowComicViewControllerTests: XCTestCase {
     var showComicViewController: ShowComicViewController?
     let output = MockShowComicViewOutput()
@@ -49,6 +50,7 @@ class ShowComicViewControllerTests: XCTestCase {
         stub(output) { stub in
             when(stub.viewIsReady()).thenDoNothing()
             when(stub.nextButtonClicked()).thenDoNothing()
+            when(stub.comicRated(rating: any())).thenDoNothing()
         }
     }
 
@@ -106,5 +108,18 @@ class ShowComicViewControllerTests: XCTestCase {
 
         // Assert
         XCTAssertTrue(ratingView.resetRatingCalled)
+    }
+
+    // MARK: - RatingDelegate
+
+    func testDidRate() {
+        // Arrange
+        let rating: UInt8 = 5
+
+        // Act
+        showComicViewController?.didRate(rating: rating)
+
+        // Assert
+        verify(output).comicRated(rating: rating)
     }
 }
