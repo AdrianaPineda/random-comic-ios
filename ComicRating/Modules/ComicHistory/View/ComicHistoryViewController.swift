@@ -46,10 +46,6 @@ class ComicHistoryViewController: UICollectionViewController {
         collectionView.collectionViewLayout.invalidateLayout()
         super.viewWillTransition(to: size, with: coordinator)
     }
-
-    // MARK: ComicHistoryViewInput
-
-    func setupInitialState() {}
 }
 
 // MARK: UICollectionViewDataSource
@@ -129,6 +125,8 @@ extension ComicHistoryViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ComicHistoryViewController: ComicHistoryViewInput {
+    func setupInitialState() {}
+
     func showComics(comics: [ComicForCell]) {
         self.comics = comics
         collectionView.reloadData()
