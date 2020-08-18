@@ -6,6 +6,7 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 @testable import ComicRating
+import Cuckoo
 import XCTest
 
 class CustomCollectionView: UICollectionView {
@@ -42,14 +43,34 @@ class ComicHistoryViewTests: XCTestCase {
     override func setUp() {
         super.setUp()
         setupComicHistoryViewController()
+        setupOutputStub()
     }
 
     private func setupComicHistoryViewController() {
         let storyboard = UIStoryboard(name: "ComicHistory", bundle: Bundle.main)
-        comicHistorViewController = storyboard.instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier) as? ComicHistoryViewController
+        comicHistorViewController = storyboard
+            .instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier) as? ComicHistoryViewController
 
         comicHistorViewController?.output = output
         comicHistorViewController?.collectionView = collectionView
+    }
+
+    private func setupOutputStub() {
+        stub(output) { stub in
+            when(stub.viewIsReady()).thenDoNothing()
+        }
+    }
+
+    // MARK: - UICollectionViewController
+
+    // MARK: viewWillAppear
+
+    func testViewWillAppear_OutputViewIsReadyCalled() {
+        // Arrange - Act
+        comicHistorViewController?.viewWillAppear(true)
+
+        // Assert
+        verify(output).viewIsReady()
     }
 
     // MARK: - ComicHistoryViewInput
