@@ -756,10 +756,10 @@
 		BB3DB32595D787D69863502E /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				4C0F97BF0D3FF878483D1069 /* Configurator */,
 				ED094FB5CD2319C5CD881D85 /* View */,
 				F502350AD89C984E56647C0C /* Presenter */,
 				1471F6D41E11861B59466B5A /* Router */,
+				4C0F97BF0D3FF878483D1069 /* Configurator */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";

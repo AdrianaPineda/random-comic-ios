@@ -8,7 +8,7 @@
 @testable import ComicRating
 import XCTest
 
-class ShowComicViewControllerMock: ShowComicViewController {}
+class MockShowComicViewController: ShowComicViewController {}
 
 class ShowComicConfiguratorTests: XCTestCase {
     override func setUp() {
@@ -21,7 +21,7 @@ class ShowComicConfiguratorTests: XCTestCase {
 
     func testConfigureModuleForViewController() {
         // Arrange
-        let viewController = ShowComicViewControllerMock()
+        let viewController = MockShowComicViewController()
         let configurator = ShowComicModuleConfigurator()
 
         // Act
