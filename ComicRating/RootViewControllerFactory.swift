@@ -10,7 +10,8 @@ import UIKit
 
 class RootViewControllerFactory {
     static func get() -> UIViewController? {
-        let tabBarController = TabBarInitializer.tabBarController()
+        let tabBarModuleBuilder = TabBarModuleBuilder()
+        let tabBarController = tabBarModuleBuilder.getViewController()
         return tabBarController
     }
 }
