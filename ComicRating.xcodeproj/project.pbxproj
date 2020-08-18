@@ -88,7 +88,7 @@
 		163F1961285AF91B35E6489E /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC0131C2FF2FB815EBDF9 /* TabBarInteractor.swift */; };
 		1EC859298844425101F6C1FB /* ComicHistoryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79E64C4EEDBF570A7BEC7C /* ComicHistoryInteractorInput.swift */; };
 		292FF17DF351584A759A6731 /* TabBarViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F57666B710F17242FA298 /* TabBarViewInput.swift */; };
-		2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1AC96112661A21E08475C /* ComicHistoryViewTests.swift */; };
+		2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1AC96112661A21E08475C /* ComicHistoryViewControllerTests.swift */; };
 		30140FB19BABB5136539A997 /* ComicHistoryPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3AA4093575108DAA40D52 /* ComicHistoryPresenterTests.swift */; };
 		360E7DB0943ABFAD18D8E97E /* TabBarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E25A18EDA839D0E6F568D /* TabBarInteractorOutput.swift */; };
 		380BF4A25C25CC574ED5D9C2 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6D68404B24678C99A8E56A /* TabBarPresenter.swift */; };
@@ -106,7 +106,7 @@
 		CDD6D87A8A2A09A82245C1E7 /* TabBarConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60AEC38C4029EFC31CF79E0 /* TabBarConfiguratorTests.swift */; };
 		D7B1FE184B500804C4BA2EF3 /* ComicHistoryRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A83350176657AF180A6E4 /* ComicHistoryRouterInput.swift */; };
 		E0E39A4A721FD2364E15D5D6 /* ComicHistoryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A0F9C82467AA96B20D468 /* ComicHistoryViewInput.swift */; };
-		F06AF5214DF52BEA147A91C3 /* TabBarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF638CCF2B0C5E25E6A568A /* TabBarViewTests.swift */; };
+		F06AF5214DF52BEA147A91C3 /* TabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF638CCF2B0C5E25E6A568A /* TabBarViewControllerTests.swift */; };
 		F1567AE545CEC8573F71D60A /* TabBarInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A6533E331818DE695F9271 /* TabBarInteractorTests.swift */; };
 		F5567380A4E71DFC68C36CF0 /* TabBarViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED8588C31C4756E4DBFC4E /* TabBarViewOutput.swift */; };
 		F8E6EC8960FED1CCE93CED0C /* ComicHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3552FAF93C97ECC885963 /* ComicHistoryPresenter.swift */; };
@@ -211,12 +211,12 @@
 		26F3552FAF93C97ECC885963 /* ComicHistoryPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryPresenter.swift; sourceTree = "<group>"; };
 		270F57666B710F17242FA298 /* TabBarViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewInput.swift; sourceTree = "<group>"; };
 		275A0F9C82467AA96B20D468 /* ComicHistoryViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryViewInput.swift; sourceTree = "<group>"; };
-		2BF638CCF2B0C5E25E6A568A /* TabBarViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewTests.swift; sourceTree = "<group>"; };
+		2BF638CCF2B0C5E25E6A568A /* TabBarViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerTests.swift; sourceTree = "<group>"; };
 		3284165BEC879AC91CD78B52 /* TabBarRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarRouterTests.swift; sourceTree = "<group>"; };
 		58A6533E331818DE695F9271 /* TabBarInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractorTests.swift; sourceTree = "<group>"; };
 		5CEAFF03BEBEEF936176C71B /* ComicHistoryRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryRouter.swift; sourceTree = "<group>"; };
 		5F8B6419FE4C04221E0E3F2B /* ComicHistoryInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInitializer.swift; sourceTree = "<group>"; };
-		68C1AC96112661A21E08475C /* ComicHistoryViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryViewTests.swift; sourceTree = "<group>"; };
+		68C1AC96112661A21E08475C /* ComicHistoryViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryViewControllerTests.swift; sourceTree = "<group>"; };
 		785FDC3F16BD6F588BBC622A /* ComicHistoryInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorOutput.swift; sourceTree = "<group>"; };
 		ACC3AA4093575108DAA40D52 /* ComicHistoryPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryPresenterTests.swift; sourceTree = "<group>"; };
 		BF28BF18F17D6493B985DE75 /* ComicHistoryRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryRouterTests.swift; sourceTree = "<group>"; };
@@ -735,7 +735,7 @@
 		921D0EA45858B85BB7531920 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68C1AC96112661A21E08475C /* ComicHistoryViewTests.swift */,
+				68C1AC96112661A21E08475C /* ComicHistoryViewControllerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -797,7 +797,7 @@
 		ED094FB5CD2319C5CD881D85 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BF638CCF2B0C5E25E6A568A /* TabBarViewTests.swift */,
+				2BF638CCF2B0C5E25E6A568A /* TabBarViewControllerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1086,7 +1086,7 @@
 				01F2418524EA7CAF0034C681 /* ComicForCellFactory.swift in Sources */,
 				012A9E6524C0C8680025B1C2 /* ComicsFactory.swift in Sources */,
 				012A9E6724C0C9AA0025B1C2 /* Comic+Equatable.swift in Sources */,
-				2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewTests.swift in Sources */,
+				2D829FC1D02B7ADCA9B3C60F /* ComicHistoryViewControllerTests.swift in Sources */,
 				0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */,
 				011F78F724CD830900C87A01 /* ShowComicConfiguratorTests.swift in Sources */,
 				30140FB19BABB5136539A997 /* ComicHistoryPresenterTests.swift in Sources */,
@@ -1094,7 +1094,7 @@
 				01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */,
 				CDD6D87A8A2A09A82245C1E7 /* TabBarConfiguratorTests.swift in Sources */,
 				011F78EF24CC8DE400C87A01 /* ComicForCell+Equatable.swift in Sources */,
-				F06AF5214DF52BEA147A91C3 /* TabBarViewTests.swift in Sources */,
+				F06AF5214DF52BEA147A91C3 /* TabBarViewControllerTests.swift in Sources */,
 				01F2418724EA7EBB0034C681 /* ComicsForCellFactory.swift in Sources */,
 				01F2417F24E7DFD30034C681 /* ShowComicViewControllerTests.swift in Sources */,
 				01F2417C24E7D47C0034C681 /* UpcomingComic+Equatable.swift in Sources */,

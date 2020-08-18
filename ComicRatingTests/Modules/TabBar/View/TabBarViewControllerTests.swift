@@ -9,7 +9,7 @@
 import Cuckoo
 import XCTest
 
-class TabBarViewTests: XCTestCase {
+class TabBarViewControllerTests: XCTestCase {
     let output = MockTabBarViewOutput()
     var tabBarViewController: TabBarViewController?
 

@@ -35,7 +35,7 @@ class CustomCollectionView: UICollectionView {
     }
 }
 
-class ComicHistoryViewTests: XCTestCase {
+class ComicHistoryViewControllerTests: XCTestCase {
     let output = MockComicHistoryViewOutput()
     var comicHistorViewController: ComicHistoryViewController?
     let collectionView = CustomCollectionView()
