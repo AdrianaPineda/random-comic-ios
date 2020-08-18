@@ -17,8 +17,10 @@ class ComicHistoryModuleInitializer: NSObject {
         let configurator = ComicHistoryModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: comicHistoryViewController)
     }
+}
 
-    static func comicHistoryViewController() -> ComicHistoryViewController? {
+class ComicHistoryModuleBuilder: NSObject {
+    func getViewController() -> ComicHistoryViewController? {
         let storyboard = UIStoryboard(name: "ComicHistory", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: KComicHistoryViewControllerIdentifier)
         return viewController as? ComicHistoryViewController

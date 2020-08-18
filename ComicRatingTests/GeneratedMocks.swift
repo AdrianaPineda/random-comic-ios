@@ -1,4 +1,189 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Configurator/ComicHistoryInitializer.swift at 2020-08-18 09:52:18 +0000
+
+//
+//  ComicHistoryComicHistoryInitializer.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 12/05/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import UIKit
+
+class MockComicHistoryModuleInitializer: ComicHistoryModuleInitializer, Cuckoo.ClassMock {
+    typealias MocksType = ComicHistoryModuleInitializer
+
+    typealias Stubbing = __StubbingProxy_ComicHistoryModuleInitializer
+    typealias Verification = __VerificationProxy_ComicHistoryModuleInitializer
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ComicHistoryModuleInitializer?
+
+    func enableDefaultImplementation(_ stub: ComicHistoryModuleInitializer) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override var comicHistoryViewController: ComicHistoryViewController! {
+        get {
+            return cuckoo_manager.getter("comicHistoryViewController",
+                                         superclassCall:
+
+                                         super.comicHistoryViewController,
+
+                                         defaultCall: __defaultImplStub!.comicHistoryViewController)
+        }
+
+        set {
+            cuckoo_manager.setter("comicHistoryViewController",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.comicHistoryViewController = newValue,
+
+                                  defaultCall: __defaultImplStub!.comicHistoryViewController = newValue)
+        }
+    }
+
+    override func awakeFromNib() {
+        return cuckoo_manager.call("awakeFromNib()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.awakeFromNib(),
+
+                                   defaultCall: __defaultImplStub!.awakeFromNib())
+    }
+
+    struct __StubbingProxy_ComicHistoryModuleInitializer: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        var comicHistoryViewController: Cuckoo.ClassToBeStubbedOptionalProperty<MockComicHistoryModuleInitializer,
+                                                                                ComicHistoryViewController> {
+            return .init(manager: cuckoo_manager, name: "comicHistoryViewController")
+        }
+
+        func awakeFromNib() -> Cuckoo.ClassStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryModuleInitializer.self,
+                                                         method: "awakeFromNib()", parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ComicHistoryModuleInitializer: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        var comicHistoryViewController: Cuckoo.VerifyOptionalProperty<ComicHistoryViewController> {
+            return .init(manager: cuckoo_manager, name: "comicHistoryViewController", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func awakeFromNib() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("awakeFromNib()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ComicHistoryModuleInitializerStub: ComicHistoryModuleInitializer {
+    override var comicHistoryViewController: ComicHistoryViewController! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (ComicHistoryViewController?).self)
+        }
+
+        set {}
+    }
+
+    override func awakeFromNib() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+class MockComicHistoryModuleBuilder: ComicHistoryModuleBuilder, Cuckoo.ClassMock {
+    typealias MocksType = ComicHistoryModuleBuilder
+
+    typealias Stubbing = __StubbingProxy_ComicHistoryModuleBuilder
+    typealias Verification = __VerificationProxy_ComicHistoryModuleBuilder
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ComicHistoryModuleBuilder?
+
+    func enableDefaultImplementation(_ stub: ComicHistoryModuleBuilder) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override func getViewController() -> ComicHistoryViewController? {
+        return cuckoo_manager.call("getViewController() -> ComicHistoryViewController?",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.getViewController(),
+
+                                   defaultCall: __defaultImplStub!.getViewController())
+    }
+
+    struct __StubbingProxy_ComicHistoryModuleBuilder: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func getViewController() -> Cuckoo.ClassStubFunction<Void, ComicHistoryViewController?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryModuleBuilder.self,
+                                                         method: "getViewController() -> ComicHistoryViewController?",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ComicHistoryModuleBuilder: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func getViewController() -> Cuckoo.__DoNotUse<Void, ComicHistoryViewController?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("getViewController() -> ComicHistoryViewController?", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ComicHistoryModuleBuilderStub: ComicHistoryModuleBuilder {
+    override func getViewController() -> ComicHistoryViewController? {
+        return DefaultValueRegistry.defaultValue(for: (ComicHistoryViewController?).self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -114,7 +299,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -263,7 +448,189 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewController.swift at 2020-08-18 09:52:18 +0000
+
+//
+//  ComicHistoryViewController.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 12/05/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import UIKit
+
+class MockComicHistoryViewController: ComicHistoryViewController, Cuckoo.ClassMock {
+    typealias MocksType = ComicHistoryViewController
+
+    typealias Stubbing = __StubbingProxy_ComicHistoryViewController
+    typealias Verification = __VerificationProxy_ComicHistoryViewController
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ComicHistoryViewController?
+
+    func enableDefaultImplementation(_ stub: ComicHistoryViewController) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override var output: ComicHistoryViewOutput! {
+        get {
+            return cuckoo_manager.getter("output",
+                                         superclassCall:
+
+                                         super.output,
+
+                                         defaultCall: __defaultImplStub!.output)
+        }
+
+        set {
+            cuckoo_manager.setter("output",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.output = newValue,
+
+                                  defaultCall: __defaultImplStub!.output = newValue)
+        }
+    }
+
+    override func viewDidLoad() {
+        return cuckoo_manager.call("viewDidLoad()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.viewDidLoad(),
+
+                                   defaultCall: __defaultImplStub!.viewDidLoad())
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        return cuckoo_manager.call("viewWillAppear(_: Bool)",
+                                   parameters: animated,
+                                   escapingParameters: animated,
+                                   superclassCall:
+
+                                   super.viewWillAppear(animated),
+
+                                   defaultCall: __defaultImplStub!.viewWillAppear(animated))
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        return cuckoo_manager.call("viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator)",
+                                   parameters: (size, coordinator),
+                                   escapingParameters: (size, coordinator),
+                                   superclassCall:
+
+                                   super.viewWillTransition(to: size, with: coordinator),
+
+                                   defaultCall: __defaultImplStub!.viewWillTransition(to: size, with: coordinator))
+    }
+
+    struct __StubbingProxy_ComicHistoryViewController: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        var output: Cuckoo.ClassToBeStubbedOptionalProperty<MockComicHistoryViewController, ComicHistoryViewOutput> {
+            return .init(manager: cuckoo_manager, name: "output")
+        }
+
+        func viewDidLoad() -> Cuckoo.ClassStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewController.self,
+                                                         method: "viewDidLoad()", parameterMatchers: matchers))
+        }
+
+        func viewWillAppear<M1: Cuckoo.Matchable>(_ animated: M1) -> Cuckoo.ClassStubNoReturnFunction<Bool> where M1.MatchedType == Bool {
+            let matchers: [Cuckoo.ParameterMatcher<Bool>] = [wrap(matchable: animated) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewController.self,
+                                                         method: "viewWillAppear(_: Bool)",
+                                                         parameterMatchers: matchers))
+        }
+
+        func viewWillTransition<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(to size: M1, with coordinator: M2) -> Cuckoo.ClassStubNoReturnFunction<(CGSize,
+                                                                                                                                                   UIViewControllerTransitionCoordinator)> where M1.MatchedType == CGSize, M2.MatchedType == UIViewControllerTransitionCoordinator {
+            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [
+                wrap(matchable: size) { $0.0 },
+                wrap(matchable: coordinator) { $0.1 }
+            ]
+            return .init(stub: cuckoo_manager.createStub(for: MockComicHistoryViewController.self,
+                                                         method: "viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator)",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ComicHistoryViewController: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        var output: Cuckoo.VerifyOptionalProperty<ComicHistoryViewOutput> {
+            return .init(manager: cuckoo_manager, name: "output", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func viewDidLoad() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("viewDidLoad()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func viewWillAppear<M1: Cuckoo.Matchable>(_ animated: M1) -> Cuckoo.__DoNotUse<Bool, Void> where M1.MatchedType == Bool {
+            let matchers: [Cuckoo.ParameterMatcher<Bool>] = [wrap(matchable: animated) { $0 }]
+            return cuckoo_manager.verify("viewWillAppear(_: Bool)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func viewWillTransition<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(to size: M1, with coordinator: M2) -> Cuckoo.__DoNotUse<(CGSize,
+                                                                                                                                    UIViewControllerTransitionCoordinator), Void> where M1.MatchedType == CGSize, M2.MatchedType == UIViewControllerTransitionCoordinator {
+            let matchers: [Cuckoo.ParameterMatcher<(CGSize, UIViewControllerTransitionCoordinator)>] = [
+                wrap(matchable: size) { $0.0 },
+                wrap(matchable: coordinator) { $0.1 }
+            ]
+            return cuckoo_manager.verify("viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ComicHistoryViewControllerStub: ComicHistoryViewController {
+    override var output: ComicHistoryViewOutput! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (ComicHistoryViewOutput?).self)
+        }
+
+        set {}
+    }
+
+    override func viewDidLoad() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    override func viewWillAppear(_: Bool) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    override func viewWillTransition(to _: CGSize, with _: UIViewControllerTransitionCoordinator) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-18 09:52:18 +0000
 
 @testable import ComicRating
 //
@@ -437,7 +804,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicHistoryComicHistoryViewOutput.swift
@@ -515,7 +882,192 @@ class ComicHistoryViewOutputStub: ComicHistoryViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Configurator/ShowComicInitializer.swift at 2020-08-18 09:52:18 +0000
+
+//
+//  ShowComicInitializer.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 18/05/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import UIKit
+
+class MockShowComicModuleInitializer: ShowComicModuleInitializer, Cuckoo.ClassMock {
+    typealias MocksType = ShowComicModuleInitializer
+
+    typealias Stubbing = __StubbingProxy_ShowComicModuleInitializer
+    typealias Verification = __VerificationProxy_ShowComicModuleInitializer
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ShowComicModuleInitializer?
+
+    func enableDefaultImplementation(_ stub: ShowComicModuleInitializer) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override var showComicViewController: ShowComicViewController! {
+        get {
+            return cuckoo_manager.getter("showComicViewController",
+                                         superclassCall:
+
+                                         super.showComicViewController,
+
+                                         defaultCall: __defaultImplStub!.showComicViewController)
+        }
+
+        set {
+            cuckoo_manager.setter("showComicViewController",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.showComicViewController = newValue,
+
+                                  defaultCall: __defaultImplStub!.showComicViewController = newValue)
+        }
+    }
+
+    override func awakeFromNib() {
+        return cuckoo_manager.call("awakeFromNib()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.awakeFromNib(),
+
+                                   defaultCall: __defaultImplStub!.awakeFromNib())
+    }
+
+    struct __StubbingProxy_ShowComicModuleInitializer: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        var showComicViewController: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicModuleInitializer,
+                                                                             ShowComicViewController> {
+            return .init(manager: cuckoo_manager, name: "showComicViewController")
+        }
+
+        func awakeFromNib() -> Cuckoo.ClassStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicModuleInitializer.self,
+                                                         method: "awakeFromNib()", parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ShowComicModuleInitializer: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        var showComicViewController: Cuckoo.VerifyOptionalProperty<ShowComicViewController> {
+            return .init(manager: cuckoo_manager, name: "showComicViewController", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func awakeFromNib() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("awakeFromNib()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ShowComicModuleInitializerStub: ShowComicModuleInitializer {
+    override var showComicViewController: ShowComicViewController! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (ShowComicViewController?).self)
+        }
+
+        set {}
+    }
+
+    override func awakeFromNib() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+class MockShowComicModuleBuilder: ShowComicModuleBuilder, Cuckoo.ClassMock {
+    typealias MocksType = ShowComicModuleBuilder
+
+    typealias Stubbing = __StubbingProxy_ShowComicModuleBuilder
+    typealias Verification = __VerificationProxy_ShowComicModuleBuilder
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ShowComicModuleBuilder?
+
+    func enableDefaultImplementation(_ stub: ShowComicModuleBuilder) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override func getViewController() -> ShowComicViewController? {
+        return cuckoo_manager.call("getViewController() -> ShowComicViewController?",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.getViewController(),
+
+                                   defaultCall: __defaultImplStub!.getViewController())
+    }
+
+    struct __StubbingProxy_ShowComicModuleBuilder: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        func getViewController() -> Cuckoo.ClassStubFunction<Void, ShowComicViewController?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicModuleBuilder.self,
+                                                         method: "getViewController() -> ShowComicViewController?",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ShowComicModuleBuilder: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        @discardableResult
+        func getViewController() -> Cuckoo.__DoNotUse<Void, ShowComicViewController?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("getViewController() -> ShowComicViewController?", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ShowComicModuleBuilderStub: ShowComicModuleBuilder {
+    override func getViewController() -> ShowComicViewController? {
+        return DefaultValueRegistry.defaultValue(for: (ShowComicViewController?).self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ShowComicShowComicInteractorInput.swift
@@ -650,7 +1202,7 @@ class ShowComicInteractorInputStub: ShowComicInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -787,7 +1339,383 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewController.swift at 2020-08-18 09:52:18 +0000
+
+//
+//  ShowComicShowComicViewController.swift
+//  ComicRating
+//
+//  Created by Adriana Pineda on 17/02/2020.
+//  Copyright © 2020 Adriana Pineda. All rights reserved.
+//
+
+@testable import ComicRating
+import Cuckoo
+
+import SkeletonView
+import UIKit
+
+class MockShowComicViewController: ShowComicViewController, Cuckoo.ClassMock {
+    typealias MocksType = ShowComicViewController
+
+    typealias Stubbing = __StubbingProxy_ShowComicViewController
+    typealias Verification = __VerificationProxy_ShowComicViewController
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    private var __defaultImplStub: ShowComicViewController?
+
+    func enableDefaultImplementation(_ stub: ShowComicViewController) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    override var comicTitleLabel: UILabel! {
+        get {
+            return cuckoo_manager.getter("comicTitleLabel",
+                                         superclassCall:
+
+                                         super.comicTitleLabel,
+
+                                         defaultCall: __defaultImplStub!.comicTitleLabel)
+        }
+
+        set {
+            cuckoo_manager.setter("comicTitleLabel",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.comicTitleLabel = newValue,
+
+                                  defaultCall: __defaultImplStub!.comicTitleLabel = newValue)
+        }
+    }
+
+    override var comicNumberLabel: UILabel! {
+        get {
+            return cuckoo_manager.getter("comicNumberLabel",
+                                         superclassCall:
+
+                                         super.comicNumberLabel,
+
+                                         defaultCall: __defaultImplStub!.comicNumberLabel)
+        }
+
+        set {
+            cuckoo_manager.setter("comicNumberLabel",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.comicNumberLabel = newValue,
+
+                                  defaultCall: __defaultImplStub!.comicNumberLabel = newValue)
+        }
+    }
+
+    override var comicImageView: UIImageView! {
+        get {
+            return cuckoo_manager.getter("comicImageView",
+                                         superclassCall:
+
+                                         super.comicImageView,
+
+                                         defaultCall: __defaultImplStub!.comicImageView)
+        }
+
+        set {
+            cuckoo_manager.setter("comicImageView",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.comicImageView = newValue,
+
+                                  defaultCall: __defaultImplStub!.comicImageView = newValue)
+        }
+    }
+
+    override var nextButton: UIButton! {
+        get {
+            return cuckoo_manager.getter("nextButton",
+                                         superclassCall:
+
+                                         super.nextButton,
+
+                                         defaultCall: __defaultImplStub!.nextButton)
+        }
+
+        set {
+            cuckoo_manager.setter("nextButton",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.nextButton = newValue,
+
+                                  defaultCall: __defaultImplStub!.nextButton = newValue)
+        }
+    }
+
+    override var ratingView: RatingView! {
+        get {
+            return cuckoo_manager.getter("ratingView",
+                                         superclassCall:
+
+                                         super.ratingView,
+
+                                         defaultCall: __defaultImplStub!.ratingView)
+        }
+
+        set {
+            cuckoo_manager.setter("ratingView",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.ratingView = newValue,
+
+                                  defaultCall: __defaultImplStub!.ratingView = newValue)
+        }
+    }
+
+    override var loadingIndicator: UIActivityIndicatorView! {
+        get {
+            return cuckoo_manager.getter("loadingIndicator",
+                                         superclassCall:
+
+                                         super.loadingIndicator,
+
+                                         defaultCall: __defaultImplStub!.loadingIndicator)
+        }
+
+        set {
+            cuckoo_manager.setter("loadingIndicator",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.loadingIndicator = newValue,
+
+                                  defaultCall: __defaultImplStub!.loadingIndicator = newValue)
+        }
+    }
+
+    override var output: ShowComicViewOutput! {
+        get {
+            return cuckoo_manager.getter("output",
+                                         superclassCall:
+
+                                         super.output,
+
+                                         defaultCall: __defaultImplStub!.output)
+        }
+
+        set {
+            cuckoo_manager.setter("output",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.output = newValue,
+
+                                  defaultCall: __defaultImplStub!.output = newValue)
+        }
+    }
+
+    override func viewDidLoad() {
+        return cuckoo_manager.call("viewDidLoad()",
+                                   parameters: (),
+                                   escapingParameters: (),
+                                   superclassCall:
+
+                                   super.viewDidLoad(),
+
+                                   defaultCall: __defaultImplStub!.viewDidLoad())
+    }
+
+    override func nextButtonClicked(_ parameter0: Any) {
+        return cuckoo_manager.call("nextButtonClicked(_: Any)",
+                                   parameters: parameter0,
+                                   escapingParameters: parameter0,
+                                   superclassCall:
+
+                                   super.nextButtonClicked(parameter0),
+
+                                   defaultCall: __defaultImplStub!.nextButtonClicked(parameter0))
+    }
+
+    struct __StubbingProxy_ShowComicViewController: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+
+        init(manager: Cuckoo.MockManager) {
+            cuckoo_manager = manager
+        }
+
+        var comicTitleLabel: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, UILabel> {
+            return .init(manager: cuckoo_manager, name: "comicTitleLabel")
+        }
+
+        var comicNumberLabel: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, UILabel> {
+            return .init(manager: cuckoo_manager, name: "comicNumberLabel")
+        }
+
+        var comicImageView: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, UIImageView> {
+            return .init(manager: cuckoo_manager, name: "comicImageView")
+        }
+
+        var nextButton: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, UIButton> {
+            return .init(manager: cuckoo_manager, name: "nextButton")
+        }
+
+        var ratingView: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, RatingView> {
+            return .init(manager: cuckoo_manager, name: "ratingView")
+        }
+
+        var loadingIndicator: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController,
+                                                                      UIActivityIndicatorView> {
+            return .init(manager: cuckoo_manager, name: "loadingIndicator")
+        }
+
+        var output: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, ShowComicViewOutput> {
+            return .init(manager: cuckoo_manager, name: "output")
+        }
+
+        func viewDidLoad() -> Cuckoo.ClassStubNoReturnFunction<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewController.self, method: "viewDidLoad()",
+                                                         parameterMatchers: matchers))
+        }
+
+        func nextButtonClicked<M1: Cuckoo.Matchable>(_ parameter0: M1) -> Cuckoo.ClassStubNoReturnFunction<Any> where M1.MatchedType == Any {
+            let matchers: [Cuckoo.ParameterMatcher<Any>] = [wrap(matchable: parameter0) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockShowComicViewController.self,
+                                                         method: "nextButtonClicked(_: Any)",
+                                                         parameterMatchers: matchers))
+        }
+    }
+
+    struct __VerificationProxy_ShowComicViewController: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+
+        var comicTitleLabel: Cuckoo.VerifyOptionalProperty<UILabel> {
+            return .init(manager: cuckoo_manager, name: "comicTitleLabel", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var comicNumberLabel: Cuckoo.VerifyOptionalProperty<UILabel> {
+            return .init(manager: cuckoo_manager, name: "comicNumberLabel", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var comicImageView: Cuckoo.VerifyOptionalProperty<UIImageView> {
+            return .init(manager: cuckoo_manager, name: "comicImageView", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var nextButton: Cuckoo.VerifyOptionalProperty<UIButton> {
+            return .init(manager: cuckoo_manager, name: "nextButton", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var ratingView: Cuckoo.VerifyOptionalProperty<RatingView> {
+            return .init(manager: cuckoo_manager, name: "ratingView", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var loadingIndicator: Cuckoo.VerifyOptionalProperty<UIActivityIndicatorView> {
+            return .init(manager: cuckoo_manager, name: "loadingIndicator", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var output: Cuckoo.VerifyOptionalProperty<ShowComicViewOutput> {
+            return .init(manager: cuckoo_manager, name: "output", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func viewDidLoad() -> Cuckoo.__DoNotUse<Void, Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("viewDidLoad()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+
+        @discardableResult
+        func nextButtonClicked<M1: Cuckoo.Matchable>(_ parameter0: M1) -> Cuckoo.__DoNotUse<Any, Void> where M1.MatchedType == Any {
+            let matchers: [Cuckoo.ParameterMatcher<Any>] = [wrap(matchable: parameter0) { $0 }]
+            return cuckoo_manager.verify("nextButtonClicked(_: Any)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class ShowComicViewControllerStub: ShowComicViewController {
+    override var comicTitleLabel: UILabel! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UILabel?).self)
+        }
+
+        set {}
+    }
+
+    override var comicNumberLabel: UILabel! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UILabel?).self)
+        }
+
+        set {}
+    }
+
+    override var comicImageView: UIImageView! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UIImageView?).self)
+        }
+
+        set {}
+    }
+
+    override var nextButton: UIButton! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UIButton?).self)
+        }
+
+        set {}
+    }
+
+    override var ratingView: RatingView! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (RatingView?).self)
+        }
+
+        set {}
+    }
+
+    override var loadingIndicator: UIActivityIndicatorView! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UIActivityIndicatorView?).self)
+        }
+
+        set {}
+    }
+
+    override var output: ShowComicViewOutput! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (ShowComicViewOutput?).self)
+        }
+
+        set {}
+    }
+
+    override func viewDidLoad() {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+
+    override func nextButtonClicked(_: Any) {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+}
+
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-18 09:52:18 +0000
 
 @testable import ComicRating
 //
@@ -1041,7 +1969,7 @@ class ShowComicViewInputStub: ShowComicViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ShowComicShowComicViewOutput.swift
@@ -1174,7 +2102,7 @@ class ShowComicViewOutputStub: ShowComicViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Interactor/TabBarInteractorInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Interactor/TabBarInteractorInput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  TabBarTabBarInteractorInput.swift
@@ -1227,7 +2155,7 @@ class MockTabBarInteractorInput: TabBarInteractorInput, Cuckoo.ProtocolMock {
 
 class TabBarInteractorInputStub: TabBarInteractorInput {}
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Router/TabBarRouterInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Router/TabBarRouterInput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  TabBarRouterInput.swift
@@ -1306,7 +2234,7 @@ class TabBarRouterInputStub: TabBarRouterInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewInput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewInput.swift at 2020-08-18 09:52:18 +0000
 
 @testable import ComicRating
 //
@@ -1390,7 +2318,7 @@ class TabBarViewInputStub: TabBarViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewOutput.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewOutput.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  TabBarTabBarViewOutput.swift
@@ -1468,7 +2396,7 @@ class TabBarViewOutputStub: TabBarViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicApiService.swift
@@ -1718,7 +2646,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicApiClient.swift
@@ -1930,7 +2858,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ImageDownloader.swift
@@ -2014,7 +2942,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-18 09:52:18 +0000
 
 @testable import ComicRating
 //
@@ -2095,7 +3023,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicStorageService.swift
@@ -2205,7 +3133,7 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-18 09:01:56 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-18 09:52:18 +0000
 
 //
 //  ComicStorageServiceInterface.swift

@@ -16,8 +16,10 @@ class ShowComicModuleInitializer: NSObject {
         let configurator = ShowComicModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: showComicViewController)
     }
+}
 
-    static func showComicViewController() -> ShowComicViewController? {
+class ShowComicModuleBuilder: NSObject {
+    func getViewController() -> ShowComicViewController? {
         let storyboard = UIStoryboard(name: "ShowComic", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: KShowComicViewControllerIdentifier)
         return viewController as? ShowComicViewController
