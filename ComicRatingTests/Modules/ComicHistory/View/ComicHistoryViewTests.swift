@@ -8,8 +8,6 @@
 @testable import ComicRating
 import XCTest
 
-let KComicHistoryViewControllerIdentifier = "comicHistoryVC"
-
 class CustomCollectionView: UICollectionView {
     private(set) var reloadDataCalled = false
     private(set) var reloadItemsCalled = false

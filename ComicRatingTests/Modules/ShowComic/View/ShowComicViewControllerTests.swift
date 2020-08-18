@@ -22,8 +22,6 @@ class MockRatingView: RatingView {
     }
 }
 
-let KShowComicViewControllerIdentifier = "showComicVC"
-
 class ShowComicViewControllerTests: XCTestCase {
     var showComicViewController: ShowComicViewController?
     let output = MockShowComicViewOutput()
@@ -36,7 +34,8 @@ class ShowComicViewControllerTests: XCTestCase {
 
     private func setupShowComicViewController() {
         let storyboard = UIStoryboard(name: "ShowComic", bundle: Bundle.main)
-        showComicViewController = storyboard.instantiateViewController(withIdentifier: KShowComicViewControllerIdentifier) as? ShowComicViewController
+        showComicViewController = storyboard
+            .instantiateViewController(withIdentifier: KShowComicViewControllerIdentifier) as? ShowComicViewController
 
         showComicViewController?.output = output
         showComicViewController?.ratingView = ratingView
