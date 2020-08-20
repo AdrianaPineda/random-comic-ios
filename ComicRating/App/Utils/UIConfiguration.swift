@@ -1,4 +1,5 @@
 //
+import Foundation
 //  UIConfiguration.swift
 //  ComicRating
 //
@@ -6,7 +7,6 @@
 //  Copyright © 2020 Adriana Pineda. All rights reserved.
 //
 import UIKit
-import Foundation
 
 class UIConfiguration {
     static let sharedInstance = UIConfiguration()

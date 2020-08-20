@@ -27,6 +27,11 @@ class ShowComicViewController: DimmableViewController {
         ratingView.delegate = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI()
+    }
+
     @IBAction func nextButtonClicked(_: Any) {
         output.nextButtonClicked()
     }
