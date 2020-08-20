@@ -82,6 +82,8 @@
 		01F2418224E7E4BF0034C681 /* UpcomingComicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418124E7E4BF0034C681 /* UpcomingComicFactory.swift */; };
 		01F2418524EA7CAF0034C681 /* ComicForCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418424EA7CAF0034C681 /* ComicForCellFactory.swift */; };
 		01F2418724EA7EBB0034C681 /* ComicsForCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418624EA7EBB0034C681 /* ComicsForCellFactory.swift */; };
+		01F2418924EEDB490034C681 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418824EEDB490034C681 /* UIConfiguration.swift */; };
+		01F2418D24EEE8140034C681 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */; };
 		01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB7BC724BB0408007B00DC /* Date+Extensions.swift */; };
 		0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */; };
 		11FED9EF6CF0CF37D8FF9AFF /* ComicHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */; };
@@ -203,6 +205,8 @@
 		01F2418124E7E4BF0034C681 /* UpcomingComicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingComicFactory.swift; sourceTree = "<group>"; };
 		01F2418424EA7CAF0034C681 /* ComicForCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicForCellFactory.swift; sourceTree = "<group>"; };
 		01F2418624EA7EBB0034C681 /* ComicsForCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsForCellFactory.swift; sourceTree = "<group>"; };
+		01F2418824EEDB490034C681 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
+		01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		01FB7BC724BB0408007B00DC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorTests.swift; sourceTree = "<group>"; };
 		03FC33C54EE34BB874F4F244 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -605,6 +609,8 @@
 			isa = PBXGroup;
 			children = (
 				01FB7BC724BB0408007B00DC /* Date+Extensions.swift */,
+				01F2418824EEDB490034C681 /* UIConfiguration.swift */,
+				01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1034,6 +1040,7 @@
 				015F707924209415004ED20A /* ShowComicModuleInput.swift in Sources */,
 				01AA441E242DC5B300612796 /* HttpService.swift in Sources */,
 				01AA44302435981D00612796 /* Comic+Decodable.swift in Sources */,
+				01F2418924EEDB490034C681 /* UIConfiguration.swift in Sources */,
 				015F707D24209415004ED20A /* ShowComicViewOutput.swift in Sources */,
 				01878A3C242887C800883D93 /* ServiceInterface.swift in Sources */,
 				01878A3624277D2400883D93 /* ComicApiServiceInterface.swift in Sources */,
@@ -1058,6 +1065,7 @@
 				380BF4A25C25CC574ED5D9C2 /* TabBarPresenter.swift in Sources */,
 				ABDC1A45843AA253EE94032A /* TabBarInteractorInput.swift in Sources */,
 				360E7DB0943ABFAD18D8E97E /* TabBarInteractorOutput.swift in Sources */,
+				01F2418D24EEE8140034C681 /* UIColor+Extensions.swift in Sources */,
 				163F1961285AF91B35E6489E /* TabBarInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
