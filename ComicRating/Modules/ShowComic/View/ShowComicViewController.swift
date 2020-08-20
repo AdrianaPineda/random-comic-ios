@@ -27,9 +27,6 @@ class ShowComicViewController: DimmableViewController {
         ratingView.delegate = self
     }
 
-    // MARK: ShowComicViewInput
-
-    func setupInitialState() {}
     @IBAction func nextButtonClicked(_: Any) {
         output.nextButtonClicked()
     }
@@ -38,6 +35,8 @@ class ShowComicViewController: DimmableViewController {
 // MARK: - ShowComicViewInput
 
 extension ShowComicViewController: ShowComicViewInput {
+    func setupInitialState() {}
+
     func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
         comicNumberLabel.text = "#\(comic.number)"

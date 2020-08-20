@@ -16,7 +16,8 @@ class ShowComicInteractor {
 
     var currentComic: Comic?
 
-    init(apiService: ComicApiServiceInterface, imageDownloader: ImageDownloaderServiceInterface,
+    init(apiService: ComicApiServiceInterface,
+         imageDownloader: ImageDownloaderServiceInterface,
          storageService: ComicStorageServiceInterface) {
         self.apiService = apiService
         self.imageDownloader = imageDownloader
@@ -28,9 +29,10 @@ extension ShowComicInteractor: ShowComicInteractorInput {
     // MARK: - Promises
 
     func fetchComic() {
-        getRandomComicNumber().then { (randomComicNumber: Int) in
-            self.apiService.getComic(id: randomComicNumber)
-        }.done { (comic: Comic) in
+        apiService.getLastComic().then { (comic: Comic) -> Promise<Comic> in
+            let randomNumber = Int.random(in: 1 ... comic.id)
+            return self.apiService.getComic(id: randomNumber)
+        }.done { (comic: Comic) -> Void in
             self.currentComic = comic
             self.output.comicFetched(comic: comic)
         }.catch { _ in
@@ -44,13 +46,6 @@ extension ShowComicInteractor: ShowComicInteractorInput {
             self.output.imageFetched(imageData: data)
         }.catch { _ in
             self.output.comicFetchFailed(message: "Could not fetch comic image")
-        }
-    }
-
-    func getRandomComicNumber() -> Promise<Int> {
-        return apiService.getLastComic().map { comic in
-            let randomNumber = Int.random(in: 1 ... comic.id)
-            return randomNumber
         }
     }
 

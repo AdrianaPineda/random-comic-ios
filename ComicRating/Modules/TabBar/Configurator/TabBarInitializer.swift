@@ -16,8 +16,11 @@ class TabBarInitializer: NSObject {
         let tabBarConfigurator = TabBarConfigurator()
         tabBarConfigurator.configureModuleForViewInput(viewInput: tabBarController)
     }
+}
 
-    static func tabBarController() -> TabBarViewController? {
+class TabBarModuleBuilder: NSObject {
+
+    func getViewController() -> TabBarViewController? {
         let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: KTabBarControllerIdentifier)
         return viewController as? TabBarViewController

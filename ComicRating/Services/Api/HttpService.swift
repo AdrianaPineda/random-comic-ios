@@ -22,7 +22,10 @@ class HttpService: HttpServiceInterface {
 
     // MARK: - Completion handlers
 
-    func request<T>(method: Http.Method, url: String, params: [String: Any]?, responseType: T.Type,
+    func request<T>(method: Http.Method,
+                    url: String,
+                    params: [String: Any]?,
+                    responseType: T.Type,
                     completion: @escaping (Swift.Result<T, Http.RequestError>) -> Void) where T: Decodable {
         let alamofireHttpMethod = getAlamofireHttpMethod(method: method)
         AF.request(url, method: alamofireHttpMethod, parameters: params).responseJSON { response in

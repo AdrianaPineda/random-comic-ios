@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "Cuckoo",
+        "repositoryURL": "https://github.com/Brightify/Cuckoo.git",
+        "state": {
+          "branch": null,
+          "revision": "0ef473893cc068425c118d1cfe5629cbca1ef343",
+          "version": "1.4.1"
+        }
+      },
+      {
         "package": "PromiseKit",
         "repositoryURL": "https://github.com/mxcl/PromiseKit",
         "state": {

@@ -8,18 +8,18 @@
 
 import UIKit
 
-typealias TabSections = (
-    showComic: UIViewController,
-    history: UIViewController
-)
+typealias TabSections = (showComic: UIViewController,
+                         history: UIViewController)
 
 class TabBarRouter: TabBarRouterInput {
     weak var tabBarPresenter: TabBarPresenter?
     weak var tabBarController: TabBarViewController?
+    var showComicModuleBuilder: ShowComicModuleBuilder?
+    var comicHistoryModuleBuilder: ComicHistoryModuleBuilder?
 
     func getTabSections() -> TabSections? {
-        let showComicViewController = ShowComicModuleInitializer.showComicViewController()
-        let comicHistoryViewController = ComicHistoryModuleInitializer.comicHistoryViewController()
+        let showComicViewController = showComicModuleBuilder?.getViewController()
+        let comicHistoryViewController = comicHistoryModuleBuilder?.getViewController()
 
         guard let comicHistoryVC = comicHistoryViewController, let showComicVC = showComicViewController else {
             return nil

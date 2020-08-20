@@ -26,6 +26,12 @@ class TabBarConfigurator {
         let interactor = TabBarInteractor()
         interactor.output = presenter
 
+        let showComicModuleBuilder = ShowComicModuleBuilder()
+        router.showComicModuleBuilder = showComicModuleBuilder
+
+        let comicHistoryModuleBuilder = ComicHistoryModuleBuilder()
+        router.comicHistoryModuleBuilder = comicHistoryModuleBuilder
+
         presenter.interactor = interactor
         viewController.output = presenter
 

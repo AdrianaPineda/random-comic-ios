@@ -13,7 +13,7 @@ private let reuseIdentifier = "ComicHistoryCell"
 class ComicHistoryViewController: UICollectionViewController {
     var output: ComicHistoryViewOutput!
 
-    let sections = 1
+    private let sections = 1
     private let minCellWidth = 200
     private let cellHeight = 120
     private let sectionInsets = UIEdgeInsets(top: 10.0,
@@ -22,8 +22,8 @@ class ComicHistoryViewController: UICollectionViewController {
                                              right: 8)
     private let starSize = CGSize(width: 20, height: 20)
 
-    var comics: [ComicForCell] = []
-    var animateImageViews = false
+    private var comics: [ComicForCell] = []
+    private var animateImageViews = false
 
     // MARK: Life cycle
 
@@ -46,10 +46,6 @@ class ComicHistoryViewController: UICollectionViewController {
         collectionView.collectionViewLayout.invalidateLayout()
         super.viewWillTransition(to: size, with: coordinator)
     }
-
-    // MARK: ComicHistoryViewInput
-
-    func setupInitialState() {}
 }
 
 // MARK: UICollectionViewDataSource
@@ -63,7 +59,8 @@ extension ComicHistoryViewController {
         return comics.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         guard let comicHistoryCell = cell as? ComicHistoryCell else { return cell }
 
@@ -128,6 +125,8 @@ extension ComicHistoryViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ComicHistoryViewController: ComicHistoryViewInput {
+    func setupInitialState() {}
+
     func showComics(comics: [ComicForCell]) {
         self.comics = comics
         collectionView.reloadData()
