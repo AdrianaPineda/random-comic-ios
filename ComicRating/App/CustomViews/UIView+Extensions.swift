@@ -19,16 +19,14 @@ extension UIViewController {
     }
 }
 
-extension TabBarViewController {
+extension UICollectionViewController {
     override func configureUI() {
-        super.configureUI()
-        tabBar.barTintColor = UIConfiguration.sharedInstance.getBackgroundColor()
+        collectionView.configureUI()
     }
 }
 
-extension UICollectionViewController {
+extension TabBarViewController {
     override func configureUI() {
-        super.configureUI()
-        collectionView.configureUI()
+        tabBar.barTintColor = UIConfiguration.sharedInstance.getBackgroundColor()
     }
 }
