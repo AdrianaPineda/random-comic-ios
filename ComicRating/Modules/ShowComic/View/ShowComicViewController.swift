@@ -143,32 +143,3 @@ extension ShowComicViewController: RatingDelegate {
         output.comicRated(rating: rating)
     }
 }
-
-extension CGSize {
-    static func aspectFit(aspectRatio: CGSize, boundingSize: CGSize) -> CGSize {
-        var modifiedBoundingSize = boundingSize
-        let mW = modifiedBoundingSize.width / aspectRatio.width
-        let mH = modifiedBoundingSize.height / aspectRatio.height
-
-        if mH < mW {
-            modifiedBoundingSize.width = modifiedBoundingSize.height / aspectRatio.height * aspectRatio.width
-        } else if mW < mH {
-            modifiedBoundingSize.height = modifiedBoundingSize.width / aspectRatio.width * aspectRatio.height
-        }
-
-        return modifiedBoundingSize
-    }
-
-    static func aspectFill(aspectRatio: CGSize, minimumSize: inout CGSize) -> CGSize {
-        let mW = minimumSize.width / aspectRatio.width
-        let mH = minimumSize.height / aspectRatio.height
-
-        if mH > mW {
-            minimumSize.width = minimumSize.height / aspectRatio.height * aspectRatio.width
-        } else if mW > mH {
-            minimumSize.height = minimumSize.width / aspectRatio.width * aspectRatio.height
-        }
-
-        return minimumSize
-    }
-}
