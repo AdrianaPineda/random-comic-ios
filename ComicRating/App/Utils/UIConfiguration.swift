@@ -12,14 +12,22 @@ class UIConfiguration {
     static let sharedInstance = UIConfiguration()
 
     func getBackgroundColor() -> UIColor {
-        return UIColor(hexString: "#313335")
+        return UIColor(named: "Background") ?? UIColor.clear
     }
 
     func getTitlesFont() -> UIFont {
         return UIFont.systemFont(ofSize: 18)
     }
 
-    func getSubTitlesFont() -> UIFont {
+    func getSubtitlesFont() -> UIFont {
         return UIFont.systemFont(ofSize: 16)
+    }
+
+    func getTitlesColor() -> UIColor {
+        return UIColor(named: "Titles") ?? UIColor.clear
+    }
+
+    func getSubtitlesColor() -> UIColor {
+        return UIColor(named: "Subtitles") ?? UIColor.clear
     }
 }
