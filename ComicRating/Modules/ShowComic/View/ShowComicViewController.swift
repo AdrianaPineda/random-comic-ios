@@ -12,10 +12,14 @@ import UIKit
 class ShowComicViewController: DimmableViewController {
     @IBOutlet var comicTitleLabel: UILabel!
     @IBOutlet var comicNumberLabel: UILabel!
+    @IBOutlet var comicDateLabel: UILabel!
     @IBOutlet var comicImageView: UIImageView!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var ratingView: RatingView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet var imageViewHeight: NSLayoutConstraint!
+
+    private let maximumImageHeight: CGFloat = 430
 
     var output: ShowComicViewOutput!
 
@@ -44,11 +48,21 @@ extension ShowComicViewController: ShowComicViewInput {
 
     func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
-        comicNumberLabel.text = "#\(comic.number)"
+        comicTitleLabel.textColor = UIConfiguration.sharedInstance.getTitlesColor()
+
+        comicNumberLabel.text = "Issue #\(comic.number)"
+        comicNumberLabel.textColor = UIConfiguration.sharedInstance.getSubtitlesColor()
+
+        comicDateLabel.text = comic.date
+        comicDateLabel.textColor = UIConfiguration.sharedInstance.getSubtitlesColor()
     }
 
     func showImage(imageData: Data) {
-        comicImageView.image = UIImage(data: imageData)
+        let image = UIImage(data: imageData)
+        if let imageHeight = image?.size.height {
+            imageViewHeight.constant = imageHeight < maximumImageHeight ? imageHeight : maximumImageHeight
+        }
+        comicImageView.image = image
     }
 
     func resetRating() {
