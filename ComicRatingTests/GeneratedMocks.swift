@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Configurator/ComicHistoryInitializer.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Configurator/ComicHistoryInitializer.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicHistoryComicHistoryInitializer.swift
@@ -183,7 +183,7 @@ class ComicHistoryModuleBuilderStub: ComicHistoryModuleBuilder {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorInput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorInput.swift
@@ -299,7 +299,7 @@ class ComicHistoryInteractorInputStub: ComicHistoryInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/Interactor/ComicHistoryInteractorOutput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicHistoryComicHistoryInteractorOutput.swift
@@ -448,7 +448,7 @@ class ComicHistoryInteractorOutputStub: ComicHistoryInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewController.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewController.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicHistoryViewController.swift
@@ -630,7 +630,7 @@ class ComicHistoryViewControllerStub: ComicHistoryViewController {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewInput.swift at 2020-08-21 13:07:40 +0000
 
 @testable import ComicRating
 //
@@ -804,7 +804,7 @@ class ComicHistoryViewInputStub: ComicHistoryViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ComicHistory/View/ComicHistoryViewOutput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicHistoryComicHistoryViewOutput.swift
@@ -882,7 +882,7 @@ class ComicHistoryViewOutputStub: ComicHistoryViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Configurator/ShowComicInitializer.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Configurator/ShowComicInitializer.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ShowComicInitializer.swift
@@ -1067,7 +1067,7 @@ class ShowComicModuleBuilderStub: ShowComicModuleBuilder {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorInput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ShowComicShowComicInteractorInput.swift
@@ -1202,7 +1202,7 @@ class ShowComicInteractorInputStub: ShowComicInteractorInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/Interactor/ShowComicInteractorOutput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ShowComicShowComicInteractorOutput.swift
@@ -1339,7 +1339,7 @@ class ShowComicInteractorOutputStub: ShowComicInteractorOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewController.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewController.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ShowComicShowComicViewController.swift
@@ -1538,6 +1538,27 @@ class MockShowComicViewController: ShowComicViewController, Cuckoo.ClassMock {
         }
     }
 
+    override var imageViewWidth: NSLayoutConstraint! {
+        get {
+            return cuckoo_manager.getter("imageViewWidth",
+                                         superclassCall:
+
+                                         super.imageViewWidth,
+
+                                         defaultCall: __defaultImplStub!.imageViewWidth)
+        }
+
+        set {
+            cuckoo_manager.setter("imageViewWidth",
+                                  value: newValue,
+                                  superclassCall:
+
+                                  super.imageViewWidth = newValue,
+
+                                  defaultCall: __defaultImplStub!.imageViewWidth = newValue)
+        }
+    }
+
     override var output: ShowComicViewOutput! {
         get {
             return cuckoo_manager.getter("output",
@@ -1632,6 +1653,10 @@ class MockShowComicViewController: ShowComicViewController, Cuckoo.ClassMock {
             return .init(manager: cuckoo_manager, name: "imageViewHeight")
         }
 
+        var imageViewWidth: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, NSLayoutConstraint> {
+            return .init(manager: cuckoo_manager, name: "imageViewWidth")
+        }
+
         var output: Cuckoo.ClassToBeStubbedOptionalProperty<MockShowComicViewController, ShowComicViewOutput> {
             return .init(manager: cuckoo_manager, name: "output")
         }
@@ -1705,6 +1730,11 @@ class MockShowComicViewController: ShowComicViewController, Cuckoo.ClassMock {
 
         var imageViewHeight: Cuckoo.VerifyOptionalProperty<NSLayoutConstraint> {
             return .init(manager: cuckoo_manager, name: "imageViewHeight", callMatcher: callMatcher,
+                         sourceLocation: sourceLocation)
+        }
+
+        var imageViewWidth: Cuckoo.VerifyOptionalProperty<NSLayoutConstraint> {
+            return .init(manager: cuckoo_manager, name: "imageViewWidth", callMatcher: callMatcher,
                          sourceLocation: sourceLocation)
         }
 
@@ -1798,6 +1828,14 @@ class ShowComicViewControllerStub: ShowComicViewController {
         set {}
     }
 
+    override var imageViewWidth: NSLayoutConstraint! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (NSLayoutConstraint?).self)
+        }
+
+        set {}
+    }
+
     override var output: ShowComicViewOutput! {
         get {
             return DefaultValueRegistry.defaultValue(for: (ShowComicViewOutput?).self)
@@ -1819,7 +1857,7 @@ class ShowComicViewControllerStub: ShowComicViewController {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewInput.swift at 2020-08-21 13:07:40 +0000
 
 @testable import ComicRating
 //
@@ -2073,7 +2111,7 @@ class ShowComicViewInputStub: ShowComicViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/ShowComic/View/ShowComicViewOutput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ShowComicShowComicViewOutput.swift
@@ -2206,7 +2244,7 @@ class ShowComicViewOutputStub: ShowComicViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Interactor/TabBarInteractorInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Interactor/TabBarInteractorInput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  TabBarTabBarInteractorInput.swift
@@ -2259,7 +2297,7 @@ class MockTabBarInteractorInput: TabBarInteractorInput, Cuckoo.ProtocolMock {
 
 class TabBarInteractorInputStub: TabBarInteractorInput {}
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Router/TabBarRouterInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/Router/TabBarRouterInput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  TabBarRouterInput.swift
@@ -2338,7 +2376,7 @@ class TabBarRouterInputStub: TabBarRouterInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewInput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewInput.swift at 2020-08-21 13:07:40 +0000
 
 @testable import ComicRating
 //
@@ -2422,7 +2460,7 @@ class TabBarViewInputStub: TabBarViewInput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewOutput.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Modules/TabBar/View/TabBarViewOutput.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  TabBarTabBarViewOutput.swift
@@ -2500,7 +2538,7 @@ class TabBarViewOutputStub: TabBarViewOutput {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiService.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicApiService.swift
@@ -2750,7 +2788,7 @@ class ComicApiServiceStub: ComicApiService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ComicApiServiceInterface.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicApiClient.swift
@@ -2962,7 +3000,7 @@ class ComicApiServiceInterfaceStub: ComicApiServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderService.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ImageDownloader.swift
@@ -3046,7 +3084,7 @@ class ImageDownloaderServiceStub: ImageDownloaderService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Api/ImageDownloaderServiceInterface.swift at 2020-08-21 13:07:40 +0000
 
 @testable import ComicRating
 //
@@ -3127,7 +3165,7 @@ class ImageDownloaderServiceInterfaceStub: ImageDownloaderServiceInterface {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageService.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicStorageService.swift
@@ -3237,7 +3275,7 @@ class ComicStorageServiceStub: ComicStorageService {
     }
 }
 
-// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-21 12:12:16 +0000
+// MARK: - Mocks generated from file: ComicRating/Services/Storage/ComicStorageServiceInterface.swift at 2020-08-21 13:07:40 +0000
 
 //
 //  ComicStorageServiceInterface.swift

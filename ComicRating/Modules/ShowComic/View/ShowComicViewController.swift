@@ -18,8 +18,10 @@ class ShowComicViewController: DimmableViewController {
     @IBOutlet var ratingView: RatingView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var imageViewHeight: NSLayoutConstraint!
+    @IBOutlet var imageViewWidth: NSLayoutConstraint!
 
     private let maximumImageHeight: CGFloat = 430
+    private let imageHorizontalPadding: CGFloat = 40
 
     var output: ShowComicViewOutput!
 
@@ -58,11 +60,18 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 
     func showImage(imageData: Data) {
+        comicImageView.frame.size.height = maximumImageHeight
+        comicImageView.frame.size.width = view.frame.width - imageHorizontalPadding
+
         let image = UIImage(data: imageData)
-        if let imageHeight = image?.size.height {
-            imageViewHeight.constant = imageHeight < maximumImageHeight ? imageHeight : maximumImageHeight
-        }
         comicImageView.image = image
+        comicImageView.layer.cornerRadius = 10
+
+        if let imageSize = image?.size {
+            let sizeBeingScaledTo = CGSize.aspectFit(aspectRatio: imageSize, boundingSize: comicImageView.frame.size)
+            imageViewHeight.constant = sizeBeingScaledTo.height
+            imageViewWidth.constant = sizeBeingScaledTo.width
+        }
     }
 
     func resetRating() {
@@ -132,5 +141,34 @@ extension ShowComicViewController: RatingDelegate {
     func didRate(rating: UInt8) {
         print("Comic rated: ", rating)
         output.comicRated(rating: rating)
+    }
+}
+
+extension CGSize {
+    static func aspectFit(aspectRatio: CGSize, boundingSize: CGSize) -> CGSize {
+        var modifiedBoundingSize = boundingSize
+        let mW = modifiedBoundingSize.width / aspectRatio.width
+        let mH = modifiedBoundingSize.height / aspectRatio.height
+
+        if mH < mW {
+            modifiedBoundingSize.width = modifiedBoundingSize.height / aspectRatio.height * aspectRatio.width
+        } else if mW < mH {
+            modifiedBoundingSize.height = modifiedBoundingSize.width / aspectRatio.width * aspectRatio.height
+        }
+
+        return modifiedBoundingSize
+    }
+
+    static func aspectFill(aspectRatio: CGSize, minimumSize: inout CGSize) -> CGSize {
+        let mW = minimumSize.width / aspectRatio.width
+        let mH = minimumSize.height / aspectRatio.height
+
+        if mH > mW {
+            minimumSize.width = minimumSize.height / aspectRatio.height * aspectRatio.width
+        } else if mW > mH {
+            minimumSize.height = minimumSize.width / aspectRatio.width * aspectRatio.height
+        }
+
+        return minimumSize
     }
 }
