@@ -22,7 +22,9 @@ This project uses Swift Package Manager to manage dependencies.
 
 -   [Alamofire](https://github.com/Alamofire/Alamofire) to fetch comics from xkcd's API
 -   [AlamofireImage](https://github.com/Alamofire/AlamofireImage) to fetch comics' images
--   [Promises](https://github.com/google/promises) to handle asynchronous code
+-   [PromiseKit](https://github.com/mxcl/PromiseKit) to handle asynchronous code
+-   [SkeletonView](https://github.com/Juanpe/SkeletonView) to handle loading views
+-   [Cuckoo](https://github.com/Brightify/Cuckoo) for mocking objects in Swift
 
 If the dependencies have not been resolved you can:
 
