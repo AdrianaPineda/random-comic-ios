@@ -5,6 +5,8 @@ This repository contains an iOS app for rating comics:
 -   The main view displays a random comic to be rated.
 -   Another view displays the list of previous comics rated.
 
+The comics are fetched from the [xkcd api](https://xkcd.com/json.html)
+
 The application is still being worked on, but the design that will have is as follows:
 
 ![main view design](./main-view-design.png)
@@ -12,7 +14,7 @@ The application is still being worked on, but the design that will have is as fo
 
 ## Architecture
 
-This project using VIPER architecture and [Generamba](https://github.com/strongself/Generamba) for module generation.
+This project was built using VIPER architecture and [Generamba](https://github.com/strongself/Generamba) for module generation.
 
 ## Dependencies
 
