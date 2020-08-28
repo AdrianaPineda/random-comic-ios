@@ -86,6 +86,7 @@
 		01F2418924EEDB490034C681 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418824EEDB490034C681 /* UIConfiguration.swift */; };
 		01F2418D24EEE8140034C681 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */; };
 		01F2418F24EEEFB90034C681 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2418E24EEEFB90034C681 /* UIView+Extensions.swift */; };
+		01FA346A24F9589E009AC7AF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA346924F9589E009AC7AF /* UIView+Extensions.swift */; };
 		01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB7BC724BB0408007B00DC /* Date+Extensions.swift */; };
 		0BE1DA3AACB344C020594102 /* ComicHistoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */; };
 		11FED9EF6CF0CF37D8FF9AFF /* ComicHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D27386DEBB8B1611B0409E /* ComicHistoryModuleInput.swift */; };
@@ -211,6 +212,7 @@
 		01F2418824EEDB490034C681 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
 		01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		01F2418E24EEEFB90034C681 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		01FA346924F9589E009AC7AF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		01FB7BC724BB0408007B00DC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		026E24F92D3B5370EBD519A8 /* ComicHistoryInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComicHistoryInteractorTests.swift; sourceTree = "<group>"; };
 		03FC33C54EE34BB874F4F244 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -617,6 +619,7 @@
 				01F2418824EEDB490034C681 /* UIConfiguration.swift */,
 				01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */,
 				010EE5D224F0055600D91A52 /* CGSize+Extensions.swift */,
+				01FA346924F9589E009AC7AF /* UIView+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1015,6 +1018,7 @@
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,
 				0150BA5124457BA5000E226C /* Dimmable.swift in Sources */,
+				01FA346A24F9589E009AC7AF /* UIView+Extensions.swift in Sources */,
 				01894F6324BB10D700CC4AE8 /* ComicForCell.swift in Sources */,
 				01878A3824277E1700883D93 /* HttpServiceInterface.swift in Sources */,
 				015F7031241F463B004ED20A /* AppDelegate.swift in Sources */,
