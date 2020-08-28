@@ -8,10 +8,10 @@
 import UIKit
 
 class StarView: UIView {
-    let color: UIColor = UIColor.blue
+    var fillColor: UIColor? { didSet { setNeedsDisplay() } }
 
     override func draw(_ rect: CGRect) {
-        color.setFill()
+        fillColor?.setFill()
 
         let path = UIBezierPath()
         let center = CGPoint(x: rect.width / 2.0, y: rect.height / 2.0)

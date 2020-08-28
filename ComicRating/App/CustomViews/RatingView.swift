@@ -31,19 +31,19 @@ private enum StarRating: String {
     }
 }
 
-private struct StarImageNames {
-    static let filled = "filled_star"
-    static let emptied = "emptied_star"
+enum StarColorNames: String {
+    case enabled = "Enabled"
+    case disabled = "Disabled"
 }
 
 class RatingView: UIView, RatingInterface {
     @IBOutlet var container: UIView!
 
-    @IBOutlet var firstStar: UIImageView!
-    @IBOutlet var secondStar: UIImageView!
-    @IBOutlet var thirdStar: UIImageView!
-    @IBOutlet var fourthStar: UIImageView!
-    @IBOutlet var fifthStar: UIImageView!
+    @IBOutlet var firstStar: StarView!
+    @IBOutlet var secondStar: StarView!
+    @IBOutlet var thirdStar: StarView!
+    @IBOutlet var fourthStar: StarView!
+    @IBOutlet var fifthStar: StarView!
 
     @IBOutlet var starHeight: NSLayoutConstraint!
     @IBOutlet var starWidth: NSLayoutConstraint!
@@ -82,36 +82,36 @@ class RatingView: UIView, RatingInterface {
     }
 
     func fillStarsWithRating(rating: UInt8) {
-        let firstStarImageName = getImageName(rating: rating, starRating: StarRating.one)
-        firstStar.image = UIImage(named: firstStarImageName)
+        let firstStarColorName = getStarColorName(rating: rating, starRating: StarRating.one)
+        firstStar.fillColor = UIColor(named: firstStarColorName)
 
-        let secondStarImageName = getImageName(rating: rating, starRating: StarRating.two)
-        secondStar.image = UIImage(named: secondStarImageName)
+        let secondStarColorName = getStarColorName(rating: rating, starRating: StarRating.two)
+        secondStar.fillColor = UIColor(named: secondStarColorName)
 
-        let thirdStarImageName = getImageName(rating: rating, starRating: StarRating.three)
-        thirdStar.image = UIImage(named: thirdStarImageName)
+        let thirdStarColorName = getStarColorName(rating: rating, starRating: StarRating.three)
+        thirdStar.fillColor = UIColor(named: thirdStarColorName)
 
-        let fourthStarImageName = getImageName(rating: rating, starRating: StarRating.four)
-        fourthStar.image = UIImage(named: fourthStarImageName)
+        let fourthStarColorName = getStarColorName(rating: rating, starRating: StarRating.four)
+        fourthStar.fillColor = UIColor(named: fourthStarColorName)
 
-        let fifthStarImageName = getImageName(rating: rating, starRating: StarRating.five)
-        fifthStar.image = UIImage(named: fifthStarImageName)
+        let fifthStarColorName = getStarColorName(rating: rating, starRating: StarRating.five)
+        fifthStar.fillColor = UIColor(named: fifthStarColorName)
 
         delegate?.didRate(rating: rating)
     }
 
-    private func getImageName(rating: UInt8, starRating: StarRating) -> String {
-        return rating >= starRating.value ? StarImageNames.filled : StarImageNames.emptied
+    private func getStarColorName(rating: UInt8, starRating: StarRating) -> String {
+        return rating >= starRating.value ? StarColorNames.enabled.rawValue : StarColorNames.disabled.rawValue
     }
 
     // MARK: - RatingInterface
 
     func resetRating() {
-        firstStar.image = UIImage(named: StarImageNames.emptied)
-        secondStar.image = UIImage(named: StarImageNames.emptied)
-        thirdStar.image = UIImage(named: StarImageNames.emptied)
-        fourthStar.image = UIImage(named: StarImageNames.emptied)
-        fifthStar.image = UIImage(named: StarImageNames.emptied)
+        firstStar.fillColor = UIColor(named: StarColorNames.disabled.rawValue)
+        secondStar.fillColor = UIColor(named: StarColorNames.disabled.rawValue)
+        thirdStar.fillColor = UIColor(named: StarColorNames.disabled.rawValue)
+        fourthStar.fillColor = UIColor(named: StarColorNames.disabled.rawValue)
+        fifthStar.fillColor = UIColor(named: StarColorNames.disabled.rawValue)
     }
 
     func setRating(rating: UInt8) {
