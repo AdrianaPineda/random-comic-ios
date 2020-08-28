@@ -74,8 +74,8 @@
 		01AA4436243C34A200612796 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA4435243C34A200612796 /* ImageDownloaderService.swift */; };
 		01AA4439243C351600612796 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AA4438243C351600612796 /* AlamofireImage */; };
 		01AA443B243C386600612796 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA443A243C386600612796 /* Http.swift */; };
+		01DC56D724F9859100B55D81 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 01DC56D624F9859100B55D81 /* Cuckoo */; };
 		01E1C2E27653ECF18FAF9C97 /* TabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742BF891B1A5E504C7DA5EE /* TabBarPresenterTests.swift */; };
-		01EB91D324BF751300687CD9 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 01EB91D224BF751300687CD9 /* Cuckoo */; };
 		01EB91D624BF783900687CD9 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB91D524BF783900687CD9 /* GeneratedMocks.swift */; };
 		01F2417724E1BD5E0034C681 /* ShowComicPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2417624E1BD5E0034C681 /* ShowComicPresenterTests.swift */; };
 		01F2417C24E7D47C0034C681 /* UpcomingComic+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2417B24E7D47C0034C681 /* UpcomingComic+Equatable.swift */; };
@@ -252,7 +252,6 @@
 			files = (
 				01878A3424277C8B00883D93 /* Alamofire in Frameworks */,
 				01AA44242432FC3B00612796 /* PromiseKit in Frameworks */,
-				01EB91D324BF751300687CD9 /* Cuckoo in Frameworks */,
 				01927CB22441977E00D2BCC4 /* Cosmos in Frameworks */,
 				01AA4439243C351600612796 /* AlamofireImage in Frameworks */,
 				01635ABF2451534B005BE30F /* SkeletonView in Frameworks */,
@@ -263,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DC56D724F9859100B55D81 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,7 +838,6 @@
 				01AA4438243C351600612796 /* AlamofireImage */,
 				01927CB12441977E00D2BCC4 /* Cosmos */,
 				01635ABE2451534B005BE30F /* SkeletonView */,
-				01EB91D224BF751300687CD9 /* Cuckoo */,
 			);
 			productName = ComicRating;
 			productReference = 015F702D241F463B004ED20A /* ComicRating.app */;
@@ -858,6 +857,9 @@
 				015F7045241F463D004ED20A /* PBXTargetDependency */,
 			);
 			name = ComicRatingTests;
+			packageProductDependencies = (
+				01DC56D624F9859100B55D81 /* Cuckoo */,
+			);
 			productName = ComicRatingTests;
 			productReference = 015F7043241F463D004ED20A /* ComicRatingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -918,7 +920,7 @@
 				01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				01927CB02441977E00D2BCC4 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				01635ABD2451534B005BE30F /* XCRemoteSwiftPackageReference "SkeletonView" */,
-				01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */,
+				01DC56D524F9859100B55D81 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = 015F702E241F463B004ED20A /* Products */;
 			projectDirPath = "";
@@ -1459,7 +1461,7 @@
 				minimumVersion = 4.1.0;
 			};
 		};
-		01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+		01DC56D524F9859100B55D81 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
 			requirement = {
@@ -1495,9 +1497,9 @@
 			package = 01AA4437243C351600612796 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
 		};
-		01EB91D224BF751300687CD9 /* Cuckoo */ = {
+		01DC56D624F9859100B55D81 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 01EB91D124BF751300687CD9 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			package = 01DC56D524F9859100B55D81 /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
