@@ -60,17 +60,22 @@ extension ShowComicViewController: ShowComicViewInput {
     }
 
     func showImage(imageData: Data) {
-        comicImageView.frame.size.height = maximumImageHeight
-        comicImageView.frame.size.width = view.frame.width - imageHorizontalPadding
+        // Set image view maximum size to properly calculate the size later on
+        imageViewHeight.constant = maximumImageHeight
+        imageViewWidth.constant = view.frame.width - imageHorizontalPadding
+        view.layoutIfNeeded()
 
+        // Set image
         let image = UIImage(data: imageData)
         comicImageView.image = image
         comicImageView.layer.cornerRadius = 10
 
+        // Get calculated size
         if let imageSize = image?.size {
             let sizeBeingScaledTo = CGSize.aspectFit(aspectRatio: imageSize, boundingSize: comicImageView.frame.size)
             imageViewHeight.constant = sizeBeingScaledTo.height
             imageViewWidth.constant = sizeBeingScaledTo.width
+            view.layoutIfNeeded()
         }
     }
 

@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAy-vf-4Ms">
-                                <rect key="frame" x="20" y="541" width="374" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Comic Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAy-vf-4Ms">
+                                <rect key="frame" x="20" y="541" width="372" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Titles"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/24/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzp-xo-mhz">
-                                <rect key="frame" x="314" y="569.5" width="80" height="21"/>
+                                <rect key="frame" x="312" y="569.5" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Subtitles"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +85,7 @@
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="Hzp-xo-mhz" firstAttribute="trailing" secondItem="xfh-qU-8jn" secondAttribute="trailing" id="0FG-LM-oTs"/>
                             <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="BNI-GT-HKv" secondAttribute="trailing" constant="20" id="C21-XR-v0o"/>
                             <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="CTP-Qg-e3n" secondAttribute="trailing" constant="20" id="CWJ-gZ-sCm"/>
                             <constraint firstItem="Hzp-xo-mhz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QZi-eO-jfi" secondAttribute="trailing" constant="8" id="Ghk-6y-VUZ"/>
@@ -92,9 +93,8 @@
                             <constraint firstItem="hAy-vf-4Ms" firstAttribute="leading" secondItem="dio-c3-86P" secondAttribute="leading" constant="20" id="I7J-lZ-QMI"/>
                             <constraint firstItem="zh1-Cn-Qdx" firstAttribute="top" secondItem="BNI-GT-HKv" secondAttribute="bottom" constant="12" id="Myy-lZ-RyC"/>
                             <constraint firstItem="BNI-GT-HKv" firstAttribute="top" secondItem="QZi-eO-jfi" secondAttribute="bottom" constant="32" id="NAo-3L-PlY"/>
-                            <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="hAy-vf-4Ms" secondAttribute="trailing" constant="20" id="Qq1-Fi-7gf"/>
+                            <constraint firstItem="dio-c3-86P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hAy-vf-4Ms" secondAttribute="trailing" constant="20" id="Qq1-Fi-7gf"/>
                             <constraint firstItem="Hzp-xo-mhz" firstAttribute="top" secondItem="QZi-eO-jfi" secondAttribute="top" id="RkV-jl-5i1"/>
-                            <constraint firstItem="Hzp-xo-mhz" firstAttribute="trailing" secondItem="hAy-vf-4Ms" secondAttribute="trailing" id="VOs-5S-IKw"/>
                             <constraint firstItem="CTP-Qg-e3n" firstAttribute="top" secondItem="dio-c3-86P" secondAttribute="top" id="Wro-7n-0B7"/>
                             <constraint firstItem="hAy-vf-4Ms" firstAttribute="top" secondItem="xfh-qU-8jn" secondAttribute="bottom" constant="16" id="fFa-Yr-ZF9"/>
                             <constraint firstItem="QZi-eO-jfi" firstAttribute="leading" secondItem="hAy-vf-4Ms" secondAttribute="leading" id="gXV-KG-0q3"/>
@@ -108,11 +108,11 @@
                     </view>
                     <connections>
                         <outlet property="comicDateLabel" destination="Hzp-xo-mhz" id="lc6-Iy-Kex"/>
-                        <outlet property="comicImageView" destination="xfh-qU-8jn" id="pfA-yh-kep"/>
+                        <outlet property="comicImageView" destination="xfh-qU-8jn" id="Sdh-nq-SXl"/>
                         <outlet property="comicNumberLabel" destination="QZi-eO-jfi" id="wY0-pU-EYp"/>
                         <outlet property="comicTitleLabel" destination="hAy-vf-4Ms" id="uE1-Qj-dxM"/>
                         <outlet property="imageViewHeight" destination="YmZ-Ql-6nn" id="bAy-bw-7zQ"/>
-                        <outlet property="imageViewWidth" destination="f1W-cN-laD" id="nuA-JB-AcB"/>
+                        <outlet property="imageViewWidth" destination="f1W-cN-laD" id="i9M-Hw-eMr"/>
                         <outlet property="loadingIndicator" destination="XaC-UY-GkP" id="oII-dD-I97"/>
                         <outlet property="nextButton" destination="CTP-Qg-e3n" id="Qui-10-zY4"/>
                         <outlet property="ratingView" destination="zh1-Cn-Qdx" id="PDq-EC-J6D"/>

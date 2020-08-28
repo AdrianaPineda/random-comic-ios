@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00AB583FBBB49889E9C7F145 /* ComicHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD970A780652708BE01A92 /* ComicHistoryViewController.swift */; };
+		010EE5D324F0055600D91A52 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EE5D224F0055600D91A52 /* CGSize+Extensions.swift */; };
 		011F78EF24CC8DE400C87A01 /* ComicForCell+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */; };
 		011F78F724CD830900C87A01 /* ShowComicConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78F624CD830900C87A01 /* ShowComicConfiguratorTests.swift */; };
 		011F78FA24CD89D800C87A01 /* ShowComicInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F78F924CD89D800C87A01 /* ShowComicInteractorTests.swift */; };
@@ -133,6 +134,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010EE5D224F0055600D91A52 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		011F78EE24CC8DE400C87A01 /* ComicForCell+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicForCell+Equatable.swift"; sourceTree = "<group>"; };
 		011F78F624CD830900C87A01 /* ShowComicConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowComicConfiguratorTests.swift; sourceTree = "<group>"; };
 		011F78F924CD89D800C87A01 /* ShowComicInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowComicInteractorTests.swift; sourceTree = "<group>"; };
@@ -614,6 +616,7 @@
 				01FB7BC724BB0408007B00DC /* Date+Extensions.swift */,
 				01F2418824EEDB490034C681 /* UIConfiguration.swift */,
 				01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */,
+				010EE5D224F0055600D91A52 /* CGSize+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				01A0A88F2466BAAC0013BEEA /* TabBarConfigurator.swift in Sources */,
 				01FB7BC824BB0408007B00DC /* Date+Extensions.swift in Sources */,
 				01AA44262432FC5200612796 /* Comic.swift in Sources */,
+				010EE5D324F0055600D91A52 /* CGSize+Extensions.swift in Sources */,
 				01A0A897246A5E8D0013BEEA /* TabBarRouterInput.swift in Sources */,
 				01AA4434243C340800612796 /* ImageDownloaderServiceInterface.swift in Sources */,
 				015F707B24209415004ED20A /* ShowComicViewController.swift in Sources */,

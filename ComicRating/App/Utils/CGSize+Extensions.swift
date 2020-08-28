@@ -15,9 +15,9 @@ extension CGSize {
         let modifiedHeight = modifiedBoundingSize.height / aspectRatio.height
 
         if modifiedHeight < modifiedWidth {
-            modifiedBoundingSize.width = modifiedBoundingSize.height / aspectRatio.height * aspectRatio.width
+            modifiedBoundingSize.width = modifiedHeight * aspectRatio.width
         } else if modifiedWidth < modifiedHeight {
-            modifiedBoundingSize.height = modifiedBoundingSize.width / aspectRatio.width * aspectRatio.height
+            modifiedBoundingSize.height = modifiedWidth * aspectRatio.height
         }
 
         return modifiedBoundingSize
