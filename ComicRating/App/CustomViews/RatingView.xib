@@ -59,7 +59,7 @@
                         <outletCollection property="gestureRecognizers" destination="5rG-5m-SJk" appends="YES" id="syN-d6-t6g"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="m27-PQ-WSK">
+                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptied_star" translatesAutoresizingMaskIntoConstraints="NO" id="m27-PQ-WSK">
                     <rect key="frame" x="250" y="23" width="40" height="40"/>
                     <accessibility key="accessibilityConfiguration" identifier="star_five"/>
                     <gestureRecognizers/>
@@ -67,9 +67,14 @@
                         <outletCollection property="gestureRecognizers" destination="Wop-tP-yFG" appends="YES" id="Tjf-1c-iaA"/>
                     </connections>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfI-Xj-aFk">
+                    <rect key="frame" x="250" y="23" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vfI-Xj-aFk" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="4Gz-o0-Ne4"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="7:5" id="4bd-7K-nly"/>
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="71H-Hs-xgv"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ex4-JB-bib"/>
@@ -78,14 +83,17 @@
                 <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JK5-6t-4ir"/>
                 <constraint firstItem="4C6-Yw-ygX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1:5" id="Jw0-PH-7kz"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="5:5" id="Mos-j6-rdL"/>
+                <constraint firstItem="vfI-Xj-aFk" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="PGX-BJ-m0K"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="S8M-IP-EvJ"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="VR1-8Y-Qry"/>
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="VaY-mJ-4O4"/>
+                <constraint firstItem="vfI-Xj-aFk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XLd-mR-F8C"/>
                 <constraint firstItem="m27-PQ-WSK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="9:5" id="d1O-42-zpD"/>
                 <constraint firstItem="VLw-JO-YOl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="3:5" id="eKq-dW-8dZ"/>
                 <constraint firstItem="VLw-JO-YOl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="epB-n9-Ge3"/>
                 <constraint firstItem="S1K-bn-zhI" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="f8U-ba-YEe"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jIq-xE-dyW"/>
+                <constraint firstItem="vfI-Xj-aFk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="9:5" id="lKk-se-VeN"/>
                 <constraint firstItem="ncL-3B-cni" firstAttribute="width" secondItem="4C6-Yw-ygX" secondAttribute="width" id="vgC-NZ-kGd"/>
                 <constraint firstItem="VLw-JO-YOl" firstAttribute="height" secondItem="4C6-Yw-ygX" secondAttribute="height" id="vw7-7Q-UUb"/>
             </constraints>
