@@ -35,10 +35,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/24/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzp-xo-mhz">
-                                <rect key="frame" x="312" y="569.5" width="80" height="21"/>
+                                <rect key="frame" x="314" y="569.5" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Subtitles"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfh-qU-8jn">
                                 <rect key="frame" x="22" y="95" width="370" height="430"/>
@@ -85,12 +88,12 @@
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="Hzp-xo-mhz" firstAttribute="trailing" secondItem="xfh-qU-8jn" secondAttribute="trailing" id="0FG-LM-oTs"/>
                             <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="BNI-GT-HKv" secondAttribute="trailing" constant="20" id="C21-XR-v0o"/>
                             <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="CTP-Qg-e3n" secondAttribute="trailing" constant="20" id="CWJ-gZ-sCm"/>
                             <constraint firstItem="Hzp-xo-mhz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QZi-eO-jfi" secondAttribute="trailing" constant="8" id="Ghk-6y-VUZ"/>
                             <constraint firstItem="BNI-GT-HKv" firstAttribute="leading" secondItem="QZi-eO-jfi" secondAttribute="leading" id="Gtw-VG-KIn"/>
                             <constraint firstItem="hAy-vf-4Ms" firstAttribute="leading" secondItem="dio-c3-86P" secondAttribute="leading" constant="20" id="I7J-lZ-QMI"/>
+                            <constraint firstItem="dio-c3-86P" firstAttribute="trailing" secondItem="Hzp-xo-mhz" secondAttribute="trailing" constant="20" id="Jjb-hR-Tzn"/>
                             <constraint firstItem="zh1-Cn-Qdx" firstAttribute="top" secondItem="BNI-GT-HKv" secondAttribute="bottom" constant="12" id="Myy-lZ-RyC"/>
                             <constraint firstItem="BNI-GT-HKv" firstAttribute="top" secondItem="QZi-eO-jfi" secondAttribute="bottom" constant="32" id="NAo-3L-PlY"/>
                             <constraint firstItem="dio-c3-86P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hAy-vf-4Ms" secondAttribute="trailing" constant="20" id="Qq1-Fi-7gf"/>

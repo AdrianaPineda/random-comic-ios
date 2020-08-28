@@ -88,6 +88,7 @@ extension ShowComicViewController: ShowComicViewInput {
         case .text:
             comicTitleLabel.showAnimatedGradientSkeleton()
             comicNumberLabel.showAnimatedGradientSkeleton()
+            comicDateLabel.showAnimatedGradientSkeleton()
         case .image:
             comicImageView.showAnimatedGradientSkeleton()
         case .rating:
@@ -100,6 +101,7 @@ extension ShowComicViewController: ShowComicViewInput {
         case .text:
             comicTitleLabel.hideSkeleton()
             comicNumberLabel.hideSkeleton()
+            comicDateLabel.hideSkeleton()
         case .image:
             comicImageView.hideSkeleton()
         case .rating:
