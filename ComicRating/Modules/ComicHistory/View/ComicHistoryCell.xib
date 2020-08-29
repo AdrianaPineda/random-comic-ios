@@ -39,10 +39,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy8-Rh-OF6" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
-                        <rect key="frame" x="144" y="65" width="453" height="47"/>
+                        <rect key="frame" x="144" y="65" width="150" height="47"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstAttribute="width" priority="250" constant="453" id="6Mm-ii-Vhf"/>
+                            <constraint firstAttribute="width" constant="150" id="6Mm-ii-Vhf"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
@@ -59,7 +59,7 @@
                     <constraint firstItem="eXN-Nw-3ub" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="Gsx-ZD-rGU"/>
                     <constraint firstAttribute="bottom" secondItem="NJB-EC-rjH" secondAttribute="bottom" constant="8" id="Jhl-WY-Nhb"/>
                     <constraint firstItem="p7Y-5v-Ekd" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="TJ2-Pe-Pfs"/>
-                    <constraint firstAttribute="trailing" secondItem="uy8-Rh-OF6" secondAttribute="trailing" constant="12" id="VSi-oU-BZW"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uy8-Rh-OF6" secondAttribute="trailing" constant="12" id="VSi-oU-BZW"/>
                     <constraint firstAttribute="trailing" secondItem="eXN-Nw-3ub" secondAttribute="trailing" constant="12" id="XRC-JN-VQb"/>
                     <constraint firstItem="uy8-Rh-OF6" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="XyY-4V-tup"/>
                     <constraint firstItem="uy8-Rh-OF6" firstAttribute="top" secondItem="eXN-Nw-3ub" secondAttribute="bottom" constant="8" id="h6I-K5-72s"/>
@@ -73,8 +73,7 @@
                 <outlet property="comicInfoLabel" destination="p7Y-5v-Ekd" id="0AP-h1-E4t"/>
                 <outlet property="comicTitleLabel" destination="eXN-Nw-3ub" id="qdS-WO-anP"/>
                 <outlet property="imageView" destination="NJB-EC-rjH" id="NPx-zy-39f"/>
-                <outlet property="ratingView" destination="uy8-Rh-OF6" id="YYF-26-g8y"/>
-                <outlet property="ratingViewWidth" destination="6Mm-ii-Vhf" id="TC4-91-3K1"/>
+                <outlet property="ratingView" destination="uy8-Rh-OF6" id="af3-2i-8IK"/>
             </connections>
             <point key="canvasLocation" x="34.057971014492757" y="-221.65178571428569"/>
         </collectionViewCell>

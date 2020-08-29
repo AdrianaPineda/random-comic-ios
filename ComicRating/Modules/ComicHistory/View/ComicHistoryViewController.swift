@@ -14,7 +14,7 @@ class ComicHistoryViewController: UICollectionViewController {
     var output: ComicHistoryViewOutput!
 
     private let sections = 1
-    private let minCellWidth = 200
+    private let minCellWidth = 270
     private let cellHeight = 120
     private let sectionInsets = UIEdgeInsets(top: 10.0,
                                              left: 8,
@@ -78,8 +78,6 @@ extension ComicHistoryViewController {
                 comicHistoryCell.imageView.showAnimatedGradientSkeleton()
             }
         }
-
-        comicHistoryCell.ratingViewWidth.constant = comicHistoryCell.frame.size.width - comicHistoryCell.imageView.frame.size.width - 20
 
         return comicHistoryCell
     }

@@ -13,5 +13,4 @@ class ComicHistoryCell: UICollectionViewCell {
     @IBOutlet var comicInfoLabel: UILabel!
     @IBOutlet var comicTitleLabel: UILabel!
     @IBOutlet var ratingView: RatingView!
-    @IBOutlet var ratingViewWidth: NSLayoutConstraint!
 }
