@@ -14,7 +14,7 @@ class ComicHistoryViewController: UICollectionViewController {
     var output: ComicHistoryViewOutput!
 
     private let sections = 1
-    private let minCellWidth = 200
+    private let minCellWidth = 270
     private let cellHeight = 120
     private let sectionInsets = UIEdgeInsets(top: 10.0,
                                              left: 8,
@@ -40,6 +40,7 @@ class ComicHistoryViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         output.viewIsReady()
+        configureUI()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -66,8 +67,8 @@ extension ComicHistoryViewController {
 
         // Configure the cell
         let comic = comics[indexPath.row]
-        comicHistoryCell.comicLabel.text = "\(comic.title) (#\(comic.number))"
-        comicHistoryCell.ratingView.setStarSize(size: starSize)
+        comicHistoryCell.comicInfoLabel.text = "Issue #\(comic.number) - \(comic.date)"
+        comicHistoryCell.comicTitleLabel.text = comic.title
         comicHistoryCell.ratingView.fillStarsWithRating(rating: comic.rating)
         if let image = getImageForComic(comic) {
             comicHistoryCell.imageView.hideSkeleton()
@@ -78,7 +79,7 @@ extension ComicHistoryViewController {
             }
         }
 
-        return cell
+        return comicHistoryCell
     }
 
     fileprivate func getImageForComic(_ comic: ComicForCell) -> UIImage? {

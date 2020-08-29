@@ -10,9 +10,12 @@ import Foundation
 struct UpcomingComic {
     var number: Int
     var title: String
+    var date: String
 
     static func fromComic(comic: Comic) -> UpcomingComic {
-        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title)
+        let date = comic.date
+        let formattedDate = date.format(format: "MM/dd/yyy")
+        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title, date: formattedDate)
         return upcomingComic
     }
 }

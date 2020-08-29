@@ -19,7 +19,6 @@ class TabBarInitializer: NSObject {
 }
 
 class TabBarModuleBuilder: NSObject {
-
     func getViewController() -> TabBarViewController? {
         let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: KTabBarControllerIdentifier)

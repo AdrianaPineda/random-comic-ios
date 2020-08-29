@@ -12,10 +12,16 @@ import UIKit
 class ShowComicViewController: DimmableViewController {
     @IBOutlet var comicTitleLabel: UILabel!
     @IBOutlet var comicNumberLabel: UILabel!
+    @IBOutlet var comicDateLabel: UILabel!
     @IBOutlet var comicImageView: UIImageView!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var ratingView: RatingView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet var imageViewHeight: NSLayoutConstraint!
+    @IBOutlet var imageViewWidth: NSLayoutConstraint!
+
+    private let maximumImageHeight: CGFloat = 430
+    private let imageHorizontalPadding: CGFloat = 40
 
     var output: ShowComicViewOutput!
 
@@ -25,6 +31,11 @@ class ShowComicViewController: DimmableViewController {
         super.viewDidLoad()
         output.viewIsReady()
         ratingView.delegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI()
     }
 
     @IBAction func nextButtonClicked(_: Any) {
@@ -39,11 +50,33 @@ extension ShowComicViewController: ShowComicViewInput {
 
     func showComic(comic: UpcomingComic) {
         comicTitleLabel.text = comic.title
-        comicNumberLabel.text = "#\(comic.number)"
+        comicTitleLabel.textColor = UIConfiguration.sharedInstance.getTitlesColor()
+
+        comicNumberLabel.text = "Issue #\(comic.number)"
+        comicNumberLabel.textColor = UIConfiguration.sharedInstance.getSubtitlesColor()
+
+        comicDateLabel.text = comic.date
+        comicDateLabel.textColor = UIConfiguration.sharedInstance.getSubtitlesColor()
     }
 
     func showImage(imageData: Data) {
-        comicImageView.image = UIImage(data: imageData)
+        // Set image view maximum size to properly calculate the size later on
+        imageViewHeight.constant = maximumImageHeight
+        imageViewWidth.constant = view.frame.width - imageHorizontalPadding
+        view.layoutIfNeeded()
+
+        // Set image
+        let image = UIImage(data: imageData)
+        comicImageView.image = image
+        comicImageView.layer.cornerRadius = 10
+
+        // Get calculated size
+        if let imageSize = image?.size {
+            let sizeBeingScaledTo = CGSize.aspectFit(aspectRatio: imageSize, boundingSize: comicImageView.frame.size)
+            imageViewHeight.constant = sizeBeingScaledTo.height
+            imageViewWidth.constant = sizeBeingScaledTo.width
+            view.layoutIfNeeded()
+        }
     }
 
     func resetRating() {
@@ -55,6 +88,7 @@ extension ShowComicViewController: ShowComicViewInput {
         case .text:
             comicTitleLabel.showAnimatedGradientSkeleton()
             comicNumberLabel.showAnimatedGradientSkeleton()
+            comicDateLabel.showAnimatedGradientSkeleton()
         case .image:
             comicImageView.showAnimatedGradientSkeleton()
         case .rating:
@@ -67,6 +101,7 @@ extension ShowComicViewController: ShowComicViewInput {
         case .text:
             comicTitleLabel.hideSkeleton()
             comicNumberLabel.hideSkeleton()
+            comicDateLabel.hideSkeleton()
         case .image:
             comicImageView.hideSkeleton()
         case .rating:

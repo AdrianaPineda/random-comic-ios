@@ -17,6 +17,11 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         output.viewIsReady()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI()
+    }
 }
 
 // MARK: TabBarViewInput

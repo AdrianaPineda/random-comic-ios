@@ -25,10 +25,14 @@ class TabBarRouter: TabBarRouterInput {
             return nil
         }
 
-        let showComicTabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        let showComicTabBarItem = UITabBarItem(title: "Home",
+                                               image: UIImage(named: "Home"),
+                                               selectedImage: UIImage(named: "HomeSelected"))
         showComicVC.tabBarItem = showComicTabBarItem
 
-        let comicHistoryTabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        let comicHistoryTabBarItem = UITabBarItem(title: "Comics",
+                                                  image: UIImage(named: "Comics"),
+                                                  selectedImage: UIImage(named: "ComicsSelected"))
         comicHistoryVC.tabBarItem = comicHistoryTabBarItem
 
         let tabSections = (showComic: showComicVC, history: comicHistoryVC)

@@ -69,6 +69,7 @@ extension AppDelegate: UIApplicationDelegate {
                      didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let window = self.window {
             window.rootViewController = RootViewControllerFactory.get()
+            window.configureUI()
             window.makeKeyAndVisible()
         }
         return true

@@ -16,4 +16,10 @@ extension Date {
         let calendar = Calendar.current
         return calendar.date(from: dateComponents)
     }
+
+    func format(format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
 }
