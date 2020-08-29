@@ -28,6 +28,10 @@ class UIConfiguration {
     }
 
     func getSubtitlesColor() -> UIColor {
-        return UIColor(named: "Subtitles") ?? UIColor.clear
+        return UIColor(named: "Primary") ?? UIColor.clear
+    }
+
+    func getSelectedSectionColor() -> UIColor {
+        return UIColor(named: "Primary") ?? UIColor.clear
     }
 }

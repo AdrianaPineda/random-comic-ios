@@ -40,5 +40,6 @@ extension UICollectionViewController {
 extension TabBarViewController {
     override func configureUI() {
         tabBar.barTintColor = UIConfiguration.sharedInstance.getBackgroundColor()
+        tabBar.tintColor = UIConfiguration.sharedInstance.getSelectedSectionColor()
     }
 }
