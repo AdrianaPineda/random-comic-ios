@@ -123,3 +123,14 @@ class RatingView: UIView, RatingInterface {
         starHeight.constant = size.height
     }
 }
+
+extension RatingView {
+    @IBInspectable var starSize: CGSize {
+        set(newValue) {
+            setStarSize(size: newValue)
+        }
+        get {
+            CGSize(width: starWidth.constant, height: starHeight.constant)
+        }
+    }
+}

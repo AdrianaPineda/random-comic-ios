@@ -68,7 +68,6 @@ extension ComicHistoryViewController {
         // Configure the cell
         let comic = comics[indexPath.row]
         comicHistoryCell.comicLabel.text = "\(comic.title) (#\(comic.number))"
-        comicHistoryCell.ratingView.setStarSize(size: starSize)
         comicHistoryCell.ratingView.fillStarsWithRating(rating: comic.rating)
         if let image = getImageForComic(comic) {
             comicHistoryCell.imageView.hideSkeleton()
