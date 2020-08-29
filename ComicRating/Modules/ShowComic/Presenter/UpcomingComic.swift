@@ -14,10 +14,8 @@ struct UpcomingComic {
 
     static func fromComic(comic: Comic) -> UpcomingComic {
         let date = comic.date
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyy"
-        let dateAsString = formatter.string(from: date)
-        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title, date: dateAsString)
+        let formattedDate = date.format(format: "MM/dd/yyy")
+        let upcomingComic = UpcomingComic(number: comic.id, title: comic.title, date: formattedDate)
         return upcomingComic
     }
 }

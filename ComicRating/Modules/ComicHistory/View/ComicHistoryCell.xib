@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,15 +26,24 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-Nw-3ub">
-                        <rect key="frame" x="144" y="8" width="453" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-5v-Ekd">
+                        <rect key="frame" x="144" y="8" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" name="Description"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-Nw-3ub">
+                        <rect key="frame" x="144" y="36.5" width="453" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Titles"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy8-Rh-OF6" customClass="RatingView" customModule="ComicRating" customModuleProvider="target">
-                        <rect key="frame" x="144" y="36.5" width="453" height="75.5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <rect key="frame" x="144" y="65" width="453" height="47"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstAttribute="width" priority="250" constant="453" id="6Mm-ii-Vhf"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                 <size key="value" width="20" height="20"/>
@@ -41,27 +51,43 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="Background"/>
                 <constraints>
+                    <constraint firstItem="p7Y-5v-Ekd" firstAttribute="top" secondItem="NJB-EC-rjH" secondAttribute="top" id="2Z1-i4-Q9R"/>
                     <constraint firstItem="NJB-EC-rjH" firstAttribute="leading" secondItem="5sN-kf-LlC" secondAttribute="leading" constant="12" id="BK8-QO-Szb"/>
                     <constraint firstItem="uy8-Rh-OF6" firstAttribute="bottom" secondItem="NJB-EC-rjH" secondAttribute="bottom" id="FIa-oR-cEC"/>
                     <constraint firstItem="eXN-Nw-3ub" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="Gsx-ZD-rGU"/>
                     <constraint firstAttribute="bottom" secondItem="NJB-EC-rjH" secondAttribute="bottom" constant="8" id="Jhl-WY-Nhb"/>
-                    <constraint firstItem="eXN-Nw-3ub" firstAttribute="top" secondItem="NJB-EC-rjH" secondAttribute="top" id="S9X-vp-LXo"/>
+                    <constraint firstItem="p7Y-5v-Ekd" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="TJ2-Pe-Pfs"/>
                     <constraint firstAttribute="trailing" secondItem="uy8-Rh-OF6" secondAttribute="trailing" constant="12" id="VSi-oU-BZW"/>
                     <constraint firstAttribute="trailing" secondItem="eXN-Nw-3ub" secondAttribute="trailing" constant="12" id="XRC-JN-VQb"/>
+                    <constraint firstItem="uy8-Rh-OF6" firstAttribute="leading" secondItem="NJB-EC-rjH" secondAttribute="trailing" constant="12" id="XyY-4V-tup"/>
                     <constraint firstItem="uy8-Rh-OF6" firstAttribute="top" secondItem="eXN-Nw-3ub" secondAttribute="bottom" constant="8" id="h6I-K5-72s"/>
                     <constraint firstItem="NJB-EC-rjH" firstAttribute="centerY" secondItem="5sN-kf-LlC" secondAttribute="centerY" id="ilw-MQ-dgl"/>
                     <constraint firstItem="NJB-EC-rjH" firstAttribute="top" secondItem="5sN-kf-LlC" secondAttribute="top" constant="8" id="jOu-IV-aLu"/>
-                    <constraint firstItem="uy8-Rh-OF6" firstAttribute="leading" secondItem="eXN-Nw-3ub" secondAttribute="leading" id="xQE-Be-Jjs"/>
+                    <constraint firstItem="eXN-Nw-3ub" firstAttribute="top" secondItem="p7Y-5v-Ekd" secondAttribute="bottom" constant="8" id="qSt-Dy-xIM"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="609" height="201"/>
             <connections>
-                <outlet property="comicLabel" destination="eXN-Nw-3ub" id="mlw-KE-V4b"/>
+                <outlet property="comicInfoLabel" destination="p7Y-5v-Ekd" id="0AP-h1-E4t"/>
+                <outlet property="comicTitleLabel" destination="eXN-Nw-3ub" id="qdS-WO-anP"/>
                 <outlet property="imageView" destination="NJB-EC-rjH" id="NPx-zy-39f"/>
                 <outlet property="ratingView" destination="uy8-Rh-OF6" id="YYF-26-g8y"/>
+                <outlet property="ratingViewWidth" destination="6Mm-ii-Vhf" id="TC4-91-3K1"/>
             </connections>
-            <point key="canvasLocation" x="34.057971014492757" y="-152.67857142857142"/>
+            <point key="canvasLocation" x="34.057971014492757" y="-221.65178571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.19215686274509805" green="0.20000000000000001" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Description">
+            <color red="0.68627450980392157" green="0.69803921568627447" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Titles">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
