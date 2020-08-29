@@ -505,15 +505,9 @@
 		01927CB82441A88100D2BCC4 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				0150BA4C24442F57000E226C /* RatingDelegate.swift */,
-				0150BA4E24443093000E226C /* RatingInterface.swift */,
-				01927CB524419C0E00D2BCC4 /* RatingView.swift */,
-				01927CB3244197DB00D2BCC4 /* RatingView.xib */,
-				0150BA5024457BA5000E226C /* Dimmable.swift */,
-				0150BA542445825F000E226C /* DimmableViewController.swift */,
-				01635ABB2451463D005BE30F /* MySkeletonView.swift */,
-				01F2418E24EEEFB90034C681 /* UIView+Extensions.swift */,
-				01FA346B24F9759C009AC7AF /* StarView.swift */,
+				01DC56DA24FA3C6E00B55D81 /* SkeletonView */,
+				01DC56D924FA3C5300B55D81 /* DimmableView */,
+				01DC56D824FA3C4200B55D81 /* RatingView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -546,6 +540,35 @@
 				01A0A894246A5E7B0013BEEA /* TabBarRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		01DC56D824FA3C4200B55D81 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				01FA346B24F9759C009AC7AF /* StarView.swift */,
+				0150BA4C24442F57000E226C /* RatingDelegate.swift */,
+				0150BA4E24443093000E226C /* RatingInterface.swift */,
+				01927CB524419C0E00D2BCC4 /* RatingView.swift */,
+				01927CB3244197DB00D2BCC4 /* RatingView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		01DC56D924FA3C5300B55D81 /* DimmableView */ = {
+			isa = PBXGroup;
+			children = (
+				0150BA5024457BA5000E226C /* Dimmable.swift */,
+				0150BA542445825F000E226C /* DimmableViewController.swift */,
+			);
+			path = DimmableView;
+			sourceTree = "<group>";
+		};
+		01DC56DA24FA3C6E00B55D81 /* SkeletonView */ = {
+			isa = PBXGroup;
+			children = (
+				01635ABB2451463D005BE30F /* MySkeletonView.swift */,
+			);
+			path = SkeletonView;
 			sourceTree = "<group>";
 		};
 		01EB91CC24BF72A400687CD9 /* Services */ = {
@@ -620,6 +643,7 @@
 				01F2418824EEDB490034C681 /* UIConfiguration.swift */,
 				01F2418C24EEE8140034C681 /* UIColor+Extensions.swift */,
 				010EE5D224F0055600D91A52 /* CGSize+Extensions.swift */,
+				01F2418E24EEEFB90034C681 /* UIView+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
