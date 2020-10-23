@@ -8,7 +8,7 @@
 import Foundation
 
 class ShowComicPresenter: ShowComicModuleInput {
-    weak var view: ShowComicViewInput!
+    weak var view: ShowComicViewInput! // TODO: why is this a forced cast
     var interactor: ShowComicInteractorInput!
     var router: ShowComicRouterInput!
 }
